@@ -1,4 +1,6 @@
 # transit-simulator
 
-![Image of Procedure](https://github.com/hdemma/transit-simulator/blob/master/images/Procedure.png)
+##Procedure
+
+<img src="https://github.com/hdemma/transit-simulator/blob/master/images/Procedure.png" alt="alt text" width="490" height="400">
 
