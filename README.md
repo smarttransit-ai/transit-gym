@@ -1,17 +1,17 @@
 # transit-simulator
 
-## Procedure
+## Procedure of bus simulation using [SUMO](https://sumo.dlr.de/docs/index.html)
 
 <img src="https://github.com/hdemma/transit-simulator/blob/master/images/Procedure.png" alt="alt text" width="490" height="400">
 
 The yellow boxes in above chart is the existing information at the begining.
 
 ### Step 1. Correct network
-Using GUI-based tool NETEDIT to check the network and add links and junctions which are missing during the conversion from OSM map to SUMO network.
+Using GUI-based tool [NETEDIT](https://sumo.dlr.de/docs/netedit.html) to check the network and add links and junctions which are missing during the conversion from OSM map to SUMO network.
 The corrected network: [Chattanooga_SUMO_Network.net.xml](https://github.com/hdemma/transit-simulator/tree/master/SUMO_simulation)
 
 ### Step 2. Find bus stops' positions on network
-* Using TraCI to interact with SUMO
+* Using [TraCI](https://sumo.dlr.de/docs/TraCI.html) to interact with SUMO
 * Get the position info of stops (including edge ID, lane position and lane index) based on geo coordinates.
 
 ### Step 3. Create bus stop additional file
