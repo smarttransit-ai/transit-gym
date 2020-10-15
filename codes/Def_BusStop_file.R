@@ -1,7 +1,7 @@
 #This code is to create busStopsCARTA.xml file.
 
 library(readxl)
-#Read xlsx file from folder named "Data"
+#Read xlsx file from folder named "data"
 data = read_excel("stopsinf_CARTA.xlsx")
 
 #Create new columns 'startpos' and 'endpos' in data based on the "lanepos" in "stopsinf_CARTA.xlsx"
