@@ -1,5 +1,5 @@
 <routes>
-	<trip id="1AltonPark_A_inbound" type="BUS" depart="3076" color="1,1,0" departPos="stop"/>
+	<trip id="1AltonPark_A_inbound" type="BUS" depart="448" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_-29660_0_95" duration="2"/>
 		<stop busStop="busStop_-31047_0_1891" duration="2"/>
 		<stop busStop="busStop_29683_0_1915" duration="2"/>
@@ -60,7 +60,7 @@
 		<stop busStop="busStop_16517_0_143" duration="2"/>
 		<stop busStop="busStop_16513_0_144" duration="2"/>
 		<stop busStop="busStop_16503_0_145" duration="2"/>
-	</trip>	<trip id="1AltonPark_B_outbound" type="BUS" depart="2418" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="1AltonPark_B_outbound" type="BUS" depart="1024" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_-2074_0_1351" duration="2"/>
 		<stop busStop="busStop_-1489_0_12" duration="2"/>
 		<stop busStop="busStop_gneE48_0_1555" duration="2"/>
@@ -82,7 +82,7 @@
 		<stop busStop="busStop_-16625_0_28" duration="2"/>
 		<stop busStop="busStop_gneE4_0_44" duration="2"/>
 		<stop busStop="busStop_-29660_0_95" duration="2"/>
-	</trip>	<trip id="1AltonPark_C_inbound" type="BUS" depart="208" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="1AltonPark_C_inbound" type="BUS" depart="509" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_-29660_0_95" duration="2"/>
 		<stop busStop="busStop_-31047_0_1891" duration="2"/>
 		<stop busStop="busStop_29683_0_1915" duration="2"/>
@@ -159,7 +159,7 @@
 		<stop busStop="busStop_2483_1_172" duration="2"/>
 		<stop busStop="busStop_2007_0_505" duration="2"/>
 		<stop busStop="busStop_9282_0_690" duration="2"/>
-	</trip>	<trip id="1AltonPark_C_outbound" type="BUS" depart="2153" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="1AltonPark_C_outbound" type="BUS" depart="1048" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_-9282_0_354" duration="2"/>
 		<stop busStop="busStop_2007_0_505" duration="2"/>
 		<stop busStop="busStop_-78835_0_784" duration="2"/>
@@ -188,7 +188,7 @@
 		<stop busStop="busStop_-16625_0_28" duration="2"/>
 		<stop busStop="busStop_gneE4_0_44" duration="2"/>
 		<stop busStop="busStop_-29660_0_95" duration="2"/>
-	</trip>	<trip id="2NorthChatt_A_inbound" type="BUS" depart="3021" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="2NorthChatt_A_inbound" type="BUS" depart="1904" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_-6900_0_730" duration="2"/>
 		<stop busStop="busStop_-13668_0_732" duration="2"/>
 		<stop busStop="busStop_-15155_0_733" duration="2"/>
@@ -198,7 +198,7 @@
 		<stop busStop="busStop_67_0_1868" duration="2"/>
 		<stop busStop="busStop_-1489_0_12" duration="2"/>
 		<stop busStop="busStop_-1489_0_1872" duration="2"/>
-	</trip>	<trip id="2NorthChatt_B_outbound" type="BUS" depart="220" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="2NorthChatt_B_outbound" type="BUS" depart="1559" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_16503_0_145" duration="2"/>
 		<stop busStop="busStop_17310_0_163" duration="2"/>
 		<stop busStop="busStop_gneE34_0_164" duration="2"/>
@@ -214,7 +214,7 @@
 		<stop busStop="busStop_7034_0_728" duration="2"/>
 		<stop busStop="busStop_6937_0_729" duration="2"/>
 		<stop busStop="busStop_-6900_0_730" duration="2"/>
-	</trip>	<trip id="2NorthChatt_C_inbound" type="BUS" depart="2976" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="2NorthChatt_C_inbound" type="BUS" depart="2353" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_-6900_0_730" duration="2"/>
 		<stop busStop="busStop_-13668_0_732" duration="2"/>
 		<stop busStop="busStop_-15155_0_733" duration="2"/>
@@ -231,7 +231,7 @@
 		<stop busStop="busStop_2467_0_1475" duration="2"/>
 		<stop busStop="busStop_2007_0_505" duration="2"/>
 		<stop busStop="busStop_9282_0_690" duration="2"/>
-	</trip>	<trip id="2NorthChatt_C_outbound" type="BUS" depart="3292" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="2NorthChatt_C_outbound" type="BUS" depart="1713" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_-9282_0_354" duration="2"/>
 		<stop busStop="busStop_2007_0_505" duration="2"/>
 		<stop busStop="busStop_-24963_0_1713" duration="2"/>
@@ -250,7 +250,7 @@
 		<stop busStop="busStop_7034_0_728" duration="2"/>
 		<stop busStop="busStop_6937_0_729" duration="2"/>
 		<stop busStop="busStop_-6900_0_730" duration="2"/>
-	</trip>	<trip id="3EnterpriseSouth_A_outbound" type="BUS" depart="963" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="3EnterpriseSouth_A_outbound" type="BUS" depart="2888" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_-9282_0_354" duration="2"/>
 		<stop busStop="busStop_2007_0_505" duration="2"/>
 		<stop busStop="busStop_-78835_0_784" duration="2"/>
@@ -276,7 +276,7 @@
 		<stop busStop="busStop_-17162_0_25" duration="2"/>
 		<stop busStop="busStop_1998_0_1754" duration="2"/>
 		<stop busStop="busStop_13948_0_1746" duration="2"/>
-	</trip>	<trip id="3EnterpriseSouth_B_inbound" type="BUS" depart="364" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="3EnterpriseSouth_B_inbound" type="BUS" depart="3430" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_2210_0_1755" duration="2"/>
 		<stop busStop="busStop_-13948_0_1756" duration="2"/>
 		<stop busStop="busStop_-14119_0_1757" duration="2"/>
@@ -297,7 +297,7 @@
 		<stop busStop="busStop_1510_0_1361" duration="2"/>
 		<stop busStop="busStop_210_1_569" duration="2"/>
 		<stop busStop="busStop_-2074_0_1351" duration="2"/>
-	</trip>	<trip id="3EnterpriseSouth_C_outbound" type="BUS" depart="1192" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="3EnterpriseSouth_C_outbound" type="BUS" depart="514" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_-2074_0_1351" duration="2"/>
 		<stop busStop="busStop_-1489_0_12" duration="2"/>
 		<stop busStop="busStop_gneE48_0_1555" duration="2"/>
@@ -315,7 +315,7 @@
 		<stop busStop="busStop_-17159_0_24" duration="2"/>
 		<stop busStop="busStop_-17162_0_25" duration="2"/>
 		<stop busStop="busStop_1998_0_1754" duration="2"/>
-	</trip>	<trip id="3EnterpriseSouth_D_outbound" type="BUS" depart="2823" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="3EnterpriseSouth_D_outbound" type="BUS" depart="907" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_2210_0_1755" duration="2"/>
 		<stop busStop="busStop_-13948_0_1756" duration="2"/>
 		<stop busStop="busStop_-14119_0_1757" duration="2"/>
@@ -342,7 +342,7 @@
 		<stop busStop="busStop_2483_1_172" duration="2"/>
 		<stop busStop="busStop_2007_0_505" duration="2"/>
 		<stop busStop="busStop_9282_0_690" duration="2"/>
-	</trip>	<trip id="3EnterpriseSouth_E_outbound" type="BUS" depart="1320" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="3EnterpriseSouth_E_outbound" type="BUS" depart="2802" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_-13948_0_1760" duration="2"/>
 		<stop busStop="busStop_-14119_0_1757" duration="2"/>
 		<stop busStop="busStop_14124_0_1758" duration="2"/>
@@ -362,7 +362,7 @@
 		<stop busStop="busStop_1510_0_1361" duration="2"/>
 		<stop busStop="busStop_210_1_569" duration="2"/>
 		<stop busStop="busStop_-2074_0_1351" duration="2"/>
-	</trip>	<trip id="4Eastgate_Hamilton_A_inbound" type="BUS" depart="2693" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="4Eastgate_Hamilton_A_inbound" type="BUS" depart="1830" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_30289_0_1883" duration="2"/>
 		<stop busStop="busStop_17238_1_923" duration="2"/>
 		<stop busStop="busStop_17241_1_924" duration="2"/>
@@ -437,7 +437,7 @@
 		<stop busStop="busStop_210_1_569" duration="2"/>
 		<stop busStop="busStop_326_1_789" duration="2"/>
 		<stop busStop="busStop_-2074_0_1351" duration="2"/>
-	</trip>	<trip id="4Eastgate_Hamilton_A_outbound" type="BUS" depart="56" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="4Eastgate_Hamilton_A_outbound" type="BUS" depart="3264" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_-2074_0_1351" duration="2"/>
 		<stop busStop="busStop_-1489_0_12" duration="2"/>
 		<stop busStop="busStop_gneE48_0_1555" duration="2"/>
@@ -518,7 +518,7 @@
 		<stop busStop="busStop_-31312_0_897" duration="2"/>
 		<stop busStop="busStop_-31315_0_898" duration="2"/>
 		<stop busStop="busStop_30289_0_1883" duration="2"/>
-	</trip>	<trip id="4Eastgate_Hamilton_B_inbound" type="BUS" depart="1105" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="4Eastgate_Hamilton_B_inbound" type="BUS" depart="2662" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_30289_0_1883" duration="2"/>
 		<stop busStop="busStop_17238_1_923" duration="2"/>
 		<stop busStop="busStop_17241_1_924" duration="2"/>
@@ -603,7 +603,7 @@
 		<stop busStop="busStop_2467_0_1475" duration="2"/>
 		<stop busStop="busStop_2007_0_505" duration="2"/>
 		<stop busStop="busStop_9282_0_690" duration="2"/>
-	</trip>	<trip id="4Eastgate_Hamilton_B_outbound" type="BUS" depart="1882" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="4Eastgate_Hamilton_B_outbound" type="BUS" depart="2521" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_-9282_0_354" duration="2"/>
 		<stop busStop="busStop_2007_0_505" duration="2"/>
 		<stop busStop="busStop_-78835_0_784" duration="2"/>
@@ -691,7 +691,7 @@
 		<stop busStop="busStop_-31312_0_897" duration="2"/>
 		<stop busStop="busStop_-31315_0_898" duration="2"/>
 		<stop busStop="busStop_30289_0_1883" duration="2"/>
-	</trip>	<trip id="4Eastgate_Hamilton_C_inbound" type="BUS" depart="1257" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="4Eastgate_Hamilton_C_inbound" type="BUS" depart="1954" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_30289_0_1883" duration="2"/>
 		<stop busStop="busStop_17238_1_923" duration="2"/>
 		<stop busStop="busStop_17241_1_924" duration="2"/>
@@ -768,7 +768,7 @@
 		<stop busStop="busStop_-2074_0_1351" duration="2"/>
 		<stop busStop="busStop_-1489_0_12" duration="2"/>
 		<stop busStop="busStop_gneE48_0_1555" duration="2"/>
-	</trip>	<trip id="4Eastgate_Hamilton_D_inbound" type="BUS" depart="2464" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="4Eastgate_Hamilton_D_inbound" type="BUS" depart="1050" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_-30289_0_1884" duration="2"/>
 		<stop busStop="busStop_17162_0_1487" duration="2"/>
 		<stop busStop="busStop_17160_0_138" duration="2"/>
@@ -791,7 +791,7 @@
 		<stop busStop="busStop_2483_1_172" duration="2"/>
 		<stop busStop="busStop_2007_0_505" duration="2"/>
 		<stop busStop="busStop_9282_0_690" duration="2"/>
-	</trip>	<trip id="4Eastgate_Hamilton_D_outbound" type="BUS" depart="2657" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="4Eastgate_Hamilton_D_outbound" type="BUS" depart="3041" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_-9282_0_354" duration="2"/>
 		<stop busStop="busStop_-1513_0_892" duration="2"/>
 		<stop busStop="busStop_-1517_0_1875" duration="2"/>
@@ -799,7 +799,7 @@
 		<stop busStop="busStop_-31312_0_897" duration="2"/>
 		<stop busStop="busStop_-31315_0_898" duration="2"/>
 		<stop busStop="busStop_-30289_0_1877" duration="2"/>
-	</trip>	<trip id="4Eastgate_Hamilton_E_inbound" type="BUS" depart="978" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="4Eastgate_Hamilton_E_inbound" type="BUS" depart="2220" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_30289_0_1885" duration="2"/>
 		<stop busStop="busStop_-17239_0_1003" duration="2"/>
 		<stop busStop="busStop_-17223_0_1004" duration="2"/>
@@ -828,7 +828,7 @@
 		<stop busStop="busStop_1510_0_1361" duration="2"/>
 		<stop busStop="busStop_210_1_569" duration="2"/>
 		<stop busStop="busStop_-2074_0_1351" duration="2"/>
-	</trip>	<trip id="4Eastgate_Hamilton_E_outbound" type="BUS" depart="2919" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="4Eastgate_Hamilton_E_outbound" type="BUS" depart="3415" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_-2074_0_1351" duration="2"/>
 		<stop busStop="busStop_-1489_0_12" duration="2"/>
 		<stop busStop="busStop_gneE48_0_1555" duration="2"/>
@@ -914,7 +914,7 @@
 		<stop busStop="busStop_-31312_0_897" duration="2"/>
 		<stop busStop="busStop_-31315_0_898" duration="2"/>
 		<stop busStop="busStop_30289_0_1878" duration="2"/>
-	</trip>	<trip id="4Eastgate_Hamilton_F_outbound" type="BUS" depart="2736" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="4Eastgate_Hamilton_F_outbound" type="BUS" depart="155" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_-2074_0_1351" duration="2"/>
 		<stop busStop="busStop_-1489_0_12" duration="2"/>
 		<stop busStop="busStop_gneE48_0_1555" duration="2"/>
@@ -942,7 +942,7 @@
 		<stop busStop="busStop_16623_0_1880" duration="2"/>
 		<stop busStop="busStop_17049_0_1917" duration="2"/>
 		<stop busStop="busStop_30289_0_1883" duration="2"/>
-	</trip>	<trip id="4Eastgate_Hamilton_G_outbound" type="BUS" depart="3439" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="4Eastgate_Hamilton_G_outbound" type="BUS" depart="831" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_-9282_0_354" duration="2"/>
 		<stop busStop="busStop_2007_0_505" duration="2"/>
 		<stop busStop="busStop_-78835_0_784" duration="2"/>
@@ -977,7 +977,7 @@
 		<stop busStop="busStop_16623_0_1880" duration="2"/>
 		<stop busStop="busStop_17049_0_1917" duration="2"/>
 		<stop busStop="busStop_30289_0_1883" duration="2"/>
-	</trip>	<trip id="7ChattanoogaHousing_inbound" type="BUS" depart="1451" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="7ChattanoogaHousing_inbound" type="BUS" depart="2406" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_-9282_0_354" duration="2"/>
 		<stop busStop="busStop_-1692_0_355" duration="2"/>
 		<stop busStop="busStop_-1692_0_356" duration="2"/>
@@ -998,7 +998,7 @@
 		<stop busStop="busStop_13630_0_285" duration="2"/>
 		<stop busStop="busStop_-9383_0_286" duration="2"/>
 		<stop busStop="busStop_-2074_0_1351" duration="2"/>
-	</trip>	<trip id="7ChattanoogaHousing_outbound" type="BUS" depart="2037" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="7ChattanoogaHousing_outbound" type="BUS" depart="1881" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_-2074_0_1351" duration="2"/>
 		<stop busStop="busStop_-1489_0_12" duration="2"/>
 		<stop busStop="busStop_gneE48_0_1555" duration="2"/>
@@ -1027,7 +1027,7 @@
 		<stop busStop="busStop_1621_0_613" duration="2"/>
 		<stop busStop="busStop_1621_1_614" duration="2"/>
 		<stop busStop="busStop_9282_0_690" duration="2"/>
-	</trip>	<trip id="8Eastdale_A_inbound" type="BUS" depart="217" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="8Eastdale_A_inbound" type="BUS" depart="1445" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_-9282_0_354" duration="2"/>
 		<stop busStop="busStop_-9275_0_1047" duration="2"/>
 		<stop busStop="busStop_-9310_0_1048" duration="2"/>
@@ -1071,7 +1071,7 @@
 		<stop busStop="busStop_-25733_0_1080" duration="2"/>
 		<stop busStop="busStop_-30924_0_1082" duration="2"/>
 		<stop busStop="busStop_-30487_0_1551" duration="2"/>
-	</trip>	<trip id="8Eastdale_A_outbound" type="BUS" depart="247" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="8Eastdale_A_outbound" type="BUS" depart="1282" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_-30487_0_1551" duration="2"/>
 		<stop busStop="busStop_16634_1_971" duration="2"/>
 		<stop busStop="busStop_16620_0_972" duration="2"/>
@@ -1083,7 +1083,7 @@
 		<stop busStop="busStop_1501_0_677" duration="2"/>
 		<stop busStop="busStop_-2027_0_679" duration="2"/>
 		<stop busStop="busStop_9282_0_690" duration="2"/>
-	</trip>	<trip id="8Eastdale_B_outbound" type="BUS" depart="1603" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="8Eastdale_B_outbound" type="BUS" depart="3396" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_-30487_0_1551" duration="2"/>
 		<stop busStop="busStop_16634_1_971" duration="2"/>
 		<stop busStop="busStop_16620_0_972" duration="2"/>
@@ -1095,7 +1095,7 @@
 		<stop busStop="busStop_1501_0_677" duration="2"/>
 		<stop busStop="busStop_-2028_0_1547" duration="2"/>
 		<stop busStop="busStop_-2027_0_679" duration="2"/>
-	</trip>	<trip id="8Eastdale_C_inbound" type="BUS" depart="2558" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="8Eastdale_C_inbound" type="BUS" depart="3038" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_-2027_0_679" duration="2"/>
 		<stop busStop="busStop_9479_0_1044" duration="2"/>
 		<stop busStop="busStop_-9275_0_1047" duration="2"/>
@@ -1140,7 +1140,7 @@
 		<stop busStop="busStop_-25733_0_1080" duration="2"/>
 		<stop busStop="busStop_-30924_0_1082" duration="2"/>
 		<stop busStop="busStop_-30487_0_1551" duration="2"/>
-	</trip>	<trip id="8Eastdale_C_outbound" type="BUS" depart="1696" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="8Eastdale_C_outbound" type="BUS" depart="899" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_-30487_0_1551" duration="2"/>
 		<stop busStop="busStop_16634_1_971" duration="2"/>
 		<stop busStop="busStop_16620_0_972" duration="2"/>
@@ -1150,7 +1150,7 @@
 		<stop busStop="busStop_1501_0_1842" duration="2"/>
 		<stop busStop="busStop_1501_0_677" duration="2"/>
 		<stop busStop="busStop_-2027_0_679" duration="2"/>
-	</trip>	<trip id="8Eastdale_D_outbound" type="BUS" depart="3494" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="8Eastdale_D_outbound" type="BUS" depart="2800" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_-9282_0_354" duration="2"/>
 		<stop busStop="busStop_-9275_0_1047" duration="2"/>
 		<stop busStop="busStop_-9310_0_1048" duration="2"/>
@@ -1194,7 +1194,7 @@
 		<stop busStop="busStop_-25733_0_1080" duration="2"/>
 		<stop busStop="busStop_-30924_0_1082" duration="2"/>
 		<stop busStop="busStop_-30487_0_1551" duration="2"/>
-	</trip>	<trip id="9EastLake_A_inbound" type="BUS" depart="1741" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="9EastLake_A_inbound" type="BUS" depart="2255" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_-22994_0_1710" duration="2"/>
 		<stop busStop="busStop_16971_0_1706" duration="2"/>
 		<stop busStop="busStop_16988_0_1142" duration="2"/>
@@ -1249,7 +1249,7 @@
 		<stop busStop="busStop_16517_0_143" duration="2"/>
 		<stop busStop="busStop_16513_0_144" duration="2"/>
 		<stop busStop="busStop_16503_0_145" duration="2"/>
-	</trip>	<trip id="9EastLake_B_outbound" type="BUS" depart="1604" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="9EastLake_B_outbound" type="BUS" depart="3531" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_gneE48_0_1555" duration="2"/>
 		<stop busStop="busStop_-1510_0_1579" duration="2"/>
 		<stop busStop="busStop_-1524_0_1354" duration="2"/>
@@ -1308,7 +1308,7 @@
 		<stop busStop="busStop_-16987_0_1559" duration="2"/>
 		<stop busStop="busStop_-17814_0_1136" duration="2"/>
 		<stop busStop="busStop_-22994_0_1710" duration="2"/>
-	</trip>	<trip id="9EastLake_C_inbound" type="BUS" depart="263" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="9EastLake_C_inbound" type="BUS" depart="243" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_-22994_0_1710" duration="2"/>
 		<stop busStop="busStop_16971_0_1706" duration="2"/>
 		<stop busStop="busStop_16988_0_1142" duration="2"/>
@@ -1376,7 +1376,7 @@
 		<stop busStop="busStop_2483_1_172" duration="2"/>
 		<stop busStop="busStop_2007_0_505" duration="2"/>
 		<stop busStop="busStop_9282_0_690" duration="2"/>
-	</trip>	<trip id="9EastLake_C_outbound" type="BUS" depart="2759" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="9EastLake_C_outbound" type="BUS" depart="1036" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_-9282_0_354" duration="2"/>
 		<stop busStop="busStop_2007_0_505" duration="2"/>
 		<stop busStop="busStop_-78835_0_784" duration="2"/>
@@ -1444,7 +1444,7 @@
 		<stop busStop="busStop_-16987_0_1559" duration="2"/>
 		<stop busStop="busStop_-17814_0_1136" duration="2"/>
 		<stop busStop="busStop_-22994_0_1710" duration="2"/>
-	</trip>	<trip id="10A_Avon_A_outbound" type="BUS" depart="1240" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="10A_Avon_A_outbound" type="BUS" depart="349" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_16503_0_145" duration="2"/>
 		<stop busStop="busStop_17310_0_1560" duration="2"/>
 		<stop busStop="busStop_17310_0_163" duration="2"/>
@@ -1484,7 +1484,7 @@
 		<stop busStop="busStop_7174_0_215" duration="2"/>
 		<stop busStop="busStop_7099_0_216" duration="2"/>
 		<stop busStop="busStop_-11176_0_217" duration="2"/>
-	</trip>	<trip id="10A_Avon_B_inbound" type="BUS" depart="275" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="10A_Avon_B_inbound" type="BUS" depart="619" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_11176_0_288" duration="2"/>
 		<stop busStop="busStop_-7049_0_233" duration="2"/>
 		<stop busStop="busStop_-7099_0_234" duration="2"/>
@@ -1521,7 +1521,7 @@
 		<stop busStop="busStop_13630_0_285" duration="2"/>
 		<stop busStop="busStop_-9383_0_286" duration="2"/>
 		<stop busStop="busStop_-2074_0_1351" duration="2"/>
-	</trip>	<trip id="10A_Avon_C_inbound" type="BUS" depart="1974" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="10A_Avon_C_inbound" type="BUS" depart="866" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_11176_0_288" duration="2"/>
 		<stop busStop="busStop_-7049_0_233" duration="2"/>
 		<stop busStop="busStop_-7099_0_234" duration="2"/>
@@ -1568,7 +1568,7 @@
 		<stop busStop="busStop_2467_0_1475" duration="2"/>
 		<stop busStop="busStop_2007_0_505" duration="2"/>
 		<stop busStop="busStop_9282_0_690" duration="2"/>
-	</trip>	<trip id="10A_Avon_C_outbound" type="BUS" depart="1593" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="10A_Avon_C_outbound" type="BUS" depart="2596" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_-9282_0_354" duration="2"/>
 		<stop busStop="busStop_2007_0_505" duration="2"/>
 		<stop busStop="busStop_-24963_0_1713" duration="2"/>
@@ -1610,7 +1610,7 @@
 		<stop busStop="busStop_7174_0_215" duration="2"/>
 		<stop busStop="busStop_7099_0_216" duration="2"/>
 		<stop busStop="busStop_-11176_0_217" duration="2"/>
-	</trip>	<trip id="10A_Avon_D_inbound" type="BUS" depart="1941" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="10A_Avon_D_inbound" type="BUS" depart="3195" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_11176_0_288" duration="2"/>
 		<stop busStop="busStop_-7049_0_233" duration="2"/>
 		<stop busStop="busStop_-7099_0_234" duration="2"/>
@@ -1664,7 +1664,7 @@
 		<stop busStop="busStop_2467_0_1475" duration="2"/>
 		<stop busStop="busStop_2007_0_505" duration="2"/>
 		<stop busStop="busStop_9282_0_690" duration="2"/>
-	</trip>	<trip id="10A_Avon_E_inbound" type="BUS" depart="1149" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="10A_Avon_E_inbound" type="BUS" depart="2662" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_9217_0_1870" duration="2"/>
 		<stop busStop="busStop_8988_0_211" duration="2"/>
 		<stop busStop="busStop_8962_0_212" duration="2"/>
@@ -1710,7 +1710,7 @@
 		<stop busStop="busStop_-9383_0_286" duration="2"/>
 		<stop busStop="busStop_-9385_0_287" duration="2"/>
 		<stop busStop="busStop_-2074_0_1351" duration="2"/>
-	</trip>	<trip id="10A_Avon_F_inbound" type="BUS" depart="1036" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="10A_Avon_F_inbound" type="BUS" depart="2765" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_11176_0_288" duration="2"/>
 		<stop busStop="busStop_-7049_0_233" duration="2"/>
 		<stop busStop="busStop_-7099_0_234" duration="2"/>
@@ -1754,7 +1754,7 @@
 		<stop busStop="busStop_-9383_0_286" duration="2"/>
 		<stop busStop="busStop_-9385_0_287" duration="2"/>
 		<stop busStop="busStop_-2074_0_1351" duration="2"/>
-	</trip>	<trip id="10C_Campbell_A_outbound" type="BUS" depart="1461" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="10C_Campbell_A_outbound" type="BUS" depart="1186" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_-9282_0_354" duration="2"/>
 		<stop busStop="busStop_2007_0_505" duration="2"/>
 		<stop busStop="busStop_-24963_0_1713" duration="2"/>
@@ -1835,7 +1835,7 @@
 		<stop busStop="busStop_-1301_0_229" duration="2"/>
 		<stop busStop="busStop_7042_0_232" duration="2"/>
 		<stop busStop="busStop_11176_0_288" duration="2"/>
-	</trip>	<trip id="10C_Campbell_B_outbound" type="BUS" depart="3223" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="10C_Campbell_B_outbound" type="BUS" depart="2327" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_-9282_0_354" duration="2"/>
 		<stop busStop="busStop_2007_0_505" duration="2"/>
 		<stop busStop="busStop_-24963_0_1713" duration="2"/>
@@ -1918,7 +1918,7 @@
 		<stop busStop="busStop_-1301_0_229" duration="2"/>
 		<stop busStop="busStop_7042_0_232" duration="2"/>
 		<stop busStop="busStop_11176_0_288" duration="2"/>
-	</trip>	<trip id="10C_Campbell_C_outbound" type="BUS" depart="2852" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="10C_Campbell_C_outbound" type="BUS" depart="3052" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_16503_0_145" duration="2"/>
 		<stop busStop="busStop_17310_0_1560" duration="2"/>
 		<stop busStop="busStop_17310_0_163" duration="2"/>
@@ -1998,7 +1998,7 @@
 		<stop busStop="busStop_-1301_0_229" duration="2"/>
 		<stop busStop="busStop_7042_0_232" duration="2"/>
 		<stop busStop="busStop_11176_0_288" duration="2"/>
-	</trip>	<trip id="10C_Campbell_D_outbound" type="BUS" depart="944" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="10C_Campbell_D_outbound" type="BUS" depart="1877" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_16503_0_145" duration="2"/>
 		<stop busStop="busStop_17310_0_1560" duration="2"/>
 		<stop busStop="busStop_17310_0_163" duration="2"/>
@@ -2077,7 +2077,7 @@
 		<stop busStop="busStop_-1270_0_227" duration="2"/>
 		<stop busStop="busStop_-1296_0_228" duration="2"/>
 		<stop busStop="busStop_-1301_0_229" duration="2"/>
-	</trip>	<trip id="10G_Glenwood_A_inbound" type="BUS" depart="3568" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="10G_Glenwood_A_inbound" type="BUS" depart="2008" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_-11176_0_217" duration="2"/>
 		<stop busStop="busStop_-11176_0_289" duration="2"/>
 		<stop busStop="busStop_-7042_0_290" duration="2"/>
@@ -2137,7 +2137,7 @@
 		<stop busStop="busStop_-9383_0_286" duration="2"/>
 		<stop busStop="busStop_-9385_0_287" duration="2"/>
 		<stop busStop="busStop_-2074_0_1351" duration="2"/>
-	</trip>	<trip id="10G_Glenwood_B_outbound" type="BUS" depart="856" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="10G_Glenwood_B_outbound" type="BUS" depart="1482" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_16503_0_145" duration="2"/>
 		<stop busStop="busStop_17310_0_1560" duration="2"/>
 		<stop busStop="busStop_17310_0_163" duration="2"/>
@@ -2195,7 +2195,7 @@
 		<stop busStop="busStop_-7123_0_353" duration="2"/>
 		<stop busStop="busStop_7042_0_232" duration="2"/>
 		<stop busStop="busStop_11176_0_288" duration="2"/>
-	</trip>	<trip id="10G_Glenwood_C_inbound" type="BUS" depart="2247" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="10G_Glenwood_C_inbound" type="BUS" depart="2600" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_-11176_0_217" duration="2"/>
 		<stop busStop="busStop_-11176_0_289" duration="2"/>
 		<stop busStop="busStop_-7042_0_290" duration="2"/>
@@ -2261,7 +2261,7 @@
 		<stop busStop="busStop_2483_1_172" duration="2"/>
 		<stop busStop="busStop_2007_0_505" duration="2"/>
 		<stop busStop="busStop_9282_0_690" duration="2"/>
-	</trip>	<trip id="10G_Glenwood_C_outbound" type="BUS" depart="3436" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="10G_Glenwood_C_outbound" type="BUS" depart="2230" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_-9282_0_354" duration="2"/>
 		<stop busStop="busStop_2007_0_505" duration="2"/>
 		<stop busStop="busStop_-24963_0_1713" duration="2"/>
@@ -2321,7 +2321,7 @@
 		<stop busStop="busStop_-7123_0_353" duration="2"/>
 		<stop busStop="busStop_7042_0_232" duration="2"/>
 		<stop busStop="busStop_11176_0_288" duration="2"/>
-	</trip>	<trip id="10G_Glenwood_D_inbound" type="BUS" depart="1454" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="10G_Glenwood_D_inbound" type="BUS" depart="1944" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_-11176_0_217" duration="2"/>
 		<stop busStop="busStop_2113_0_221" duration="2"/>
 		<stop busStop="busStop_-1996_0_222" duration="2"/>
@@ -2408,7 +2408,7 @@
 		<stop busStop="busStop_-1253_0_1371" duration="2"/>
 		<stop busStop="busStop_-1256_0_1372" duration="2"/>
 		<stop busStop="busStop_25483_0_1391" duration="2"/>
-	</trip>	<trip id="10G_Glenwood_E_inbound" type="BUS" depart="2866" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="10G_Glenwood_E_inbound" type="BUS" depart="269" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_-14249_0_291" duration="2"/>
 		<stop busStop="busStop_-7275_0_294" duration="2"/>
 		<stop busStop="busStop_-8893_0_360" duration="2"/>
@@ -2465,7 +2465,7 @@
 		<stop busStop="busStop_-9383_0_286" duration="2"/>
 		<stop busStop="busStop_-9385_0_287" duration="2"/>
 		<stop busStop="busStop_-2074_0_1351" duration="2"/>
-	</trip>	<trip id="13Rossville_A_inbound" type="BUS" depart="1852" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="13Rossville_A_inbound" type="BUS" depart="3006" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_-22994_0_1710" duration="2"/>
 		<stop busStop="busStop_16971_0_1706" duration="2"/>
 		<stop busStop="busStop_16915_0_1253" duration="2"/>
@@ -2522,7 +2522,7 @@
 		<stop busStop="busStop_gneE34_0_164" duration="2"/>
 		<stop busStop="busStop_1524_0_165" duration="2"/>
 		<stop busStop="busStop_1510_0_1361" duration="2"/>
-	</trip>	<trip id="13Rossville_A_outbound" type="BUS" depart="2671" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="13Rossville_A_outbound" type="BUS" depart="3387" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_gneE48_0_1555" duration="2"/>
 		<stop busStop="busStop_-1510_0_1579" duration="2"/>
 		<stop busStop="busStop_-1524_0_1354" duration="2"/>
@@ -2582,7 +2582,7 @@
 		<stop busStop="busStop_-17814_0_1136" duration="2"/>
 		<stop busStop="busStop_-29743_0_1247" duration="2"/>
 		<stop busStop="busStop_-22994_0_1710" duration="2"/>
-	</trip>	<trip id="13Rossville_B_inbound" type="BUS" depart="2495" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="13Rossville_B_inbound" type="BUS" depart="2406" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_-22994_0_1710" duration="2"/>
 		<stop busStop="busStop_16971_0_1706" duration="2"/>
 		<stop busStop="busStop_16915_0_1253" duration="2"/>
@@ -2646,7 +2646,7 @@
 		<stop busStop="busStop_2483_1_172" duration="2"/>
 		<stop busStop="busStop_2007_0_505" duration="2"/>
 		<stop busStop="busStop_9282_0_690" duration="2"/>
-	</trip>	<trip id="13Rossville_B_outbound" type="BUS" depart="2468" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="13Rossville_B_outbound" type="BUS" depart="2988" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_-9282_0_354" duration="2"/>
 		<stop busStop="busStop_2007_0_505" duration="2"/>
 		<stop busStop="busStop_-78835_0_784" duration="2"/>
@@ -2715,7 +2715,7 @@
 		<stop busStop="busStop_-17814_0_1136" duration="2"/>
 		<stop busStop="busStop_-29743_0_1247" duration="2"/>
 		<stop busStop="busStop_-22994_0_1710" duration="2"/>
-	</trip>	<trip id="14MocsExpress_A_inbound" type="BUS" depart="2492" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="14MocsExpress_A_inbound" type="BUS" depart="2625" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_78746_0_413" duration="2"/>
 		<stop busStop="busStop_2460_0_414" duration="2"/>
 		<stop busStop="busStop_11240_0_417" duration="2"/>
@@ -2730,7 +2730,7 @@
 		<stop busStop="busStop_-1507_0_178" duration="2"/>
 		<stop busStop="busStop_-1514_0_179" duration="2"/>
 		<stop busStop="busStop_-9853_0_400" duration="2"/>
-	</trip>	<trip id="14MocsExpress_A_outbound" type="BUS" depart="995" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="14MocsExpress_A_outbound" type="BUS" depart="2288" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_-9853_0_400" duration="2"/>
 		<stop busStop="busStop_1507_0_277" duration="2"/>
 		<stop busStop="busStop_1502_0_278" duration="2"/>
@@ -2747,7 +2747,7 @@
 		<stop busStop="busStop_9813_0_409" duration="2"/>
 		<stop busStop="busStop_78746_0_412" duration="2"/>
 		<stop busStop="busStop_78746_0_413" duration="2"/>
-	</trip>	<trip id="14MocsExpress_B_inbound" type="BUS" depart="1921" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="14MocsExpress_B_inbound" type="BUS" depart="2582" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_71_0_489" duration="2"/>
 		<stop busStop="busStop_210_0_1000" duration="2"/>
 		<stop busStop="busStop_210_1_569" duration="2"/>
@@ -2778,7 +2778,7 @@
 		<stop busStop="busStop_-11239_0_418" duration="2"/>
 		<stop busStop="busStop_-9651_0_1611" duration="2"/>
 		<stop busStop="busStop_-15106_0_1571" duration="2"/>
-	</trip>	<trip id="14MocsExpress_B_outbound" type="BUS" depart="2966" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="14MocsExpress_B_outbound" type="BUS" depart="440" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_-9732_0_403" duration="2"/>
 		<stop busStop="busStop_-14173_0_404" duration="2"/>
 		<stop busStop="busStop_-11237_0_405" duration="2"/>
@@ -2796,7 +2796,7 @@
 		<stop busStop="busStop_-2710_1_999" duration="2"/>
 		<stop busStop="busStop_-2677_0_773" duration="2"/>
 		<stop busStop="busStop_71_0_489" duration="2"/>
-	</trip>	<trip id="14MocsExpress_C_inbound" type="BUS" depart="615" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="14MocsExpress_C_inbound" type="BUS" depart="2561" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_71_0_489" duration="2"/>
 		<stop busStop="busStop_210_0_1000" duration="2"/>
 		<stop busStop="busStop_210_1_569" duration="2"/>
@@ -2818,7 +2818,7 @@
 		<stop busStop="busStop_-1514_0_179" duration="2"/>
 		<stop busStop="busStop_-9853_0_400" duration="2"/>
 		<stop busStop="busStop_9282_0_690" duration="2"/>
-	</trip>	<trip id="14MocsExpress_C_outbound" type="BUS" depart="1239" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="14MocsExpress_C_outbound" type="BUS" depart="2895" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_-9282_0_354" duration="2"/>
 		<stop busStop="busStop_-1692_0_355" duration="2"/>
 		<stop busStop="busStop_-1692_0_356" duration="2"/>
@@ -2847,7 +2847,7 @@
 		<stop busStop="busStop_-2710_1_999" duration="2"/>
 		<stop busStop="busStop_-2677_0_773" duration="2"/>
 		<stop busStop="busStop_71_0_489" duration="2"/>
-	</trip>	<trip id="14MocsExpress_D_inbound" type="BUS" depart="2726" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="14MocsExpress_D_inbound" type="BUS" depart="681" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_78746_0_413" duration="2"/>
 		<stop busStop="busStop_2460_0_414" duration="2"/>
 		<stop busStop="busStop_11240_0_417" duration="2"/>
@@ -2863,7 +2863,7 @@
 		<stop busStop="busStop_-1514_0_179" duration="2"/>
 		<stop busStop="busStop_-9853_0_400" duration="2"/>
 		<stop busStop="busStop_9282_0_690" duration="2"/>
-	</trip>	<trip id="14MocsExpress_D_outbound" type="BUS" depart="801" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="14MocsExpress_D_outbound" type="BUS" depart="2641" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_-9282_0_354" duration="2"/>
 		<stop busStop="busStop_-1692_0_355" duration="2"/>
 		<stop busStop="busStop_-1692_0_356" duration="2"/>
@@ -2887,7 +2887,7 @@
 		<stop busStop="busStop_9813_0_409" duration="2"/>
 		<stop busStop="busStop_78746_0_412" duration="2"/>
 		<stop busStop="busStop_78746_0_413" duration="2"/>
-	</trip>	<trip id="15St.Elmo_A_inbound" type="BUS" depart="2597" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="15St.Elmo_A_inbound" type="BUS" depart="1791" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_-31400_0_454" duration="2"/>
 		<stop busStop="busStop_27388_0_1683" duration="2"/>
 		<stop busStop="busStop_30950_0_1488" duration="2"/>
@@ -2912,7 +2912,7 @@
 		<stop busStop="busStop_73_1_487" duration="2"/>
 		<stop busStop="busStop_72_0_488" duration="2"/>
 		<stop busStop="busStop_71_0_489" duration="2"/>
-	</trip>	<trip id="15St.Elmo_A_outbound" type="BUS" depart="1038" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="15St.Elmo_A_outbound" type="BUS" depart="1998" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_-960_0_423" duration="2"/>
 		<stop busStop="busStop_-961_0_424" duration="2"/>
 		<stop busStop="busStop_-962_0_425" duration="2"/>
@@ -2953,7 +2953,7 @@
 		<stop busStop="busStop_29676_0_452" duration="2"/>
 		<stop busStop="busStop_-29737_0_453" duration="2"/>
 		<stop busStop="busStop_-31400_0_454" duration="2"/>
-	</trip>	<trip id="15St.Elmo_B_inbound" type="BUS" depart="2542" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="15St.Elmo_B_inbound" type="BUS" depart="3394" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_-31400_0_454" duration="2"/>
 		<stop busStop="busStop_27388_0_1683" duration="2"/>
 		<stop busStop="busStop_30950_0_1488" duration="2"/>
@@ -2985,7 +2985,7 @@
 		<stop busStop="busStop_2483_1_172" duration="2"/>
 		<stop busStop="busStop_2007_0_505" duration="2"/>
 		<stop busStop="busStop_9282_0_690" duration="2"/>
-	</trip>	<trip id="15St.Elmo_B_outbound" type="BUS" depart="1851" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="15St.Elmo_B_outbound" type="BUS" depart="3452" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_-9282_0_354" duration="2"/>
 		<stop busStop="busStop_2007_0_505" duration="2"/>
 		<stop busStop="busStop_-78835_0_784" duration="2"/>
@@ -3034,7 +3034,7 @@
 		<stop busStop="busStop_29676_0_452" duration="2"/>
 		<stop busStop="busStop_-29737_0_453" duration="2"/>
 		<stop busStop="busStop_-31400_0_454" duration="2"/>
-	</trip>	<trip id="16NorthgateOb_A_outbound" type="BUS" depart="861" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="16NorthgateOb_A_outbound" type="BUS" depart="2064" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_16503_0_145" duration="2"/>
 		<stop busStop="busStop_17310_0_1560" duration="2"/>
 		<stop busStop="busStop_17310_0_163" duration="2"/>
@@ -3083,7 +3083,7 @@
 		<stop busStop="busStop_-14532_0_559" duration="2"/>
 		<stop busStop="busStop_14576_0_560" duration="2"/>
 		<stop busStop="busStop_14569_0_1423" duration="2"/>
-	</trip>	<trip id="16NorthgateOb_B_inbound" type="BUS" depart="343" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="16NorthgateOb_B_inbound" type="BUS" depart="849" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_14569_0_509" duration="2"/>
 		<stop busStop="busStop_-14500_0_564" duration="2"/>
 		<stop busStop="busStop_1673_0_1425" duration="2"/>
@@ -3125,7 +3125,7 @@
 		<stop busStop="busStop_2240_0_1839" duration="2"/>
 		<stop busStop="busStop_67_0_1868" duration="2"/>
 		<stop busStop="busStop_-1489_0_12" duration="2"/>
-	</trip>	<trip id="16NorthgateOb_C_inbound" type="BUS" depart="1694" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="16NorthgateOb_C_inbound" type="BUS" depart="2088" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_14569_0_509" duration="2"/>
 		<stop busStop="busStop_-14500_0_564" duration="2"/>
 		<stop busStop="busStop_1673_0_1425" duration="2"/>
@@ -3176,7 +3176,7 @@
 		<stop busStop="busStop_2467_0_1475" duration="2"/>
 		<stop busStop="busStop_2007_0_505" duration="2"/>
 		<stop busStop="busStop_9282_0_690" duration="2"/>
-	</trip>	<trip id="16NorthgateOb_C_outbound" type="BUS" depart="1106" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="16NorthgateOb_C_outbound" type="BUS" depart="374" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_-9282_0_354" duration="2"/>
 		<stop busStop="busStop_2007_0_505" duration="2"/>
 		<stop busStop="busStop_-24963_0_1713" duration="2"/>
@@ -3227,12 +3227,12 @@
 		<stop busStop="busStop_-14532_0_559" duration="2"/>
 		<stop busStop="busStop_14576_0_560" duration="2"/>
 		<stop busStop="busStop_14569_0_1423" duration="2"/>
-	</trip>	<trip id="16NorthgateOb_D_inbound" type="BUS" depart="2831" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="16NorthgateOb_D_inbound" type="BUS" depart="1715" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_gneE48_0_1555" duration="2"/>
 		<stop busStop="busStop_-1510_0_1579" duration="2"/>
 		<stop busStop="busStop_-1524_0_1354" duration="2"/>
 		<stop busStop="busStop_16503_0_145" duration="2"/>
-	</trip>	<trip id="16NorthgateOb_E_outbound" type="BUS" depart="3065" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="16NorthgateOb_E_outbound" type="BUS" depart="653" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_16503_0_145" duration="2"/>
 		<stop busStop="busStop_17310_0_1560" duration="2"/>
 		<stop busStop="busStop_17310_0_163" duration="2"/>
@@ -3281,7 +3281,7 @@
 		<stop busStop="busStop_-14532_0_559" duration="2"/>
 		<stop busStop="busStop_14576_0_560" duration="2"/>
 		<stop busStop="busStop_14569_0_1423" duration="2"/>
-	</trip>	<trip id="19CromwellRoad_A_inbound" type="BUS" depart="158" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="19CromwellRoad_A_inbound" type="BUS" depart="210" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_31360_0_1669" duration="2"/>
 		<stop busStop="busStop_30068_0_1671" duration="2"/>
 		<stop busStop="busStop_31199_0_695" duration="2"/>
@@ -3357,7 +3357,7 @@
 		<stop busStop="busStop_17310_0_1560" duration="2"/>
 		<stop busStop="busStop_17310_0_163" duration="2"/>
 		<stop busStop="busStop_gneE34_0_164" duration="2"/>
-	</trip>	<trip id="19CromwellRoad_A_outbound" type="BUS" depart="2054" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="19CromwellRoad_A_outbound" type="BUS" depart="3470" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_gneE34_0_164" duration="2"/>
 		<stop busStop="busStop_1524_0_165" duration="2"/>
 		<stop busStop="busStop_1510_0_1361" duration="2"/>
@@ -3407,7 +3407,7 @@
 		<stop busStop="busStop_-26350_0_1664" duration="2"/>
 		<stop busStop="busStop_-26570_0_1665" duration="2"/>
 		<stop busStop="busStop_-26653_0_1666" duration="2"/>
-	</trip>	<trip id="19CromwellRoad_B_inbound" type="BUS" depart="3122" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="19CromwellRoad_B_inbound" type="BUS" depart="980" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_31360_0_1669" duration="2"/>
 		<stop busStop="busStop_30068_0_1671" duration="2"/>
 		<stop busStop="busStop_31199_0_695" duration="2"/>
@@ -3485,7 +3485,7 @@
 		<stop busStop="busStop_2467_0_1475" duration="2"/>
 		<stop busStop="busStop_2007_0_505" duration="2"/>
 		<stop busStop="busStop_9282_0_690" duration="2"/>
-	</trip>	<trip id="21GoldenGateway_A_inbound" type="BUS" depart="1257" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="21GoldenGateway_A_inbound" type="BUS" depart="2183" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_-9821_0_756" duration="2"/>
 		<stop busStop="busStop_-9923_0_757" duration="2"/>
 		<stop busStop="busStop_-9923_0_758" duration="2"/>
@@ -3509,7 +3509,7 @@
 		<stop busStop="busStop_38639_0_568" duration="2"/>
 		<stop busStop="busStop_210_1_569" duration="2"/>
 		<stop busStop="busStop_-2074_0_1351" duration="2"/>
-	</trip>	<trip id="21GoldenGateway_A_outbound" type="BUS" depart="2164" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="21GoldenGateway_A_outbound" type="BUS" depart="256" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_1489_0_166" duration="2"/>
 		<stop busStop="busStop_gneE48_0_1555" duration="2"/>
 		<stop busStop="busStop_-1510_0_1579" duration="2"/>
@@ -3535,7 +3535,7 @@
 		<stop busStop="busStop_9820_0_754" duration="2"/>
 		<stop busStop="busStop_337_0_755" duration="2"/>
 		<stop busStop="busStop_-9821_0_756" duration="2"/>
-	</trip>	<trip id="21GoldenGateway_B_inbound" type="BUS" depart="2449" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="21GoldenGateway_B_inbound" type="BUS" depart="3111" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_-9821_0_756" duration="2"/>
 		<stop busStop="busStop_-9923_0_757" duration="2"/>
 		<stop busStop="busStop_-9923_0_758" duration="2"/>
@@ -3563,7 +3563,7 @@
 		<stop busStop="busStop_2483_1_172" duration="2"/>
 		<stop busStop="busStop_2007_0_505" duration="2"/>
 		<stop busStop="busStop_9282_0_690" duration="2"/>
-	</trip>	<trip id="21GoldenGateway_B_outbound" type="BUS" depart="2518" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="21GoldenGateway_B_outbound" type="BUS" depart="1377" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_-9282_0_354" duration="2"/>
 		<stop busStop="busStop_2007_0_505" duration="2"/>
 		<stop busStop="busStop_-78835_0_784" duration="2"/>
@@ -3597,7 +3597,7 @@
 		<stop busStop="busStop_9820_0_754" duration="2"/>
 		<stop busStop="busStop_337_0_755" duration="2"/>
 		<stop busStop="busStop_-9821_0_756" duration="2"/>
-	</trip>	<trip id="21GoldenGateway_C_inbound" type="BUS" depart="3573" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="21GoldenGateway_C_inbound" type="BUS" depart="2056" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_-9821_0_756" duration="2"/>
 		<stop busStop="busStop_-9923_0_757" duration="2"/>
 		<stop busStop="busStop_-9923_0_758" duration="2"/>
@@ -3614,7 +3614,7 @@
 		<stop busStop="busStop_16517_0_143" duration="2"/>
 		<stop busStop="busStop_16513_0_144" duration="2"/>
 		<stop busStop="busStop_16503_0_145" duration="2"/>
-	</trip>	<trip id="21GoldenGateway_D_inbound" type="BUS" depart="3088" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="21GoldenGateway_D_inbound" type="BUS" depart="99" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_-9821_0_756" duration="2"/>
 		<stop busStop="busStop_-9923_0_757" duration="2"/>
 		<stop busStop="busStop_-9923_0_758" duration="2"/>
@@ -3636,7 +3636,7 @@
 		<stop busStop="busStop_1510_0_1361" duration="2"/>
 		<stop busStop="busStop_210_1_569" duration="2"/>
 		<stop busStop="busStop_-2074_0_1351" duration="2"/>
-	</trip>	<trip id="28AmnicolaHwyChatt_A_inbound" type="BUS" depart="841" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="28AmnicolaHwyChatt_A_inbound" type="BUS" depart="719" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_-1612_0_780" duration="2"/>
 		<stop busStop="busStop_-2083_0_1573" duration="2"/>
 		<stop busStop="busStop_-2370_0_782" duration="2"/>
@@ -3649,7 +3649,7 @@
 		<stop busStop="busStop_-9385_0_287" duration="2"/>
 		<stop busStop="busStop_-2074_0_1351" duration="2"/>
 		<stop busStop="busStop_-1489_0_12" duration="2"/>
-	</trip>	<trip id="28AmnicolaHwyChatt_A_outbound" type="BUS" depart="2596" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="28AmnicolaHwyChatt_A_outbound" type="BUS" depart="681" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_-1489_0_12" duration="2"/>
 		<stop busStop="busStop_gneE48_0_1555" duration="2"/>
 		<stop busStop="busStop_2007_0_505" duration="2"/>
@@ -3660,7 +3660,7 @@
 		<stop busStop="busStop_1265_0_778" duration="2"/>
 		<stop busStop="busStop_2083_0_507" duration="2"/>
 		<stop busStop="busStop_2373_0_508" duration="2"/>
-	</trip>	<trip id="28AmnicolaHwyChatt_B_inbound" type="BUS" depart="2554" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="28AmnicolaHwyChatt_B_inbound" type="BUS" depart="2171" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_-1489_0_12" duration="2"/>
 		<stop busStop="busStop_-1540_0_17" duration="2"/>
 		<stop busStop="busStop_9455_0_284" duration="2"/>
@@ -3682,7 +3682,7 @@
 		<stop busStop="busStop_gneE48_0_1555" duration="2"/>
 		<stop busStop="busStop_-2083_0_1573" duration="2"/>
 		<stop busStop="busStop_-1510_0_1579" duration="2"/>
-	</trip>	<trip id="28AmnicolaHwyChatt_B_outbound" type="BUS" depart="1940" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="28AmnicolaHwyChatt_B_outbound" type="BUS" depart="483" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_-1489_0_12" duration="2"/>
 		<stop busStop="busStop_9455_0_284" duration="2"/>
 		<stop busStop="busStop_13630_0_285" duration="2"/>
@@ -3701,7 +3701,7 @@
 		<stop busStop="busStop_-78835_0_784" duration="2"/>
 		<stop busStop="busStop_-2074_0_1351" duration="2"/>
 		<stop busStop="busStop_gneE48_0_1555" duration="2"/>
-	</trip>	<trip id="33DowntownShuttle_A_inbound" type="BUS" depart="152" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="33DowntownShuttle_A_inbound" type="BUS" depart="1851" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_9390_0_1566" duration="2"/>
 		<stop busStop="busStop_-38635_0_793" duration="2"/>
 		<stop busStop="busStop_-958_0_1537" duration="2"/>
@@ -3715,7 +3715,7 @@
 		<stop busStop="busStop_-17309_0_18" duration="2"/>
 		<stop busStop="busStop_-16503_0_19" duration="2"/>
 		<stop busStop="busStop_31821_0_1874" duration="2"/>
-	</trip>	<trip id="33DowntownShuttle_A_outbound" type="BUS" depart="3220" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="33DowntownShuttle_A_outbound" type="BUS" depart="869" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_31821_0_1874" duration="2"/>
 		<stop busStop="busStop_16513_0_144" duration="2"/>
 		<stop busStop="busStop_16503_0_145" duration="2"/>
@@ -3731,7 +3731,7 @@
 		<stop busStop="busStop_210_1_569" duration="2"/>
 		<stop busStop="busStop_326_1_789" duration="2"/>
 		<stop busStop="busStop_9390_0_1565" duration="2"/>
-	</trip>	<trip id="33DowntownShuttle_B_outbound" type="BUS" depart="2911" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="33DowntownShuttle_B_outbound" type="BUS" depart="2996" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_16517_0_143" duration="2"/>
 		<stop busStop="busStop_16513_0_144" duration="2"/>
 		<stop busStop="busStop_16503_0_145" duration="2"/>
@@ -3747,18 +3747,18 @@
 		<stop busStop="busStop_210_1_569" duration="2"/>
 		<stop busStop="busStop_326_1_789" duration="2"/>
 		<stop busStop="busStop_9390_0_1565" duration="2"/>
-	</trip>	<trip id="34NorthShoreShuttle_A_inbound" type="BUS" depart="634" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="34NorthShoreShuttle_A_inbound" type="BUS" depart="1942" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_-9068_0_1655" duration="2"/>
 		<stop busStop="busStop_9045_0_716" duration="2"/>
 		<stop busStop="busStop_-1455_1_803" duration="2"/>
 		<stop busStop="busStop_9390_0_1565" duration="2"/>
-	</trip>	<trip id="34NorthShoreShuttle_A_outbound" type="BUS" depart="2895" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="34NorthShoreShuttle_A_outbound" type="BUS" depart="46" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_9390_0_1565" duration="2"/>
 		<stop busStop="busStop_2296_0_801" duration="2"/>
 		<stop busStop="busStop_-9040_1_739" duration="2"/>
 		<stop busStop="busStop_-9045_0_740" duration="2"/>
 		<stop busStop="busStop_-9068_0_1655" duration="2"/>
-	</trip>	<trip id="34NorthShoreShuttle_B_inbound" type="BUS" depart="2599" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="34NorthShoreShuttle_B_inbound" type="BUS" depart="2618" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_9390_0_1565" duration="2"/>
 		<stop busStop="busStop_-1489_0_12" duration="2"/>
 		<stop busStop="busStop_gneE48_0_1555" duration="2"/>
@@ -3770,7 +3770,9 @@
 		<stop busStop="busStop_-16503_0_19" duration="2"/>
 		<stop busStop="busStop_-16517_0_1557" duration="2"/>
 		<stop busStop="busStop_31821_0_1874" duration="2"/>
-	</trip>	<trip id="34NorthShoreShuttle_C_outbound" type="BUS" depart="2781" color="1,1,0" departPos="stop"/>
+	</trip>	<trip id="34NorthShoreShuttle_C_outbound" type="BUS" depart="674" color="1,1,0" departPos="stop">
 		<stop busStop="busStop_16517_0_143" duration="2"/>
 		<stop busStop="busStop_16513_0_144" duration="2"/>
 		<stop busStop="busStop_16503_0_145" duration="2"/>
+		<stop busStop="busStop_17310_0_1560" duration="2"/>
+		<stop busStop="busStop_17310_0_163" duration="2"/>

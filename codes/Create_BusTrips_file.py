@@ -36,7 +36,7 @@ for tripid, df in busline.items():
     # FIXME: depart
     df['ID'] = df.index
     f.write('\t<trip id="'+tripid+'" type="BUS" depart="' + str(rand.randint(0, 3600)) +
-            '" color="1,1,0" departPos="stop"/>\n')
+            '" color="1,1,0" departPos="stop">\n')
     # helper function to parse data to html
     def parser(r):
         return '\t\t<stop busStop="busStop_' + r['edgeID']+ "_"\
