@@ -1,0 +1,18 @@
+Program:
+	'begin'
+		'TimeStart' timeStart = INT
+		'TimeEnd' timeEnd = INT
+
+		routeSet*=RouteCommand
+	'end'
+;
+
+RouteCommand:
+	'RouteFileName' routeFileName = STRING
+		how = STRING
+		vehicleSet *= VehicleCommand
+;
+
+VehicleCommand:
+	'vehicle' vehicleid=STRING
+;
