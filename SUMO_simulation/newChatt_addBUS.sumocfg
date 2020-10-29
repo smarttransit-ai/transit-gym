@@ -10,8 +10,8 @@
 
     <time>
         <begin value="0"/>
-        <end value="5400"/>
-		<time-to-teleport value="150" />
+        <end value="86400"/>
+	<time-to-teleport value="150" />
     </time>
 	
     <processing>
