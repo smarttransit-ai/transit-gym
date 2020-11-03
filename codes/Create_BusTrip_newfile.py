@@ -37,8 +37,9 @@ f.write("<routes>\n")
 for tripid, df in trip.items():
     # FIXME: depart: the first value of 'depart' column in dict 'trip' for each 'tripid'
     df['stop_id'] = df.index
+    depart = df['depart'].iloc[0]
     #FIX here:
-    f.write('\t<trip id="'+str(tripid)+'" type="BUS" depart=" " color="1,1,0" departPos="stop">\n')
+    f.write('\t<trip id="'+str(tripid)+'" type="BUS" depart="' + str(int(depart)) + '" color="1,1,0" departPos="stop">\n')
     # helper function to parse data to html
     def parser(r):
         return '\t\t<stop busStop="busStop_' + r['edgeID']+ "_"\
