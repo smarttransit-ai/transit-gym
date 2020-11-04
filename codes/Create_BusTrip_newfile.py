@@ -52,4 +52,4 @@ for tripid, df in trip.items():
     f.write("\t</trip>\n")
 
 f.write("</routes>")
-f.close
+f.close()
