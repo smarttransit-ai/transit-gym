@@ -2,6 +2,10 @@ Program:
 	'begin'
 		'TimeStart' timeStart = INT
 		'TimeEnd' timeEnd = INT
+		'Network' networkFile = STRING
+		'Additional' additionalFile = STRING
+		'OutputName' outputFile = STRING
+		'DumpName' dumpFile=STRING
 
 		routeSet*=RouteCommand
 	'end'

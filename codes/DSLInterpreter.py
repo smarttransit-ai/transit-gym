@@ -13,14 +13,16 @@ current_model = metamodel.model_from_file('test.ts')
 
 class Simulation(object):
     def __init__(self):
-        self.start_time = 0;
-        self.end_time=0;
         self.routeSet = {}
     
     # interpret model
     def interpret(self, model):
         self.start_time = model.timeStart
         self.end_time = model.timeEnd
+        self.network = model.networkFile
+        self.additional = model.additionalFile
+        self.output = model.outputFile
+        self.dump = model.dumpFile
         for route in model.routeSet:
             vehicles = []
             # build a list of vehicle for each file
@@ -63,40 +65,46 @@ class Simulation(object):
             count += 1
         
     
-    def generateConfig(self, export_file):
+    def generateConfig(self):
         self.generateRouteFiles()
+        if os.path.exists('../SUMO_simulation/' + self.output):
+            os.remove("../SUMO_simulation/" + self.output)
         
         # write SUMOCFG file to initialize simulation
-        f = open(export_file, "x")
+        f = open(self.output, "x")
         f.write('<?xml version="1.0" encoding="UTF-8"?>\n')
         f.write('<configuration xmlns:xsi="http://www.w3.org' +
                 '/2001/XMLSchema-instance" xsi:noNamespaceSchema'+ 
                 'Location="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">\n')
-        f.write('\t<input>\n\t\t<net-file value="Chattanooga_SUMO_Network.net.xml"/>\n')
+        f.write('\t<input>\n\t\t<net-file value="'+ self.network + '"/>\n')
         f.write('\t\t<route-files value="')
         count = 0
+        files_to_write = ''
         for key in self.routeSet:
-            f.write('output_' + str(count) + '.xml' + ',')
+            files_to_write = files_to_write + 'output_' + str(count) + '.xml' + ','
             count = count + 1
+        if len(files_to_write) > 0:
+            files_to_write = files_to_write[:-1]
+
+        f.write(files_to_write)
         f.write('"/>\n')
-        f.write('\t\t<additional-files value="busStopsCARTA.add.xml"/>\n')
+        f.write('\t\t<additional-files value="'+ self.additional +'"/>\n')
         f.write('\t</input>\n')
         f.write('\t<time>\n\t\t<begin value="' + str(self.start_time) + '"/>\n')
         f.write('\t\t<end value="'+  str(self.end_time) + '"/>\n')
         f.write('\t\t<time-to-teleport value="150" />\n\t</time>\n')
         f.write('\t<processing>\n\t\t<ignore-route-errors value="true"/>\n'+
                 '\t</processing>\n')
-        f.write('\t<output>\n\t\t<netstate-dump value="Trajectory_Output.xml"/>\n')
+        f.write('\t<output>\n\t\t<netstate-dump value="' + self.dump + '"/>\n')
         f.write('\t</output>\n\t<gui_only>\n\t\t<gui-settings-file value="gui.view.xml"/>\n')
         f.write('\t</gui_only>\n</configuration>')
         f.close()
             
 
-if os.path.exists('../SUMO_simulation/DSL_OUTPUT/test.sumocfg'):
-    os.remove("../SUMO_simulation/DSL_OUTPUT/test.sumocfg")
+
 test = Simulation()
 test.interpret(current_model)
-test.generateConfig('../SUMO_simulation/DSL_OUTPUT/test.sumocfg')
+test.generateConfig()
                     
             
             
