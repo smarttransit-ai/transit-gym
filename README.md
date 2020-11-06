@@ -14,11 +14,12 @@ Using GUI-based tool [NETEDIT](https://sumo.dlr.de/docs/netedit.html) to check t
 * Using [TraCI](https://sumo.dlr.de/docs/TraCI.html) to interact with SUMO
 * Get the position info of stops (including edge ID, lane position and lane index) based on geo coordinates in [CARTA Summary Data](https://github.com/hdemma/transit-simulator/blob/master/data/CARTA%20Summary%20Route%20Data_Remix%20Feb%20Schedule.xlsx).
 
-### Step 3. Create bus stop additional file
+### Step 3. [Create bus stop additional file](https://github.com/smarttransit-ai/transit-simulator/blob/master/codes/Def_BusStop_file.py)
 Automatically generate codes for bus stop additional file based on stop's positions converted by TraCI.
 
-### Step 4. Create bus trip file
-Automatically generate codes for bus trip file based on [sequential bus stops along each bus route](https://github.com/hdemma/transit-simulator/blob/master/data/buslines.xlsx) with correspongding position information.
+### Step 4. [Create bus trip file](https://github.com/smarttransit-ai/transit-simulator/blob/master/codes/Create_BusTrip_newfile.py)
+Automatically generate codes for bus trip file based on [sequential bus stops along each trip in GTFS](https://github.com/smarttransit-ai/transit-simulator/blob/master/data/Comprehensive_GTFS.xlsx) with correspongding position information.
+*Note* Comprehensive_GTFS.xlsx is [generated](https://github.com/smarttransit-ai/transit-simulator/blob/master/codes/Match_GTFS.py) from the [GTFS data](https://github.com/smarttransit-ai/transit-energy-dashboard/tree/master/app/data/raw/GTFS/gtfs_may_2020)
 
 ### Step 5. Generate bus route file
 Generate the bus route file which includes detailed edge list for each bus route computed by [duarouter](https://sumo.dlr.de/docs/duarouter.html).
