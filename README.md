@@ -1,6 +1,6 @@
 # transit-simulator
 
-## Procedure of transit simulation using [SUMO](https://sumo.dlr.de/docs/index.html)(Version 1.6.0)
+## Procedure of transit simulation using [SUMO](https://sumo.dlr.de/docs/index.html)(Version 1.7.0)
 
 <img src="https://github.com/hdemma/transit-simulator/blob/master/images/Procedure.png" alt="alt text" width="490" height="400">
 
