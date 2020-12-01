@@ -5,14 +5,14 @@ import os
 import datetime
 
 # testing
-if os.path.exists('E:/SUMO/RUIXIAO/newChattanooganet/Data/BusLines.trips.xml'):
-    os.remove("E:/SUMO/RUIXIAO/newChattanooganet/Data/BusLines.trips.xml")
+if os.path.exists('BusLines.trips.xml'):
+    os.remove("BusLines.trips.xml")
 
 # read from stopsinf
-data = pd.read_excel("E:/SUMO/RUIXIAO/newChattanooganet/Data/stopsinf_CARTA.xlsx",index_col = 'ID')
+data = pd.read_excel("../data/stopsinf_CARTA.xlsx",index_col = 'ID')
 data.index.names = ['stop_id']
 # read from Comprehensive_GTFS.xlsx
-trips = pd.read_excel("E:/SUMO/RUIXIAO/newChattanooganet/Data/Comprehensive_GTFS.xlsx",index_col = 'stop_id')
+trips = pd.read_excel("../data/Comprehensive_GTFS.xlsx",index_col = 'stop_id')
 
 
 trips=trips[trips['departure_time'].map(lambda x: x[0:2]!=24)]
@@ -30,7 +30,7 @@ for tripid, df in trip.items():
     trip[tripid] = df.join(data, how='inner')
 
 #Create BusLines.xml file to write in
-f = open("E:/SUMO/RUIXIAO/newChattanooganet/Data/BusLines.trips.xml", "x")
+f = open("BusLines.trips.xml", "x")
 
 # write first line
 f.write("<routes>\n")
