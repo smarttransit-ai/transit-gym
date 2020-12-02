@@ -13,6 +13,10 @@
         <end value="86400"/>
     </time>
 	
+    <output>
+        <stop-output value="Busstop_output.xml"/>
+    </output>
+	
     <processing>
         <ignore-route-errors value="true"/>
     </processing>
