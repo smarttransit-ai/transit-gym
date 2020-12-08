@@ -6,72 +6,116 @@
 import os
 from textx import metamodel_from_file
 from bs4 import BeautifulSoup
+#from Matching_Func import Matcher
+from Veh_Type_Container import Veh_Types_Container
+from Raw_Data_Generator import Raw_Data_Generator
 
 # initialize model
-metamodel = metamodel_from_file("TransitSimulatorDSL.tx")
-current_model = metamodel.model_from_file('test.ts')
 
 class Simulation(object):
-    def __init__(self):
+    def __init__(self, metamodel_file="TransitSimulatorDSL.tx", data_path="../SUMO_simulation/"):
         self.routeSet = {}
+        self.carSet = {}
+        self.metamodel = metamodel_from_file(metamodel_file)
+        self.data_path = data_path
+        self.veh_type_container = Veh_Types_Container()
+        
     
     # interpret model
-    def interpret(self, model):
-        self.start_time = model.timeStart
-        self.end_time = model.timeEnd
-        self.network = model.networkFile
-        self.additional = model.additionalFile
-        self.output = model.outputFile
-        self.dump = model.dumpFile
-        for route in model.routeSet:
-            vehicles = []
-            # build a list of vehicle for each file
-            if route.how == "INCLUDE":
-                vehicles = ['INCLUDE']
-                for vehicle in route.vehicleSet:
-                    vehicles.append(vehicle.vehicleid)
+    def interpret(self, file_name):
+        model_c = self.metamodel.model_from_file(file_name)
+        raw_generator = Raw_Data_Generator()
+        raw_generator.generate_trip_file_from_GTFS(export_path=self.data_path)
+        
+        for model in model_c.files:
+            self.file_name = model.configName
+            self.start_time = model.timeStart
+            self.end_time = model.timeEnd
+            self.network = model.networkFile
+            self.additional = model.additionalFile
+            self.dump = model.dumpFile
+        
+            for route in model.routeSet:
+                vehicles = []
+                cars = {}
+                # build a list of vehicle for each file
+                if route.how == "INCLUDE":
+                    vehicles = ['INCLUDE']
+                    for vehicle in route.vehicleSet:
+                        vehicles.append(vehicle.vehicleid)
+                        if vehicle.vehicleType:
+                            cars[vehicle.vehicleid] = vehicle.vehicleType
+                            #FIXME
+                        if vehicle.vehicleNewType:
+                            cars[vehicle.vehicleid] = vehicle.vehicleNewType
+                            v = {}
+                            v['id'] = vehicle.vehicleNewType
+                            if vehicle.accel:
+                                v['accel'] = vehicle.accel
+                            if vehicle.decel:
+                                v['decel'] = vehicle.decel
+                            if vehicle.length:
+                                v['length'] = vehicle.length
+                            if vehicle.maxSpeed:
+                                v['maxSpeed'] = vehicle.maxSpeed
+                            if vehicle.capacity:
+                                v['capacity'] = vehicle.capacity
+                            self.veh_type_container.add(v) 
+                
+                elif route.how == 'EXCLUDE':
+                    vehicles = ['EXCLUDE']
+                    for vehicle in route.vehicleSet:
+                        
+                        vehicles.append(vehicle.vehicleid)
+                        
+                else:
+                    vehicles = ['ALL']
+                self.routeSet[route.routeFileName] = vehicles
+                self.carSet[route.routeFileName] = cars
+            self.generateConfig()
             
-            elif route.how == 'EXCLUDE':
-                vehicles = ['EXCLUDE']
-                for vehicle in route.vehicleSet:
-                    vehicles.append(vehicle.vehicleid)
-            else:
-                vehicles = ['ALL']
-            self.routeSet[route.routeFileName] = vehicles
-    
     # generate route files
     def generateRouteFiles(self):
         count = 0
         for file in self.routeSet:
-            infile = open('../SUMO_simulation/' + file, 'r')
+            infile = open(self.data_path + file, 'r')
             contents = infile.read()
             route = BeautifulSoup(contents, 'xml')
             vehlist = self.routeSet[file]
+            cardict = self.carSet[file]
             # include those vehicle if use INCLUDE option
             if vehlist[0] == 'INCLUDE':
                 for vehicle in route.find_all('vehicle'):
-                    if not vehicle['id'] in vehlist:
+                    matched_id = vehicle['id']
+                    if not matched_id in vehlist:
                         vehicle.decompose()
+                    else:
+                        if matched_id in cardict:
+                            vehicle['type'] = cardict[matched_id]
             # exclude those vehicle if use EXCLUDE option
             elif vehlist[0] == 'EXCLUDE':
-                for vehicle in route.routes.vehicle:
-                    if vehicle['id'] in vehlist:
+                for vehicle in route.find_all('vehicle'):
+                    if self.vehicle['id'] in vehlist:
                         vehicle.decompose()
             # do nothing if include ALL option
             xml = route.prettify('utf-8')
-            with open('../SUMO_simulation/DSL_OUTPUT/output_' + str(count) + '.xml', 'wb') as file:
+            with open(self.data_path + self.file_name + '_data_' + str(count) + '.xml', 'wb') as file:
                 file.write(xml)
                 file.close()
             count += 1
         
+        
     
     def generateConfig(self):
         self.generateRouteFiles()
-        if os.path.exists('../SUMO_simulation/' + self.output):
-            os.remove("../SUMO_simulation/" + self.output)
+        vehDef = self.data_path + "vehtype.add.xml"
+        self.veh_type_container.export(vehDef)
+        self.additional = self.additional + "," + "vehtype.add.xml"
+        if os.path.exists(self.data_path + self.file_name + '.sumocfg'):
+            os.remove(self.data_path + self.file_name + '.sumocfg')
         
         # write SUMOCFG file to initialize simulation
-        f = open(self.output, "x")
+        f = open(self.data_path+self.file_name + '.sumocfg', "x")
         f.write('<?xml version="1.0" encoding="UTF-8"?>\n')
         f.write('<configuration xmlns:xsi="http://www.w3.org' +
                 '/2001/XMLSchema-instance" xsi:noNamespaceSchema'+ 
@@ -81,11 +125,11 @@ class Simulation(object):
         count = 0
         files_to_write = ''
         for key in self.routeSet:
-            files_to_write = files_to_write + 'output_' + str(count) + '.xml' + ','
+            files_to_write = files_to_write + self.file_name + '_data_' + str(count) + '.xml' + ','
             count = count + 1
         if len(files_to_write) > 0:
             files_to_write = files_to_write[:-1]
-
+            
         f.write(files_to_write)
         f.write('"/>\n')
         f.write('\t\t<additional-files value="'+ self.additional +'"/>\n')
@@ -99,12 +143,15 @@ class Simulation(object):
         f.write('\t</output>\n\t<gui_only>\n\t\t<gui-settings-file value="gui.view.xml"/>\n')
         f.write('\t</gui_only>\n</configuration>')
         f.close()
-            
+    
+    def generate_Raw_from_GTFS(self):
+        rgt = Raw_Data_Generator()
+        rgt.generate_trip_file_from_GTFS(self.data_path)
+        rgt.generate_busline_trips(self.data_path)
+        
+        
 
 
-test = Simulation()
-test.interpret(current_model)
-test.generateConfig()
                     
             
             

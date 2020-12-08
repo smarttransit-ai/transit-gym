@@ -1,22 +1,32 @@
+
 Program:
 	'begin'
+		files *= FileCommand
+	'end'
+;
+
+FileCommand:
+	'Config' configName = STRING
 		'TimeStart' timeStart = INT
 		'TimeEnd' timeEnd = INT
 		'Network' networkFile = STRING
 		'Additional' additionalFile = STRING
-		'OutputName' outputFile = STRING
 		'DumpName' dumpFile=STRING
 
 		routeSet*=RouteCommand
-	'end'
 ;
 
 RouteCommand:
 	'RouteFileName' routeFileName = STRING
 		how = STRING
-		vehicleSet *= VehicleCommand
+		vehicleSet *= VehicleCommand 
 ;
 
 VehicleCommand:
-	'vehicle' vehicleid=STRING
+	'vehicle' vehicleid=STRING (vehicleType=STRING)?
+	('ntype' vehicleNewType=STRING)? ('accel=' accel=STRING)? ('decel=' decel=STRING)? ('length=' length=STRING)? ('maxSpeed=' maxSpeed=STRING)? ('capacity=' capacity=STRING)? 
+;
+
+Comment:
+  /\/\/.*$/
 ;
