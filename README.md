@@ -4,7 +4,7 @@
 
 <img src="https://github.com/hdemma/transit-simulator/blob/master/images/ChattanoogaSUMO.png" alt="alt text" width="550" height="320">
 
-*Note* The green boxes in above chart indicate the input information.
+*Note:* The green boxes in above chart indicate the input information.
 
 ### Step 1. Correct network
 Using GUI-based tool [NETEDIT](https://sumo.dlr.de/docs/netedit.html) to check the network and add links and junctions which are missing during the conversion from OSM map to SUMO network.
