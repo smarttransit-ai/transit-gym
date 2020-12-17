@@ -1,6 +1,6 @@
 # transit-simulator
 
-## Procedure of transit simulation using [SUMO](https://sumo.dlr.de/docs/index.html)(Version 1.8.0)
+## Procedure of transit simulation using [SUMO](https://sumo.dlr.de/docs/index.html) (Version 1.8.0)
 
 <img src="https://github.com/hdemma/transit-simulator/blob/master/images/ChattanoogaSUMO.png" alt="alt text" width="550" height="320">
 
@@ -37,13 +37,12 @@ Automatically generate codes for bus trip file based on vehicel.xlsx. Here use a
 * Vehicle type additional xml: [vehtype.add.xml](https://github.com/smarttransit-ai/transit-simulator/blob/master/SUMO_simulation/vehtype.add.xml).
 
 ### Step 7. Generate route file for bus and person
-Generate the bus route file which includes detailed edge list for each bus route computed by [duarouter](https://sumo.dlr.de/docs/duarouter.html).
+Use the tool [duarouter](https://sumo.dlr.de/docs/duarouter.html) to generate the route xml file for bus and person which includes detailed edge list for each bus route and detail public transit plan for persons.
 ```
-duarouter --route-files BusLines.trips.xml --net-file Chattanooga_SUMO_Network.net.xml 
---additional-files busStopsCARTA.add.xml,vehtype.add.xml --output-file Bus.rou.xml
+duarouter --route-files BusLines.trips.xml,person_trips.xml --net-file Chattanooga_SUMO_Network.net.xml --unsorted-input 
+--additional-files busStopsCARTA.add.xml,vehtype.add.xml --ptline-routing --output-file busPerson.rou.xml --ignore-errors
 ```
-*Note:* The vehicle type 'bus' needs to be predefined in [the vehicle type additional file](https://github.com/hdemma/transit-simulator/blob/master/SUMO_simulation/vehtype.add.xml) or added in bus trip file before running the above command.
-* Bus route file: [busPerson.rou.xml](https://github.com/hdemma/transit-simulator/blob/master/SUMO_simulation/busPerson.rou.xml).
+* The route file for bus and person: [busPerson.rou.xml](https://github.com/hdemma/transit-simulator/blob/master/SUMO_simulation/busPerson.rou.xml).
 
 ### Step 7. Define edge-based dump additional xml
 Based on revised bus stop position file, recreate stop additional file and bus trip file. 
