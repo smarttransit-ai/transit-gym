@@ -20,14 +20,17 @@ The edge lists in the later route file can supply the clue to check which stop i
 
 ### Step 3. [Create bus stop additional xml](https://github.com/smarttransit-ai/transit-simulator/blob/master/codes/Def_BusStop_file.py)
 Automatically generate codes for bus stop additional file based on stop's positions converted by TraCI.
-* Stop additional file: [busStopsCARTA.add.xml](https://github.com/hdemma/transit-simulator/blob/master/SUMO_simulation/busStopsCARTA.add.xml).
+* Stop additional xml: [busStopsCARTA.add.xml](https://github.com/hdemma/transit-simulator/blob/master/SUMO_simulation/busStopsCARTA.add.xml).
 ### Step 4. [Create bus trip xml](https://github.com/smarttransit-ai/transit-simulator/blob/master/codes/Create_BusTrip_newfile.py)
 Automatically generate codes for bus trip file based on sequential bus stops along each trip in [Comprehensive_GTFS.xlsx](https://github.com/smarttransit-ai/transit-simulator/blob/master/data/Comprehensive_GTFS.xlsx) with correspongding position information.
 *Note:* Comprehensive_GTFS.xlsx is [generated](https://github.com/smarttransit-ai/transit-simulator/blob/master/codes/Match_GTFS.py) from the [GTFS](https://github.com/smarttransit-ai/transit-energy-dashboard/tree/master/app/data/raw/GTFS/gtfs_may_2020)data.
-* Bus trip file: [BusLines.trips.xml](https://github.com/hdemma/transit-simulator/blob/master/SUMO_simulation/BusLines.trips.xml).
+* Bus trip xml: [BusLines.trips.xml](https://github.com/hdemma/transit-simulator/blob/master/SUMO_simulation/BusLines.trips.xml).
 
 ### Step 5. Genarate person trips xml
-
+Use a SUMO tool [od2trips](https://sumo.dlr.de/docs/Demand/Importing_O/D_Matrices.html) to generate the person trips by incorporating [transportation demand (in O format)](https://github.com/smarttransit-ai/transit-simulator/blob/master/SUMO_simulation/OD_person.od) and [taz.xml](https://github.com/smarttransit-ai/transit-simulator/blob/master/SUMO_simulation/taz.xml). The command is shown as below.
+```
+od2trips -d OD_person.od --taz-files taz.xml --prefix person --persontrips --persontrips.modes public -o Person_trips.xml
+```
 
 ### Step 6. Create vehicle type additional xml
 
