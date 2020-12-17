@@ -2,7 +2,7 @@
 
 ## Procedure of transit simulation using [SUMO](https://sumo.dlr.de/docs/index.html)(Version 1.8.0)
 
-<img src="https://github.com/hdemma/transit-simulator/blob/master/images/ChattanoogaSimSUMO.png" alt="alt text" width="490" height="400">
+<img src="https://github.com/hdemma/transit-simulator/blob/master/images/ChattanoogaSimSUMO.png" alt="alt text" width="550" height="400">
 
 The green boxes in above chart indicate the input information.
 
