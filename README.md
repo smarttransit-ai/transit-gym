@@ -1,10 +1,10 @@
 # transit-simulator
 
-## Procedure of transit simulation using [SUMO](https://sumo.dlr.de/docs/index.html)(Version 1.7.0)
+## Procedure of transit simulation using [SUMO](https://sumo.dlr.de/docs/index.html)(Version 1.8.0)
 
-<img src="https://github.com/hdemma/transit-simulator/blob/master/images/Procedure.png" alt="alt text" width="490" height="400">
+<img src="https://github.com/hdemma/transit-simulator/blob/master/images/ChattanoogaSimSUMO.png" alt="alt text" width="490" height="400">
 
-The yellow boxes in above chart is the existing information at the begining.
+The green boxes in above chart indicate the input information.
 
 ### Step 1. Correct network
 Using GUI-based tool [NETEDIT](https://sumo.dlr.de/docs/netedit.html) to check the network and add links and junctions which are missing during the conversion from OSM map to SUMO network.
