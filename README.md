@@ -14,7 +14,7 @@ Using GUI-based tool [NETEDIT](https://sumo.dlr.de/docs/netedit.html) to check t
 * Using [TraCI](https://sumo.dlr.de/docs/TraCI.html) to interact with SUMO
 * Get the position info of stops (including edge ID, lane position and lane index) based on geo coordinates in [GTFS](https://github.com/smarttransit-ai/transit-energy-dashboard/blob/master/app/data/raw/GTFS/gtfs_may_2020/stops.txt).
 
-*Note:* Due to the nature of the automatic process, there would be many stops with incorrect positions converted through TraCI. The stops might be identified on a neighbor link with an opposite direction. For example, a stop should on edge ID '-123', and the lane position is 10, but it may be identified on edge ID '123' without the '-' sign, and the lane position is 90, have 10 distance to the end of the edge. This issue will cause buses to turn around fequently on their route. So it is necessary to find out these incorrect stops and revise them to the correct edge ID and lane position in the [stops position info file](https://github.com/hdemma/transit-simulator/blob/master/data/stopsinf_CARTA.xlsx). 
+*Note:* Due to the nature of the automatic process, there would be many stops with incorrect positions converted through TraCI. The stops might be identified on a neighbor link with an opposite direction. For example, a stop should on edge ID '-123', and the lane position is 10, but it may be identified on edge ID '123' without the '-' sign, and the lane position is 90, have 10 distance to the end of the edge. This issue will cause buses to turn around fequently on their route. So it is necessary to find out these incorrect stops and revise them to the correct edge ID and lane position in the [busstops.xlsx](https://github.com/hdemma/transit-simulator/blob/master/data/busstops.xlsx). 
 
 The edge lists in the later route file can supply the clue to check which stop is set on a wrong position on the route. It generally takes place when there are more than two edges with the same ID numbers but at least one is with “– “sign. 
 
@@ -23,7 +23,7 @@ Automatically generate codes for bus stop additional file based on stop's positi
 
 ### Step 4. [Create bus trip file](https://github.com/smarttransit-ai/transit-simulator/blob/master/codes/Create_BusTrip_newfile.py)
 Automatically generate codes for bus trip file based on [sequential bus stops along each trip in GTFS](https://github.com/smarttransit-ai/transit-simulator/blob/master/data/Comprehensive_GTFS.xlsx) with correspongding position information.
-*Note* Comprehensive_GTFS.xlsx is [generated](https://github.com/smarttransit-ai/transit-simulator/blob/master/codes/Match_GTFS.py) from the [GTFS data](https://github.com/smarttransit-ai/transit-energy-dashboard/tree/master/app/data/raw/GTFS/gtfs_may_2020)
+*Note:* Comprehensive_GTFS.xlsx is [generated](https://github.com/smarttransit-ai/transit-simulator/blob/master/codes/Match_GTFS.py) from the [GTFS data](https://github.com/smarttransit-ai/transit-energy-dashboard/tree/master/app/data/raw/GTFS/gtfs_may_2020)
 
 ### Step 5. Generate bus route file
 Generate the bus route file which includes detailed edge list for each bus route computed by [duarouter](https://sumo.dlr.de/docs/duarouter.html).
