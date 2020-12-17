@@ -53,7 +53,7 @@ To get the edge-based output, a edge-based state dump is defined within an addit
 ```
 Values within this output describe the situation within the network in terms of traffic by giving macroscopic values such as the mean vehicle speed, the mean density(#veh/km), the mean occupancy(%) of edge/lane. For lane-based dump, replace edgeData to laneData.
 
-*Note:* An attribute named freq describe the aggregation period the values the detector collects shall be summed up. If not given the whole time interval from begin to end (see below) is aggregated. For example freq="3600" can be added in the above defination to get a aggregation output values in one hour.
+*Note:* An attribute named *freq* describes the aggregation period the values the detector collects shall be summed up. If not given the whole time interval from begin to end (see below) is aggregated. For example *freq="3600"* can be added in the above defination to get a aggregation output values in one hour.
 
 ### Step 8. Configure and run simulation
 Set up the configuration file with output parameters: [newChatt_addBUS.sumocfg](https://github.com/hdemma/transit-simulator/blob/master/SUMO_simulation/newChatt_addBUS_wMEANoutput.sumocfg).
