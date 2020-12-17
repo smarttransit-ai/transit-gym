@@ -57,7 +57,7 @@ Values within this output describe the situation within the network in terms of 
 
 ### Step 8. Configure and run simulation
 Set up the configuration file with output parameters: [newChatt_addBUS.sumocfg](https://github.com/hdemma/transit-simulator/blob/master/SUMO_simulation/newChatt_addBUS_wMEANoutput.sumocfg).
-The above configuration will generate three output files:
+This configuration will generate three output files:
 * Edge-based output mentioned in step 7.
 * Bus stop output. This output contains the information about each vehicle's scheduled <stop>: time of arrival and departure, stopping place and number of persons that were loaded and unloaded. The information is generated every time a stop ends.
 * Full output which contains informtation about every edge, lane, vehicle and traffic light for each time step
