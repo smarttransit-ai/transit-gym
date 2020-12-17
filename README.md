@@ -56,4 +56,4 @@ SUMO 1.8.0
 
 Python 3.8
 
-Please click the blue texts for detail information.
+*Please click the blue texts for detail information.*
