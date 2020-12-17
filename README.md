@@ -37,7 +37,7 @@ Automatically generate codes for bus trip file based on vehicel.xlsx. Here use a
 * Vehicle type additional xml: [vehtype.add.xml](https://github.com/smarttransit-ai/transit-simulator/blob/master/SUMO_simulation/vehtype.add.xml).
 
 ### Step 7. Generate route file for bus and person
-Use the tool [duarouter](https://sumo.dlr.de/docs/duarouter.html) to generate the route xml file for bus and person which includes detailed edge list for each bus route and detail public transit plan for persons.
+Use the tool [duarouter](https://sumo.dlr.de/docs/duarouter.html) to generate the route xml file for bus and person which includes detailed edge list for each bus route and detailed public transit plan for persons.
 ```
 duarouter --route-files BusLines.trips.xml,person_trips.xml --net-file Chattanooga_SUMO_Network.net.xml --unsorted-input 
 --additional-files busStopsCARTA.add.xml,vehtype.add.xml --ptline-routing --output-file busPerson.rou.xml --ignore-errors
@@ -51,9 +51,11 @@ Based on revised bus stop position file, recreate stop additional file and bus t
 Set up the configuration file: [newChatt_addBUS.sumocfg](https://github.com/hdemma/transit-simulator/blob/master/SUMO_simulation/newChatt_addBUS.sumocfg).
 
 *Note:* [Chattanooga_Daily_Trips.rou.xml](https://vanderbilt365.sharepoint.com/sites/TransitHub/Shared%20Documents/simulation/SUMO_simulation) is in Teams
+
+**Please click the above blue texts for detailed information.
+
 ### Environment
 SUMO 1.8.0
 
 Python 3.8
 
-*Please click the blue texts for detail information.*
