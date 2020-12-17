@@ -18,27 +18,30 @@ Using GUI-based tool [NETEDIT](https://sumo.dlr.de/docs/netedit.html) to check t
 
 The edge lists in the later route file can supply the clue to check which stop is set on a wrong position on the route. It generally takes place when there are more than two edges with the same ID numbers but at least one is with “– “sign. 
 
-### Step 3. [Create bus stop additional file](https://github.com/smarttransit-ai/transit-simulator/blob/master/codes/Def_BusStop_file.py)
+### Step 3. [Create bus stop additional xml](https://github.com/smarttransit-ai/transit-simulator/blob/master/codes/Def_BusStop_file.py)
 Automatically generate codes for bus stop additional file based on stop's positions converted by TraCI.
+* Stop additional file: [busStopsCARTA.add.xml](https://github.com/hdemma/transit-simulator/blob/master/SUMO_simulation/busStopsCARTA.add.xml).
+### Step 4. [Create bus trip xml](https://github.com/smarttransit-ai/transit-simulator/blob/master/codes/Create_BusTrip_newfile.py)
+Automatically generate codes for bus trip file based on sequential bus stops along each trip in [Comprehensive_GTFS.xlsx](https://github.com/smarttransit-ai/transit-simulator/blob/master/data/Comprehensive_GTFS.xlsx) with correspongding position information.
+*Note:* Comprehensive_GTFS.xlsx is [generated](https://github.com/smarttransit-ai/transit-simulator/blob/master/codes/Match_GTFS.py) from the [GTFS](https://github.com/smarttransit-ai/transit-energy-dashboard/tree/master/app/data/raw/GTFS/gtfs_may_2020)data.
+* Bus trip file: [BusLines.trips.xml](https://github.com/hdemma/transit-simulator/blob/master/SUMO_simulation/BusLines.trips.xml).
 
-### Step 4. [Create bus trip file](https://github.com/smarttransit-ai/transit-simulator/blob/master/codes/Create_BusTrip_newfile.py)
-Automatically generate codes for bus trip file based on [sequential bus stops along each trip in GTFS](https://github.com/smarttransit-ai/transit-simulator/blob/master/data/Comprehensive_GTFS.xlsx) with correspongding position information.
-*Note:* Comprehensive_GTFS.xlsx is [generated](https://github.com/smarttransit-ai/transit-simulator/blob/master/codes/Match_GTFS.py) from the [GTFS data](https://github.com/smarttransit-ai/transit-energy-dashboard/tree/master/app/data/raw/GTFS/gtfs_may_2020)
+### Step 5. Genarate person trips xml
 
-### Step 5. Generate bus route file
+
+### Step 6. Create vehicle type additional xml
+
+### Step 7. Generate route file for bus and person
 Generate the bus route file which includes detailed edge list for each bus route computed by [duarouter](https://sumo.dlr.de/docs/duarouter.html).
 ```
 duarouter --route-files BusLines.trips.xml --net-file Chattanooga_SUMO_Network.net.xml 
 --additional-files busStopsCARTA.add.xml,vehtype.add.xml --output-file Bus.rou.xml
 ```
 *Note:* The vehicle type 'bus' needs to be predefined in [the vehicle type additional file](https://github.com/hdemma/transit-simulator/blob/master/SUMO_simulation/vehtype.add.xml) or added in bus trip file before running the above command.
+* Bus route file: [busPerson.rou.xml](https://github.com/hdemma/transit-simulator/blob/master/SUMO_simulation/busPerson.rou.xml).
 
-
-### Step 7. Regenerate route file
-Based on revised bus stop position file, recreate stop additional file and bus trip file. And then get the bus route file in the same way shown in **Step 5**.
-* Stop additional file: [busStopsCARTA.add.xml](https://github.com/hdemma/transit-simulator/blob/master/SUMO_simulation/busStopsCARTA.add.xml).
-* Bus trip file: [BusLines.trips.xml](https://github.com/hdemma/transit-simulator/blob/master/SUMO_simulation/BusLines.trips.xml).
-* Bus route file: [Bus.rou.xml](https://github.com/hdemma/transit-simulator/blob/master/SUMO_simulation/Bus.rou.xml).
+### Step 7. Define edge-based dump additional xml
+Based on revised bus stop position file, recreate stop additional file and bus trip file. 
 
 ### Step 8. Configure and run simulation
 Set up the configuration file: [newChatt_addBUS.sumocfg](https://github.com/hdemma/transit-simulator/blob/master/SUMO_simulation/newChatt_addBUS.sumocfg).
