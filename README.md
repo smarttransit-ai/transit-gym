@@ -45,10 +45,21 @@ duarouter --route-files BusLines.trips.xml,person_trips.xml --net-file Chattanoo
 * The route file for bus and person: [busPerson.rou.xml](https://github.com/hdemma/transit-simulator/blob/master/SUMO_simulation/busPerson.rou.xml).
 
 ### Step 7. Define edge-based dump additional xml
-Based on revised bus stop position file, recreate stop additional file and bus trip file. 
+To get the edge-based output, a edge-based state dump is defined within an additional-file added to the sumo config as following:
+```
+<additional>
+  <edgeData id="edgebased" file="EdgeData.xml" />
+</additional>
+```
+Values within this output describe the situation within the network in terms of traffic by giving macroscopic values such as the mean vehicle speed, the mean density(#veh/km), the mean occupancy(%) of edge/lane. For lane-based dump, replace edgeData to laneData.
+*Note:* An attribute named freq describe the aggregation period the values the detector collects shall be summed up. If not given the whole time interval from begin to end (see below) is aggregated. Ror example freq="3600" can be added in the above defination to get a aggregation output values in one hour.
 
 ### Step 8. Configure and run simulation
-Set up the configuration file: [newChatt_addBUS.sumocfg](https://github.com/hdemma/transit-simulator/blob/master/SUMO_simulation/newChatt_addBUS.sumocfg).
+Set up the configuration file with output parameters: [newChatt_addBUS.sumocfg](https://github.com/hdemma/transit-simulator/blob/master/SUMO_simulation/newChatt_addBUS_wMEANoutput.sumocfg).
+The above configuration will generate three output files:
+* Edge-based output mentioned in step 7.
+* Bus stop output. This output contains the information about each vehicle's scheduled <stop>: time of arrival and departure, stopping place and number of persons that were loaded and unloaded. The information is generated every time a stop ends.
+* Full output which contains informtation about every edge, lane, vehicle and traffic light for each time step
 
 *Note:* [Chattanooga_Daily_Trips.rou.xml](https://vanderbilt365.sharepoint.com/sites/TransitHub/Shared%20Documents/simulation/SUMO_simulation) is in Teams
 
