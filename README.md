@@ -53,4 +53,7 @@ Set up the configuration file: [newChatt_addBUS.sumocfg](https://github.com/hdem
 *Note:* [Chattanooga_Daily_Trips.rou.xml](https://vanderbilt365.sharepoint.com/sites/TransitHub/Shared%20Documents/simulation/SUMO_simulation) is in Teams
 ### Environment
 SUMO 1.8.0
+
 Python 3.8
+
+Please click the blue texts for detail information.
