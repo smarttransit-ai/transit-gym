@@ -1,6 +1,6 @@
 # transit-simulator
 
-## Procedure of transit simulation using [SUMO](https://sumo.dlr.de/docs/index.html) (Version 1.8.0)
+## Procedure of transit simulation using [SUMO](https://sumo.dlr.de/docs/index.html)
 
 <img src="https://github.com/hdemma/transit-simulator/blob/master/images/ChattanoogaSUMO.png" alt="alt text" width="550" height="320">
 
@@ -51,3 +51,6 @@ Based on revised bus stop position file, recreate stop additional file and bus t
 Set up the configuration file: [newChatt_addBUS.sumocfg](https://github.com/hdemma/transit-simulator/blob/master/SUMO_simulation/newChatt_addBUS.sumocfg).
 
 *Note:* [Chattanooga_Daily_Trips.rou.xml](https://vanderbilt365.sharepoint.com/sites/TransitHub/Shared%20Documents/simulation/SUMO_simulation) is in Teams
+### Environment
+SUMO 1.8.0
+Python 3.8
