@@ -56,7 +56,7 @@ Values within this output describe the situation within the network in terms of 
 *Note:* An attribute named *freq* describes the aggregation period the values the detector collects shall be summed up. For example *freq="3600"* can be added in the above defination to get a aggregation output values in one hour.
 
 ### Step 8. Configure and run simulation
-Set up the configuration file with output parameters: [newChatt_addBUS.sumocfg](https://github.com/hdemma/transit-simulator/blob/master/SUMO_simulation/newChatt_addBUS_wMEANoutput.sumocfg).
+Set up the configuration file with output parameters: [newChatt_addBUS_wMEANoutput.sumocfg](https://github.com/hdemma/transit-simulator/blob/master/SUMO_simulation/newChatt_addBUS_wMEANoutput.sumocfg).
 This configuration will generate three output files:
 * Edge-based output mentioned in step 7.
 * Bus stop output. This output contains the information about each vehicle's scheduled <stop>: time of arrival and departure, stopping place and number of persons that were loaded and unloaded. The information is generated every time a stop ends.
