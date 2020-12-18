@@ -32,12 +32,12 @@ Use a SUMO tool [od2trips](https://sumo.dlr.de/docs/Demand/Importing_O/D_Matrice
 od2trips -d OD_person.od --taz-files taz.xml --prefix person --persontrips --persontrips.modes public -o Person_trips.xml
 ```
 **Option:**
--d <FILE> (--od-matrix-files <FILE>)	Loads O/D-files from FILE(s)
---taz-files <FILE>	Loads TAZ (districts; also from networks) from FILE(s)
---prefix <STRING>	Defines the prefix for vehicle/person names
---persontrips <BOOL>	Writes persontrips instead of vehicles; default: false
---persontrips.modes	Add modes attribute to personTrips
--o <FILE> (--output-file <FILE>)	Writes trip definitions into FILE
+-d <FILE> (--od-matrix-files <FILE>)	Loads O/D-files from FILE(s)\
+--taz-files <FILE>	Loads TAZ (districts; also from networks) from FILE(s)\
+--prefix <STRING>	Defines the prefix for vehicle/person names\
+--persontrips <BOOL>	Writes persontrips instead of vehicles; default: false\
+--persontrips.modes	Add modes attribute to personTrips\
+-o <FILE> (--output-file <FILE>)	Writes trip definitions into FILE\
 
 ### Step 6. Create vehicle type additional xml
 Automatically generate codes for bus trip file based on vehicel.xlsx. Here use a [sample](https://github.com/smarttransit-ai/transit-simulator/blob/master/data/BUS_type.xlsx) data ([Def_vehType_file.py](https://github.com/smarttransit-ai/transit-simulator/blob/master/codes/Def_vehType_file.py)).
