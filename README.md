@@ -32,8 +32,8 @@ Use a SUMO tool [od2trips](https://sumo.dlr.de/docs/Demand/Importing_O/D_Matrice
 od2trips -d OD_person.od --taz-files taz.xml --prefix person --persontrips --persontrips.modes public -o Person_trips.xml
 ```
 
-### Step 6. [Create vehicle type additional xml](https://github.com/smarttransit-ai/transit-simulator/blob/master/codes/Def_vehType_file.py)
-Automatically generate codes for bus trip file based on vehicel.xlsx. Here use a [sample](https://github.com/smarttransit-ai/transit-simulator/blob/master/data/BUS_type.xlsx) data.
+### Step 6. Create vehicle type additional xml
+Automatically generate codes for bus trip file based on vehicel.xlsx. Here use a [sample](https://github.com/smarttransit-ai/transit-simulator/blob/master/data/BUS_type.xlsx) data ([Def_vehType_file.py](https://github.com/smarttransit-ai/transit-simulator/blob/master/codes/Def_vehType_file.py)).
 * Vehicle type additional xml: [vehtype.add.xml](https://github.com/smarttransit-ai/transit-simulator/blob/master/SUMO_simulation/vehtype.add.xml).
 
 ### Step 7. Generate route file for bus and person
