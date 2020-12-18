@@ -31,13 +31,13 @@ Use a SUMO tool [od2trips](https://sumo.dlr.de/docs/Demand/Importing_O/D_Matrice
 ```
 od2trips -d OD_person.od --taz-files taz.xml --prefix person --persontrips --persontrips.modes public -o Person_trips.xml
 ```
-**Option:**
+**Option:**\
 -d <FILE> (--od-matrix-files <FILE>)	Loads O/D-files from FILE(s)\
 --taz-files <FILE>	Loads TAZ (districts; also from networks) from FILE(s)\
 --prefix <STRING>	Defines the prefix for vehicle/person names\
 --persontrips <BOOL>	Writes persontrips instead of vehicles; default: false\
 --persontrips.modes	Add modes attribute to personTrips\
--o <FILE> (--output-file <FILE>)	Writes trip definitions into FILE\
+-o <FILE> (--output-file <FILE>)	Writes trip definitions into FILE
 
 ### Step 6. Create vehicle type additional xml
 Automatically generate codes for bus trip file based on vehicel.xlsx. Here use a [sample](https://github.com/smarttransit-ai/transit-simulator/blob/master/data/BUS_type.xlsx) data ([Def_vehType_file.py](https://github.com/smarttransit-ai/transit-simulator/blob/master/codes/Def_vehType_file.py)).
@@ -49,18 +49,18 @@ Use the tool [duarouter](https://sumo.dlr.de/docs/duarouter.html) to generate th
 duarouter --route-files BusLines.trips.xml,person_trips.xml --net-file Chattanooga_SUMO_Network.net.xml --unsorted-input 
 --additional-files busStopsCARTA.add.xml,vehtype.add.xml --ptline-routing --output-file busPerson.rou.xml --ignore-errors
 ```
-**Option:**
---route-files <FILE>	Read sumo routes, alternatives, flows, and trips from FILE(s)
---net-file <FILE>	Use FILE as SUMO-network to route on
---unsorted-input <BOOL>	Assume input is unsorted; default: false
---ptline-routing <BOOL>	Route all public transport input; default: false
---output-file <FILE>	Write generated routes to FILE
+**Option:**\
+--route-files <FILE>	Read sumo routes, alternatives, flows, and trips from FILE(s)\
+--net-file <FILE>	Use FILE as SUMO-network to route on\
+--unsorted-input <BOOL>	Assume input is unsorted; default: false\
+--ptline-routing <BOOL>	Route all public transport input; default: false\
+--output-file <FILE>	Write generated routes to FILE\
 --ignore-errors <BOOL>	Continue if a route could not be build; default: false
   
 * The generated route file for bus and person: [busPerson.rou.xml](https://github.com/hdemma/transit-simulator/blob/master/SUMO_simulation/busPerson.rou.xml).
 
 ### Step 7. Define edge-based dump additional xml
-To get the edge-based output, a edge-based state dump is defined within an additional-file added to the sumo config as following:
+To get the edge-based output, a [edge-based state dump](https://sumo.dlr.de/docs/Simulation/Output/Lane-_or_Edge-based_Traffic_Measures.html) is defined within an additional-file added to the sumo config as following:
 ```
 <additional>
   <edgeData id="<MEASUREMENT_ID>" freq="<FREQUENCY>" file="<OUTPUT_FILE>" />
