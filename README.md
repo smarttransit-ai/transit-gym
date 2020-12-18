@@ -77,7 +77,7 @@ This configuration will generate three output files:
 * Bus stop output. This output contains the information about each vehicle's scheduled <stop>: time of arrival and departure, stopping place and number of persons that were loaded and unloaded. The information is generated every time a stop ends.
 * Full output which contains informtation about every edge, lane, vehicle and traffic light for each time step
 
-*Note:* [Chattanooga_Daily_Trips.rou.xml](https://vanderbilt365.sharepoint.com/sites/TransitHub/Shared%20Documents/simulation/SUMO_simulation) is in Teams
+*Note:* [Chattanooga_Daily_Trips.rou.xml](https://vanderbilt365.sharepoint.com/sites/TransitHub/Shared%20Documents/simulation/SUMO_simulation), which is too large to push here， is put in Teams
 
 **Click the above blue highlight texts for more information.**
 
