@@ -131,7 +131,7 @@ class GTFS_processor:
             os.remove(busstop)
         
         #Read xlsx file from folder named "data"
-        data = pd.read_excel("../data/stopsinf_CARTA.xlsx")
+        data = pd.read_excel("../data/busstops.xlsx")
         
         #Create new columns 'startpos' and 'endpos' in data based on the "lanepos" in "stopsinf_CARTA.xlsx"
         data['startPos'] = round(data["lanepos"] - 5, 2)
