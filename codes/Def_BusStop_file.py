@@ -4,18 +4,18 @@ import pandas as pd
 import os
 
 # for testing
-if os.path.exists('busStopsCARTA.xml'):
-    os.remove("busStopsCARTA.xml")
+if os.path.exists('busStopsCARTA.add.xml'):
+    os.remove("busStopsCARTA.add.xml")
 
 #Read xlsx file from folder named "data"
-data = pd.read_excel("../data/stopsinf_CARTA.xlsx")
+data = pd.read_excel("../data/busstops.xlsx")
 
-#Create new columns 'startpos' and 'endpos' in data based on the "lanepos" in "stopsinf_CARTA.xlsx"
+#Create new columns 'startpos' and 'endpos' in data based on the "lanepos" in "busstops.xlsx"
 data['startPos'] = round(data["lanepos"] - 5, 2)
 data['endPos'] = round(data['startPos'] + 10, 2)
 data['startPos'][data['startPos']<0] = 0
 #Create busStopsCARTA.txt file to write in
-f = open("busStopsCARTA.xml", "x")
+f = open("busStopsCARTA.add.xml", "x")
 #Write the fist line in the .txt file
 f.write("<additional>\n")
 

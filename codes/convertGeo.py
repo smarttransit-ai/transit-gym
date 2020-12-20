@@ -26,4 +26,4 @@ for i in range(len(LAT)):
     edgeinf.append(get_edge(LON[i],LAT[i]))
 # Write to     
 df = pd.DataFrame(edgeinf, columns=['edgeID', 'lanepos', 'laneind'])
-df.to_excel(r'stopsinf_CARTA.xlsx', index = False)
+df.to_excel(r'busstops.xlsx', index = False)
