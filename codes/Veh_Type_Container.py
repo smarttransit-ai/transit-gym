@@ -10,8 +10,8 @@ import os
 
 # helper class for converting buses input
 class Veh_Types_Container:
-    def __init__(self, file_name="../data/BUS_type.xlsx"):
-        self.data = pd.read_excel(file_name)
+    def __init__(self, data_path, file_name):
+        self.data = pd.read_excel(data_path + file_name)
         self.data = self.data.applymap(str).set_index("BusID")
         self.data['guiShape'] = 'bus'
         self.data['minGap'] = '3.00'

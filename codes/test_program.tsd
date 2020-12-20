@@ -1,0 +1,14 @@
+import "Chattanooga"
+import "BUS_type.xlsx"
+import "gtfs.latest"
+
+simulation configuration 1
+{
+	time [0800:0900]
+	schedule weekday
+	vehicleassignment
+	{
+		block 301:"Gillig_101"
+		trip 151733020:"Gillig_103"
+	}
+}
