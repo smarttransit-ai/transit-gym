@@ -22,8 +22,8 @@ class Veh_Types_Container:
                               "personCapacity":"32", "sigma": "0.5"}
     
     # check if vehicle is in
-    def isin(self, vehicleid):
-        return True if vehicleid in self.data else False
+    def isin(self, vehicle_id):
+        return True if vehicle_id in self.data else False
     
     # add a new vehicle
     def add(self, vehicle):

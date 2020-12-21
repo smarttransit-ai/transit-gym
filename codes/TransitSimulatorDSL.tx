@@ -4,7 +4,7 @@ Program:
 ;
 
 ImportCommand:
-	'import ' importName = STRING
+	('import ' importName = STRING)
 ;
 
 SimulationCommand:
@@ -12,6 +12,7 @@ SimulationCommand:
 	'{'
 		'time [' timeStart=INT ':' timeEnd=INT ']'
 		'schedule' schedule = ID
+		('frequency' frequency = INT)?
 		('vehicleassignment'
 		'{'
 			assignments += AssignmentCommand

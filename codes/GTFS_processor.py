@@ -10,6 +10,8 @@ import gtfs_kit as gk
 import pandas as pd
 import os
 import numpy as np
+import sys
+import traci
 
 class GTFS_processor:
     def __init__(self, data_path ,date):
@@ -19,6 +21,7 @@ class GTFS_processor:
         test = stop_times.join(trips, how='left')
         test['tripid'] = test.index
         test.set_index('stop_id', inplace=True)
+        self.stops = pd.read_csv(path + "stops.txt", sep=',')
         self.gtfs_data = test
         #self.parse()
         self.assignment = None
@@ -51,6 +54,29 @@ class GTFS_processor:
             return [2]
         else:
             return [1, 5]
+    
+    # generate intermediate dataframe for busstop information
+    def convert_bus_stop(self, network):
+        LAT = self.stops['stop_lat']
+        LON = self.stops['stop_lon']
+        
+        if 'SUMO_HOME' in os.environ:
+            tools = os.path.join(os.environ['SUMO_HOME'], 'tools')
+            sys.path.append(tools)
+        else:   
+            sys.exit("please declare environment variable 'SUMO_HOME'")
+            raise ValueError('Environment Variable "SUMO HOME" not declared!')
+        # Connect to SUMO  
+        traci.start(["sumo", "-n", network])
+        def get_edge(lon, lat):
+            edgeID, lanePosition, laneIndex = traci.simulation.convertRoad(lon,lat, True)
+            return edgeID, lanePosition, laneIndex
+        edgeinf =[]
+        for i in range(len(LAT)):
+            edgeinf.append(get_edge(LON[i],LAT[i]))
+        # Write to     
+        df = pd.DataFrame(edgeinf, columns=['edgeID', 'lanepos', 'laneind'])
+        return df
         
     
     def export_route_file(self,time_start, time_end, schedule, export_path):
@@ -67,7 +93,7 @@ class GTFS_processor:
             os.remove(busline_trips)
         
         # read from stopsinf
-        data = pd.read_excel("../data/stopsinf_CARTA.xlsx",index_col = 'ID')
+        data = pd.read_excel("../data/busstops.xlsx",index_col = 'ID')
         data.index.names = ['stop_id']
         # read from Comprehensive_GTFS.xlsx
         
@@ -124,7 +150,7 @@ class GTFS_processor:
         f.write("</routes>")
         f.close()
     
-    def export_busstop_file(self, export_path):
+    def export_busstop_file(self, export_path, network):
         # for testing
         busstop = export_path
         if os.path.exists(busstop):
@@ -164,6 +190,8 @@ class GTFS_processor:
     
     def get_trip_id(self, blockid, tripid):
         return 0
+    
+    
     
         
         

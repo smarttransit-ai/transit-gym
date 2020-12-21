@@ -1,11 +1,14 @@
-import "Chattanooga"
-import "BUS_type.xlsx"
+import "network.Chattanooga"
+import "vehicle.BUS_type.xlsx"
 import "gtfs.latest"
+import "td.OD_person.od"
+
 
 simulation configuration 1
 {
 	time [0800:0900]
 	schedule weekday
+	frequency 3600
 	vehicleassignment
 	{
 		block 301:"Gillig_101"
