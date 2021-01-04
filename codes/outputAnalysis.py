@@ -16,7 +16,7 @@ stopO=stopO[["stopinfo_id","stopinfo_busStop","stopinfo_started","stopinfo_arriv
              "stopinfo_lane","stopinfo_pos","stopinfo_parking"]]
 stopO=stopO.sort_values(["stopinfo_id","stopinfo_started"])
 # write final stop output 
-stopO.to_csv("./Data/Output/busstop_info.csv",index=False)
+stopO.to_csv("./output/busstop_info.csv",index=False)
 
 
 # edge based output with mean speed for each hour(3600s)
@@ -26,7 +26,7 @@ edgeO=edgeO[["interval_begin","interval_end","edge_id","edge_speed",
              "edge_occupancy","edge_traveltime",
              "edge_waitingTime","edge_entered"]]
 # UNIT: "edge_speed":m/s, "edge_density":#veh/km, "edge_occupancy":%
-edgeO.to_csv("./Data/Output/edge_info.csv",index=False)
+edgeO.to_csv("./output/edge_info.csv",index=False)
 
 
 # trajectory for all vehicles
@@ -54,7 +54,7 @@ trajectory=dict(tuple(trajectory.groupby('vehicle_ref')))
 #write in csv files, bus name as the file name
 for key, df in trajectory.items():
     bus=key.replace(':','')
-    with open('./Data/Output/' + 'Trajectory_' + bus + '.csv', 'w', newline='') as oFile:
+    with open('./output/' + 'Trajectory_' + bus + '.csv', 'w', newline='') as oFile:
         df.to_csv(oFile, index = False)
     print("Finished writing: " + 'Trajectory_' + bus)
 
