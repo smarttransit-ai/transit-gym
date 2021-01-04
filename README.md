@@ -57,7 +57,7 @@ duarouter --route-files BusLines.trips.xml,person_trips.xml --net-file Chattanoo
 --output-file <FILE>	Write generated routes to FILE\
 --ignore-errors <BOOL>	Continue if a route could not be build; default: false
   
-* The generated route file for bus and person: [busPerson.rou.xml](https://github.com/hdemma/transit-simulator/blob/master/SUMO_simulation/busPerson.rou.xml).
+* The generated route file for bus and person: [bus_withPerson.rou.xml](https://github.com/smarttransit-ai/transit-simulator/blob/master/SUMO_simulation/bus_withPerson.rou.rar).
 
 ### Step 8. Define edge-based dump additional xml
 To get the edge-based output, a [edge-based state dump](https://sumo.dlr.de/docs/Simulation/Output/Lane-_or_Edge-based_Traffic_Measures.html) is defined within an additional-file added to the sumo config as following:
@@ -71,12 +71,11 @@ Values within this output describe the situation within the network in terms of 
 *Note:* An attribute named *freq* describes the aggregation period the values the detector collects shall be summed up. For example *freq="3600"* can be added in the above defination to get an aggregation output values in one hour.
 
 ### Step 9. Configure and run simulation
-Set up the configuration file with output parameters: [newChatt_addBUS_wMEANoutput.sumocfg](https://github.com/hdemma/transit-simulator/blob/master/SUMO_simulation/newChatt_addBUS_wMEANoutput.sumocfg).
+Set up the configuration file with output parameters: [Chattanooga_addBUS_final.sumocfg](https://github.com/smarttransit-ai/transit-simulator/blob/master/SUMO_simulation/Chattanooga_addBUS_final.sumocfg).
 This configuration will generate three output files:
 * Edge-based output mentioned in step 7.
 * Bus stop output. This output contains the information about each vehicle's scheduled <stop>: time of arrival and departure, stopping place and number of persons that were loaded and unloaded. The information is generated every time a stop ends.
-* Full output which contains informtation about every edge, lane, vehicle and traffic light for each time step
-
+* Trajectory output which contains information about type, current speed and acceleration of each vehicle.
 *Note:* [Chattanooga_Daily_Trips.rou.xml](https://vanderbilt365.sharepoint.com/sites/TransitHub/Shared%20Documents/simulation/SUMO_simulation), which is too large to push here, is put in Teams
 
 **Click the above blue highlight texts for more information.**
