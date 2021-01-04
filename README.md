@@ -77,6 +77,9 @@ This configuration will generate three output files:
 * Bus stop output. This output contains the information about each vehicle's scheduled <stop>: time of arrival and departure, stopping place and number of persons that were loaded and unloaded. The information is generated every time a stop ends.
 * Trajectory output which contains information about type, current speed and acceleration of each vehicle.
 *Note:* [Chattanooga_Daily_Trips.rou.xml](https://vanderbilt365.sharepoint.com/sites/TransitHub/Shared%20Documents/simulation/SUMO_simulation), which is too large to push here, is put in Teams
+  
+### Step 10. Process the output files
+[outputAnalysis.py](https://github.com/smarttransit-ai/transit-simulator/blob/master/codes/outputAnalysis.py) is the script to process the three output files: edge-based output, busstop output, and trajectories output. 
 
 **Click the above blue highlight texts for more information.**
 
