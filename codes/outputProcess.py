@@ -34,6 +34,7 @@ motion = pd.read_csv("trajectories_outputmotionState.csv",sep=';',low_memory=Fal
 vehtype = pd.read_csv("trajectories_outputactorConfig.csv",sep=';')
 vehref = pd.read_csv("trajectories_outputvehicle.csv",sep=';')
 
+# extract the output values for buses
 vehref['vehicle_ref'] = vehref['vehicle_ref'].astype('str')
 bus=vehref[vehref['vehicle_ref'].apply(lambda x: len(x)>20)]
 busref=bus[['vehicle_ref','vehicle_id','vehicle_actorConfig']]
