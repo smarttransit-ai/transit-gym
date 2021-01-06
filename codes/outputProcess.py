@@ -39,7 +39,7 @@ vehref['vehicle_ref'] = vehref['vehicle_ref'].astype('str')
 bus=vehref[vehref['vehicle_ref'].apply(lambda x: len(x)>20)]
 busref=bus[['vehicle_ref','vehicle_id','vehicle_actorConfig']]
 busref.rename(columns={'vehicle_actorConfig' : 'actorConfig_id'},inplace = True)
-# join bustype and vehtype by the same column 'actorConfig_id'
+# join busref and vehtype by the same column 'actorConfig_id'
 businfo=pd.merge(busref, vehtype, on='actorConfig_id')
 
 traj=motion.loc[motion.motionState_vehicle.isin(businfo.vehicle_id), ]
