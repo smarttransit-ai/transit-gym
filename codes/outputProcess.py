@@ -2,13 +2,13 @@
 import pandas as pd
 import numpy as np
 
-# convert xml to csv
+## convert xml to csv
 runfile('E:/SUMO/tools/xml/xml2csv.py',wdir='E:/SUMO/tools/xml', args='EdgeData.xml')
 runfile('E:/SUMO/tools/xml/xml2csv.py',wdir='E:/SUMO/tools/xml', args='busstop_output.xml')
 runfile('E:/SUMO/tools/xml/xml2csv.py',wdir='E:/SUMO/tools/xml', args='trajectories_output.xml -p')
 # -p is used to split the output files based on the first level
 
-# bus stop output containing delay and person load information
+## bus stop output containing delay and person load information
 stopO = pd.read_csv("busstop_output.csv",sep=';')
 stopO=stopO[["stopinfo_id","stopinfo_busStop","stopinfo_started","stopinfo_arrivalDelay",
              "stopinfo_ended","stopinfo_delay","stopinfo_initialPersons",
@@ -19,7 +19,7 @@ stopO=stopO.sort_values(["stopinfo_id","stopinfo_started"])
 stopO.to_csv("./output/busstop_info.csv",index=False)
 
 
-# edge based output with mean speed for each hour(3600s)
+## edge based output with mean speed for each hour(3600s)
 edgeO = pd.read_csv("EdgeData.csv",sep=';')
 edgeO=edgeO[["interval_begin","interval_end","edge_id","edge_speed",
              "edge_density","edge_laneDensity","edge_left",
@@ -29,7 +29,7 @@ edgeO=edgeO[["interval_begin","interval_end","edge_id","edge_speed",
 edgeO.to_csv("./output/edge_info.csv",index=False)
 
 
-# trajectory for all vehicles
+## trajectory for all vehicles during the simulation time interval
 motion = pd.read_csv("trajectories_outputmotionState.csv",sep=';',low_memory=False)
 vehtype = pd.read_csv("trajectories_outputactorConfig.csv",sep=';')
 vehref = pd.read_csv("trajectories_outputvehicle.csv",sep=';')
@@ -51,7 +51,7 @@ trajectory=pd.merge(traj, businfo, on='vehicle_id')
 trajectory=trajectory.drop(['vehicle_id'],axis=1)
 #group dataframe into multiple dataframe as a dict by bus name
 trajectory=dict(tuple(trajectory.groupby('vehicle_ref')))
-#write in csv files, bus name as the file name
+#write in csv files, bus trip name as the file name
 for key, df in trajectory.items():
     bus=key.replace(':','')
     with open('./output/' + 'Trajectory_' + bus + '.csv', 'w', newline='') as oFile:
