@@ -4,14 +4,17 @@ import "gtfs.latest"
 import "td.OD_person.od"
 
 
-simulation configuration 1
+simulation configuration 2
 {
 	time [0800:0900]
 	schedule weekday
-	frequency 3600
+	output_sampling_period 3600 
 	vehicleassignment
 	{
-		block 301:"Gillig_101"
 		trip 151733020:"Gillig_103"
 	}
 }
+
+
+
+

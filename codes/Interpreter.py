@@ -12,7 +12,7 @@ from Veh_Type_Container import Veh_Types_Container
 from GTFS_processor import GTFS_processor
 from Transportation_Demand_Processor import TDProcessor
 
-class Simulation(object):
+class Interpreter(object):
     def __init__(self, metamodel_file="TransitSimulatorDSL.tx", data_path="../data/", export_path = "../SUMO_simulation/"):
         self.metamodel = metamodel_from_file(metamodel_file)
         self.data_path = data_path
@@ -23,8 +23,14 @@ class Simulation(object):
         imports = model_c.imports
         data = self.analyze_import(imports)
         simulations = model_c.simulations
+        export_directory = []
         for simulation in simulations:
-            self.analyze_simulation(data, simulation)    
+            export_directory.append(self.analyze_simulation(data, simulation))
+        
+        return export_directory
+            
+        
+        
     
     def analyze_import(self, imports):
         network = None
@@ -55,7 +61,7 @@ class Simulation(object):
     def analyze_simulation(self, data, simulation):
         GTFS, vehicles, network, td = data
         confignum = simulation.configNum
-        time_start = int(simulation.timeStart / 100 * 3600 + simulation.timeStart % 100 * 60)
+        time_start = 0
         time_end = int(simulation.timeEnd / 100 * 3600 + simulation.timeEnd % 100 * 60)
         
         schedule = simulation.schedule 
@@ -78,29 +84,30 @@ class Simulation(object):
         edge_dump_file = None
         if simulation.frequency:
             frequency = simulation.frequency
-            edge_dump_file = 'Simulation_' + str(confignum) + '.edge.dump.add' + '.xml'
+            edge_dump_file = 'edge.dump.add' + '.xml'
             edge_dump_file_full = self.export_path + 'Simulation_' + str(confignum) + '/' + edge_dump_file
             f = open(edge_dump_file_full, "x")
             f.write("<additional>")
-            f.write('\n\t<edgeData id="msmid" freq="'+ str(frequency) + '" file="Simulation_'+ str(confignum) + '_EdgeMean.xml" />')
+            f.write('\n\t<edgeData id="msmid" freq="'+ str(frequency) + '" file="EdgeMean.xml" />')
             f.write('\n</additional>')
             f.close()
             
-        routefile = 'Simulation_' + str(confignum) + '_raw_routefile.xml'
-        final_route_file = 'Simulation_' + str(confignum) + '_final_routefile.xml'
-        busStopfile = 'Simulation_' + str(confignum) + '_stopfile.add.xml'
-        vehiclefile = 'Simulation_' + str(confignum) + '_vehicle.add.xml'
-        dumpfile = 'Simulation_' + str(confignum) + '_dump.xml'
+        routefile = 'raw_routefile.xml'
+        final_route_file = 'final_routefile.xml'
+        busStopfile = 'stopfile.add.xml'
+        vehiclefile = 'vehicle.add.xml'
+        dumpfile = 'trajectories_output.xml'
+        busstopdump = 'busstop_output.xml'
         routefileFull = self.export_path + 'Simulation_' + str(confignum) + '/' + routefile
         busStopfileFull = self.export_path + 'Simulation_' + str(confignum) + '/' + busStopfile
         vehiclefileFull = self.export_path + 'Simulation_' + str(confignum) + '/' + vehiclefile
-        configfileFull = self.export_path + 'Simulation_' + str(confignum) + '/Simulation_' + str(confignum) + '_config' + '.sumocfg'
+        configfileFull = self.export_path + 'Simulation_' + str(confignum) + '/' + 'config' + '.sumocfg'
         
         final_route_file_full = self.export_path + 'Simulation_' + str(confignum) + '/' + final_route_file
         GTFS.export_route_file(time_start, time_end, schedule, routefileFull)
         GTFS.export_busstop_file(busStopfileFull, network)
         vehicles.export(vehiclefileFull)
-        td.merge_route_file(routefileFull, vehiclefileFull, busStopfileFull, network, final_route_file_full)
+        td.merge_route_file(routefileFull, vehiclefileFull, busStopfileFull, network, final_route_file_full, time_end)
         
         
         # generate config file
@@ -115,22 +122,26 @@ class Simulation(object):
         f.write('\t<input>\n\t\t<net-file value="'+ '../' + network + '"/>\n')
         f.write('\t\t<route-files value="')
         f.write(final_route_file)
+        f.write(', ../../data/Chattanooga_Daily_Trips.rou.xml')
         f.write('"/>\n')
         if edge_dump_file:
-            f.write('\t\t<additional-files value="'+ busStopfile + ',' + vehiclefile + ',' + edge_dump_file + '"/>\n')
+            f.write('\t\t<additional-files value="'+ busStopfile + ',' + edge_dump_file + '"/>\n')
         else:
-            f.write('\t\t<additional-files value="'+ busStopfile + ',' + vehiclefile+ '"/>\n')
+            f.write('\t\t<additional-files value="'+ busStopfile + '"/>\n')
         f.write('\t</input>\n')
         f.write('\t<time>\n\t\t<begin value="' + str(time_start) + '"/>\n')
         f.write('\t\t<end value="'+ str(time_end) + '"/>\n')
-        f.write('\t\t<time-to-teleport value="150" />\n\t</time>\n')
+        f.write('\t</time>\n')
         f.write('\t<processing>\n\t\t<ignore-route-errors value="true"/>\n'+
                 '\t</processing>\n')
-        f.write('\t<output>\n\t\t<netstate-dump value="' + dumpfile + '"/>\n')
+        f.write('\t<output>\n\t\t<stop-output value="'+ busstopdump + '"/>\n') #FIXME
+        f.write('\t\t<amitran-output value="' + dumpfile + '"/>\n')
         f.write('\t</output>\n\t<gui_only>\n\t\t<gui-settings-file value="../' + self.data_path + 'gui.view.xml"/>\n')
+        f.write('\t<report>\n\t\t<no-warnings value="true"/>\n\t\t<error-log value="error_warning_log.xml"/>\n\t</report>\n')
         f.write('\t</gui_only>\n</configuration>')
         f.close()
-        
+        print('Please find configured simulation file at: ' + self.export_path + 'Simulation_' + str(confignum))
+        return self.export_path + 'Simulation_' + str(confignum) + '/'
         
         
         

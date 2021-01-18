@@ -13,7 +13,7 @@ class TDProcessor:
         self.td_path = data_path + td_path
         self.data_path = data_path
     
-    def merge_route_file(self, routefileFull, vehiclefileFull, busStopfileFull, network, final_route_file_full):
+    def merge_route_file(self, routefileFull, vehiclefileFull, busStopfileFull, network, final_route_file_full, time_end):
         # errorcode = subprocess.call('od2trips -d '+ self.td_path +
         #           ' --taz-files "'+ self.data_path + 'taz.xml" --prefix person --persontrips --persontrips.modes public -o "' + 
         #           'Person_trips.xml"', shell=True)
@@ -29,13 +29,12 @@ class TDProcessor:
         command = 'duarouter --route-files "'+ routefileFull + ', ' + \
             'Person_trips.xml" --net-file "' + network + '" --unsorted-input --additional-files "'+ \
                 busStopfileFull + ', ' + vehiclefileFull + '" --ptline-routing --output-file "' + \
-                    final_route_file_full + '" --ignore-errors'
-        print(command)
+                    final_route_file_full + '" --ignore-errors --no-warnings -b 0 -e ' + str(time_end)
         errorcode = subprocess.call(command, shell=True)
         
         
-        if errorcode:
-            raise RuntimeError("generation of final route file failed with exit code:", errorcode)
+        # if errorcode:
+        #     raise RuntimeError("generation of final route file failed with exit code:", errorcode)
         
         
         

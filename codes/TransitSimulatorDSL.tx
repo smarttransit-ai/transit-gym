@@ -12,7 +12,7 @@ SimulationCommand:
 	'{'
 		'time [' timeStart=INT ':' timeEnd=INT ']'
 		'schedule' schedule = ID
-		('frequency' frequency = INT)?
+		('output_sampling_period' frequency = INT)?
 		('vehicleassignment'
 		'{'
 			assignments += AssignmentCommand
