@@ -16,30 +16,39 @@ class Output_Processor:
         
 
         ## convert xml to csv
-        xml2csv.main(result_path + 'EdgeData.xml')
-        xml2csv.main(result_path + 'busstop_output.xml')
-        xml2csv.main(result_path + 'trajectories_output.xml -p')
+        xml2csv.main([result_path + 'EdgeMean.xml'])
+        xml2csv.main([result_path + 'busstop_output.xml'])
+        xml2csv.main([result_path + 'trajectories_output.xml', '-p'])
         # -p is used to split the output files based on the first level
         
         ## bus stop output containing delay and person load information
-        stopO = pd.read_csv(result_path + "busstop_output.csv",sep=';')
-        stopO=stopO[["stopinfo_id","stopinfo_busStop","stopinfo_started","stopinfo_arrivalDelay",
-                     "stopinfo_ended","stopinfo_delay","stopinfo_initialPersons",
-                     "stopinfo_loadedPersons","stopinfo_unloadedPersons",
-                     "stopinfo_lane","stopinfo_pos","stopinfo_parking"]]
-        stopO=stopO.sort_values(["stopinfo_id","stopinfo_started"])
-        # write final stop output 
-        stopO.to_csv(result_path + "output/busstop_info.csv",index=False)
+        try:
+            stopO = pd.read_csv(result_path + "busstop_output.csv",sep=';')
+            if not stopO.empty:
+                stopO=stopO[["stopinfo_id","stopinfo_busStop","stopinfo_started","stopinfo_arrivalDelay",
+                             "stopinfo_ended","stopinfo_delay","stopinfo_initialPersons",
+                             "stopinfo_loadedPersons","stopinfo_unloadedPersons",
+                             "stopinfo_lane","stopinfo_pos","stopinfo_parking"]]
+                stopO=stopO.sort_values(["stopinfo_id","stopinfo_started"])
+                # write final stop output 
+                stopO.to_csv(result_path + "busstop_info.csv",index=False)
+            else:
+                print('busstop output is empty')
+        except pd.errors.EmptyDataError:
+            print("busstop output is empty")
         
         
         ## edge based output with mean speed for each hour(3600s)
-        edgeO = pd.read_csv(result_path + "EdgeData.csv",sep=';')
-        edgeO=edgeO[["interval_begin","interval_end","edge_id","edge_speed",
-                     "edge_density","edge_laneDensity","edge_left",
-                     "edge_occupancy","edge_traveltime",
-                     "edge_waitingTime","edge_entered"]]
-        # UNIT: "edge_speed":m/s, "edge_density":#veh/km, "edge_occupancy":%
-        edgeO.to_csv(result_path + "output/edge_info.csv",index=False)
+        edgeO = pd.read_csv(result_path + "EdgeMean.csv",sep=';')
+        if not edgeO.empty:
+            edgeO=edgeO[["interval_begin","interval_end","edge_id","edge_speed",
+                         "edge_density","edge_laneDensity","edge_left",
+                         "edge_occupancy","edge_traveltime",
+                         "edge_waitingTime","edge_entered"]]
+            # UNIT: "edge_speed":m/s, "edge_density":#veh/km, "edge_occupancy":%
+            edgeO.to_csv(result_path + "edge_info.csv",index=False)
+        else:
+            print('EdgeDump output is empty')
         
         
         ## trajectory for all vehicles during the simulation time interval
@@ -68,7 +77,7 @@ class Output_Processor:
         #write in csv files, bus trip name as the file name
         for key, df in trajectory.items():
             bus=key.replace(':','')
-            with open(result_path + 'output/' + 'Trajectory_' + bus + '.csv', 'w', newline='') as oFile:
+            with open(result_path + '' + 'Trajectory_' + bus + '.csv', 'w', newline='') as oFile:
                 df.to_csv(oFile, index = False)
             print("Finished writing: " + 'Trajectory_' + bus)
                 

@@ -5,9 +5,10 @@ Created on Tue Dec 15 20:21:58 2020
 
 @author: danielgui
 """
-from Interpreter import Simulation
+from Simulation import Simulation
+
 
 sim = Simulation()
-sim.interpret('test_program.tsd')
+sim.run('test_program.tsd')
 
 
