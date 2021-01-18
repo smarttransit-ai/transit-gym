@@ -40,7 +40,8 @@ for tripid, df in trip.items():
     df['stop_id'] = df.index
     # add one element as bus type           
     tripid=tripid+(random.randint(101,105),) 
-    f.write('\t<trip id="trip'+str(tripid[1])+"_"+str(tripid[4])+'" line="Route'+str(tripid[2])+
+    f.write('\t<trip id="Route'+str(tripid[2])+"_trip"+str(tripid[1])+
+            "_"+str(tripid[4])+'" line="Route'+str(tripid[2])+
             "_"+tripid[3]+"_block"+str(tripid[5])+"_trip"+str(tripid[1])+'" type="Gillig_'
             +str(tripid[6])+'" depart="' + str(tripid[0]) + 
             '" color="1,1,0" departPos="stop">\n')

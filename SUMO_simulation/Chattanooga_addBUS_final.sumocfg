@@ -24,7 +24,7 @@
 	
 	<report>
 	    <no-warnings value="true"/>
-		<error-log value="error_warning_log.xml"/>
+		<error-log value="error_warning_log.txt"/>
 	</report>
 	
 	<gui_only>

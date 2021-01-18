@@ -79,7 +79,7 @@ This configuration will generate three output files:
 *Note:* [Chattanooga_Daily_Trips.rou.xml](https://vanderbilt365.sharepoint.com/sites/TransitHub/Shared%20Documents/simulation/SUMO_simulation), which is too large to push here, is put in Teams
   
 ### Step 10. Process the output files
-[outputAnalysis.py](https://github.com/smarttransit-ai/transit-simulator/blob/master/codes/outputAnalysis.py) is the script for processing the three output files: edge-based output, busstop output, and trajectories output. 
+[outputProcess.py](https://github.com/smarttransit-ai/transit-simulator/blob/master/codes/outputProcess.py) is the script for processing the three output files: edge-based output, busstop output, and trajectories output. 
 
 **Click the above blue highlight texts for more information.**
 
