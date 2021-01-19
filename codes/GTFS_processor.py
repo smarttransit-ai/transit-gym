@@ -168,7 +168,7 @@ class GTFS_processor:
         
         #Create new columns 'startpos' and 'endpos' in data based on the "lanepos" in "stopsinf_CARTA.xlsx"
         data['startPos'] = round(data["lanepos"] - 5, 2)
-        data['endPos'] = round(data['startPos'] + 10, 2)
+        data['endPos'] = round(data['startPos'] + 5, 2)
         data['startPos'][data['startPos']<0] = 0
         #Create busStopsCARTA.txt file to write in
         f = open(busstop, "x")
