@@ -1,0 +1,2 @@
+feed_publisher_name,feed_publisher_url,feed_lang,feed_start_date,feed_end_date,feed_version
+CARTA,http://www.gocarta.org,EN,20200413,20200816,S1000028

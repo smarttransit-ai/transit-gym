@@ -9,6 +9,6 @@ from Simulation import Simulation
 
 
 sim = Simulation()
-sim.run('test_program.tsd')
+sim.run('test_program.txt')
 
 
