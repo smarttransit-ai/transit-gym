@@ -76,7 +76,6 @@ class Output_Processor:
         trajectory=trajectory.drop(['vehicle_id'],axis=1)
         #group dataframe into multiple dataframe as a dict by bus name
         trajectory=dict(tuple(trajectory.groupby('vehicle_ref')))
-        print(trajectory)
         #write in csv files, bus trip name as the file name
         for key, df in trajectory.items():
             bus=key.replace(':','')
