@@ -8,6 +8,7 @@ Created on Mon Jan 18 18:29:04 2021
 import pandas as pd
 import numpy as np
 import xml2csv
+import os
 class Output_Processor:
     def __init__(self):
         pass
@@ -19,6 +20,7 @@ class Output_Processor:
         xml2csv.main([result_path + 'EdgeMean.xml'])
         xml2csv.main([result_path + 'busstop_output.xml'])
         xml2csv.main([result_path + 'trajectories_output.xml', '-p'])
+        os.makedirs(result_path + 'output/')
         # -p is used to split the output files based on the first level
         
         ## bus stop output containing delay and person load information
@@ -31,7 +33,7 @@ class Output_Processor:
                              "stopinfo_lane","stopinfo_pos","stopinfo_parking"]]
                 stopO=stopO.sort_values(["stopinfo_id","stopinfo_started"])
                 # write final stop output 
-                stopO.to_csv(result_path + "busstop_info.csv",index=False)
+                stopO.to_csv(result_path + "output/busstop_info.csv",index=False)
             else:
                 print('busstop output is empty')
         except pd.errors.EmptyDataError:
@@ -46,7 +48,7 @@ class Output_Processor:
                          "edge_occupancy","edge_traveltime",
                          "edge_waitingTime","edge_entered"]]
             # UNIT: "edge_speed":m/s, "edge_density":#veh/km, "edge_occupancy":%
-            edgeO.to_csv(result_path + "edge_info.csv",index=False)
+            edgeO.to_csv(result_path + "output/edge_info.csv",index=False)
         else:
             print('EdgeDump output is empty')
         
@@ -74,10 +76,11 @@ class Output_Processor:
         trajectory=trajectory.drop(['vehicle_id'],axis=1)
         #group dataframe into multiple dataframe as a dict by bus name
         trajectory=dict(tuple(trajectory.groupby('vehicle_ref')))
+        print(trajectory)
         #write in csv files, bus trip name as the file name
         for key, df in trajectory.items():
             bus=key.replace(':','')
-            with open(result_path + '' + 'Trajectory_' + bus + '.csv', 'w', newline='') as oFile:
+            with open(result_path + '' + 'output/Trajectory_' + bus + '.csv', 'w', newline='') as oFile:
                 df.to_csv(oFile, index = False)
             print("Finished writing: " + 'Trajectory_' + bus)
                 

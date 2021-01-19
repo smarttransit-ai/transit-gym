@@ -25,7 +25,7 @@ class GTFS_processor:
         self.gtfs_data = test
         #self.parse()
         self.assignment = None
-        #self.schedule_def = pd.read_csv(path + "calendar.txt", sep=',', index_col = "trip_id")
+        self.schedule_def = pd.read_csv(path + "calendar.txt", sep=',')
     
     def parse(self):
         self.gtfs_data['arrival_time'] = self.gtfs_data['arrival_time'].astype(str)
@@ -50,10 +50,17 @@ class GTFS_processor:
         self.assignment = [tripid, blockid]
     
     def parse_schedule(self, schedule): #FIXME
+        df = self.schedule_def
+        schedule = []
         if schedule == 'weekday':
-            return [2]
+            for index, row in df.iterrows():
+                if row['monday'] == 1 and row['tuesday'] == 1 and row['wednesday'] == 1 and row['thursday'] == 1 and row['friday'] == 1:
+                    schedule.append(row['service_id'])
         else:
-            return [1, 5]
+            for index, row in df.iterrows():
+                if row['saturday'] == 1 or row['sunday'] == 1:
+                    schedule.append(row['service_id'])
+        return schedule
     
     # generate intermediate dataframe for busstop information
     def convert_bus_stop(self, network):

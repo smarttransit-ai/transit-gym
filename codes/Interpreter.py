@@ -26,10 +26,7 @@ class Interpreter(object):
         export_directory = []
         for simulation in simulations:
             export_directory.append(self.analyze_simulation(data, simulation))
-        
         return export_directory
-            
-        
         
     
     def analyze_import(self, imports):
@@ -140,7 +137,7 @@ class Interpreter(object):
         f.write('\t<report>\n\t\t<no-warnings value="true"/>\n\t\t<error-log value="error_warning_log.xml"/>\n\t</report>\n')
         f.write('\t</gui_only>\n</configuration>')
         f.close()
-        print('Please find configured simulation file at: ' + self.export_path + 'Simulation_' + str(confignum))
+        print('\nConfig File Saved. Please find configured simulation file at: ' + self.export_path + 'Simulation_' + str(confignum) + '\n')
         return self.export_path + 'Simulation_' + str(confignum) + '/'
         
         
