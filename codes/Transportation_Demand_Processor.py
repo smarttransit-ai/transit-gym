@@ -6,6 +6,7 @@
 @author: danielgui
 """
 import subprocess
+import os
 
 class TDProcessor:
     def __init__(self, td_path, data_path):
@@ -13,11 +14,14 @@ class TDProcessor:
         self.data_path = data_path
     
     def merge_route_file(self, routefileFull, vehiclefileFull, busStopfileFull, network, final_route_file_full, time_end):
+        if not os.path.exists(self.td_path):
+            raise ValueError("Missing transportation demand file", self.td_path)
+        if not os.path.exists(self.data_path + "taz.xml"):
+            raise ValueError("Missing transportation demand file: ", self.data_path + "taz.xml")
         errorcode = subprocess.call('od2trips -d '+ self.td_path +
                   ' --taz-files "'+ self.data_path + 'taz.xml" --prefix person --persontrips --persontrips.modes public -o "' + 
                   'Person_trips.xml"', shell=True)
-        if errorcode:
-            raise RuntimeError("generation of Person_trips command failed with exit code:", errorcode)
+        
         
         command = 'duarouter --route-files "'+ routefileFull + ', ' + \
             'Person_trips.xml" --net-file "' + network + '" --unsorted-input --additional-files "'+ \
