@@ -29,7 +29,7 @@ Automatically generate codes for bus trip file based on sequential bus stops alo
 ### Step 5. Genarate person trips xml
 Use a SUMO tool [od2trips](https://sumo.dlr.de/docs/Demand/Importing_O/D_Matrices.html) to generate the person trips by incorporating [transportation demand (in O format)](https://github.com/smarttransit-ai/transit-simulator/blob/master/SUMO_simulation/OD_person.od) and [taz.xml](https://github.com/smarttransit-ai/transit-simulator/blob/master/SUMO_simulation/taz.xml). The command is shown as below.
 ```
-od2trips -d OD_person.od --taz-files taz.xml --prefix person --persontrips --persontrips.modes public -o Person_trips.xml
+od2trips -d OD_person.od --taz-files taz.xml --prefix person --persontrips --persontrips.modes public -o Person_trips.xml --timeline 16860:0.05,21600:0.25,32400:0.2,54000:0.25,64800:0.2,86400:0
 ```
 **Option:**\
 -d <FILE> (--od-matrix-files <FILE>)	Loads O/D-files from FILE(s)\
@@ -86,5 +86,5 @@ This configuration will generate three output files:
 ### Environment
 SUMO 1.8.0
 
-Python 3.8
+Python 3.7
 
