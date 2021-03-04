@@ -6,7 +6,6 @@ Created on Sat Dec 12 14:58:34 2020
 @author: danielgui
 """
 
-import gtfs_kit as gk
 import pandas as pd
 import os
 import numpy as np

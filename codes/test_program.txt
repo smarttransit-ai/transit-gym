@@ -6,7 +6,7 @@ import "td.OD_person.od"
 
 simulation configuration 3
 {
-	time [0800:0900]
+	time [0000:0030]
 	schedule weekday
 	output_sampling_period 3600 
 	vehicleassignment
