@@ -112,7 +112,7 @@ class Output_Processor:
         def write_file(grp):
             pc = grp["vehicle_ref"].unique()[0]
             pc = pc.replace(':','')
-            grp.to_csv(f"./outtest/"+ 'Trajectory_' + pc + ".csv",
+            grp.to_csv(f"./output/"+ 'Trajectory_' + pc + ".csv",
                             header=False,
                             index=False)
             return None
