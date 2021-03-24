@@ -14,7 +14,8 @@ import traci
 
 class GTFS_processor:
     def __init__(self, data_path ,date):
-        path = data_path + self.get_path(date) + '/'
+        path = data_path + 'GTFS/' + self.get_path(date) + '/'
+        self.stop_path = data_path + 'models/bus-stop/' 
         stop_times = pd.read_csv(path + "stop_times.txt", sep=',', index_col = "trip_id")
         trips = pd.read_csv(path + 'trips.txt', sep=',', index_col = 'trip_id')
         test = stop_times.join(trips, how='left')
@@ -99,7 +100,7 @@ class GTFS_processor:
             os.remove(busline_trips)
         
         # read from stopsinf
-        data = pd.read_excel("../data/busstops.xlsx",index_col = 'ID')
+        data = pd.read_excel(self.stop_path + "busstops.xlsx",index_col = 'ID') #FIXME
         data.index.names = ['stop_id']
         # read from Comprehensive_GTFS.xlsx
         
@@ -163,7 +164,7 @@ class GTFS_processor:
             os.remove(busstop)
         
         #Read xlsx file from folder named "data"
-        data = pd.read_excel("../data/busstops.xlsx")
+        data = pd.read_excel(self.stop_path + "busstops.xlsx")
         
         #Create new columns 'startpos' and 'endpos' in data based on the "lanepos" in "stopsinf_CARTA.xlsx"
         data['startPos'] = round(data["lanepos"] - 5, 2)

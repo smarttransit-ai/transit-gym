@@ -13,7 +13,7 @@ from GTFS_processor import GTFS_processor
 from Transportation_Demand_Processor import TDProcessor
 
 class Interpreter(object):
-    def __init__(self, metamodel_file="TransitSimulatorDSL.tx", data_path="../data/", export_path = "../SUMO_simulation/"):
+    def __init__(self, metamodel_file="TransitSimulatorDSL.tx", data_path="./network/", export_path = "./"):
         self.metamodel = metamodel_from_file(metamodel_file)
         self.data_path = data_path
         self.export_path = export_path
@@ -75,7 +75,7 @@ class Interpreter(object):
                     tripid[assignment.tripid] = assignment.vehicleid
                     
         GTFS.assign_vehicle(tripid, blockid)
-        shutil.rmtree(self.export_path + 'Simulation_' + str(confignum), ignore_errors=True) #FIXME
+        #FIXME shutil.rmtree(self.export_path + 'Simulation_' + str(confignum), ignore_errors=True) #FIXME
         os.makedirs(self.export_path + 'Simulation_' + str(confignum) + '/')
         # if configured frequency
         edge_dump_file = None
@@ -116,10 +116,10 @@ class Interpreter(object):
         f.write('<configuration xmlns:xsi="http://www.w3.org' +
                 '/2001/XMLSchema-instance" xsi:noNamespaceSchema'+ 
                 'Location="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">\n')
-        f.write('\t<input>\n\t\t<net-file value="'+ '../' + network + '"/>\n')
+        f.write('\t<input>\n\t\t<net-file value="' + network + '"/>\n')
         f.write('\t\t<route-files value="')
         f.write(final_route_file)
-        f.write(', ../../data/Chattanooga_Daily_Trips.rou.xml')
+        f.write(', ' + self.data_path + 'models/routes/Chattanooga_Daily_Trips.rou.xml') #FIXME
         f.write('"/>\n')
         if edge_dump_file:
             f.write('\t\t<additional-files value="'+ busStopfile + ',' + edge_dump_file + '"/>\n')
@@ -133,7 +133,7 @@ class Interpreter(object):
                 '\t</processing>\n')
         f.write('\t<output>\n\t\t<stop-output value="'+ busstopdump + '"/>\n') #FIXME
         f.write('\t\t<amitran-output value="' + dumpfile + '"/>\n')
-        f.write('\t</output>\n\t<gui_only>\n\t\t<gui-settings-file value="../' + self.data_path + 'gui.view.xml"/>\n')
+        f.write('\t</output>\n\t<gui_only>\n\t\t<gui-settings-file value="../' + self.data_path + 'models/gui/gui.view.xml"/>\n')
         f.write('\t<report>\n\t\t<no-warnings value="true"/>\n\t\t<error-log value="error_warning_log.xml"/>\n\t</report>\n')
         f.write('\t</gui_only>\n</configuration>')
         f.close()
