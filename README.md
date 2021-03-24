@@ -2,7 +2,7 @@
 
 ## Procedure of transit simulation using [SUMO](https://sumo.dlr.de/docs/index.html)
 
-<img src="https://github.com/hdemma/transit-simulator/blob/master/images/ChattanoogaSUMO.png" alt="alt text" width="550" height="320">
+<img src="https://github.com/hdemma/transit-simulator/blob/master/legacy files/images/ChattanoogaSUMO.png" alt="alt text" width="550" height="320">
 
 *Note:* The green boxes in the above diagram indicate the input information.
 
@@ -56,7 +56,7 @@ duarouter --route-files BusLines.trips.xml,person_trips.xml --net-file Chattanoo
 --ptline-routing <BOOL>	Route all public transport input; default: false\
 --output-file <FILE>	Write generated routes to FILE\
 --ignore-errors <BOOL>	Continue if a route could not be build; default: false
-  
+
 * The generated route file for bus and person: [bus_withPerson.rou.xml](https://github.com/smarttransit-ai/transit-simulator/blob/master/SUMO_simulation/bus_withPerson.rou.rar).
 
 ### Step 8. Define edge-based dump additional xml
