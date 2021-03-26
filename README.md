@@ -46,7 +46,7 @@ Automatically generate codes for bus trip file based on vehicel.xlsx. Here use a
 ### Step 7. Generate route file for bus and person
 Use the tool [duarouter](https://sumo.dlr.de/docs/duarouter.html) to generate the route xml file for bus and person which includes detailed edge list for each bus route and detailed public transit plan for persons.
 ```
-duarouter --route-files BusLines.trips.xml,person_trips.xml --net-file Chattanooga_SUMO_Network.net.xml --unsorted-input 
+duarouter --route-files BusLines.trips.xml,Person_trips.xml --net-file Chattanooga_SUMO_Network.net.xml --unsorted-input 
 --additional-files busStopsCARTA.add.xml,vehtype.add.xml --ptline-routing --output-file bus_withPerson.rou.xml --ignore-errors
 ```
 **Option:**\
