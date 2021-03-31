@@ -1,16 +1,47 @@
 # transit-simulator
 
-## Procedure of transit simulation using [SUMO](https://sumo.dlr.de/docs/index.html)
+## Part 1. Guide to transsim simulator
+
+### Step 1. Install package
+
+In the directory src, create a python venv (or use install for all environments). Use the command "***pip install .***" to install the package into your environment. Note the version of python on your machine should be greater than 3.6 for dependencies to work.
+
+### Step 2. Install SUMO
+
+If you have not already done so, go to "https://sumo.dlr.de/docs/Installing/index.html" to install SUMO on your machine. Please install the latest version instead of the regular distribution.
+
+### Step 3. Prepare files
+
+Prepare the required files in a same file structure as shown in the files folder. The required files in the apporipriate folders are:
+
+* /network/ - The network files.
+* /taz/ - The taz.xml for transportation demand.
+* /bus-stop/ - Configured bus stop excel file. Format should be same as example.
+* /gtfs/ - Apporpriate GTFS files.
+* /gui/ - gui.view.xml for sumo config.
+* /travel-demand/ -.od file for transportation demand.
+* /vehicle-types/ - Apporpriate excel file for vehicle stats.
+* /routes/ - Routes to be included in the simulation if needed. (Optional)
+
+### Step 4. Start Simulation
+
+As shown in driver.py, you can now use the package it to interpret your transsim program. Use run() to start the simulation. The result will be available in the running directory after it completes.
+
+## Part 2. The manual Procedure of transit simulation using [SUMO](https://sumo.dlr.de/docs/index.html)
+
+The automated manual process is shown below.
 
 <img src="https://github.com/hdemma/transit-simulator/blob/master/legacy files/images/ChattanoogaSUMO.png" alt="alt text" width="550" height="320">
 
 *Note:* The green boxes in the above diagram indicate the input information.
 
 ### Step 1. Correct network
+
 Using GUI-based tool [NETEDIT](https://sumo.dlr.de/docs/netedit.html) to check the network and add links and junctions which are missing during the conversion from OSM map to SUMO network.
 * The corrected network: [Chattanooga_SUMO_Network.net.xml](https://github.com/hdemma/transit-simulator/tree/master/SUMO_simulation/Chattanooga_SUMO_Network.net.zip)
 
 ### Step 2. Find bus stops' positions on network 
+
 * Using [TraCI](https://sumo.dlr.de/docs/TraCI.html) to interact with SUMO ([convertGeo.py](https://github.com/smarttransit-ai/transit-simulator/blob/master/codes/convertGeo.py)).
 * Get the position info of stops (including edge ID, lane position and lane index) based on geo coordinates in [GTFS](https://github.com/smarttransit-ai/transit-energy-dashboard/blob/master/app/data/raw/GTFS/gtfs_may_2020/stops.txt).
 
