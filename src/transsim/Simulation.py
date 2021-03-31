@@ -25,7 +25,7 @@ class Simulation:
     
     def run(self, file_name):
         if not file_name.endswith('.transsim'):
-            print('Wrong extension of program')
+            raise ValueError('Wrong extension of program')
         print('Starting Interpretion...\n')
         result = self.interpreter.interpret(file_name)
         #result = ['../SUMO_Simulation/Simulation_3/']
