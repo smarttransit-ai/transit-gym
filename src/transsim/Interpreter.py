@@ -13,7 +13,7 @@ from GTFS_processor import GTFS_processor
 from Transportation_Demand_Processor import TDProcessor
 
 class Interpreter(object):
-    def __init__(self, metamodel_file="TransitSimulatorDSL.tx", data_path="./network/", export_path = "./"):
+    def __init__(self, metamodel_file, data_path, export_path):
         self.metamodel = metamodel_from_file(metamodel_file)
         self.data_path = data_path
         self.export_path = export_path
@@ -30,33 +30,79 @@ class Interpreter(object):
         
     
     def analyze_import(self, imports):
-        network = None
-        vehicles = None
-        GTFS = None
+        network_path = None
+        vehicle_path = None
+        gtfs_path = None
+        taz_path = None
+        td_path = None
+        gui_path = None
+        busstop_path = None
+        routes = []
+
+        # parse imports
         for imp in imports:
             imp = imp.importName
-            if imp[0:5] == 'gtfs.':
+            if imp.startswith('gtfs.'):
                 imp = imp[5:]
-                GTFS = GTFS_processor(self.data_path, imp)
-            elif imp[0:8] == 'vehicle.':
+                gtfs_path = self.data_path + '/gtfs/' + imp
+                #GTFS = GTFS_processor(self.data_path, imp) FIXME
+            elif imp.startswith('vehicle.'):
                 imp = imp[8:]
-                vehicles = Veh_Types_Container(self.data_path, imp)
-            elif imp[0:8] == 'network.':
+                vehicle_path = self.data_path + '/vehicle/' + imp
+                #vehicles = Veh_Types_Container(self.data_path, imp)
+            elif imp.startswith('network.'):
                 imp = imp[8:]
-                network = self.data_path + imp + '_SUMO_Network.net.xml'
+                if not imp.endswith('.net.xml'):
+                    raise ValueError('Network file format incorrect')
+                network_path = self.data_path + '/network/' + imp + '.net.xml'
                 # checker
-                if not os.path.exists(network):
+                if not os.path.exists(network_path):
                     raise ValueError("Imported Network file does not exist: ", network)
-            elif imp[0:3] == "td.":
-                imp = imp[3:]
-                td = TDProcessor(imp, self.data_path)
+            elif imp.startswith("travel-demand."):
+                imp = imp[14:]
+                if not imp.endswith('.od'):
+                    raise ValueError('Transportation demand file format incorrect')
+                td_path = self.data_path + '/travel-demand/' + imp
+                #td = TDProcessor(imp, self.data_path)
+            elif imp.startswith('routes.'):
+                imp = imp([6:])
+                if not imp.endswith('.xml'):
+                    raise ValueError('Route file format incorrect', imp)
+                routes.append(self.data_path + '/routes/' + imp)
+            elif imp.startswith('taz.'):
+                imp = imp([4:])
+                if not imp.endswith('.xml'):
+                    raise ValueError('taz file incorrect')
+                taz_path = self.data_path + '/taz/' + imp
+            elif imp.startswith('gui.'):
+                imp = imp([4:])
+                if not imp.endswith('.xml'):
+                    raise ValueError('gui file incorrect')
+                gui_path = self.data_path + '/gui/' + imp
+            elif imp.startswith('bus-stop'):
+                imp = imp([8:])
+                busstop_path = self.data_path + '/bus-stop/' + imp
             else:
                 raise ValueError("Invalid import:", imp)
-                
-        return [GTFS, vehicles, network, td]
+
+        # input checking
+        for route in routes:
+            if not os.path.exists(route):
+                raise ValueError("Imported route file does not exist: ", route)
+        data = [gtfs_path, network_path, vehicle_path, taz_path,td_path,gui_path,busstop_path]
+
+        for dat in data:
+            if not os.path.exists(data):
+                raise ValueError("Imported file does not exist: ", dat)
+
+        data.append(routes)
+
+        return data
     
     def analyze_simulation(self, data, simulation):
-        GTFS, vehicles, network, td = data
+        gtfs_path, network_path, vehicle_path, taz_path, td_path, gui_path, busstop_path, routes = data
+        vehicles = Veh_Types_Container(vehicle_path)
+        gtfs = GTFS_processor(gtfs_path)
         confignum = simulation.configNum
         time_start = 0
         time_end = int(simulation.timeEnd / 100 * 3600 + simulation.timeEnd % 100 * 60)
@@ -65,6 +111,7 @@ class Interpreter(object):
         assignments = simulation.assignments
         blockid = {}
         tripid = {}
+
         for assignment in assignments:
             if not vehicles.isin(assignment.vehicleid):
                 raise ValueError('Not a valid vehicle id')
@@ -73,8 +120,8 @@ class Interpreter(object):
                     blockid[assignment.blockid] = assignment.vehicleid
                 if assignment.tripid:
                     tripid[assignment.tripid] = assignment.vehicleid
-                    
-        GTFS.assign_vehicle(tripid, blockid)
+
+        gtfs.assign_vehicle(tripid, blockid)
         #FIXME shutil.rmtree(self.export_path + 'Simulation_' + str(confignum), ignore_errors=True) #FIXME
         os.makedirs(self.export_path + 'Simulation_' + str(confignum) + '/')
         # if configured frequency
@@ -95,16 +142,19 @@ class Interpreter(object):
         vehiclefile = 'vehicle.add.xml'
         dumpfile = 'trajectories_output.xml'
         busstopdump = 'busstop_output.xml'
-        routefileFull = self.export_path + 'Simulation_' + str(confignum) + '/' + routefile
-        busStopfileFull = self.export_path + 'Simulation_' + str(confignum) + '/' + busStopfile
-        vehiclefileFull = self.export_path + 'Simulation_' + str(confignum) + '/' + vehiclefile
-        configfileFull = self.export_path + 'Simulation_' + str(confignum) + '/' + 'config' + '.sumocfg'
+        person_trips = self.export_path + '/Simulation_' + str(confignum) + '/Person_trips.xml'
+        routefileFull = self.export_path + '/Simulation_' + str(confignum) + '/' + routefile
+        busStopfileFull = self.export_path + '/Simulation_' + str(confignum) + '/' + busStopfile
+        vehiclefileFull = self.export_path + '/Simulation_' + str(confignum) + '/' + vehiclefile
+        configfileFull = self.export_path + '/Simulation_' + str(confignum) + '/' + 'config' + '.sumocfg'
         
         final_route_file_full = self.export_path + 'Simulation_' + str(confignum) + '/' + final_route_file
-        GTFS.export_route_file(time_start, time_end, schedule, routefileFull)
-        GTFS.export_busstop_file(busStopfileFull, network)
+        gtfs.export_route_file(td_path, taz_path, busstop_path, time_start, time_end, schedule, routefileFull)
+        gtfs.export_busstop_file(busstop_path, busStopfileFull, network)
         vehicles.export(vehiclefileFull)
-        td.merge_route_file(routefileFull, vehiclefileFull, busStopfileFull, network, final_route_file_full, time_end)
+
+        td = TDProcessor()
+        td.merge_route_file(person_trips, routefileFull, vehiclefileFull, busStopfileFull, network_path, final_route_file_full, time_end)
         
         
         # generate config file
@@ -116,10 +166,11 @@ class Interpreter(object):
         f.write('<configuration xmlns:xsi="http://www.w3.org' +
                 '/2001/XMLSchema-instance" xsi:noNamespaceSchema'+ 
                 'Location="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">\n')
-        f.write('\t<input>\n\t\t<net-file value="' + network + '"/>\n')
+        f.write('\t<input>\n\t\t<net-file value="' + network_path + '"/>\n')
         f.write('\t\t<route-files value="')
         f.write(final_route_file)
-        f.write(', ' + self.data_path + 'models/routes/Chattanooga_Daily_Trips.rou.xml') #FIXME
+        for route in routes
+        f.write(', ' + route) #FIXME
         f.write('"/>\n')
         if edge_dump_file:
             f.write('\t\t<additional-files value="'+ busStopfile + ',' + edge_dump_file + '"/>\n')
@@ -133,7 +184,7 @@ class Interpreter(object):
                 '\t</processing>\n')
         f.write('\t<output>\n\t\t<stop-output value="'+ busstopdump + '"/>\n') #FIXME
         f.write('\t\t<amitran-output value="' + dumpfile + '"/>\n')
-        f.write('\t</output>\n\t<gui_only>\n\t\t<gui-settings-file value="../' + self.data_path + 'models/gui/gui.view.xml"/>\n')
+        f.write('\t</output>\n\t<gui_only>\n\t\t<gui-settings-file value="../' + gui_path/>\n')
         f.write('\t<report>\n\t\t<no-warnings value="true"/>\n\t\t<error-log value="error_warning_log.xml"/>\n\t</report>\n')
         f.write('\t</gui_only>\n</configuration>')
         f.close()

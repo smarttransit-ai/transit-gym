@@ -13,9 +13,8 @@ import sys
 import traci
 
 class GTFS_processor:
-    def __init__(self, data_path ,date):
-        path = data_path + 'GTFS/' + self.get_path(date) + '/'
-        self.stop_path = data_path + 'models/bus-stop/' 
+    def __init__(self, gtfs_path):
+        path = gtfs_path
         stop_times = pd.read_csv(path + "stop_times.txt", sep=',', index_col = "trip_id")
         trips = pd.read_csv(path + 'trips.txt', sep=',', index_col = 'trip_id')
         test = stop_times.join(trips, how='left')
@@ -38,13 +37,6 @@ class GTFS_processor:
             return data['departure_time'][:2]+ data['departure_time'][3:5] + data['departure_time'][6:]
         self.gtfs_data['departure_time'] = self.gtfs_data.apply(lambda x: convert(self.gtfs_data), axis=1)
         self.gtfs_data['departure_time'] = self.gtfs_data['departure_time'].astype(int)
-        
-    
-    def get_path(self, date):
-        if date == 'latest':
-            return '20200816' #FIXME
-        else:
-            return date
     
     def assign_vehicle(self, tripid, blockid):
         self.assignment = [tripid, blockid]
@@ -86,7 +78,7 @@ class GTFS_processor:
         return df
         
     
-    def export_route_file(self,time_start, time_end, schedule, export_path):
+    def export_route_file(self, busstop_path, time_start, time_end, schedule, export_path):
         time_start = time_start * 100
         time_end = time_end * 100
         data = self.gtfs_data
@@ -100,13 +92,12 @@ class GTFS_processor:
             os.remove(busline_trips)
         
         # read from stopsinf
-        data = pd.read_excel(self.stop_path + "busstops.xlsx",index_col = 'ID') #FIXME
+        data = pd.read_excel(busstop_path,index_col = 'ID') #FIXME
         data.index.names = ['stop_id']
         # read from Comprehensive_GTFS.xlsx
         
         
         trips=trips[trips['departure_time'].map(lambda x: x[0:2]!=24)]
-        
         trips['depart'] = pd.to_timedelta(trips.departure_time).dt.total_seconds()
         trips['depart'] = trips['depart'].apply(lambda x: round(x, 1))
         trips['arrival'] = trips['depart']-3
@@ -157,14 +148,14 @@ class GTFS_processor:
         f.write("</routes>")
         f.close()
     
-    def export_busstop_file(self, export_path, network):
+    def export_busstop_file(self, busstop_path, export_path, network):
         # for testing
         busstop = export_path
         if os.path.exists(busstop):
             os.remove(busstop)
         
         #Read xlsx file from folder named "data"
-        data = pd.read_excel(self.stop_path + "busstops.xlsx")
+        data = pd.read_excel(busstop_path)
         
         #Create new columns 'startpos' and 'endpos' in data based on the "lanepos" in "stopsinf_CARTA.xlsx"
         data['startPos'] = round(data["lanepos"] - 5, 2)
