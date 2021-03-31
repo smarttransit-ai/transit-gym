@@ -8,9 +8,9 @@ import os
 import shutil
 from textx import metamodel_from_file
 #from Matching_Func import Matcher
-from Veh_Type_Container import Veh_Types_Container
-from GTFS_processor import GTFS_processor
-from Transportation_Demand_Processor import TDProcessor
+from transsim.Veh_Type_Container import Veh_Types_Container
+from transsim.GTFS_processor import GTFS_processor
+from transsim.Transportation_Demand_Processor import TDProcessor
 
 class Interpreter(object):
     def __init__(self, metamodel_file, data_path, export_path):

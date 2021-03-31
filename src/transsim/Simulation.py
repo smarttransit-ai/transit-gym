@@ -5,9 +5,9 @@ Created on Mon Jan 18 18:18:22 2021
 
 @author: danielgui
 """
-from Interpreter import Interpreter
+from transsim.Interpreter import Interpreter
 import subprocess
-from Output_Processor import Output_Processor
+from transsim.Output_Processor import Output_Processor
 import os
 
 class Simulation:
