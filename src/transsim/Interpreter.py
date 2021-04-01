@@ -65,22 +65,22 @@ class Interpreter(object):
                 td_path = self.data_path + '/travel-demand/' + imp
                 #td = TDProcessor(imp, self.data_path)
             elif imp.startswith('routes.'):
-                imp = imp([6:])
+                imp = imp[6:]
                 if not imp.endswith('.xml'):
                     raise ValueError('Route file format incorrect', imp)
                 routes.append(self.data_path + '/routes/' + imp)
             elif imp.startswith('taz.'):
-                imp = imp([4:])
+                imp = imp[4:]
                 if not imp.endswith('.xml'):
                     raise ValueError('taz file incorrect')
                 taz_path = self.data_path + '/taz/' + imp
             elif imp.startswith('gui.'):
-                imp = imp([4:])
+                imp = imp[4:]
                 if not imp.endswith('.xml'):
                     raise ValueError('gui file incorrect')
                 gui_path = self.data_path + '/gui/' + imp
             elif imp.startswith('bus-stop'):
-                imp = imp([8:])
+                imp = imp[8:]
                 busstop_path = self.data_path + '/bus-stop/' + imp
             else:
                 raise ValueError("Invalid import:", imp)
@@ -169,7 +169,7 @@ class Interpreter(object):
         f.write('\t<input>\n\t\t<net-file value="' + network_path + '"/>\n')
         f.write('\t\t<route-files value="')
         f.write(final_route_file)
-        for route in routes
+        for route in routes:
         f.write(', ' + route) #FIXME
         f.write('"/>\n')
         if edge_dump_file:
