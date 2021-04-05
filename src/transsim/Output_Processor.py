@@ -7,7 +7,7 @@ Created on Mon Jan 18 18:29:04 2021
 """
 import pandas as pd
 import numpy as np
-import xml2csv
+import transsim.xml2csv
 import os
 import dask.dataframe as dd
 class Output_Processor:

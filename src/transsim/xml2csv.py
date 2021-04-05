@@ -36,7 +36,7 @@ try:
 except ImportError:
     haveLxml = False
 
-import xsd
+import transsim.xsd
 
 
 class NestingHandler(xml.sax.handler.ContentHandler):

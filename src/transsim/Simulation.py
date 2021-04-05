@@ -11,7 +11,7 @@ from transsim.Output_Processor import Output_Processor
 import os
 
 class Simulation:
-    def __init__(self, data_path, export_path = "./", metamodel_file="TransitSimulatorDSL.tx", sumo_home=None, add_path=None):
+    def __init__(self, data_path, export_path = "./", metamodel_file=None, sumo_home=None, add_path=None):
         #FIXME
         env = os.environ
         if sumo_home:

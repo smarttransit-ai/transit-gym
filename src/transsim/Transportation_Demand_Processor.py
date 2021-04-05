@@ -10,7 +10,7 @@ import os
 
 class TDProcessor:
     def __init__(self):
-    
+        pass
     def merge_route_file(self, person_trips, td_path, taz_path, routefileFull, vehiclefileFull, busStopfileFull, network, final_route_file_full, time_end):
 
         if not os.path.exists(td_path):
@@ -18,12 +18,12 @@ class TDProcessor:
         if not os.path.exists(taz_path):
             raise ValueError("Missing transportation demand file: ", taz_path)
         errorcode = subprocess.call('od2trips -d "'+ td_path +
-                  '" --taz-files "'+ taz_path + '" --prefix person --persontrips --persontrips.modes public -o "' + person_trips + "', shell=True)
+                  '" --taz-files "'+ taz_path + '" --prefix person --persontrips --persontrips.modes public -o "' + person_trips + '", shell=True')
         
         
-        command = 'duarouter --route-files "'+ routefileFull + ', ' + \
+        command = 'duarouter --route-files "'+ routefileFull + '", "' + \
             person_trips + '" --net-file "' + network + '" --unsorted-input --additional-files "'+ \
-                busStopfileFull + ', ' + vehiclefileFull + '" --ptline-routing --output-file "' + \
+                busStopfileFull + '", "' + vehiclefileFull + '" --ptline-routing --output-file "' + \
                     final_route_file_full + '" --ignore-errors --no-warnings -b 0 -e ' + str(time_end)
         errorcode = subprocess.call(command, shell=True)
         

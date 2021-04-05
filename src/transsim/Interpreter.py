@@ -5,16 +5,24 @@
 """
 
 import os
+import io
 import shutil
-from textx import metamodel_from_file
+from textx import metamodel_from_str
 #from Matching_Func import Matcher
 from transsim.Veh_Type_Container import Veh_Types_Container
 from transsim.GTFS_processor import GTFS_processor
 from transsim.Transportation_Demand_Processor import TDProcessor
 
+import pkgutil
+
+
 class Interpreter(object):
     def __init__(self, metamodel_file, data_path, export_path):
-        self.metamodel = metamodel_from_file(metamodel_file)
+        if not metamodel_file:
+            metamodel_str = pkgutil.get_data(__name__, "templates/TransitSimulatorDSL.tx").decode('ascii')
+            self.metamodel = metamodel_from_str(metamodel_str)
+        else:
+            self.metamodel = metamodel_from_file(metamodel_file)
         self.data_path = data_path
         self.export_path = export_path
     
@@ -170,7 +178,7 @@ class Interpreter(object):
         f.write('\t\t<route-files value="')
         f.write(final_route_file)
         for route in routes:
-        f.write(', ' + route) #FIXME
+            f.write(', ' + route) #FIXME
         f.write('"/>\n')
         if edge_dump_file:
             f.write('\t\t<additional-files value="'+ busStopfile + ',' + edge_dump_file + '"/>\n')
@@ -184,7 +192,7 @@ class Interpreter(object):
                 '\t</processing>\n')
         f.write('\t<output>\n\t\t<stop-output value="'+ busstopdump + '"/>\n') #FIXME
         f.write('\t\t<amitran-output value="' + dumpfile + '"/>\n')
-        f.write('\t</output>\n\t<gui_only>\n\t\t<gui-settings-file value="../' + gui_path/>\n')
+        f.write('\t</output>\n\t<gui_only>\n\t\t<gui-settings-file value="' + gui_path + '">\n')
         f.write('\t<report>\n\t\t<no-warnings value="true"/>\n\t\t<error-log value="error_warning_log.xml"/>\n\t</report>\n')
         f.write('\t</gui_only>\n</configuration>')
         f.close()
