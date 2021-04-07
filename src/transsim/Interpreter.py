@@ -62,10 +62,9 @@ class Interpreter(object):
                 imp = imp[8:]
                 if not imp.endswith('.net.xml'):
                     raise ValueError('Network file format incorrect')
-                network_path = self.data_path + '/network/' + imp + '.net.xml'
+                network_path = self.data_path + '/network/' + imp
                 # checker
-                if not os.path.exists(network_path):
-                    raise ValueError("Imported Network file does not exist: ", network)
+        
             elif imp.startswith("travel-demand."):
                 imp = imp[14:]
                 if not imp.endswith('.od'):
