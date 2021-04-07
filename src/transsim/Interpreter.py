@@ -99,7 +99,7 @@ class Interpreter(object):
         data = [gtfs_path, network_path, vehicle_path, taz_path,td_path,gui_path,busstop_path]
 
         for dat in data:
-            if not os.path.exists(data):
+            if not os.path.exists(dat):
                 raise ValueError("Imported file does not exist: ", dat)
 
         data.append(routes)
@@ -157,7 +157,7 @@ class Interpreter(object):
         
         final_route_file_full = self.export_path + 'Simulation_' + str(confignum) + '/' + final_route_file
         gtfs.export_route_file(td_path, taz_path, busstop_path, time_start, time_end, schedule, routefileFull)
-        gtfs.export_busstop_file(busstop_path, busStopfileFull, network)
+        gtfs.export_busstop_file(busstop_path, busStopfileFull, network_path)
         vehicles.export(vehiclefileFull)
 
         td = TDProcessor()
