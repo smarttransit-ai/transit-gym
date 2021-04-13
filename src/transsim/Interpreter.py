@@ -193,7 +193,7 @@ class Interpreter(object):
                 '\t</processing>\n')
         f.write('\t<output>\n\t\t<stop-output value="'+ busstopdump + '"/>\n') #FIXME
         f.write('\t\t<amitran-output value="' + dumpfile + '"/>\n')
-        f.write('\t</output>\n\t<gui_only>\n\t\t<gui-settings-file value="' + gui_path + '">\n')
+        f.write('\t</output>\n\t<gui_only>\n\t\t<gui-settings-file value="' + gui_path + '"/>\n')
         f.write('\t<report>\n\t\t<no-warnings value="true"/>\n\t\t<error-log value="error_warning_log.xml"/>\n\t</report>\n')
         f.write('\t</gui_only>\n</configuration>')
         f.close()

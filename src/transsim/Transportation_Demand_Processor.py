@@ -23,9 +23,9 @@ class TDProcessor:
                   '" --taz-files "'+ taz_path + '" --prefix person --persontrips --persontrips.modes public -o "' + person_trips + '"', shell=True)
         
         
-        command = 'duarouter --route-files "'+ routefileFull + '", "' + \
+        command = 'duarouter --route-files "'+ routefileFull + ', ' + \
             person_trips + '" --net-file "' + network + '" --unsorted-input --additional-files "'+ \
-                busStopfileFull + '", "' + vehiclefileFull + '" --ptline-routing --output-file "' + \
+                busStopfileFull + ', ' + vehiclefileFull + '" --ptline-routing --output-file "' + \
                     final_route_file_full + '" --ignore-errors --no-warnings -b 0 -e ' + str(time_end)
         errorcode = subprocess.call(command, shell=True)
         
