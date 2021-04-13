@@ -11,6 +11,7 @@ import os
 class TDProcessor:
     def __init__(self):
         #self.code_path = code_path
+        pass
         
     def merge_route_file(self, person_trips, td_path, taz_path, routefileFull, vehiclefileFull, busStopfileFull, network, final_route_file_full, time_end):
 
