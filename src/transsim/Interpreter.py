@@ -160,7 +160,9 @@ class Interpreter(object):
         gtfs.export_busstop_file(busstop_path, busStopfileFull, network_path)
         vehicles.export(vehiclefileFull)
 
+        #code_path = os.path.abspath(__file__)
         td = TDProcessor()
+
         td.merge_route_file(person_trips, td_path, taz_path, routefileFull, vehiclefileFull, busStopfileFull, network_path, final_route_file_full, time_end)
         
         
