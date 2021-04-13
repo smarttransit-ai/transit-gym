@@ -52,7 +52,7 @@ class Interpreter(object):
             imp = imp.importName
             if imp.startswith('gtfs.'):
                 imp = imp[5:]
-                gtfs_path = self.data_path + '/gtfs/' + imp
+                gtfs_path = self.data_path + '/gtfs/' + imp + '/'
                 #GTFS = GTFS_processor(self.data_path, imp) FIXME
             elif imp.startswith('vehicle.'):
                 imp = imp[8:]
@@ -86,8 +86,8 @@ class Interpreter(object):
                 if not imp.endswith('.xml'):
                     raise ValueError('gui file incorrect')
                 gui_path = self.data_path + '/gui/' + imp
-            elif imp.startswith('bus-stop'):
-                imp = imp[8:]
+            elif imp.startswith('bus-stop.'):
+                imp = imp[9:]
                 busstop_path = self.data_path + '/bus-stop/' + imp
             else:
                 raise ValueError("Invalid import:", imp)
@@ -149,19 +149,19 @@ class Interpreter(object):
         vehiclefile = 'vehicle.add.xml'
         dumpfile = 'trajectories_output.xml'
         busstopdump = 'busstop_output.xml'
-        person_trips = self.export_path + '/Simulation_' + str(confignum) + '/Person_trips.xml'
-        routefileFull = self.export_path + '/Simulation_' + str(confignum) + '/' + routefile
-        busStopfileFull = self.export_path + '/Simulation_' + str(confignum) + '/' + busStopfile
-        vehiclefileFull = self.export_path + '/Simulation_' + str(confignum) + '/' + vehiclefile
-        configfileFull = self.export_path + '/Simulation_' + str(confignum) + '/' + 'config' + '.sumocfg'
+        person_trips = self.export_path + 'Simulation_' + str(confignum) + '/Person_trips.xml'
+        routefileFull = self.export_path + 'Simulation_' + str(confignum) + '/' + routefile
+        busStopfileFull = self.export_path + 'Simulation_' + str(confignum) + '/' + busStopfile
+        vehiclefileFull = self.export_path + 'Simulation_' + str(confignum) + '/' + vehiclefile
+        configfileFull = self.export_path + 'Simulation_' + str(confignum) + '/' + 'config' + '.sumocfg'
         
         final_route_file_full = self.export_path + 'Simulation_' + str(confignum) + '/' + final_route_file
-        gtfs.export_route_file(td_path, taz_path, busstop_path, time_start, time_end, schedule, routefileFull)
+        gtfs.export_route_file(busstop_path, time_start, time_end, schedule, routefileFull)
         gtfs.export_busstop_file(busstop_path, busStopfileFull, network_path)
         vehicles.export(vehiclefileFull)
 
         td = TDProcessor()
-        td.merge_route_file(person_trips, routefileFull, vehiclefileFull, busStopfileFull, network_path, final_route_file_full, time_end)
+        td.merge_route_file(person_trips, td_path, taz_path, routefileFull, vehiclefileFull, busStopfileFull, network_path, final_route_file_full, time_end)
         
         
         # generate config file
