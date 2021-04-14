@@ -26,7 +26,7 @@ class TDProcessor:
         command = 'duarouter --route-files "'+ routefileFull + ', ' + \
             person_trips + '" --net-file "' + network + '" --unsorted-input --additional-files "'+ \
                 busStopfileFull + ', ' + vehiclefileFull + '" --ptline-routing --output-file "' + \
-                    final_route_file_full + '" --ignore-errors --no-warnings -b 0 -e ' + str(time_end)
+                    final_route_file_full + '" --ignore-errors --no-warnings' + str(time_end)
         errorcode = subprocess.call(command, shell=True)
         
         
