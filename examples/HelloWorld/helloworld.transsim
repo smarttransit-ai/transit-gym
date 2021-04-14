@@ -1,4 +1,4 @@
-import "network.Chattanooga_SUMO_Network.net.xml"
+import "network.Chattanooga_SUMO_Network_reduced.net.xml"
 import "vehicle.BUS_type.xlsx"
 import "gtfs.20200816"
 import "travel-demand.OD_person.od"
