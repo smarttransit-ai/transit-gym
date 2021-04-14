@@ -160,7 +160,7 @@ class Interpreter(object):
         gtfs.export_busstop_file(busstop_path, busStopfileFull, network_path)
         vehicles.export(vehiclefileFull)
 
-        code_path = os.path.abspath(__file__)
+        #code_path = os.path.abspath(__file__)
         td = TDProcessor()
 
         td.merge_route_file(person_trips, td_path, taz_path, routefileFull, vehiclefileFull, busStopfileFull, network_path, final_route_file_full, time_end)
@@ -175,11 +175,11 @@ class Interpreter(object):
         f.write('<configuration xmlns:xsi="http://www.w3.org' +
                 '/2001/XMLSchema-instance" xsi:noNamespaceSchema'+ 
                 'Location="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">\n')
-        f.write('\t<input>\n\t\t<net-file value="' + code_path + '/' + network_path + '"/>\n')
+        f.write('\t<input>\n\t\t<net-file value="' + '../' + network_path + '"/>\n')
         f.write('\t\t<route-files value="')
         f.write(final_route_file)
         for route in routes:
-            f.write(', ' + code_path + '/' + route) #FIXME
+            f.write(', ' + '../' + route) #FIXME
         f.write('"/>\n')
         if edge_dump_file:
             f.write('\t\t<additional-files value="'+ busStopfile + ',' + edge_dump_file + '"/>\n')
@@ -193,7 +193,7 @@ class Interpreter(object):
                 '\t</processing>\n')
         f.write('\t<output>\n\t\t<stop-output value="'+ busstopdump + '"/>\n') #FIXME
         f.write('\t\t<amitran-output value="' + dumpfile + '"/>\n')
-        f.write('\t</output>\n\t<gui_only>\n\t\t<gui-settings-file value="' + code_path + '/' + gui_path + '"/>\n')
+        f.write('\t</output>\n\t<gui_only>\n\t\t<gui-settings-file value="' + '../' + gui_path + '"/>\n')
         f.write('\t<report>\n\t\t<no-warnings value="true"/>\n\t\t<error-log value="error_warning_log.xml"/>\n\t</report>\n')
         f.write('\t</gui_only>\n</configuration>')
         f.close()

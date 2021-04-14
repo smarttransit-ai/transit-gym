@@ -1,7 +1,7 @@
 import setuptools
 
 setuptools.setup(name='transsim',
-version='3.3',
+version='3.4',
 description='transsim DSL interpreter',
 url='#',
 author='Daniel Gui, Himanshu Neema, Ruixiao Sun, Yuche Chen',
