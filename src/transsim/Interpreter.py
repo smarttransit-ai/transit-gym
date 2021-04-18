@@ -72,7 +72,7 @@ class Interpreter(object):
                 td_path = self.data_path + '/travel-demand/' + imp
                 #td = TDProcessor(imp, self.data_path)
             elif imp.startswith('routes.'):
-                imp = imp[6:]
+                imp = imp[7:]
                 if not imp.endswith('.xml'):
                     raise ValueError('Route file format incorrect', imp)
                 routes.append(self.data_path + '/routes/' + imp)
