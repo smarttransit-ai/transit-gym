@@ -1,0 +1,5 @@
+trip_id,route_id,service_id,trip_headsign,trip_short_name,direction_id,block_id,shape_id,wheelchair_accessible,bikes_allowed,block_name
+151657020,1,2,"ALTON PARK",,0,702,shp-1-04,2,2,107
+151658020,1,2,"ALTON PARK",,0,1502,shp-1-03,2,2,156
+151659020,1,2,"ALTON PARK",,0,1402,shp-1-03,2,2,155
+151660020,1,2,"ALTON PARK",,0,1502,shp-1-03,2,2,156
