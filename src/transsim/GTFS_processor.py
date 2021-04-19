@@ -41,10 +41,10 @@ class GTFS_processor:
     def assign_vehicle(self, tripid, blockid):
         self.assignment = [tripid, blockid]
     
-    def parse_schedule(self, schedule): #FIXME
+    def parse_schedule(self, sch): #FIXME
         df = self.schedule_def
         schedule = []
-        if schedule == 'weekday':
+        if sch == 'weekday':
             for index, row in df.iterrows():
                 if row['monday'] == 1 and row['tuesday'] == 1 and row['wednesday'] == 1 and row['thursday'] == 1 and row['friday'] == 1:
                     schedule.append(row['service_id'])
