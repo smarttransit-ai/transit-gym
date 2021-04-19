@@ -44,10 +44,10 @@ class Output_Processor:
         ## edge based output with mean speed for each hour(3600s)
         edgeO = pd.read_csv(result_path + "EdgeMean.csv",sep=';')
         if not edgeO.empty:
-            edgeO=edgeO[["interval_begin","interval_end","edge_id","edge_speed",
+            edgeO=edgeO[edge0.columns.intersection(["interval_begin","interval_end","edge_id","edge_speed",
                          "edge_density","edge_laneDensity","edge_left",
                          "edge_occupancy","edge_traveltime",
-                         "edge_waitingTime","edge_entered"]]
+                         "edge_waitingTime","edge_entered"])]
             # UNIT: "edge_speed":m/s, "edge_density":#veh/km, "edge_occupancy":%
             edgeO.to_csv(result_path + "output/edge_info.csv",index=False)
         else:
