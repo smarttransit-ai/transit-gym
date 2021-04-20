@@ -44,7 +44,7 @@ class Output_Processor:
         ## edge based output with mean speed for each hour(3600s)
         edgeO = pd.read_csv(result_path + "EdgeMean.csv",sep=';')
         if not edgeO.empty:
-            edgeO=edgeO[edge0.columns.intersection(["interval_begin","interval_end","edge_id","edge_speed",
+            edgeO=edgeO[edgeO.columns.intersection(["interval_begin","interval_end","edge_id","edge_speed",
                          "edge_density","edge_laneDensity","edge_left",
                          "edge_occupancy","edge_traveltime",
                          "edge_waitingTime","edge_entered"])]
@@ -85,11 +85,11 @@ class Output_Processor:
         #     print("Finished writing: " + 'Trajectory_' + bus)
 
         ## trajectory for all vehicles during the simulation time interval
-        motion = dd.read_csv("trajectories_outputmotionState.csv",sep=';',low_memory=False)
+        motion = dd.read_csv(result_path + "trajectories_outputmotionState.csv",sep=';',low_memory=False)
         print("motion file imported. length",motion.shape[0])
-        vehtype = pd.read_csv("trajectories_outputactorConfig.csv",sep=';')
+        vehtype = pd.read_csv(result_path + "trajectories_outputactorConfig.csv",sep=';')
         print('actor config imported. lenthi', vehtype.shape[0])
-        vehref = pd.read_csv("trajectories_outputvehicle.csv",sep=';')
+        vehref = pd.read_csv(result_path + "trajectories_outputvehicle.csv",sep=';')
         print('vehref imported. length', vehref.shape[0])
         # extract the output values for buses
         vehref['vehicle_ref'] = vehref['vehicle_ref'].astype('str')
@@ -112,7 +112,7 @@ class Output_Processor:
         def write_file(grp):
             pc = grp["vehicle_ref"].unique()[0]
             pc = pc.replace(':','')
-            grp.to_csv(f"./output/"+ 'Trajectory_' + pc + ".csv",
+            grp.to_csv(result_path + "output/"+ 'Trajectory_' + pc + ".csv",
                             header=False,
                             index=False)
             return None
