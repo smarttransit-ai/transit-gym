@@ -1,6 +1,6 @@
 import "network.Chattanooga_SUMO_Network.net.xml"
 import "vehicle.BUS_type.xlsx"
-import "gtfs.sample_gtfs"
+import "gtfs.sample-gtfs"
 import "travel-demand.OD_person.od"
 import "taz.taz.xml"
 import "gui.gui.view.xml"
