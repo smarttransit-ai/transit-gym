@@ -1,0 +1,23 @@
+import "network.Chattanooga_SUMO_Network.net.xml"
+import "vehicle.BUS_type.xlsx"
+import "gtfs.20200816"
+import "travel-demand.OD_person.od"
+import "taz.taz.xml"
+import "route.Chattanooga_Daily_Trips.rou.xml"
+import "gui.gui.view.xml"
+import "bus-stop.busstops.xlsx"
+
+
+simulation configuration 1
+{
+	time [0000:2400]
+	schedule weekday
+	output_sampling_period 3600 
+	vehicleassignment
+	{
+		trip 151733020:"Gillig_103"
+	}
+}
+
+
+
