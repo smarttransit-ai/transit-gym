@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generated on 08/27/20 17:59:04 by Eclipse SUMO duarouter Version 1.6.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/duarouterConfiguration.xsd">
+
+    <input>
+        <net-file value="Chattanooga_SUMO_Network.net.xml"/>
+        <additional-files value="busStopsCARTA.add.xml,vehtype.add.xml"/>
+        <route-files value="BusLines.trips.xml"/>
+    </input>
+
+    <output>
+        <output-file value="Bus.rou.xml"/>
+        <alternatives-output value="Bus.rou.alt.xml"/>
+    </output>
+
+</configuration>
+-->
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+ <vType accel="2.6" decel="4.5" guiShape="bus" id="BUS" length="8.00" maxSpeed="50.00" minGap="3.00" personCapacity="30" sigma="0"/>
+ <vehicle color="yellow" depart="0.00" departPos="stop" id="1AltonPark_A_inbound" type="BUS">
+  <route edges="-29660 -31048 -31047 29683 -29571 -29618 -29642 29641 29581 -29581 -29591 -29633 29622 29604 29508 29500 29478 29466 29443 31729 31730 31186 29290 29274 -29302 29302 29251 29210 29113 29104 29031 27643 16997 16797 17249 17250 16794 16793 16998 16999 16789 17113 17114 27361 29924 27308 27303 -27375 -27439 -30954 -30953 27463 27388 gneE2 gneE3 gneE4 gneE5 gneE6 gneE7 gneE8 gneE9 30948 30949 30950 27173 16754 16751 16747 16919 16735 -26890 -26942 -26959 -27020 17295 17296 16933 17258 17259 17342 17343 17115 17116 16625 16616 17163 17164 16596 17271 17272 17273 17274 16586 17161 17162 16577 17159 17160 16560 16552 16542 17165 17166 16532 17301 17302 16517 16515 16513 16503"/>
+  <stop busStop="busStop_-29660_0_95" duration="2.00"/>
+  <stop busStop="busStop_-31047_0_1891" duration="2.00"/>
+  <stop busStop="busStop_29683_0_1915" duration="2.00"/>
+  <stop busStop="busStop_29683_0_72" duration="2.00"/>
+  <stop busStop="busStop_29683_0_1892" duration="2.00"/>
+  <stop busStop="busStop_-29571_0_161" duration="2.00"/>
+  <stop busStop="busStop_-29618_0_74" duration="2.00"/>
+  <stop busStop="busStop_-29618_0_75" duration="2.00"/>
+  <stop busStop="busStop_29641_0_158" duration="2.00"/>
+  <stop busStop="busStop_29581_0_157" duration="2.00"/>
+  <stop busStop="busStop_29622_0_155" duration="2.00"/>
+  <stop busStop="busStop_29604_0_146" duration="2.00"/>
+  <stop busStop="busStop_29604_0_81" duration="2.00"/>
+  <stop busStop="busStop_29604_0_90" duration="2.00"/>
+  <stop busStop="busStop_29508_0_1486" duration="2.00"/>
+  <stop busStop="busStop_29500_0_1899" duration="2.00"/>
+  <stop busStop="busStop_29478_0_148" duration="2.00"/>
+  <stop busStop="busStop_29466_0_1731" duration="2.00"/>
+  <stop busStop="busStop_29443_0_1797" duration="2.00"/>
+  <stop busStop="busStop_31730_0_150" duration="2.00"/>
+  <stop busStop="busStop_31186_0_151" duration="2.00"/>
+  <stop busStop="busStop_29290_0_152" duration="2.00"/>
+  <stop busStop="busStop_-29302_0_100" duration="2.00"/>
+  <stop busStop="busStop_29031_0_103" duration="2.00"/>
+  <stop busStop="busStop_27643_0_104" duration="2.00"/>
+  <stop busStop="busStop_16997_0_105" duration="2.00"/>
+  <stop busStop="busStop_17250_0_107" duration="2.00"/>
+  <stop busStop="busStop_16794_0_108" duration="2.00"/>
+  <stop busStop="busStop_16789_0_110" duration="2.00"/>
+  <stop busStop="busStop_17114_0_111" duration="2.00"/>
+  <stop busStop="busStop_29924_0_112" duration="2.00"/>
+  <stop busStop="busStop_27303_0_113" duration="2.00"/>
+  <stop busStop="busStop_-27439_0_115" duration="2.00"/>
+  <stop busStop="busStop_-30953_0_116" duration="2.00"/>
+  <stop busStop="busStop_-30953_0_1912" duration="2.00"/>
+  <stop busStop="busStop_-30953_0_118" duration="2.00"/>
+  <stop busStop="busStop_-30953_0_1913" duration="2.00"/>
+  <stop busStop="busStop_gneE4_0_44" duration="2.00"/>
+  <stop busStop="busStop_30948_0_1914" duration="2.00"/>
+  <stop busStop="busStop_16751_0_1358" duration="2.00"/>
+  <stop busStop="busStop_16747_0_1582" duration="2.00"/>
+  <stop busStop="busStop_16735_0_124" duration="2.00"/>
+  <stop busStop="busStop_-26890_0_125" duration="2.00"/>
+  <stop busStop="busStop_-26942_0_127" duration="2.00"/>
+  <stop busStop="busStop_-26942_0_128" duration="2.00"/>
+  <stop busStop="busStop_-26959_0_129" duration="2.00"/>
+  <stop busStop="busStop_-27020_0_130" duration="2.00"/>
+  <stop busStop="busStop_17296_0_132" duration="2.00"/>
+  <stop busStop="busStop_16933_0_133" duration="2.00"/>
+  <stop busStop="busStop_17258_0_134" duration="2.00"/>
+  <stop busStop="busStop_17116_0_136" duration="2.00"/>
+  <stop busStop="busStop_17162_0_1487" duration="2.00"/>
+  <stop busStop="busStop_17160_0_138" duration="2.00"/>
+  <stop busStop="busStop_16552_0_139" duration="2.00"/>
+  <stop busStop="busStop_16542_0_140" duration="2.00"/>
+  <stop busStop="busStop_17166_0_141" duration="2.00"/>
+  <stop busStop="busStop_17301_0_142" duration="2.00"/>
+  <stop busStop="busStop_16517_0_143" duration="2.00"/>
+  <stop busStop="busStop_16513_0_144" duration="2.00"/>
+  <stop busStop="busStop_16503_0_145" duration="2.00"/>
+ </vehicle>
+</routes>
