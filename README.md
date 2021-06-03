@@ -8,9 +8,7 @@ Note: The steps discussed here are generic steps. Specific **examples** are:
 
 **[Chattanooga_CS](https://github.com/hdemma/transit-simulator/blob/master/examples/Chattanooga_CS/)**: a environment for transit simulation within the Chattanooga area.
 
-Also, the simulator is an automation of manual steps. If you are looking for **manual steps** to create the simulation environment, please refer to:
-
-https://github.com/hdemma/transit-simulator/blob/master/manual_files
+Also, the simulator is an automation of manual steps. If you are looking for **manual steps** to create the simulation environment, please refer to [Manual Files](manual_files)
 
 ### Step 1. Install package
 
