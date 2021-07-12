@@ -1,6 +1,4 @@
-
 #Calibration of Microscopic and Mesoscopic SUMO Simulation Model based on the Real-world Speed Data
-
 Calibration adjusts model parameters to improve the model's ability to reproduce time-dynamic system performance observed under specific travel conditions.
 For the current project, the primary reference for the calibration is [Traffic Analysis Toolbox Volume III](https://ops.fhwa.dot.gov/publications/fhwahop18036/index.htm) Chapter five [Model Calibration](https://ops.fhwa.dot.gov/publications/fhwahop18036/chapter5.htm#calibrate-model-variant-to-meet-acceptability-criteria).
 ##Step 1. Modification of OD matrices based on the time-of-day
