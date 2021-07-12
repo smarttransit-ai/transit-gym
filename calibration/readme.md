@@ -1,19 +1,22 @@
-#Calibration of Microscopic and Mesoscopic SUMO Simulation Model based on the Real-world Speed Data
+
+
+
+# Calibration of Microscopic and Mesoscopic SUMO Simulation Model based on the Real-world Speed Data
 
 
 Calibration adjusts model parameters to improve the model's ability to reproduce time-dynamic system performance observed under specific travel conditions.
 For the current project, the primary reference for the calibration is [Traffic Analysis Toolbox Volume III](https://ops.fhwa.dot.gov/publications/fhwahop18036/index.htm) Chapter five [Model Calibration](https://ops.fhwa.dot.gov/publications/fhwahop18036/chapter5.htm#calibrate-model-variant-to-meet-acceptability-criteria).
 
 
-##Step 1. Modification of OD matrices based on the time-of-day
+## Step 1. Modification of OD matrices based on the time-of-day
 
 
 The matrices have used a set of  [OD-matrices]() provided by [NREL](https://www.nrel.gov/). Based on the instruction provided, the proportion of each period of time is: 100% of peak hours plus 16.7% off-peak hours matrices. Due to a [bug](( https://github.com/eclipse/sumo/issues/8676) in [SUMO](https://www.eclipse.org/sumo/) to calculate 0 probability,  if a timeline contains a time slice with 0 probability, vehicles may depart in that slice because fractional vehicles from a previous slice are emitted with some probability in a subsequent slice. Therefore, it is needed to calculate ODs manually with this time frame:
 **
 0:0.167,21600:0,32400:0.167,54000:0,64800:0.167,86400:0
 **
-##Step 2. Generate vehicle trips XML file
-Use a SUMO tools [od2trips](https://sumo.dlr.de/docs/Demand/Importing_O/D_Matrices.html) to generate trips files for each vehicle type and time-of-day by incorporating transportation demand [in O format](https://sumo.dlr.de/docs/Demand/Importing_O/D_Matrices.html) and [taz.xml](https://github.com/smarttransit-ai/transit simulator/blob/master/manual_files/SUMO_simulation/taz.xml). Nine “trips.xml" file generate as below:
+## Step 2. Generate vehicle trips XML file
+Use a SUMO tools [od2trips](https://sumo.dlr.de/docs/Demand/Importing_O/D_Matrices.html) to generate trips files for each vehicle type and time-of-day by incorporating transportation demand [in O format](https://sumo.dlr.de/docs/Demand/Importing_O/D_Matrices.html) and [taz.xml](https://github.com/smarttransit-ai/transit simulator/blob/master/manual_files/SUMO_simulation/taz.xml) . Nine “trips.xml" file generate as below:
 - trips_pass_am_xml.xml
 - trips_pass_pm_xml.xml
 - trips_pass_op_xml.xml
@@ -38,11 +41,11 @@ od2trips --taz-files taz.xml --od-matrix-files mut_am.txt --output-file trips_mu
 od2trips --taz-files taz.xml --od-matrix-files sut_pm.txt --output-file trips_sut_pm_xml.trips.xml --prefix sut_pm --vtype truck --spread.uniform t 
 ```
 
-##Step 3. Download network from Open Street Map (OSM)
+## Step 3. Download network from Open Street Map (OSM)
 Use SUMO tools [OSMWebWizard](https://sumo.dlr.de/docs/Tutorials/OSMWebWizard.html) to import a large-scale network. [OpenStreetMap]( http://www.openstreetmap.org) is a free editable map of the whole world. It is made by people like you.". 
 **Caution:**
 If the map excerpt covers a very large area, the simulation might become slow or even unresponsive.
-##Step 4. Edit network
+## Step 4. Edit network
 Use SUMO tools, [netconvert](https://sumo.dlr.de/docs/netconvert.html)  to modify and edit the imported map from [OSM]( http://www.openstreetmap.org).
 Several aspects of the imported network may have to be modified to suit your needs. Some of the relevant [netconvert] options are described below.
 **Option:**
@@ -62,16 +65,16 @@ The following options can be used to reduce the network size:
 if only major roads are needed, reduction of the network can be done by setting the option
 --keep-edges.by-type highway.motorway,highway.motorway_link,highway.trunk,highway.trunk_link,highway.primary,highway.primary_link
 
-##Step 5. Traffic light modification 
+## Step 5. Traffic light modification 
 Use an iteration way between load network by [SUMO](https://sumo.dlr.de/docs/index.html) to show the name of the intersection with error on the traffic light, then edit [traffic light](https://sumo.dlr.de/docs/Simulation/Traffic_Lights.html). Also, [sumo/sumo-gui]( https://sumo.dlr.de/docs/sumo-gui.html) allows loading definitions which describe when and how a set of traffic lights can switch from one program to another.
 
-##Step 6. Convert TAZ shapefiles to polygon and polygon to edges.
+## Step 6. Convert TAZ shapefiles to polygon and polygon to edges.
 Use [polyconvert]( https://sumo.dlr.de/docs/polyconvert.html) to import geometrical shapes [TAZ_2014](…..) , converts them to a representation that may be visualized using [sumo-gui]( https://sumo.dlr.de/docs/index.html).
 The command is shown as below.
 ```
 polyconvert --net-file Chattanooga_SUMO_Network.net.xml --shapefile-prefixes TAZ_TAZ_2014  --shapefile.id-column id  --shapefile.guess-projection t -o polygone.xml 
 ```
-##Step 7. convert polygon file to Sumo TAZ file with edges assigned to TAZs:
+## Step 7. convert polygon file to Sumo TAZ file with edges assigned to TAZs:
 Use python script [edgesInDistricts.py]( https://sumo.dlr.de/docs/Tools/District.html). Parsing a number of networks and TAZ (district) files with shapes, this script writes a TAZ file with all the edges which are inside the relevant TAZ.
 The command is shown below.
 ```
@@ -82,7 +85,7 @@ edgesInDistricts.py -n Chattanooga_SUMO_Network.net.xml -t o polygone.xml -o taz
 Below are additional options to determine edge processing:
 edgesInDistricts.py –help
 
-##Step 8. Generate trips file (Iterative Assignment (Dynamic User Equilibrium))
+## Step 8. Generate trips file (Iterative Assignment (Dynamic User Equilibrium))
 Use python script [duaIterate.py]( https://sumo.dlr.de/docs/Tools/Assign.html#dua-iteratepy)  to perform the computation of a dynamic user assignment (DUA). It works by alternatingly running the simulation to discover travel times and then assigning alternative routes to some of the vehicles according to these travel times. This is repeated for a defined number of iteration steps. At least two files must be given as input the script: a SUMO network and a set of trip definitions. A stochastic user-equilibrium (UE) traffic state is not guaranteed after the assignment. Increasing the number of iteration steps increases the likelihood of convergence to equilibrium. Within each iteration step, the script generates a configuration file for the [duarouter]( https://sumo.dlr.de/docs/duarouter.html)  application and starts it with this configuration file. Then, a configuration file for sumo is built, and sumo is started. Both configuration files are completely defined within the script itself.
 The number of iterations may be set to a fixed number of determined dynamically depending on the used options. In order to ensure convergence, there are different methods employed to calculate the route choice probability from the route cost (so the vehicle does not always choose the "cheapest" route). In general, new routes will be added by the router to the route set of each vehicle in each iteration (at least if none of the present routes is the "cheapest") and may be chosen according to the route choice mechanisms like [Gawron](https://d-nb.info/1183255454/34) and [Logit]( https://www.tandfonline.com/doi/full/10.1080/03081061003643705). 
 
@@ -94,10 +97,10 @@ Also, if not prefer using DUA, using a single assignment by [duarouter]( https:/
 **Options:**
 duarouter   --route-files combined.trips.xml  –net-file Chattanooga_SUMO_Network.net.xml    --unsorted-input  --additional-files busStopsCARTA.add.xml,vehtype.add.xml    --ptline-routing --output-file    Cattanooga.rou.xml --ignore-errors
 However, only the shortest path were used instead of a user assignment algorithm may cause lots of jams/deadlocks.
-##Step 9. Define some points on the network to accumulating speed data from [INRIX](https://inrix.com/products/speed/)
+## Step 9. Define some points on the network to accumulating speed data from [INRIX](https://inrix.com/products/speed/)
 Use [Google Earth]( https://earth.google.com/web/) to determine some points ( points alongside the streets which is introduced by Geo-Location (Lat, Long) at the network to get the speed data from [INRIX]( https://inrix.com/products/speed/) speed data set.
 
-##Step 10. Define induction loop detectors
+## Step 10. Define induction loop detectors
 The detectors are placed in various places as well as the original detectors in real world. [137 detectors]() were applied on the network to measure the speed and the flow. They are spread on the entry and exit edges of the networks. [E1 Loops Detectors]( https://sumo.dlr.de/docs/Simulation/Output/Induction_Loops_Detectors_%28E1%29.html)  are used and use python script [Def_Detector_File.py](https://sumo.dlr.de/docs/Tools/Detector.html) to generate [detectors.add.xml]() file by incorporating network file and edge converted Geo-location (Lat, long). An induction loop is defined this way within an [additional-file]( https://sumo.dlr.de/docs/sumo.html#format_of_additional_files)  like this:
 
 ```xml
@@ -115,7 +118,7 @@ Multiple definitions may be placed in the same additional-file and also referenc
       speed="''<MEAN_SPEED>''" harmonicMeanSpeed="''<HARM_MEAN_SPEED>''" length="''<MEAN_LENGTH>''" nVehEntered="''<ENTERED_VEHICLES>''"/>
 ```
    The detector computes the values by determining the times the vehicle enters and leaves the detector first. This implicates that a) some values are not available as long as the vehicle is on the detector, and b) some values cannot be computed if the vehicle enters the detector by a lane change - as the vehicle did not pass the detector completely.
-##Step 11. Set parameters for the calibration (Microscopic and Mesoscopic)
+## Step 11. Set parameters for the calibration (Microscopic and Mesoscopic)
 The calibration is an important part of modeling since there is no model that can be accurate to the real traffic condition. The calibration is a kind of adaptation process for the model to represent the real traffic condition. Speed data is calibrated to get the optimal value of the model parameters by changing some parameters which predicted will directly influence the speed of the network. Every microsimulation software program comes with a set of user-adjustable parameters for the purpose of calibrating the model to local conditions. Therefore, the objective of calibration is to find the set of parameter values for the model that best reproduces observed measures of system performance [[1]](https://ops.fhwa.dot.gov/publications/fhwahop18036/chapter5.htm).
 
 The traffic simulation tools can mainly be divided into four different groups [Stefan Krauß]( https://sumo.dlr.de/pdf/KraussDiss.pdf) : 
@@ -177,21 +180,21 @@ Only a few [vType](https://sumo.dlr.de/docs/Definition_of_Vehicles%2C_Vehicle_Ty
 •	[Impatience]( https://sumo.dlr.de/docs/Simulation/Meso.html#impatience )
 •	[accel,decel](https://sumo.dlr.de/docs/Vehicle_Type_Parameter_Defaults.html) (only for computing junction passing time when the microscopic junction model is active).
 Use python script [createVehTypeDistribution.py]( https://sumo.dlr.de/docs/Tools/Misc.html ) to generate a vehicle type distribution by sampling from configurable value distributions for the desired vType-parameters.
-##Step 12. Configure and run Micro-SUMO simulation
+## Step 12. Configure and run Micro-SUMO simulation
 Set up the configuration file with set of parameters as [vTypeDistributions_micro.add.xml]() and output parameters: [Chattanooga_SUMO_calibration_final.sumocfg]().
 This configuration will generate three output files:
 * Edge-based output. 
 * Detectors output file [out.xml](), contains 137 detectores wtith flow and speed data to compare with real-world speed data. 
 * Trajectory output which contains information about type, current speed and acceleration of each vehicle.
 *Note:* [Chattanooga_Daily_Trips_calibtation.rou.xml](), which is too large to push here, is put in Teams.
-##Step 13. Configure and run Meso-SUMO simulation
+## Step 13. Configure and run Meso-SUMO simulation
 Set up the configuration file with set of parameters as [vTypeDistributions_meso.add.xml]() and output parameters: [Chattanooga_SUMO_calibration_final.sumocfg]().
 This configuration will generate three output files:
 * Edge-based output. 
 * Detectors output file [out.xml](), contains 137 detectores wtith flow and speed data to compare with real-world speed data. 
 * Trajectory output which contains information about type, current speed and acceleration of each vehicle.
 *Note:* [Chattanooga_Daily_Trips_calibtation.rou.xml](), which is too large to push here, is put in Teams.
-##Step 14. Process the output files
+## Step 14. Process the output files
 For calibration, Micro-SUMO simulation results should be compared with the real-world with a T-test and [Fréchet distance](http://www.kr.tuwien.ac.at/staff/eiter/et-archive/cdtr9464.pdf) to find which speed result is close to the real-world data. 
 •	For the T-test, first, determine a significance level appropriate for the study. This will be the value for comparing the final result. Generally, significance values are at α = 0.05 or α = 0.01, depending on the preference and how accurate the results are.
 •	Compute the discrete Fréchet distance between two curves. Use python scripts [similaritymeasures](https://pypi.org/project/similaritymeasures/) and [frechetdist](https://pypi.org/project/frechetdist/) to calculate the minimum distance between two curves.
