@@ -16,7 +16,8 @@ The matrices have used a set of  [OD-matrices](https://github.com/smarttransit-a
 **0:0.167,21600:0,32400:0.167,54000:0,64800:0.167,86400:0**
 
 ## Step 2. Generate vehicle trips XML file
-Use a SUMO tools [od2trips](https://sumo.dlr.de/docs/Demand/Importing_O/D_Matrices.html) to generate trips files for each vehicle type and time-of-day by incorporating transportation demand [in O format](https://sumo.dlr.de/docs/Demand/Importing_O/D_Matrices.html) and [taz.xml](https://github.com/smarttransit-ai/transit simulator/blob/master/manual_files/SUMO_simulation/taz.xml). Nine “trips.xml" file generate as below:
+Use a SUMO tools [od2trips](https://sumo.dlr.de/docs/Demand/Importing_O/D_Matrices.html) to generate trips files for each vehicle type and time-of-day by incorporating transportation demand [in O format](https://sumo.dlr.de/docs/Demand/Importing_O/D_Matrices.html) and [taz.xml](https://github.com/smarttransit-ai/transit-simulator/tree/master/manual_files/SUMO_simulation). Nine [trips.xml](https://github.com/smarttransit-ai/transit-simulator/tree/master/calibration/simulation/trips%20file) file generate as below:
+
 - trips_pass_am_xml.xml
 - trips_pass_pm_xml.xml
 - trips_pass_op_xml.xml
@@ -27,7 +28,7 @@ Use a SUMO tools [od2trips](https://sumo.dlr.de/docs/Demand/Importing_O/D_Matric
 - trips_mut_pm_xml.xml
 - trips_mut_op_xml.xml
 
-Use python script [Combine_trip_files.ipynb]() to combine the xml file into a [combin_trips.xml file]().
+Use python script [Combine_trip_files.ipynb](https://github.com/smarttransit-ai/transit-simulator/tree/master/calibration/codes) to combine the xml file into a [combin_trips.xml file](https://github.com/smarttransit-ai/transit-simulator/tree/master/calibration/simulation/trips%20file).
 The command is shown below.
 ```
 od2trips --taz-files taz.xml --od-matrix-files pass_op.txt --output-file trips_pass_op_xml.trips.xml --prefix pass_op --vtype passenger --spread.uniform t 
