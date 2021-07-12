@@ -70,7 +70,7 @@ if only major roads are needed, reduction of the network can be done by setting 
 Use an iteration way between load network by [SUMO](https://sumo.dlr.de/docs/index.html) to show the name of the intersection with error on the traffic light, then edit [traffic light](https://sumo.dlr.de/docs/Simulation/Traffic_Lights.html). Also, [sumo/sumo-gui]( https://sumo.dlr.de/docs/sumo-gui.html) allows loading definitions which describe when and how a set of traffic lights can switch from one program to another.
 
 ## Step 6. Convert TAZ shapefiles to polygon and polygon to edges.
-Use [polyconvert]( https://sumo.dlr.de/docs/polyconvert.html) to import geometrical shapes [TAZ_2014](…..) , converts them to a representation that may be visualized using [sumo-gui]( https://sumo.dlr.de/docs/index.html).
+Use [polyconvert]( https://sumo.dlr.de/docs/polyconvert.html) to import geometrical shapes [TAZ_2014](https://github.com/smarttransit-ai/transit-simulator/tree/master/calibration/simulation) , converts them to a representation that may be visualized using [sumo-gui]( https://sumo.dlr.de/docs/index.html).
 The command is shown as below.
 ```
 polyconvert --net-file Chattanooga_SUMO_Network.net.xml --shapefile-prefixes TAZ_TAZ_2014  --shapefile.id-column id  --shapefile.guess-projection t -o polygone.xml 
