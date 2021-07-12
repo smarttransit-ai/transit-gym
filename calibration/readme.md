@@ -11,12 +11,13 @@ For the current project, the primary reference for the calibration is [Traffic A
 ## Step 1. Modification of OD matrices based on the time-of-day
 
 
-The matrices have used a set of  [OD-matrices]() provided by [NREL](https://www.nrel.gov/). Based on the instruction provided, the proportion of each period of time is: 100% of peak hours plus 16.7% off-peak hours matrices. Due to a [bug](https://github.com/eclipse/sumo/issues/8676) in [SUMO](https://www.eclipse.org/sumo/) to calculate 0 probability,  if a timeline contains a time slice with 0 probability, vehicles may depart in that slice because fractional vehicles from a previous slice are emitted with some probability in a subsequent slice. Therefore, it is needed to calculate ODs manually with this time frame:
+The matrices have used a set of  [OD-matrices](https://github.com/smarttransit-ai/transit-simulator/tree/master/calibration/simulation/OD) provided by [NREL](https://www.nrel.gov/). Based on the instruction provided, the proportion of each period of time is: 100% of peak hours plus 16.7% off-peak hours matrices. Due to a [bug](https://github.com/eclipse/sumo/issues/8676) in [SUMO](https://www.eclipse.org/sumo/) to calculate 0 probability,  if a timeline contains a time slice with 0 probability, vehicles may depart in that slice because fractional vehicles from a previous slice are emitted with some probability in a subsequent slice. Therefore, it is needed to calculate ODs manually with this time frame:
 
 **0:0.167,21600:0,32400:0.167,54000:0,64800:0.167,86400:0**
 
 ## Step 2. Generate vehicle trips XML file
-Use a SUMO tools [od2trips](https://sumo.dlr.de/docs/Demand/Importing_O/D_Matrices.html) to generate trips files for each vehicle type and time-of-day by incorporating transportation demand [in O format](https://sumo.dlr.de/docs/Demand/Importing_O/D_Matrices.html) and [taz.xml](https://github.com/smarttransit-ai/transit simulator/blob/master/manual_files/SUMO_simulation/taz.xml). Nine “trips.xml" file generate as below:
+Use a SUMO tools [od2trips](https://sumo.dlr.de/docs/Demand/Importing_O/D_Matrices.html) to generate trips files for each vehicle type and time-of-day by incorporating transportation demand [in O format](https://sumo.dlr.de/docs/Demand/Importing_O/D_Matrices.html) and [taz.xml](https://github.com/smarttransit-ai/transit-simulator/tree/master/manual_files/SUMO_simulation). Nine [trips.xml](https://github.com/smarttransit-ai/transit-simulator/tree/master/calibration/simulation/trips%20file) file generate as below:
+
 - trips_pass_am_xml.xml
 - trips_pass_pm_xml.xml
 - trips_pass_op_xml.xml
@@ -27,7 +28,7 @@ Use a SUMO tools [od2trips](https://sumo.dlr.de/docs/Demand/Importing_O/D_Matric
 - trips_mut_pm_xml.xml
 - trips_mut_op_xml.xml
 
-Use python script [Combine_trip_files.ipynb]() to combine the xml file into a [combin_trips.xml file]().
+Use python script [Combine_trip_files.ipynb](https://github.com/smarttransit-ai/transit-simulator/tree/master/calibration/codes) to combine the xml file into a [combin_trips.xml file](https://github.com/smarttransit-ai/transit-simulator/tree/master/calibration/simulation/trips%20file).
 The command is shown below.
 ```
 od2trips --taz-files taz.xml --od-matrix-files pass_op.txt --output-file trips_pass_op_xml.trips.xml --prefix pass_op --vtype passenger --spread.uniform t 
@@ -69,7 +70,7 @@ if only major roads are needed, reduction of the network can be done by setting 
 Use an iteration way between load network by [SUMO](https://sumo.dlr.de/docs/index.html) to show the name of the intersection with error on the traffic light, then edit [traffic light](https://sumo.dlr.de/docs/Simulation/Traffic_Lights.html). Also, [sumo/sumo-gui]( https://sumo.dlr.de/docs/sumo-gui.html) allows loading definitions which describe when and how a set of traffic lights can switch from one program to another.
 
 ## Step 6. Convert TAZ shapefiles to polygon and polygon to edges.
-Use [polyconvert]( https://sumo.dlr.de/docs/polyconvert.html) to import geometrical shapes [TAZ_2014](…..) , converts them to a representation that may be visualized using [sumo-gui]( https://sumo.dlr.de/docs/index.html).
+Use [polyconvert]( https://sumo.dlr.de/docs/polyconvert.html) to import geometrical shapes [TAZ_2014](https://github.com/smarttransit-ai/transit-simulator/tree/master/calibration/simulation) , converts them to a representation that may be visualized using [sumo-gui]( https://sumo.dlr.de/docs/index.html).
 The command is shown as below.
 ```
 polyconvert --net-file Chattanooga_SUMO_Network.net.xml --shapefile-prefixes TAZ_TAZ_2014  --shapefile.id-column id  --shapefile.guess-projection t -o polygone.xml 
