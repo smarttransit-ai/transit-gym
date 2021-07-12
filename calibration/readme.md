@@ -143,11 +143,11 @@ carFollowModel; Krauss
 **Options:**
 Available distributions and its syntax are:
 
-•"normal(mu,sd)" with mu and sd being floating numbers: Normal distribution with mean mu and standard deviation sd.
-•"normalCapped(mu, sd, min, max)" By default, no negative values are accepted but may be enabled by setting a negative lower limit.
-•"lognormal(mu,sd)" with mu and sd being floating numbers: Normal distribution with mean mu and standard deviation sd.
-•"uniform(a,b)" with limits a and b being floating numbers: Uniform distribution between a and b.
-•"gamma(alpha,beta)" with parameters alpha and beta: Gamma distribution.
+-"normal(mu,sd)" with mu and sd being floating numbers: Normal distribution with mean mu and standard deviation sd.
+-"normalCapped(mu, sd, min, max)" By default, no negative values are accepted but may be enabled by setting a negative lower limit.
+-"lognormal(mu,sd)" with mu and sd being floating numbers: Normal distribution with mean mu and standard deviation sd.
+-"uniform(a,b)" with limits a and b being floating numbers: Uniform distribution between a and b.
+-"gamma(alpha,beta)" with parameters alpha and beta: Gamma distribution.
 The command is shown below.
 ```
 python tools/createVehTypeDistribution.py config.txt
