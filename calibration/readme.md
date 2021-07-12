@@ -70,7 +70,7 @@ if only major roads are needed, reduction of the network can be done by setting 
 Use an iteration way between load network by [SUMO](https://sumo.dlr.de/docs/index.html) to show the name of the intersection with error on the traffic light, then edit [traffic light](https://sumo.dlr.de/docs/Simulation/Traffic_Lights.html). Also, [sumo/sumo-gui]( https://sumo.dlr.de/docs/sumo-gui.html) allows loading definitions which describe when and how a set of traffic lights can switch from one program to another.
 
 ## Step 6. Convert TAZ shapefiles to polygon and polygon to edges.
-Use [polyconvert]( https://sumo.dlr.de/docs/polyconvert.html) to import geometrical shapes [TAZ_2014](https://github.com/smarttransit-ai/transit-simulator/tree/master/calibration/simulation) , converts them to a representation that may be visualized using [sumo-gui]( https://sumo.dlr.de/docs/index.html).
+Use [polyconvert]( https://sumo.dlr.de/docs/polyconvert.html) to import geometrical shapes [TAZ shape files](https://github.com/smarttransit-ai/transit-simulator/tree/master/calibration/simulation/TAZ%20Shape%20files) , converts them to a representation that may be visualized using [sumo-gui]( https://sumo.dlr.de/docs/index.html).
 The command is shown as below.
 ```
 polyconvert --net-file Chattanooga_SUMO_Network.net.xml --shapefile-prefixes TAZ_TAZ_2014  --shapefile.id-column id  --shapefile.guess-projection t -o polygone.xml 
@@ -102,7 +102,7 @@ However, only the shortest path were used instead of a user assignment algorithm
 Use [Google Earth]( https://earth.google.com/web/) to determine some points ( points alongside the streets which is introduced by Geo-Location (Lat, Long) at the network to get the speed data from [INRIX]( https://inrix.com/products/speed/) speed data set.
 
 ## Step 10. Define induction loop detectors
-The detectors are placed in various places as well as the original detectors in real world. [137 detectors]() were applied on the network to measure the speed and the flow. They are spread on the entry and exit edges of the networks. [E1 Loops Detectors]( https://sumo.dlr.de/docs/Simulation/Output/Induction_Loops_Detectors_%28E1%29.html)  are used and use python script [Def_Detector_File.py](https://sumo.dlr.de/docs/Tools/Detector.html) to generate [detectors.add.xml]() file by incorporating network file and edge converted Geo-location (Lat, long). An induction loop is defined this way within an [additional-file]( https://sumo.dlr.de/docs/sumo.html#format_of_additional_files)  like this:
+The detectors are placed in various places as well as the original detectors in real world. [137 detectors](https://github.com/smarttransit-ai/transit-simulator/tree/master/calibration/simulation/detector) were applied on the network to measure the speed and the flow. They are spread on the entry and exit edges of the networks. [E1 Loops Detectors]( https://sumo.dlr.de/docs/Simulation/Output/Induction_Loops_Detectors_%28E1%29.html)  are used and use python script [Def_Detector_File.py](https://sumo.dlr.de/docs/Tools/Detector.html) to generate [detectors.add.xml](https://github.com/smarttransit-ai/transit-simulator/tree/master/calibration/simulation/detector) file by incorporating network file and edge converted Geo-location (Lat, long). An induction loop is defined this way within an [additional-file]( https://sumo.dlr.de/docs/sumo.html#format_of_additional_files)  like this:
 
 ```xml
 <additional>
