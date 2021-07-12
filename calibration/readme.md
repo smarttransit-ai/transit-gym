@@ -1,7 +1,13 @@
 #Calibration of Microscopic and Mesoscopic SUMO Simulation Model based on the Real-world Speed Data
+
+
 Calibration adjusts model parameters to improve the model's ability to reproduce time-dynamic system performance observed under specific travel conditions.
 For the current project, the primary reference for the calibration is [Traffic Analysis Toolbox Volume III](https://ops.fhwa.dot.gov/publications/fhwahop18036/index.htm) Chapter five [Model Calibration](https://ops.fhwa.dot.gov/publications/fhwahop18036/chapter5.htm#calibrate-model-variant-to-meet-acceptability-criteria).
+
+
 ##Step 1. Modification of OD matrices based on the time-of-day
+
+
 The matrices have used a set of  [OD-matrices]() provided by [NREL](https://www.nrel.gov/). Based on the instruction provided, the proportion of each period of time is: 100% of peak hours plus 16.7% off-peak hours matrices. Due to a [bug](( https://github.com/eclipse/sumo/issues/8676) in [SUMO](https://www.eclipse.org/sumo/) to calculate 0 probability,  if a timeline contains a time slice with 0 probability, vehicles may depart in that slice because fractional vehicles from a previous slice are emitted with some probability in a subsequent slice. Therefore, it is needed to calculate ODs manually with this time frame:
 **
 0:0.167,21600:0,32400:0.167,54000:0,64800:0.167,86400:0
