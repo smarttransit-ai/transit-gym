@@ -1,0 +1,39 @@
+tau; uniform(1,5)
+sigma; uniform(0,1)
+length; normal(4.9,0.2); [3.5,5.5]
+vClass; passenger
+carFollowModel; Krauss
+accel; 2.9
+decel; 4.9
+maxSpeed; 70
+
+
+---------------------------------------------------Help-----------------------------
+tau; normal(0.8,0.1)
+sigma; normal(0.5,0.2)
+length; normal(4.9,0.2); [3.5,5.5]
+param; myCustomParameter; normal(5, 2); [0, 12]
+vClass; passenger
+carFollowModel; Krauss
+------------------------------------------------
+In the config file, one line is used per vehicle type attribute. The syntax is: [param; ] <AtrributeOrParameterName>; <ValueOrDistribution> [; <limits>]
+
+If the prefix param is given at the beginning of a line, it is assumed that the values of a vehicle parameter (given as a param child element of the vehicle element) are to be sampled. Otherwise, values of an attribute of the vehicle element are sampled. ValueOrDistribution can be a string, a scalar value or a distribution definition. Available distributions and its syntax are:
+
+"normal(mu,sd)" with mu and sd being floating numbers: Normal distribution with mean mu and standard deviation sd.
+"normalCapped(mu, sd, min, max)" By default, no negative values are accepted but may be enabled by setting a negative lower limit.
+"lognormal(mu,sd)" with mu and sd being floating numbers: Normal distribution with mean mu and standard deviation sd.
+"uniform(a,b)" with limits a and b being floating numbers: Uniform distribution between a and b.
+"gamma(alpha,beta)" with parameters alpha and beta: Gamma distribution.
+Additional options:
+
+--output-file configures the name of the output file to be written
+--name Name of the created distribution
+--size Number of s to be sampled for filling the distribution
+--seed Set the seed for the random number generator
+Retrieving parameters from measurements of individual vehicles
+To obtain mean and deviation a number of values must be obtained from the data set. The following is recommenced:
+
+accel: the maximum (or high percentile) acceleration for each vehicle
+deccel: the maximum (or high percentile) deceleration for each vehicle
+speedFactor: the maximum (or high percentile) quotient of speed/speedLimit for each vehicle

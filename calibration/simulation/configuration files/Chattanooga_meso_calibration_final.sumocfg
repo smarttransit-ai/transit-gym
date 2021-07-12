@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="Chattanooga_SUMO_Network_calibration.net.xml"/>
+        <route-files value="combined_trips_final_calibration.rou.xml"/>
+	<additional-files value="busStopsCARTA.add.xml,detectorNew.add.xml,edgedump.add.xml"/>
+    </input>
+
+    <time>
+        <begin value="0"/>
+        <end value="86400"/>
+    </time>
+	
+	<output>
+         <stop-output value="busstop_output.xml"/>
+
+    </output>
+	
+    <processing>
+        <ignore-route-errors value="true"/>
+        <time-to-teleport value="50"/>
+        
+    </processing>
+	
+
+	<report>
+	    <no-warnings value="true"/>
+	    <error-log value="error_warning_log.txt"/>
+	    <xml-validation value="never"/>
+	</report>
+	
+	<gui_only>
+        <gui-settings-file value="gui.view.xml"/>
+        </gui_only>
+
+    <mesoscopic>
+        <mesosim value="true"/>
+        <meso-junction-control.limited value="true"/>
+        <meso-overtaking value="true"/>
+    </mesoscopic> 
+	
+</configuration>
