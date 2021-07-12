@@ -143,11 +143,11 @@ carFollowModel; Krauss
 **Options:**
 Available distributions and its syntax are:
 
--"normal(mu,sd)" with mu and sd being floating numbers: Normal distribution with mean mu and standard deviation sd.
--"normalCapped(mu, sd, min, max)" By default, no negative values are accepted but may be enabled by setting a negative lower limit.
--"lognormal(mu,sd)" with mu and sd being floating numbers: Normal distribution with mean mu and standard deviation sd.
--"uniform(a,b)" with limits a and b being floating numbers: Uniform distribution between a and b.
--"gamma(alpha,beta)" with parameters alpha and beta: Gamma distribution.
+- "normal(mu,sd)" with mu and sd being floating numbers: Normal distribution with mean mu and standard deviation sd.
+- "normalCapped(mu, sd, min, max)" By default, no negative values are accepted but may be enabled by setting a negative lower limit.
+- "lognormal(mu,sd)" with mu and sd being floating numbers: Normal distribution with mean mu and standard deviation sd.
+- "uniform(a,b)" with limits a and b being floating numbers: Uniform distribution between a and b.
+- "gamma(alpha,beta)" with parameters alpha and beta: Gamma distribution.
 The command is shown below.
 ```
 python tools/createVehTypeDistribution.py config.txt
@@ -173,13 +173,13 @@ The output file looks as following:
 [MESO]( https://sumo.dlr.de/docs/Simulation/Meso.html) refers to a mesoscopic simulation model which uses the same input data as the main sumo model. It computes vehicle movements with queues and runs up to 100 times faster than the microscopic model of sumo. Additionally, due to using a coarser model for intersections and lane-changing, it is more tolerant of network modeling errors than sumo.
 The Mesoscopic model calibrates with a Microscopic model with a measure [Fréchet distance](https://en.wikipedia.org/wiki/Fr%C3%A9chet_distance), [T-test](https://en.wikipedia.org/wiki/Student%27s_t-test) , and RMSE [[2]](https://ops.fhwa.dot.gov/publications/fhwahop18036/chapter3.htm#simulation-run-control-data), [[3]](https://static.tti.tamu.edu/tti.tamu.edu/documents/4198-2.pdf).
 Only a few [vType](https://sumo.dlr.de/docs/Definition_of_Vehicles%2C_Vehicle_Types%2C_and_Routes.html) parameters affect the mesoscopic simulation. They are listed below: 
-•	[vClass](https://sumo.dlr.de/docs/Definition_of_Vehicles%2C_Vehicle_Types%2C_and_Routes.html#vehicle_types)
-•	[length](https://sumo.dlr.de/docs/Definition_of_Vehicles%2C_Vehicle_Types%2C_and_Routes.html#vehicle_length)
-•	[minGap](https://sumo.dlr.de/docs/Definition_of_Vehicles%2C_Vehicle_Types%2C_and_Routes.html#vehicle_length)
-•	[maxSpeed](https://sumo.dlr.de/docs/Vehicle_Type_Parameter_Defaults.html)
-•	[speedFactor, speedDev](https://sumo.dlr.de/docs/Simulation/Meso.html#further_congestion_effects )
-•	[Impatience]( https://sumo.dlr.de/docs/Simulation/Meso.html#impatience )
-•	[accel,decel](https://sumo.dlr.de/docs/Vehicle_Type_Parameter_Defaults.html) (only for computing junction passing time when the microscopic junction model is active).
+- [vClass](https://sumo.dlr.de/docs/Definition_of_Vehicles%2C_Vehicle_Types%2C_and_Routes.html#vehicle_types)
+- [length](https://sumo.dlr.de/docs/Definition_of_Vehicles%2C_Vehicle_Types%2C_and_Routes.html#vehicle_length)
+- [minGap](https://sumo.dlr.de/docs/Definition_of_Vehicles%2C_Vehicle_Types%2C_and_Routes.html#vehicle_length)
+ -[maxSpeed](https://sumo.dlr.de/docs/Vehicle_Type_Parameter_Defaults.html)
+- [speedFactor, speedDev](https://sumo.dlr.de/docs/Simulation/Meso.html#further_congestion_effects )
+- [Impatience]( https://sumo.dlr.de/docs/Simulation/Meso.html#impatience )
+- [accel,decel](https://sumo.dlr.de/docs/Vehicle_Type_Parameter_Defaults.html) (only for computing junction passing time when the microscopic junction model is active).
 Use python script [createVehTypeDistribution.py]( https://sumo.dlr.de/docs/Tools/Misc.html ) to generate a vehicle type distribution by sampling from configurable value distributions for the desired vType-parameters.
 ## Step 12. Configure and run Micro-SUMO simulation
 Set up the configuration file with set of parameters as [vTypeDistributions_micro.add.xml]() and output parameters: [Chattanooga_SUMO_calibration_final.sumocfg]().
