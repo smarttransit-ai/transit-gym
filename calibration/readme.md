@@ -16,7 +16,7 @@ The matrices have used a set of  [OD-matrices]() provided by [NREL](https://www.
 **0:0.167,21600:0,32400:0.167,54000:0,64800:0.167,86400:0**
 
 ## Step 2. Generate vehicle trips XML file
-Use a SUMO tools [od2trips](https://sumo.dlr.de/docs/Demand/Importing_O/D_Matrices.html) to generate trips files for each vehicle type and time-of-day by incorporating transportation demand [in O format](https://sumo.dlr.de/docs/Demand/Importing_O/D_Matrices.html) and [taz.xml](https://github.com/smarttransit-ai/transit simulator/blob/master/manual_files/SUMO_simulation/taz.xml) . Nine “trips.xml" file generate as below:
+Use a SUMO tools [od2trips](https://sumo.dlr.de/docs/Demand/Importing_O/D_Matrices.html) to generate trips files for each vehicle type and time-of-day by incorporating transportation demand [in O format](https://sumo.dlr.de/docs/Demand/Importing_O/D_Matrices.html) and [taz.xml](https://github.com/smarttransit-ai/transit simulator/blob/master/manual_files/SUMO_simulation/taz.xml). Nine “trips.xml" file generate as below:
 - trips_pass_am_xml.xml
 - trips_pass_pm_xml.xml
 - trips_pass_op_xml.xml
@@ -142,11 +142,12 @@ carFollowModel; Krauss
 ```
 **Options:**
 Available distributions and its syntax are:
-•	"normal(mu,sd)" with mu and sd being floating numbers: Normal distribution with mean mu and standard deviation sd.
-•	"normalCapped(mu, sd, min, max)" By default, no negative values are accepted but may be enabled by setting a negative lower limit.
-•	"lognormal(mu,sd)" with mu and sd being floating numbers: Normal distribution with mean mu and standard deviation sd.
-•	"uniform(a,b)" with limits a and b being floating numbers: Uniform distribution between a and b.
-•	"gamma(alpha,beta)" with parameters alpha and beta: Gamma distribution.
+
+•"normal(mu,sd)" with mu and sd being floating numbers: Normal distribution with mean mu and standard deviation sd.
+•"normalCapped(mu, sd, min, max)" By default, no negative values are accepted but may be enabled by setting a negative lower limit.
+•"lognormal(mu,sd)" with mu and sd being floating numbers: Normal distribution with mean mu and standard deviation sd.
+•"uniform(a,b)" with limits a and b being floating numbers: Uniform distribution between a and b.
+•"gamma(alpha,beta)" with parameters alpha and beta: Gamma distribution.
 The command is shown below.
 ```
 python tools/createVehTypeDistribution.py config.txt
