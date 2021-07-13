@@ -44,12 +44,17 @@ od2trips --taz-files taz.xml --od-matrix-files sut_pm.txt --output-file trips_su
 
 ## Step 3. Download network from Open Street Map (OSM)
 Use SUMO tools [OSMWebWizard](https://sumo.dlr.de/docs/Tutorials/OSMWebWizard.html) to import a large-scale network. [OpenStreetMap]( http://www.openstreetmap.org) is a free editable map of the whole world. It is made by people like you.". 
+
 **Caution:**
 If the map excerpt covers a very large area, the simulation might become slow or even unresponsive.
+
 ## Step 4. Edit network
 Use SUMO tools, [netconvert](https://sumo.dlr.de/docs/netconvert.html)  to modify and edit the imported map from [OSM]( http://www.openstreetmap.org).
 Several aspects of the imported network may have to be modified to suit your needs. Some of the relevant [netconvert] options are described below.
+
+
 **Option:**
+
 --geometry.remove : Simplifies the network (saving space) without changing topology.
 --ramps.guess : Acceleration/Deceleration lanes are often not included in OSM data. This option identifies likely roads that have these additional lanes and causes them to be added.
 --junctions.join: applies a heuristic to join these junction clusters automatically and is used by default when using a python script [osmBuild.py](https://github.com/eclipse/sumo/blob/master/tools/osmBuild.py)
@@ -61,7 +66,9 @@ The command is shown as below.
 ```
 Also, it is possible to build SUMO networks for very large areas (the whole of Chattanooga), but some precautions should be taken: [OSM for large-scale network](https://sumo.dlr.de/docs/Networks/Import/OpenStreetMap.html).  
 The following options can be used to reduce the network size:
+
 **Options:**
+
 --no-internal-links, --keep-edges.by-vclass passenger, --remove-edges.by-type highway.track,highway.services,highway.unsurfaced
 if only major roads are needed, reduction of the network can be done by setting the option
 --keep-edges.by-type highway.motorway,highway.motorway_link,highway.trunk,highway.trunk_link,highway.primary,highway.primary_link
