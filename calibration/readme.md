@@ -50,7 +50,7 @@ If the map excerpt covers a very large area, the simulation might become slow or
 
 ## Step 4. Edit network
 Use SUMO tools, [netconvert](https://sumo.dlr.de/docs/netconvert.html)  to modify and edit the imported map from [OSM]( http://www.openstreetmap.org).
-Several aspects of the imported network may have to be modified to suit your needs. Some of the relevant [netconvert] options are described below.
+Several aspects of the imported network may have to be modified to suit your needs. Some of the relevant netconvert  options are described below.
 
 
 **Option:**
@@ -102,6 +102,7 @@ The command is shown below.
 duaIterate.py --net-file Chattanooga_SUMO_Network.net.xml -t combined_trips.xml -l 2 -C -m    --meso-recheck 1 -E -L --time-to-teleport 50 --clean-alt
 ```
 Also, if not prefer using DUA, using a single assignment by [duarouter]( https://sumo.dlr.de/docs/duarouter.html) with the below command:
+
 **Options:**
 duarouter   --route-files combined.trips.xml  –net-file Chattanooga_SUMO_Network.net.xml    --unsorted-input  --additional-files busStopsCARTA.add.xml,vehtype.add.xml    --ptline-routing --output-file    Cattanooga.rou.xml --ignore-errors
 However, only the shortest path were used instead of a user assignment algorithm may cause lots of jams/deadlocks.
@@ -137,7 +138,7 @@ The traffic simulation tools can mainly be divided into four different groups [S
 ### Step 11.1. Microscopic model
 In the [SUMO]( https://sumo.dlr.de/docs/ ), the speed parameter is used in the calibration process. The reason was that the observation data only provide speed and flow. The flow data was not being used in the calibration process because the only data from the real world we have is speed data. Root Mean Square Error (RMSE) minimizing analysis and T-test were used to calibrate data between the model output and observed data to find the optimal value of parameters in the model development. In order to find the optimal value of parameters in the model, some parameters were changed or modified. The changed parameters in the calibration process are those in [Krauβ]( https://sumo.dlr.de/pdf/KraussDiss.pdf ) car-following parameters. After having several trial-and-error experiments, there are four parameters that occurred which can make significant changes in the network. Those parameters are sigma (driver imperfection), tau (driver reaction time), speedFactor, or speedDev.
 *Tau* is intended to model a driver's desired time headway (in seconds). It is used by all models. Drivers attempt to maintain a minimum time gap of tau between the rear bumper of their leader and their own "front-bumper + minGap" to assure the possibility to brake in time when their leader starts braking, and they need tau seconds reaction time to start breaking as well.
-*Sigma* is the driver imperfection (0 denotes perfect driving	). 
+*Sigma* is the driver imperfection (0 denotes perfect driving). 
 Use python script [createVehTypeDistribution.py]( https://sumo.dlr.de/docs/Tools/Misc.html ) to generate  a vehicle type distribution by sampling from configurable value distributions for the desired [vType-parameters](https://sumo.dlr.de/docs/Definition_of_Vehicles%2C_Vehicle_Types%2C_and_Routes.html).
 The only required parameter is the configuration file in the format shown below (example config.txt):
 ```txt
@@ -190,22 +191,23 @@ Only a few [vType](https://sumo.dlr.de/docs/Definition_of_Vehicles%2C_Vehicle_Ty
 - [accel,decel](https://sumo.dlr.de/docs/Vehicle_Type_Parameter_Defaults.html) (only for computing junction passing time when the microscopic junction model is active).
 Use python script [createVehTypeDistribution.py]( https://sumo.dlr.de/docs/Tools/Misc.html ) to generate a vehicle type distribution by sampling from configurable value distributions for the desired vType-parameters.
 ## Step 12. Configure and run Micro-SUMO simulation
-Set up the configuration file with set of parameters as [vTypeDistributions_micro.add.xml]() and output parameters: [Chattanooga_SUMO_calibration_final.sumocfg]().
+Set up the [configuration file](https://github.com/smarttransit-ai/transit-simulator/tree/master/calibration/simulation-calibration/configuration%20files) with set of parameters as [vTypeDistributions_micro.add.xml](https://github.com/smarttransit-ai/transit-simulator/tree/master/calibration/simulation-calibration/Micro-%20VehTypeDist) and output parameters: [Chattanooga_SUMO_calibration_final.sumocfg](https://github.com/smarttransit-ai/transit-simulator/tree/master/calibration/simulation-calibration/configuration%20files).
 This configuration will generate three output files:
 * Edge-based output. 
-* Detectors output file [out.xml](), contains 137 detectores wtith flow and speed data to compare with real-world speed data. 
+* Detectors output file [out.xml](https://github.com/smarttransit-ai/transit-simulator/tree/master/calibration), contains 137 detectores wtith flow and speed data to compare with real-world speed data. 
 * Trajectory output which contains information about type, current speed and acceleration of each vehicle.
 *Note:* [Chattanooga_Daily_Trips_calibtation.rou.xml](), which is too large to push here, is put in Teams.
 ## Step 13. Configure and run Meso-SUMO simulation
-Set up the configuration file with set of parameters as [vTypeDistributions_meso.add.xml]() and output parameters: [Chattanooga_SUMO_calibration_final.sumocfg]().
+Set up the configuration file with set of parameters as [vTypeDistributions_meso.add.xml](https://github.com/smarttransit-ai/transit-simulator/tree/master/calibration/simulation-calibration/Meso_VehTypeDist) and output parameters: [Chattanooga_SUMO_calibration_final.sumocfg](https://github.com/smarttransit-ai/transit-simulator/tree/master/calibration/simulation-calibration/configuration%20files).
 This configuration will generate three output files:
 * Edge-based output. 
-* Detectors output file [out.xml](), contains 137 detectores wtith flow and speed data to compare with real-world speed data. 
+* Detectors output file [out.xml](https://github.com/smarttransit-ai/transit-simulator/tree/master/calibration), contains 137 detectores wtith flow and speed data to compare with real-world speed data. 
 * Trajectory output which contains information about type, current speed and acceleration of each vehicle.
 *Note:* [Chattanooga_Daily_Trips_calibtation.rou.xml](), which is too large to push here, is put in Teams.
 ## Step 14. Process the output files
 For calibration, Micro-SUMO simulation results should be compared with the real-world with a T-test and [Fréchet distance](http://www.kr.tuwien.ac.at/staff/eiter/et-archive/cdtr9464.pdf) to find which speed result is close to the real-world data. 
-•	For the T-test, first, determine a significance level appropriate for the study. This will be the value for comparing the final result. Generally, significance values are at α = 0.05 or α = 0.01, depending on the preference and how accurate the results are.
-•	Compute the discrete Fréchet distance between two curves. Use python scripts [similaritymeasures](https://pypi.org/project/similaritymeasures/) and [frechetdist](https://pypi.org/project/frechetdist/) to calculate the minimum distance between two curves.
+- For the T-test, first, determine a significance level appropriate for the study. This will be the value for comparing the final result. Generally, significance values are at α = 0.05 or α = 0.01, depending on the preference and how accurate the results are.
+- Compute the discrete Fréchet distance between two curves. Use python scripts [similaritymeasures](https://pypi.org/project/similaritymeasures/) and [frechetdist](https://pypi.org/project/frechetdist/) to calculate the minimum distance between two curves.
 The process should be repeated for calibration of the Meso-SUMO model between the result of Meso and Micro.
+
 **Click the above blue highlight texts for more information.**
