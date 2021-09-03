@@ -6,7 +6,7 @@ Run the simulation and collect the output results, which includes the trajectori
 
 Below is a sample for one trajectory file.
 
-<img src="https://github.com/smarttransit-ai/transit-simulator/blob/master/energy_estimation/traj_sample.png" alt="alt text" width="550" height="150">
+<img src="https://github.com/smarttransit-ai/transit-simulator/blob/master/energy_estimation/traj_sample.png" alt="alt text" width="550" height="120">
 
 time_ms: time of the day in millisecond.
 speed: unit is 0.01m/s
