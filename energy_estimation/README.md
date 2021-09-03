@@ -5,6 +5,7 @@
 Run the simulation and collect the output results, which includes the trajectories for each trip. Each trip id has one trajectory output, recording the instantaneous speed and acceleration in 1Hz.
 
 Below is a sample for one trajectory file.
+<img src="https://github.com/smarttransit-ai/transit-simulator/blob/master/energy_estimation/traj_sample.png" alt="alt text" width="300" height="120">
 
 time_ms: time of the day in millisecond.
 speed: unit is 0.01m/s
