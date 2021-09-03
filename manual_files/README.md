@@ -77,10 +77,10 @@ Values within this output describe the situation within the network in terms of 
 Set up the configuration file with output parameters: [Chattanooga_addBUS_final.sumocfg](https://github.com/smarttransit-ai/transit-simulator/blob/master/manual_files/SUMO_simulation/Chattanooga_addBUS_final.sumocfg).
 This configuration will generate three output files:
 
-* Edge-based output mentioned in step 7.
+* Edge-based output mentioned in step 8.
 * Bus stop output. This output contains the information about each vehicle's scheduled <stop>: time of arrival and departure, stopping place and number of persons that were loaded and unloaded. The information is generated every time a stop ends.
 * Trajectory output which contains information about type, current speed and acceleration of each vehicle.
-*Note:* [Chattanooga_Daily_Trips.rou.xml](https://vanderbilt365.sharepoint.com/sites/TransitHub/Shared%20Documents/simulation/SUMO_simulation), which is too large to push here, is put in Teams
+*Note:* [Chattanooga_Daily_Trips.rou.xml](https://vanderbilt365.sharepoint.com/sites/TransitHub/Shared%20Documents/simulation/SUMO_simulation), which is too large to push here, is on Teams
 ### Step 10. Process the output files
 [outputProcess.py](https://github.com/smarttransit-ai/transit-simulator/blob/master/manual_files/codes/outputProcess.py) is the script for processing the three output files: edge-based output, busstop output, and trajectories output. 
 
