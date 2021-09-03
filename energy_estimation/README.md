@@ -1,4 +1,5 @@
 ## Energy estimation for simulated trips
+This code is to estimated the energy consumption for simulated buses in 1HZ. The micro-energy prediction models are developed based on the real-time vehicle driving and energy consumption data at 1Hz frequency collected by CARTA. For more details about the model, please refer to the [micro-energy-prediction repo](https://github.com/smarttransit-ai/micro-energy-prediction) .
 
 ### 1. Output from transit-simulator 
 
