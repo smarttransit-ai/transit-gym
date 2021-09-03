@@ -8,9 +8,9 @@ Below is a sample for one trajectory file.
 
 <img src="https://github.com/smarttransit-ai/transit-simulator/blob/master/energy_estimation/traj_sample.png" alt="alt text" width="550" height="120">
 
-*time_ms: time of the day in millisecond.
-*speed: unit is 0.01m/s.
-*acceleration: unit is 0.001m/s^2.
+* time_ms: time of the day in millisecond.
+* speed: unit is 0.01m/s.
+* acceleration: unit is 0.001m/s^2.
 
 ### 2. energy estimation
 [Energy-estimation.ipynb](https://github.com/smarttransit-ai/transit-simulator/blob/master/energy_estimation/Energy-estimation.ipynb) is used to predict the energy consumption for trajectories in 1HZ. 
