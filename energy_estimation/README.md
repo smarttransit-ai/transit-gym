@@ -15,9 +15,9 @@ Below is a sample for one trajectory file.
 
 
 ### 2. energy estimation
-[Energy-estimation.ipynb](https://github.com/smarttransit-ai/transit-simulator/blob/master/energy_estimation/Energy-estimation.ipynb) is used to predict the energy consumption for trajectories in 1HZ. 
-* Select scenario for weather (rainy, sunny, windy, and snowny) and vehicle class (diesel, hybrid, and electric)
-* Load micro-energy prediction model
+[Energy_estimation.ipynb](https://github.com/smarttransit-ai/transit-simulator/blob/master/energy_estimation/Energy_estimation.ipynb) is used to predict the energy consumption for trajectories in 1HZ. 
+* Select scenario for weather (rainy, sunny, windy, and snowny)
+* Load micro-energy prediction models
 * Predict energy consumption for each trip in 1Hz
 
 *Note:* The unit of predicted energy consumption for diesel and hybrid bus is gal/h, and for electric bus is kWh.
