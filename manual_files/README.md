@@ -24,7 +24,7 @@ The edge lists in the later route file can supply the clue to check which stop i
 Automatically generate codes for bus stop additional file based on stop's positions converted by TraCI ([Def_BusStop_file.py](https://github.com/smarttransit-ai/transit-simulator/blob/master/manual_files/codes/Def_BusStop_file.py)).
 * Stop additional xml: [busStopsCARTA.add.xml](https://github.com/hdemma/transit-simulator/blob/master/manual_files/SUMO_simulation/busStopsCARTA.add.xml).
 ### Step 4. Create bus trip xml
-Automatically generate codes for bus trip file based on sequential bus stops along each trip in [Comprehensive_GTFS.xlsx](https://github.com/smarttransit-ai/transit-simulator/blob/master/manual_files/data/Comprehensive_GTFS.xlsx) with correspongding position information ([Create_BusTrip_newfile.py](https://github.com/smarttransit-ai/transit-simulator/blob/master/manual_files/codes/Create_BusTrip_newfile.py))
+Automatically generate codes for bus trip file based on sequential bus stops along each trip in [Comprehensive_GTFS.xlsx](https://github.com/smarttransit-ai/transit-simulator/blob/master/manual_files/data/Comprehensive_GTFS.xlsx) with correspongding position information ([Create_BusTripXML.py](https://github.com/smarttransit-ai/transit-simulator/blob/master/manual_files/codes/Create_BusTripXML.py))
 *Note:* Comprehensive_GTFS.xlsx is generated ([Match_GTFS.py](https://github.com/smarttransit-ai/transit-simulator/blob/master/manual_files/codes/Match_GTFS.py)) from the [GTFS](https://github.com/smarttransit-ai/transit-energy-dashboard/tree/master/app/data/raw/GTFS/gtfs_may_2020) data.
 
 * Bus trip xml: [BusLines.trips.xml](https://github.com/hdemma/transit-simulator/blob/master/manual_files/SUMO_simulation/BusLines.trips.xml).
