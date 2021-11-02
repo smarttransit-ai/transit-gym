@@ -1,0 +1,10 @@
+<additional>
+	<vType id="Gillig_LF_2014" accel="1.2" decel="4.0" sigma="0.5" length="10.7" minGap="3" maxSpeed="65" personCapacity="32" guiShape="bus" vClass="bus" emissionClass="HBEFA3/Bus"/>
+	<vType id="Gillig_HF_2006" accel="1.3" decel="4.2" sigma="0.5" length="10.7" minGap="3" maxSpeed="65" personCapacity="32" guiShape="bus" vClass="bus" emissionClass="HBEFA3/Bus"/>
+	<vType id="Gillig_HF_2002" accel="1.2" decel="4.1" sigma="0.5" length="10.7" minGap="3" maxSpeed="60" personCapacity="35" guiShape="bus" vClass="bus" emissionClass="HBEFA3/Bus"/>
+	<vType id="Gillig_HF_1998" accel="1.1" decel="4.0" sigma="0.5" length="9.1" minGap="3" maxSpeed="65" personCapacity="29" guiShape="bus" vClass="bus" emissionClass="HBEFA3/Bus"/>
+	<vType id="Gillig_Hybrids_2014" accel="1.4" decel="4.4" sigma="0.5" length="10.7" minGap="3" maxSpeed="60" personCapacity="32" guiShape="bus" vClass="bus" emissionClass="HBEFA3/Bus"/>
+	<vType id="Gillig_Hybrids_2009" accel="1.2" decel="4.0" sigma="0.5" length="11.3" minGap="3" maxSpeed="60" personCapacity="35" guiShape="bus" vClass="bus" emissionClass="HBEFA3/Bus"/>
+    <vType id="Gillig_LF_2009" accel="1.3" decel="4.1" sigma="0.5" length="11.3" minGap="3" maxSpeed="65" personCapacity="35" guiShape="bus" vClass="bus" emissionClass="HBEFA3/Bus"/>
+	<vType id="BYD_BEV" accel="1.2" decel="4.3" sigma="0.5" length="10.9" minGap="3" maxSpeed="62.5" personCapacity="33" guiShape="bus" vClass="bus" emissionClass="HBEFA3/Bus"/>
+</additional>
