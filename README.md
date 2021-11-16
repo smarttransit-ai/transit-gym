@@ -22,6 +22,9 @@
 1. Change the GTFS Schedule
 2. Repeat steps 1-7 from above.
 
+
+## Link to videos and demonstrations
+
 # Explaining the transit simulation
 
  - what goes behings it.
