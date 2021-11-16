@@ -1,5 +1,35 @@
 # transit-simulator
 
+## Examples: Chattanooga Simulation.
+
+1. Do something
+2. Simulate for a day
+3. Collect trajectories
+4. Compute Energy Estimates
+5. Plot Energy Estimates across trajectories for vehicles.
+6. Plot occupancy of vehicles
+7. Plot congestion levels on the roads.
+
+
+## Changing the Settings - Examples
+1. Change the vehicle Assignment
+2. Repeat steps 1-7 from above.
+
+
+## Changing the Settings - Examples
+1. Change the GTFS Schedule
+2. Repeat steps 1-7 from above.
+
+# Explaining the transit simulation
+
+ - what goes behings it.
+ - Refer to the paper
+ - Provide link to presentation and video of smart comp
+ - Explain calibration process
+ - When would the calibration process be repeated.
+
+
+
 ## Guide to transsim
 
 Note: The steps discussed here are generic steps. Specific **examples** are:
