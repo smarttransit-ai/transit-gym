@@ -5,7 +5,7 @@
 ## Examples: Chattanooga Simulation.
 
 1. Do something
-2. Simulate for a day
+2. Simulate for one hour from 8AM - 9 AM. Describe how someone can change to whole day or a different time window.
 3. Collect trajectories
 4. Compute Energy Estimates
 5. Plot Energy Estimates across trajectories for vehicles.
