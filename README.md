@@ -1,5 +1,7 @@
 # transit-simulator
 
+* Installation instructions.
+
 ## Examples: Chattanooga Simulation.
 
 1. Do something
