@@ -27,12 +27,6 @@ Prepare the required files in a same file structure as shown in the files folder
 
 As shown in [driver.py](examples/driver.py), you can now use the package it to interpret your transsim program. Use run() to start the simulation. The result will be available in the running directory after it completes.
 
-### Environment
-SUMO 1.8.0
-
-Python 3.7
-
-
 ## Examples: Chattanooga Simulation.
 
 1. Do something
