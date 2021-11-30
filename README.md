@@ -1,7 +1,7 @@
 # transit-simulator
 
-* Installation instructions.
-* 
+## Installation Instructions
+
 ### Step 1. Install package
 
 In the directory src, create a python venv (or use install for all environments). Use the command "***pip install .***" to install the package into your environment. Note the version of python on your machine should be greater than 3.6 for dependencies to work.
