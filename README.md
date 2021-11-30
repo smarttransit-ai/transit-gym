@@ -1,6 +1,37 @@
 # transit-simulator
 
 * Installation instructions.
+* 
+### Step 1. Install package
+
+In the directory src, create a python venv (or use install for all environments). Use the command "***pip install .***" to install the package into your environment. Note the version of python on your machine should be greater than 3.6 for dependencies to work.
+
+### Step 2. Install SUMO
+
+If you have not already done so, go to "https://sumo.dlr.de/docs/Installing/index.html" to install SUMO on your machine. Please install the latest version instead of the regular distribution.
+
+### Step 3. Prepare files
+
+Prepare the required files in a same file structure as shown in the files folder. The required files in the apporipriate folders are:
+
+* /network/ - The network files.
+* /taz/ - The taz.xml for transportation demand.
+* /bus-stop/ - Configured bus stop excel file. Format should be same as example.
+* /gtfs/ - Apporpriate GTFS files.
+* /gui/ - gui.view.xml for sumo config.
+* /travel-demand/ -.od file for transportation demand.
+* /vehicle-types/ - Apporpriate excel file for vehicle stats.
+* /routes/ - Routes to be included in the simulation if needed. (Optional)
+
+### Step 4. Start Simulation
+
+As shown in [driver.py](examples/driver.py), you can now use the package it to interpret your transsim program. Use run() to start the simulation. The result will be available in the running directory after it completes.
+
+### Environment
+SUMO 1.8.0
+
+Python 3.7
+
 
 ## Examples: Chattanooga Simulation.
 
@@ -33,8 +64,6 @@
  - Explain calibration process
  - When would the calibration process be repeated.
 
-
-
 ## Guide to transsim
 
 Note: The steps discussed here are generic steps. Specific **examples** are:
@@ -45,35 +74,6 @@ Note: The steps discussed here are generic steps. Specific **examples** are:
 
 Also, the simulator is an automation of manual steps. If you are looking for **manual steps** to create the simulation environment, please refer to [Manual Files](manual_files)
 
-### Step 1. Install package
-
-In the directory src, create a python venv (or use install for all environments). Use the command "***pip install .***" to install the package into your environment. Note the version of python on your machine should be greater than 3.6 for dependencies to work.
-
-### Step 2. Install SUMO
-
-If you have not already done so, go to "https://sumo.dlr.de/docs/Installing/index.html" to install SUMO on your machine. Please install the latest version instead of the regular distribution.
-
-### Step 3. Prepare files
-
-Prepare the required files in a same file structure as shown in the files folder. The required files in the apporipriate folders are:
-
-* /network/ - The network files.
-* /taz/ - The taz.xml for transportation demand.
-* /bus-stop/ - Configured bus stop excel file. Format should be same as example.
-* /gtfs/ - Apporpriate GTFS files.
-* /gui/ - gui.view.xml for sumo config.
-* /travel-demand/ -.od file for transportation demand.
-* /vehicle-types/ - Apporpriate excel file for vehicle stats.
-* /routes/ - Routes to be included in the simulation if needed. (Optional)
-
-### Step 4. Start Simulation
-
-As shown in [driver.py](examples/driver.py), you can now use the package it to interpret your transsim program. Use run() to start the simulation. The result will be available in the running directory after it completes.
-
-### Environment
-SUMO 1.8.0
-
-Python 3.7
 
 # Acknowledgement
 
