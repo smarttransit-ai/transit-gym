@@ -48,8 +48,7 @@ class Veh_Types_Container:
             f.write('\t<vType id="' + key+ '" accel="'\
                 + r['accel'] + '" decel="'+ r['decel'] + '" sigma="' + r['sigma'] + '" length="'\
                 + r['length']+'" minGap="' + r['minGap'] + '" maxSpeed="'+ r['maxSpeed']+'" personCapacity="'\
-                + r['personCapacity']+'" guiShape="' + r['guiShape'] + '" vClass="'\
-                + r['vClass'] + '" emissionClass="' + r['emissionClass'] + '"/>\n')
+                + r['personCapacity']+'" guiShape="' + r['guiShape'] + '" vClass="'bus'" emissionClass="' + r['emissionClass'] + '"/>\n')
         
         #Write the last line in the .txt file
         f.write("</additional>")
