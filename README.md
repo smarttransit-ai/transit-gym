@@ -48,17 +48,11 @@ As shown in [driver.py](examples/driver.py), you can now use the package it to i
 2. Repeat steps 1-7 from above.
 
 
-## Link to videos and demonstrations
-This work is published in this paper: [TRANSIT-GYM: A Simulation and Evaluation Engine for Analysis of Bus Transit Systems](https://ieeexplore.ieee.org/abstract/document/9556290)
-
-The videos and demonstations are in:
-https://vanderbilt365.sharepoint.com/sites/TransitHub/Shared%20Documents/Forms/AllItems.aspx?FolderCTID=0x01200038D55CC5B8DD0640BBBA3F2E7A659561&id=%2Fsites%2FTransitHub%2FShared%20Documents%2Fsimulation%2FSmartComp&viewid=ba956da1%2D2d6b%2D4b8a%2D8eaa%2D9d2fb164d54c
-
 # Explaining the transit simulation
 
  - what goes behings it.
- - Refer to the paper
- - Provide link to presentation and video of smart comp
+ - RThis work is published in this paper: [TRANSIT-GYM: A Simulation and Evaluation Engine for Analysis of Bus Transit Systems](https://ieeexplore.ieee.org/abstract/document/9556290)
+ - Find the presentation and video of the paper in this link: https://vanderbilt365.sharepoint.com/sites/TransitHub/Shared%20Documents/Forms/AllItems.aspx?FolderCTID=0x01200038D55CC5B8DD0640BBBA3F2E7A659561&id=%2Fsites%2FTransitHub%2FShared%20Documents%2Fsimulation%2FSmartComp&viewid=ba956da1%2D2d6b%2D4b8a%2D8eaa%2D9d2fb164d54c
  - Explain calibration process
  - When would the calibration process be repeated.
 
