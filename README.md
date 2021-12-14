@@ -29,26 +29,29 @@ As shown in [driver.py](examples/driver.py), you can now use the package it to i
 
 ## Examples: Chattanooga Simulation.
 
-1. Do something
-2. Simulate for one hour from 8AM - 9 AM. Describe how someone can change to whole day or a different time window.
-3. Collect trajectories
-4. Compute Energy Estimates
-5. Plot Energy Estimates across trajectories for vehicles.
-6. Plot occupancy of vehicles
-7. Plot congestion levels on the roads.
+1. Run the [Chattanooga_CS](https://github.com/smarttransit-ai/transit-simulator/tree/master/examples/Chattanooga_CS) example. cd into Chattanooga_CS and run: python3 driver.py
+2. Simulate for one hour from 9 AM - 10 AM. Change the simulation to a whole day or different time windows by changing the "time [0900:1000]" in [Chattanooga_CS.transsim](https://github.com/smarttransit-ai/transit-simulator/blob/master/examples/Chattanooga_CS/Chattanooga_CS.transsim).
+4. Collect output.
+5. Compute Energy Estimates
+6. Plot Energy Estimates across trajectories for vehicles.
+7. Plot occupancy of vehicles
+8. Plot congestion levels on the roads.
 
 
 ## Changing the Settings - Examples
-1. Change the vehicle Assignment
-2. Repeat steps 1-7 from above.
+1. Change the vehicle Assignment by changing the content of "vehicleassignment{}" in [Chattanooga_CS.transsim](https://github.com/smarttransit-ai/transit-simulator/blob/master/examples/Chattanooga_CS/Chattanooga_CS.transsim) and run: python3 driver.py
+3. Repeat steps 1-7 from above.
 
 
 ## Changing the Settings - Examples
-1. Change the GTFS Schedule
+1. Change the GTFS Schedule by changing "import "gtfs.20200816"" to other gtfs file name in [Chattanooga_CS.transsim](https://github.com/smarttransit-ai/transit-simulator/blob/master/examples/Chattanooga_CS/Chattanooga_CS.transsim) and run: python3 driver.py
 2. Repeat steps 1-7 from above.
 
 
 ## Link to videos and demonstrations
+This work is published in this paper: [TRANSIT-GYM: A Simulation and Evaluation Engine for Analysis of Bus Transit Systems](https://ieeexplore.ieee.org/abstract/document/9556290)
+
+The videos and demonstations are in:
 https://vanderbilt365.sharepoint.com/sites/TransitHub/Shared%20Documents/Forms/AllItems.aspx?FolderCTID=0x01200038D55CC5B8DD0640BBBA3F2E7A659561&id=%2Fsites%2FTransitHub%2FShared%20Documents%2Fsimulation%2FSmartComp&viewid=ba956da1%2D2d6b%2D4b8a%2D8eaa%2D9d2fb164d54c
 
 # Explaining the transit simulation
