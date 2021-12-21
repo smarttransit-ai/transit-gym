@@ -31,7 +31,7 @@ As shown in [driver.py](examples/driver.py), you can now use the package it to i
 
 1. Run the [Chattanooga_CS](https://github.com/smarttransit-ai/transit-simulator/tree/master/examples/Chattanooga_CS) example. cd into Chattanooga_CS and run: python3 driver.py
 2. Simulate for one hour from 9 AM - 10 AM. Change the simulation to a whole day or different time windows by changing the "time [0900:1000]" in [Chattanooga_CS.transsim](https://github.com/smarttransit-ai/transit-simulator/blob/master/examples/Chattanooga_CS/Chattanooga_CS.transsim).
-4. Collect output.
+4. Collect output. The output results are saved at Chattanooga_CS/Chattanooga_CS/output/.
 5. Compute Energy Estimates
 6. Plot Energy Estimates across trajectories for vehicles.
 7. Plot occupancy of vehicles
