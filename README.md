@@ -34,7 +34,7 @@ As shown in [driver.py](examples/driver.py), you can now use the package it to i
 4. Collect output. The output results are saved at Chattanooga_CS/Chattanooga_CS/output/.
 5. Compute Energy Estimates. Fill the corresponding folder name in the script and run [Energy_estimation.ipynb](https://github.com/smarttransit-ai/transit-simulator/blob/master/energy_estimation/Energy_estimation.ipynb). The energy estimation results are saved in your created folder.
 6. Plot Energy Estimates across trajectories for vehicles. Run the script [plot_energy_estimation.ipynb](https://github.com/smarttransit-ai/transit-simulator/blob/master/energy_estimation/plot_energy_estimation.ipynb) with the energy estimation results.
-7. Plot occupancy of vehicles. Read the "busstop_info.csv" from the simulation output folder and run the script [plot_occupancy.ipynb](https://github.com/smarttransit-ai/transit-simulator/blob/master/manual_files/output/visulization%20example/plot_occupancy.ipynb).
+7. Plot occupancy of buses. Read the "busstop_info.csv" from the simulation output folder and run the script [plot_occupancy.ipynb](https://github.com/smarttransit-ai/transit-simulator/blob/master/manual_files/output/visulization%20example/plot_occupancy.ipynb).
 8. Plot congestion levels on the roads.
 
 
