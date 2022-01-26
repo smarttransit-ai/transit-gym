@@ -28,7 +28,26 @@ Prepare the required files in a same file structure as shown in the files folder
 As shown in [driver.py](examples/driver.py), you can now use the package it to interpret your transsim program. Use run() to start the simulation. The result will be available in the running directory after it completes.
 
 ## Example 1: Hello World
+
+
 ## Example 2 : Chattanooga Simulation - 24 Hours
+The procedure is similar to "Installation Instructions", with the configuration file of 24 Hours.  
+### Step 1. Prepare the Required Files for 24 Hours
+Prepare the required files in a same file structure as shown in the files folder. The required files in the apporipriate folders are:
+
+* /network/ - The network files.
+* /taz/ - The taz.xml for transportation demand.
+* /bus-stop/ - Configured bus stop excel file. Format should be same as example.
+* /gtfs/ - Apporpriate GTFS files.
+* /gui/ - gui.view.xml for sumo config.
+* /travel-demand/ -.od file for transportation demand.
+* /vehicle-types/ - Apporpriate excel file for vehicle stats.
+* /routes/ - Routes to be included in the simulation. 
+* 
+### Step 2. Start Simulation
+As shown in [driver.py](examples/driver.py), you can now use the package it to interpret your transsim program. Use run() to start the simulation. The result will be available in the running directory after it completes.
+
+
 * Describe the output files.
 ## Example 3 : Chattanooga Simulation - 0900 - 1000 hours
 ## Example 4 : Chattanooga Simulation - 0900 - 1000 hours with GTFS Changes
