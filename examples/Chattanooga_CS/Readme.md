@@ -34,7 +34,7 @@ sudo apt-**get** install unzip
 
 Then, go to
 
-https://vanderbilt365.sharepoint.com/sites/TransitHub/Shared%20Documents/simulation/SUMO_simulation/Chattanooga_Daily_Trips.rou.xml
+https://drive.google.com/file/d/18QYhq5gbh9ytAzwC9kSXwNHfwSljbp8s/view?usp=sharing
 
 to download the route file and put in a new directory examples/Chattanooga_CS/routes
 
