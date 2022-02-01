@@ -31,10 +31,10 @@ As shown in [driver.py](examples/driver.py), you can now use the package it to i
 
 
 ## Example 2 : Chattanooga Simulation - 24 Hours
-The procedure is similar to "Installation Instructions", with the configuration file of 24 Hours.  
+The procedure is similar to "Installation Instructions", with the configuration file of 24 Hours. The configuration file and driver python file updated as "Chattanooga_CS_24_hours" and "driver_24" respectively at: https://github.com/smarttransit-ai/transit-simulator/tree/master/examples/Chattanooga_CS
 ### Step 1. Prepare the Required Files for 24 Hours
 Prepare the required files in a same file structure as shown in the files folder. The required files in the apporipriate folders are:
-go to" https://drive.google.com/drive/folders/1rBjS87wliKDDHBRMoYVOdYuK5BruQ6Rp?usp=sharing "
+
 
 * /network/ - The network files.
 * /taz/ - The taz.xml for transportation demand.
@@ -47,7 +47,7 @@ go to" https://drive.google.com/drive/folders/1rBjS87wliKDDHBRMoYVOdYuK5BruQ6Rp?
 
 
 ### Step 2. Start Simulation
-As shown in [driver.py](examples/driver.py), you can now use the package it to interpret your transsim program. Use run() to start the simulation. The result will be available in the running directory after it completes.
+As shown in [driver_24.py](examples/driver_24.py), you can now use the package it to interpret your transsim program. Use run() to start the simulation. The result will be available in the running directory after it completes.
 
 
 * Describe the output files.
