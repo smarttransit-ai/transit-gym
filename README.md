@@ -78,7 +78,7 @@ Prepare the required files in a same file structure as shown in the files folder
 
 
 ### Step 2. Start Simulation
-As shown in [driver_24_val.py](examples/driver_24.py), you can now use the package it to interpret your transsim program. Use run() to start the simulation. The result will be available in the running directory after it completes.
+As shown in [driver_24_cal.py](examples/driver_24.py), you can now use the package it to interpret your transsim program. Use run() to start the simulation. The result will be available in the running directory after it completes.
 
 
 
