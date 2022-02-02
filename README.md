@@ -51,13 +51,12 @@ As shown in [driver_24.py](examples/driver_24.py), you can now use the package i
 
 
 * Describe the output files.
-## Example 3 : Chattanooga Simulation - 0900 - 1000 hours
-## Example 4 : Chattanooga Simulation - 0900 - 1000 hours with GTFS Changes
+## Example 3 : Chattanooga Simulation - 0900 - 1000 hours with GTFS Changes
+Using GTFS processor "https://github.com/smarttransit-ai/transit-simulator/blob/master/src/transsim/GTFS_processor.py" to generate new files and put the files in the GFTS folder. 
 
 
 
-
-## Example 5 : Chattanooga Simulation - 24 Hours after calibration
+## Example 4 : Chattanooga Simulation - 24 Hours after calibration
 The procedure is similar to "Installation Instructions", with the configuration file of 24 Hours. The configuration file and driver python file updated as "Chattanooga_CS_24_hours_cal" and "driver_24_cal" respectively at: https://github.com/smarttransit-ai/transit-simulator/tree/master/examples/Chattanooga_CS
 Also, it needs to replace * /routes/ file with https://drive.google.com/file/d/1IxJPMDwjnMn5U5wSLA2PJ_J0WsePk_aN/view?usp=sharing with the previous route file and add vehicle type from https://drive.google.com/file/d/14WqszGqfpbP1awJhw9TFWamT7p6Uv-7d/view?usp=sharing .
 
