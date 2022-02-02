@@ -53,15 +53,15 @@ As shown in [driver_24.py](examples/driver_24.py), you can now use the package i
 * Describe the output files.
 ## Example 3 : Chattanooga Simulation - 0900 - 1000 hours with GTFS Changes
 Using GTFS processor "https://github.com/smarttransit-ai/transit-simulator/blob/master/src/transsim/GTFS_processor.py" to generate new files and put the files in the GFTS folder. Prepare the required files in a same file structure as shown in the files folder. The required files in the apporipriate folders are:
+* /network/ - The network files.
+* /taz/ - The taz.xml for transportation demand.
+* /bus-stop/ - Configured bus stop excel file. Format should be same as example.
+* /gtfs/ - Apporpriate GTFS files.
+* /gui/ - gui.view.xml for sumo config.
+* /travel-demand/ -.od file for transportation demand.
+* /vehicle-types/ - Apporpriate excel file for vehicle stats.
+* /routes/ - Routes to be included in the simulation. 
 
-/network/ - The network files.
-/taz/ - The taz.xml for transportation demand.
-/bus-stop/ - Configured bus stop excel file. Format should be same as example.
-/gtfs/ - Apporpriate GTFS files.
-/gui/ - gui.view.xml for sumo config.
-/travel-demand/ -.od file for transportation demand.
-/vehicle-types/ - Apporpriate excel file for vehicle stats.
-/routes/ - Routes to be included in the simulation.
 
 
 ## Example 4 : Chattanooga Simulation - 24 Hours after calibration
