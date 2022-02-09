@@ -16,7 +16,7 @@ sudo apt-**get** install sumo sumo-tools sumo-doc
 
 Install the package into the python environment.
 
-For global installation, cd into the directory transsim/src and run:
+For global installation, cd into the directory transit-simulator/src and run:
 
 sudo **pip3** install .
 
