@@ -29,6 +29,33 @@ As shown in [driver.py](examples/driver.py), you can now use the package it to i
 
 ## Example 1: Hello World
 
+#Step 1. Install transsim package
+
+Install the package into the python environment.
+
+For global installation, cd into the directory transit-simulator/src and run:
+
+sudo **pip3** install .
+
+To install the package into your global python environment. 
+
+#Step 2. Unzip network files
+Unzip the network file contained in examples/HelloWorld/network.<br>
+Run the following command in the directory examples/HelloWorld/network:
+
+sudo apt-**get** install unzip
+
+**unzip** Chattanooga_SUMO_Network.net.zip
+
+#Step 3. Run test simulation
+
+You are all set to run the helloworld example. cd into HelloWorld and run:
+
+**python3** driver.py
+
+#Step 4. Collect results
+The results will be put in HelloWorld/Simulation_1. Specifically, the trajectories and edge output files will be in the folder HelloWorld/Simulation_1/output/.
+
 
 ## Example 2 : Chattanooga Simulation - 24 Hours
 The procedure is similar to "Installation Instructions", with the configuration file of 24 Hours. The configuration file and driver python file updated as "Chattanooga_CS_24_hours" and "driver_24" respectively at: https://github.com/smarttransit-ai/transit-simulator/tree/master/examples/Chattanooga_CS
