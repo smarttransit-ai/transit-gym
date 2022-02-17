@@ -57,7 +57,7 @@ The results will be put in HelloWorld/Simulation_1. Specifically, the trajectori
 
 
 ## Example 2 : Chattanooga Simulation - 24 Hours
-The procedure is similar to "Installation Instructions", with the configuration file of 24 Hours. The configuration file and driver python file updated as "Chattanooga_CS_24_hours" and "driver_24" respectively at: https://github.com/smarttransit-ai/transit-simulator/tree/master/examples/Chattanooga_CS
+The procedure is similar to "Installation Instructions", with the configuration file of 24 Hours. 
 ### Step 1. Prepare the Required Files for 24 Hours
 Prepare the required files in a same file structure as shown in the files folder. The required files in the apporipriate folders are:
 
@@ -71,6 +71,15 @@ Prepare the required files in a same file structure as shown in the files folder
 * /vehicle-types/ - Apporpriate excel file for vehicle stats.
 * /routes/ - Routes to be included in the simulation. 
 
+
+1. Download the routes file (routes.Chattanooga_Daily_Trips.rou.xml) from (https://drive.google.com/file/d/17O9rhpYR1JWlh9vSRZvyCdIFsTKhLSZj/view?usp=sharing) and put in the /routes/ folder.
+2. Run the [Chattanooga_CS_24_hours.transsim](https://github.com/smarttransit-ai/transit-simulator/tree/master/examples/Chattanooga_CS_24_hours) example. cd into Chattanooga_CS_24_hours and run: python3 driver_24.py
+3. Simulate for 24 hour from 00:00 AM - 12 PM. Change the simulation to a whole day or different time windows by changing the "time [0000:2359]" in [Chattanooga_CS_24_hours.transsim](https://github.com/smarttransit-ai/transit-simulator/tree/master/examples/Chattanooga_CS_24_hours).
+4. Collect output. The output results are saved at examples/Chattanooga_CS_24_hours/output/. The example output of simulating for one hour from 00:00 AM - 12 PM is saved at https://drive.google.com/drive/u/1/folders/1w9hj8wMJOGemEWVHgJ4_zvXnMT2Htbv9. The output folder includes trajectories for buses, bus stop information, and edge information, all in csv format.
+5. Compute Energy Estimates. Fill the corresponding folder name in the script and run [Energy_estimation.ipynb](https://github.com/smarttransit-ai/transit-simulator/blob/master/energy_estimation/Energy_estimation.ipynb). The energy estimation results are saved in your created folder.
+6. Plot Energy Estimates across trajectories for vehicles. Run the script [plot_energy_estimation.ipynb](https://github.com/smarttransit-ai/transit-simulator/blob/master/energy_estimation/plot_energy_estimation.ipynb) with the energy estimation results.
+7. Plot occupancy of buses. Read the "busstop_info.csv" from the simulation output folder and run the script [plot_occupancy.ipynb](https://github.com/smarttransit-ai/transit-simulator/blob/master/manual_files/output/visulization%20example/plot_occupancy.ipynb).
+8. Plot congestion levels on the roads.
 
 ### Step 2. Start Simulation
 As shown in [driver_24.py](examples/driver_24.py), you can now use the package it to interpret your transsim program. Use run() to start the simulation. The result will be available in the running directory after it completes.
@@ -88,6 +97,14 @@ Using GTFS processor "https://github.com/smarttransit-ai/transit-simulator/blob/
 * /vehicle-types/ - Apporpriate excel file for vehicle stats.
 * /routes/ - Routes to be included in the simulation. 
 
+1. Run the [Chattanooga_CS_900_1000](https://github.com/smarttransit-ai/transit-simulator/tree/master/examples/Chattanooga_CS_900_1000) example. cd into Chattanooga_CS and run: python3 driver.py
+2. Download the routes file (routes.Chattanooga_Daily_Trips.rou.xml) from (https://drive.google.com/file/d/17O9rhpYR1JWlh9vSRZvyCdIFsTKhLSZj/view?usp=sharing) and put in the /routes/ folder. 
+3. Simulate for one hour from 9 AM - 10 AM. Change the simulation to a whole day or different time windows by changing the "time [0900:1000]" in [Chattanooga_CS.transsim](https://github.com/smarttransit-ai/transit-simulator/blob/master/examples/Chattanooga_CS/Chattanooga_CS.transsim).
+4. Collect output. The output results are saved at Chattanooga_CS/Chattanooga_CS/output/. The example output of simulating for one hour from 9 AM - 10 AM is saved at https://drive.google.com/drive/u/1/folders/1w9hj8wMJOGemEWVHgJ4_zvXnMT2Htbv9. The output folder includes trajectories for buses, bus stop information, and edge information, all in csv format.
+5. Compute Energy Estimates. Fill the corresponding folder name in the script and run [Energy_estimation.ipynb](https://github.com/smarttransit-ai/transit-simulator/blob/master/energy_estimation/Energy_estimation.ipynb). The energy estimation results are saved in your created folder.
+6. Plot Energy Estimates across trajectories for vehicles. Run the script [plot_energy_estimation.ipynb](https://github.com/smarttransit-ai/transit-simulator/blob/master/energy_estimation/plot_energy_estimation.ipynb) with the energy estimation results.
+7. Plot occupancy of buses. Read the "busstop_info.csv" from the simulation output folder and run the script [plot_occupancy.ipynb](https://github.com/smarttransit-ai/transit-simulator/blob/master/manual_files/output/visulization%20example/plot_occupancy.ipynb).
+8. Plot congestion levels on the roads.
 
 
 ## Example 4 : Chattanooga Simulation - 24 Hours after calibration
@@ -120,15 +137,6 @@ As shown in [driver_24_cal.py](examples/driver_24.py), you can now use the packa
 
 
 
-## Examples: Chattanooga Simulation.
-
-1. Run the [Chattanooga_CS](https://github.com/smarttransit-ai/transit-simulator/tree/master/examples/Chattanooga_CS) example. cd into Chattanooga_CS and run: python3 driver.py
-2. Simulate for one hour from 9 AM - 10 AM. Change the simulation to a whole day or different time windows by changing the "time [0900:1000]" in [Chattanooga_CS.transsim](https://github.com/smarttransit-ai/transit-simulator/blob/master/examples/Chattanooga_CS/Chattanooga_CS.transsim).
-4. Collect output. The output results are saved at Chattanooga_CS/Chattanooga_CS/output/. The example output of simulating for one hour from 9 AM - 10 AM is saved at https://drive.google.com/drive/u/1/folders/1w9hj8wMJOGemEWVHgJ4_zvXnMT2Htbv9. The output folder includes trajectories for buses, bus stop information, and edge information, all in csv format.
-5. Compute Energy Estimates. Fill the corresponding folder name in the script and run [Energy_estimation.ipynb](https://github.com/smarttransit-ai/transit-simulator/blob/master/energy_estimation/Energy_estimation.ipynb). The energy estimation results are saved in your created folder.
-6. Plot Energy Estimates across trajectories for vehicles. Run the script [plot_energy_estimation.ipynb](https://github.com/smarttransit-ai/transit-simulator/blob/master/energy_estimation/plot_energy_estimation.ipynb) with the energy estimation results.
-7. Plot occupancy of buses. Read the "busstop_info.csv" from the simulation output folder and run the script [plot_occupancy.ipynb](https://github.com/smarttransit-ai/transit-simulator/blob/master/manual_files/output/visulization%20example/plot_occupancy.ipynb).
-8. Plot congestion levels on the roads.
 
 
 ## Changing the Settings - Examples
