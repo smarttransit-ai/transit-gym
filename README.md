@@ -1,5 +1,14 @@
 # transit-simulator
 
+The following project describes the procedures necessary to simulate the public transit in the city of Chattanooga. The approach is generalizable and can be extended to other cities. The paper [TRANSIT-GYM: A Simulation and Evaluation Engine for Analysis of Bus Transit Systems](https://ieeexplore.ieee.org/abstract/document/9556290) provides details about the work.
+
+Below you will find the installation instructions and steps required to run a few example simulations. During these steps we refer to two different scenarios:
+
+1. **[Hello World](https://github.com/hdemma/transit-simulator/blob/master/examples/HelloWorld/)**: a simple example that demonstrates the full functionality and usages.
+2. **[Chattanooga_CS](https://github.com/hdemma/transit-simulator/blob/master/examples/Chattanooga_CS/)**: a environment for transit simulation within the Chattanooga area.
+
+Note the steps below are an automation of manual steps. If you are looking for **manual steps** to create the simulation environment, please refer to [Manual Files](manual_files)
+
 ## Installation Instructions
 
 ### Step 1. Install package
@@ -146,14 +155,6 @@ Prepare the required files in a same file structure as shown in the files folder
 As shown in [driver_24_cal.py](examples/driver_24.py), you can now use the package it to interpret your transsim program. Use run() to start the simulation. The result will be available in the running directory after it completes.
 
 
-
-
-
-
-
-
-
-
 ## Changing the Settings - Examples
 1. Change the vehicle Assignment by changing the content of "vehicleassignment{}" in .transsim files in the respective example and run: python3 driver.py
 3. Repeat steps 1-7 from above.
@@ -164,22 +165,6 @@ As shown in [driver_24_cal.py](examples/driver_24.py), you can now use the packa
 2. Repeat steps 1-7 from above.
 
 
-# Explaining the transit simulation
-
- - This work is published in this paper: [TRANSIT-GYM: A Simulation and Evaluation Engine for Analysis of Bus Transit Systems](https://ieeexplore.ieee.org/abstract/document/9556290)
- - Find the presentation and video of the paper in this link: https://vanderbilt365.sharepoint.com/sites/TransitHub/Shared%20Documents/Forms/AllItems.aspx?FolderCTID=0x01200038D55CC5B8DD0640BBBA3F2E7A659561&id=%2Fsites%2FTransitHub%2FShared%20Documents%2Fsimulation%2FSmartComp&viewid=ba956da1%2D2d6b%2D4b8a%2D8eaa%2D9d2fb164d54c
- - Explain calibration process
- - When would the calibration process be repeated.
-
-## Guide to transsim
-
-Note: The steps discussed here are generic steps. Specific **examples** are:
-
-**[Hello World](https://github.com/hdemma/transit-simulator/blob/master/examples/HelloWorld/)**: a simple example that demonstrates the full functionality and usages.
-
-**[Chattanooga_CS](https://github.com/hdemma/transit-simulator/blob/master/examples/Chattanooga_CS/)**: a environment for transit simulation within the Chattanooga area.
-
-Also, the simulator is an automation of manual steps. If you are looking for **manual steps** to create the simulation environment, please refer to [Manual Files](manual_files)
 
 
 # Acknowledgement
