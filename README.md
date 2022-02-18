@@ -150,7 +150,7 @@ As shown in [driver_24_cal.py](examples/driver_24.py), you can now use the packa
 
 
 ## Changing the Settings - Examples
-1. Change the vehicle Assignment by changing the content of "vehicleassignment{}" in [Chattanooga_CS.transsim](https://github.com/smarttransit-ai/transit-simulator/blob/master/examples/Chattanooga_CS/Chattanooga_CS.transsim) and run: python3 driver.py
+1. Change the vehicle Assignment by changing the content of "vehicleassignment{}" in .transsim files in the respective example and run: python3 driver.py
 3. Repeat steps 1-7 from above.
 
 
