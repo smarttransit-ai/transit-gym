@@ -7,7 +7,7 @@ Below you will find the installation instructions and steps required to run a fe
 1. **[Hello World](https://github.com/hdemma/transit-simulator/blob/master/examples/HelloWorld/)**: a simple example that demonstrates the full functionality and usages.
 2. **[Chattanooga_CS](https://github.com/hdemma/transit-simulator/blob/master/examples/Chattanooga_CS/)**: a environment for transit simulation within the Chattanooga area.
 
-Please refer to [Manual Files](manual_files) if you are looking for **manual steps** to create the simulation environment.
+Please refer to [Manual Files](manual_files) if you are looking for **manual steps** to create the simulation environment. Otherwise follow the steps below that provide helper scripts.
 
 ## Installation Instructions
 
