@@ -11,7 +11,7 @@ import "bus-stop.busstops.xlsx"
 
 simulation configuration 1
 {
-	time [0900:0910]
+	time [0900:1000]
 	schedule weekday
 	output_sampling_period 3600 
 	vehicleassignment
