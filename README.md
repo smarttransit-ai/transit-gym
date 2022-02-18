@@ -6,6 +6,8 @@
 
 In the directory src, create a python venv (or use install for all environments). Use the command "***pip install .***" to install the package into your environment. Note the version of python on your machine should be greater than 3.6 for dependencies to work.
 
+Install required python packages from requirements.txt
+
 ### Step 2. Install SUMO
 
 If you have not already done so, go to "https://sumo.dlr.de/docs/Installing/index.html" to install SUMO on your machine. Please install the latest version instead of the regular distribution.
