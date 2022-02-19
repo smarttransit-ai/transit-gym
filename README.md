@@ -41,7 +41,7 @@ Prepare the required files in a same file structure as shown in the files folder
 As shown in [driver.py](examples/driver.py), you can now use the package it to interpret your transsim program. Use run() to start the simulation. The result will be available in the running directory after it completes.
 
 ## For running Energy estimation 
-Install jupyter-nbconvert to run pyhton notebooks. It can be done by entering **sudo apt install jupyter-nbconvert** in terminal.
+Install jupyter-nbconvert to run python notebooks. It can be done by entering **sudo apt install jupyter-nbconvert** in terminal.
 
 # Example 1: Hello World
 
