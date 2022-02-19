@@ -1,19 +1,18 @@
-FROM python:3.10-slim-buster as runstage
+FROM ubuntu:21.10
 ARG BUILD_CONCURRENCY
 RUN apt-get update && apt-get install -y locales  && rm -rf /var/lib/apt/lists/* \
     && localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
 ENV LANG en_US.utf8
 RUN ln -fs /usr/share/zoneinfo/America/Chicago /etc/localtime
-RUN apt-get install -y tzdata
+RUN apt-get update && apt-get install -y tzdata  python3  python3-pip python3-dev python-is-python3
 RUN dpkg-reconfigure --frontend noninteractive tzdata
 RUN mkdir -p /src  && mkdir -p /opt
 RUN apt-get update && \
     apt-get install -y --no-install-recommends wget ca-certificates tzdata\
-    libboost-program-options1.67.0 build-essential libboost-regex1.67.0 libboost-date-time1.67.0 libboost-chrono1.67.0\
-    ibboost-filesystem1.67.0 autoconf libboost-iostreams1.67.0 libboost-thread1.67.0 expat liblua5.2-0 libtbb2 git\
+    libboost-program-options-dev build-essential libboost-regex-dev libboost-date-time-dev libboost-chrono-dev\
+    libboost-filesystem-dev autoconf libboost-iostreams-dev libboost-thread-dev expat liblua5.2-0 libtbb2 git\
     libboost-dev  libzmq5-dev swig cmake automake libtool tmux
 WORKDIR /
-
 
 RUN wget https://github.com/GMLC-TDC/HELICS/releases/download/v2.8.0/Helics-v2.8.0-source.tar.gz
 RUN mkdir helics
@@ -34,7 +33,7 @@ RUN pip install pytz
 WORKDIR /
 RUN git clone https://github.com/gridlab-d/gridlab-d.git gridlab-d
 WORKDIR gridlab-d
-RUN git checkout develop
+RUN git checkout 725bec8d7fd57134607559199b795acc1722d494
 RUN autoreconf -fi
 RUN ./configure --with-helics --with-xerces --enable-silent-rules "CFLAGS=-g -O0 -w" "CXXFLAGS=-g -O0 -w -std=c++14" "LDFLAGS=-g -O0 -w"
 RUN NPROC=${BUILD_CONCURRENCY:-$(grep -c ^processor /proc/cpuinfo 2>/dev/null || 1)} && make -j${NPROC} install
@@ -58,7 +57,12 @@ RUN rm -rf gridlab-d helics xerces-c-3.2.3
 #RUN NPROC=${BUILD_CONCURRENCY:-$(grep -c ^processor /proc/cpuinfo 2>/dev/null || 1)} && make -C sumo-1.12.0 -j${NPROC} all 
 #RUN NPROC=${BUILD_CONCURRENCY:-$(grep -c ^processor /proc/cpuinfo 2>/dev/null || 1)} && make -C sumo-1.12.0 -j${NPROC} install 
 
-RUN apt-get update && apt-get -qq install sumo sumo-tools sumo-doc
+# Install latest sumo package.
+RUN echo "deb https://ppa.launchpadcontent.net/sumo/stable/ubuntu impish main" >> /etc/apt/sources.list
+RUN echo "deb-src https://ppa.launchpadcontent.net/sumo/stable/ubuntu impish main " >> /etc/apt/sources.list
+RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 4B339D18DD12CA62CA0E400F87637B2A34012D7A
+RUN apt-get update && apt-get -qq install sumo sumo-tools sumo-doc vim
+
 
 #COPY start-session.sh /
 #RUN chmod +x start-session.sh
