@@ -43,20 +43,22 @@ WORKDIR /
 RUN rm -rf gridlab-d helics xerces-c-3.2.3
  
 # Install system dependencies.
-RUN apt-get update && apt-get -qq install \
-    wget \
-    g++ \
-    automake make cmake \
-    libxerces-c-dev libfox-1.6-dev \
-    default-jdk \
-    libeigen3-dev libopenscenegraph-dev \
-    openscenegraph libgl2ps-dev
+# RUN apt-get update && apt-get -qq install \
+#     wget \
+#     g++ \
+#     automake make cmake \
+#     libxerces-c-dev libfox-1.6-dev \
+#     default-jdk \
+#     libeigen3-dev libopenscenegraph-dev \
+#     openscenegraph libgl2ps-dev
  
-RUN wget https://sumo.dlr.de/releases/1.12.0/sumo-src-1.12.0.tar.gz
-RUN tar -xzvf sumo-src-1.12.0.tar.gz 
-RUN cd sumo-1.12.0 && cmake . 
-RUN NPROC=${BUILD_CONCURRENCY:-$(grep -c ^processor /proc/cpuinfo 2>/dev/null || 1)} && make -C sumo-1.12.0 -j${NPROC} all 
-RUN NPROC=${BUILD_CONCURRENCY:-$(grep -c ^processor /proc/cpuinfo 2>/dev/null || 1)} && make -C sumo-1.12.0 -j${NPROC} install 
+# RUN wget https://sumo.dlr.de/releases/1.12.0/sumo-src-1.12.0.tar.gz
+# RUN tar -xzvf sumo-src-1.12.0.tar.gz 
+# RUN cd sumo-1.12.0 && cmake . 
+#RUN NPROC=${BUILD_CONCURRENCY:-$(grep -c ^processor /proc/cpuinfo 2>/dev/null || 1)} && make -C sumo-1.12.0 -j${NPROC} all 
+#RUN NPROC=${BUILD_CONCURRENCY:-$(grep -c ^processor /proc/cpuinfo 2>/dev/null || 1)} && make -C sumo-1.12.0 -j${NPROC} install 
+
+RUN apt-get update && apt-get -qq install sumo sumo-tools sumo-doc
 
 #COPY start-session.sh /
 #RUN chmod +x start-session.sh
@@ -69,3 +71,13 @@ RUN chmod +x start-session.sh
 
 ENV PYTHONPATH "${PYTHONPATH}:/usr/local/python"
 RUN git clone https://github.com/adubey14/HELICS-Tutorial.git gridlab-tutorial
+
+RUN git clone https://github.com/smarttransit-ai/transit-gym.git transit-gym
+WORKDIR /transit-gym/src
+RUN pip install .
+RUN apt-get update && apt-get -qq install unzip
+
+WORKDIR /transit-gym/examples/HelloWorld/network
+RUN unzip Chattanooga_SUMO_Network.net.zip
+
+WORKDIR /
