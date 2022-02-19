@@ -74,6 +74,7 @@ RUN echo "tmux -2 attach-session -d" >>start-session.sh
 RUN chmod +x start-session.sh
 
 ENV PYTHONPATH "${PYTHONPATH}:/usr/local/python"
+ENV SUMO_HOME '/usr/share/sumo/'
 RUN git clone https://github.com/adubey14/HELICS-Tutorial.git gridlab-tutorial
 
 RUN git clone https://github.com/smarttransit-ai/transit-gym.git transit-gym
