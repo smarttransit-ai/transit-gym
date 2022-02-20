@@ -217,16 +217,16 @@ The files are already arranged in the required structure. *Extract zip file in /
 Download the routes file (routes.Chattanooga_Daily_Trips.rou.xml) from (https://drive.google.com/file/d/17O9rhpYR1JWlh9vSRZvyCdIFsTKhLSZj/view?usp=sharing) and put in the Chattanooga_CS_24_hours/routes/ folder.
 
 ### Step 2. Start Simulation
-**Warning: This execution may take a long time (>24 hours)**
+**Warning: This execution may take a long time (>24 hours)**<br>
+**Note**: The simulation time can be changed to different durations by changing the "time [0000:2359]" in [Chattanooga_CS_24_hours.transsim](https://github.com/smarttransit-ai/transit-gym/tree/master/examples/Chattanooga_CS_24_hours).<br>
 
-Now you are ready to simulate for 24 hours from 12:00 AM - 12:00 AM (next day). 
+1. Simulate for 24 hours from 12:00 AM - 12:00 AM (next day). 
 
-**Note**: Change the simulation to a whole day or different time windows by changing the "time [0000:2359]" in [Chattanooga_CS_24_hours.transsim](https://github.com/smarttransit-ai/transit-gym/tree/master/examples/Chattanooga_CS_24_hours).
 ```
 $ cd transit-gym/examples/Chattanooga_CS_24_hours
 $ python3 driver_24.py
 ```
-The result will be available in the running directory in folder `output/Simulation1` after it completes. The output folder includes trajectories for buses, bus stop information, and edge information, all in csv format.
+2. The result are available in `/output/Simulation1`.  The output folder includes trajectories for buses, bus stop information, and edge information, all in csv format.
 
 *Optional* The example output of simulating for one hour from 00:00 AM - 12 PM is saved at https://drive.google.com/drive/u/1/folders/1w9hj8wMJOGemEWVHgJ4_zvXnMT2Htbv9.
 
