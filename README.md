@@ -144,7 +144,9 @@ As shown in [driver.py](examples/driver.py), you can now use the program to inte
 ```
 $ python3 driver.py
 ```
-The result will be available in the running directory after it completes.
+The result will be available in the running directory in `Simulation1\output\` after it completes.<br>
+An example output of the Trajectory generated:
+[img2](https://github.com/smarttransit-ai/transit-gym/blob/readme_change/resources/traj_sample.png)
 
 ### Step 5. For running Energy estimation 
 Install jupyter-nbconvert to run python notebooks. 
@@ -171,6 +173,9 @@ $ jupyter nbconvert --execute plot_energy_estimation.ipynb
 ```
 $ jupyter nbconvert --execute plot_occupancy.ipynb
 ```
+
+Here is an example plot to estimate energy usage from the results of Hello_World
+[image](https://github.com/smarttransit-ai/transit-gym/blob/readme_change/resources/hello_world_plot.PNG)
 
 ### Optional: Step 7. Installing ubuntu unzipper
 ```
