@@ -274,8 +274,7 @@ Go to the [Chattanooga_CS_cal](examples/Chattanooga_CS_cal) example folder.
 **Note**: Look at [calibration-poster.pdf](calibration-poster.pdf) for the calibration procedures that we used.
 
 ### Step 1. Prepare the Required Files for 24 Hours
-The files are already arranged in the required structure. *Extract zip file in /network/ folder*<br>
-1. Download the calibrated routes file (Chattanooga_trips_cal.rou.xml) from https://drive.google.com/file/d/1IxJPMDwjnMn5U5wSLA2PJ_J0WsePk_aN/view?usp=sharing and put in the /routes/ folder. 
+1. Download the calibrated routes file [Chattanooga_trips_cal.rou.xml](https://www.dropbox.com/s/1tn7an1rijfyafa/Chattanooga_trips_cal.rou.xml.tar.gz?dl=0) from [dropbox](https://www.dropbox.com/s/1tn7an1rijfyafa/Chattanooga_trips_cal.rou.xml.tar.gz?dl=0)and put in the /routes/ folder. Extract the tar.gz in the routes folder.
 2. Extract the zip file in /network folder 
 
 
