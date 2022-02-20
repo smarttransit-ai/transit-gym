@@ -218,7 +218,7 @@ The results will be put in HelloWorld/Simulation_1. Specifically, the trajectori
 Go to the [Chattanooga_CS_900_1000](examples/Chattanooga_CS_900_1000) example folder. 
 
 ### Step 0. *Optional* Update with new GTFS files
-GTFS files can be updated as shown in [Step 8. Generating GTFS files](#Optional-Step-8.-Updating-GTFS-files)
+GTFS files can be updated as shown in [Step 8. Generating GTFS files](#optional--step-8-updating-gtfs-files)
 
 ### Step 1. Prepare the Required Files
 
