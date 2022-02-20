@@ -28,10 +28,11 @@ class Simulation:
             raise ValueError('Wrong extension of program')
         print(time.ctime(),":",'Generating Configuration files for Simulation from ',file_name)
         result = self.interpreter.interpret(file_name)
-        #result = ['../SUMO_Simulation/Simulation_3/']
-        print(time.ctime(),":",'Starting Simulation. Calling Sumo: ','sumo ' + res + 'config.sumocfg')
+        print(time.ctime(),":",'Done.')
+        #result = ['../SUMO_Simulation/Simulation_3/']        
         for res in result:
-            subprocess.call(time.ctime(),":",'sumo ' + res + 'config.sumocfg', shell=True)
+            print(time.ctime(),":",'Starting Simulation. Calling Sumo: ','sumo ' + res + 'config.sumocfg')
+            subprocess.run('sumo ' + res + 'config.sumocfg', shell=True,check=True,capture_output=True)
         print(time.ctime(),":",'Simulation Complete - Proceeding to output processing')
         processor = Output_Processor()
         for res in result:
