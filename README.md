@@ -104,7 +104,7 @@ Now the simulation results will be in host machine.
 
 ## Step 1. Install package
 
-In the directory src, create a python venv (or use install for all environments). Use the command "***pip install .***" to install the package into your environment. Note the version of python on your machine should be greater than 3.6 for dependencies to work.
+Navigate to /transit-gym/src, create a python venv (or use install for all environments). Use the command "***pip install .***" to install the package into your environment. python >= 3.6 required for dependencies to work.
 
 Install required python packages from requirements.txt
 
