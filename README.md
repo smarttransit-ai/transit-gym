@@ -152,7 +152,7 @@ Install jupyter-nbconvert to run python notebooks.
 $ sudo apt install jupyter-nbconvert
 ```
 
-### Step 6. Post-processing on generated results[.](#post-processing)
+### Step 6. Post-processing on generated results[](#post-processing)
 Here, perform 3 types of post-analysis
 1. Compute the energy estimates.
   Fill the corresponding **folder names** in the script and run [Energy_estimation.ipynb](https://github.com/smarttransit-ai/transit-gym/blob/master/energy_estimation/Energy_estimation.ipynb).
@@ -296,10 +296,10 @@ The procedure is similar to "Installation Instructions", with the configuration 
 
 ## Additional Steps. Changing the Settings - Examples
 #### Changing the Vehicle Assignment
-  1. Change the vehicle Assignment by changing the content of "vehicleassignment{}" in .transsim files in the respective example and run: python3 driver.py
+Change the vehicle Assignment by changing the content of "vehicleassignment{}" in .transsim files in the respective example and run: python3 driver.py
 
 #### Changing the GTFS schedule[](#change-duration)
-1. Change the GTFS Schedule by changing "import "gtfs.20200816"" to other gtfs file name, such as "import "gtfs.20211024"" in the transsim file. For example, in  [Chattanooga_CS.transsim](https://github.com/smarttransit-ai/transit-simulator/blob/master/examples/Chattanooga_CS/Chattanooga_CS.transsim) change **import "gtfs.20200816"** to **import "gtfs.20211024"**
+Change the GTFS Schedule by changing "import "gtfs.20200816"" to other gtfs file name, such as "import "gtfs.20211024"" in the transsim file. For example, in  [Chattanooga_CS.transsim](https://github.com/smarttransit-ai/transit-simulator/blob/master/examples/Chattanooga_CS/Chattanooga_CS.transsim) change **import "gtfs.20200816"** to **import "gtfs.20211024"**
 
 
 
