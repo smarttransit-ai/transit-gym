@@ -26,15 +26,29 @@ Now you can run various examples. create a directory where results will be store
 
 ```
 $ mkdir simulation_output  # 
-$ docker run -t -i -v simulation_output:/simulation_output transit-gym-docker bash  
+$ docker run -t -i -v `pwd`/simulation_output:/simulation_output transit-gym-docker bash  
 root@37a93e9abef8:/# 
 ```
 
 Now launch example
 
 ```
-root@9c7f0f221ea7:/# cd transit-gym/examples/HelloWorld/
-root@9c7f0f221ea7:/transit-gym/examples/HelloWorld# python driver.py 
+root@bf8aa1fdcd33:/# cd transit-gym/examples/HelloWorld/
+root@bf8aa1fdcd33:/transit-gym/examples/HelloWorld# python driver.py 
+Sun Feb 20 00:55:18 2022 : Generating Configuration files for Simulation from  helloworld.transsim
+Sun Feb 20 00:55:18 2022 : running od2trips
+Sun Feb 20 00:55:19 2022 : od2trips done
+Sun Feb 20 00:55:19 2022 : running duarouter. Takes time.
+Sun Feb 20 01:25:08 2022 : duarouter done
+
+Config File Saved. Please find configured simulation file at: ./Simulation_1
+
+Sun Feb 20 01:25:08 2022 : Done.
+Sun Feb 20 01:25:08 2022 : Starting Simulation. Calling Sumo:  sumo ./Simulation_1/config.sumocfg
+Sun Feb 20 01:28:51 2022 : Simulation Complete - Proceeding to output processing
+/usr/local/lib/python3.9/dist-packages/transsim/Output_Processor.py:45: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  edgeO = pd.read_csv(result_path + "EdgeMean.csv",sep=';')
+Sun Feb 20 01:29:13 2022 : All Done
 ```
 
 The output will look like the following
@@ -64,6 +78,49 @@ Index(['time', 'speed', 'acceleration', 'vehicle_ref', 'actorConfig_id',
        'actorConfig_vehicleClass'],
       dtype='object')
 Sat Feb 19 23:33:59 2022 : All Done
+```
+
+Now move the results to host machine
+
+```
+root@bf8aa1fdcd33:/transit-gym/examples/HelloWorld# mv Simulation_1/ /simulation_output/HelloWorld_Simulation_1
+root@bf8aa1fdcd33:/transit-gym/examples/HelloWorld# exit
+exit
+
+```
+
+Now the simulation results will be in host machine.
+
+```
+(base) host-machine:simulation_output $ tree
+.
+└── HelloWorld_Simulation_1
+    ├── EdgeMean.csv
+    ├── EdgeMean.xml
+    ├── Person_trips.xml
+    ├── busstop_output.csv
+    ├── busstop_output.xml
+    ├── config.sumocfg
+    ├── edge.dump.add.xml
+    ├── error_warning_log.xml
+    ├── final_routefile.alt.xml
+    ├── final_routefile.xml
+    ├── output
+    │   ├── Trajectory_Route1.0_ALTON_PARK_block107.0_trip151657020.csv
+    │   ├── busstop_info.csv
+    │   └── edge_info.csv
+    ├── raw_routefile.xml
+    ├── stopfile.add.xml
+    ├── trajectories_output.xml
+    ├── trajectories_outputactorConfig.csv
+    ├── trajectories_outputmotionState.csv
+    ├── trajectories_outputvehicle.csv
+    └── vehicle.add.xml
+
+2 directories, 20 files
+(base) host-machine:simulation_output $ 
+
+
 ```
 
 # Regular Installation Instructions (without Docker)
