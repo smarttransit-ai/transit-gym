@@ -22,7 +22,7 @@ $ cd transit-gym
 $ docker build -t transit-gym-docker .
 ```
 
-Now you can run various examples. create a directory where results will be stored and then launch docker into root and mount simulation_output to /simulation_output. The docker will provide a prompt into the container. The number may be different.
+Now you can run various examples. create a directory where results will be stored and then launch docker into root and mount simulation_output to /simulation_output. The docker will provide a prompt into the container. The container number 37a93e9abef8 will be different on your machine.
 
 ```
 $ mkdir simulation_output  # 
@@ -40,6 +40,30 @@ root@9c7f0f221ea7:/transit-gym/examples/HelloWorld# python driver.py
 The output will look like the following
 
 ```
+root@8a9adfe7c1dc:/transit-gym/examples/HelloWorld# python driver.py 
+Sat Feb 19 22:59:06 2022 : Generating Configuration files for Simulation from  helloworld.transsim
+Sat Feb 19 22:59:07 2022 : running od2trips
+Sat Feb 19 22:59:08 2022 : od2trips done
+Sat Feb 19 22:59:08 2022 : running duarouter. Takes time.
+Sat Feb 19 23:30:14 2022 : duarouter done
+
+Config File Saved. Please find configured simulation file at: ./Simulation_1
+
+Sat Feb 19 23:30:14 2022 : Done.
+Sat Feb 19 23:30:14 2022 : Starting Simulation. Calling Sumo:  sumo ./Simulation_1/config.sumocfg
+Sat Feb 19 23:33:39 2022 : Simulation Complete - Proceeding to output processing
+/usr/local/lib/python3.9/dist-packages/transsim/Output_Processor.py:45: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  edgeO = pd.read_csv(result_path + "EdgeMean.csv",sep=';')
+motion file imported. length Delayed('int-b6ee372e-7324-475b-8697-da871817f05f')
+actor config imported. lenthi 1
+vehref imported. length 1
+busref 1
+traj Delayed('int-bcd7831b-fe1f-4115-932e-acc3d3ab3c2b')
+Index(['time', 'speed', 'acceleration', 'vehicle_ref', 'actorConfig_id',
+       'actorConfig_emissionClass', 'actorConfig_fuel', 'actorConfig_ref',
+       'actorConfig_vehicleClass'],
+      dtype='object')
+Sat Feb 19 23:33:59 2022 : All Done
 ```
 
 # Regular Installation Instructions (without Docker)
