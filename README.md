@@ -185,7 +185,7 @@ $ sudo apt-get install unzip
 ```
 
 ### Optional : Step 8. Updating GTFS files[](#new-gtfs)
-Using [GTFS_processor.py]"https://github.com/smarttransit-ai/transit-gym/blob/master/src/transsim/GTFS_processor.py" to generate new files and put the files in the GFTS folder.
+Using [GTFS_processor.py]("https://github.com/smarttransit-ai/transit-gym/blob/master/src/transsim/GTFS_processor.py") to generate new files and put the files in the GFTS folder.
 ```
 $ cd transit-gym/src/transsim
 $ python3 GTFS_processor.py
