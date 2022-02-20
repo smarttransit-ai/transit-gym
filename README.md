@@ -184,7 +184,7 @@ Here is an example plot to estimate energy usage from the results of Hello_World
 $ sudo apt-get install unzip
 ```
 
-### Optional : Step 8. Updating GTFS files[](#new-gtfs)
+### Optional : Step 8. Updating GTFS files
 Using [GTFS_processor.py](src/transsim/GTFS_processor.py) to generate new files and put the files in the GFTS folder.
 ```
 $ cd transit-gym/src/transsim
@@ -237,7 +237,7 @@ $ python3 driver.py
 ```
 2. The result are available in `/Simulation1/output`.  The output folder includes trajectories for buses, bus stop information, and edge information, all in csv format. 
 <pre>  *Optional* The example output of simulating for one hour from 9 AM - 10 AM is stored at https://drive.google.com/drive/u/1/folders/1w9hj8wMJOGemEWVHgJ4_zvXnMT2Htbv9</pre>
-3. The *post-processing* can be performed on the collected data according to the steps mentioned [Step 6. Post-processing](#post-processing)
+3. The *post-processing* can be performed on the collected data according to the steps mentioned [Step 6. Post-processing](#step-6-post-processing-on-generated-results)
 
 ## Example 3 : Chattanooga Simulation - 24 Hours (Uncalibrated)
 Go to the [Chattanooga_CS_24_hours](examples/Chattanooga_CS_24_hours) example folder. 
