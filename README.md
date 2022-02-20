@@ -152,7 +152,7 @@ Install jupyter-nbconvert to run python notebooks.
 $ sudo apt install jupyter-nbconvert
 ```
 
-### Step 6. Post-processing on generated results[](#post-processing)
+### Step 6. Post-processing on generated results[.](#post-processing)
 Here, perform 3 types of post-analysis
 1. Compute the energy estimates.
   Fill the corresponding **folder names** in the script and run [Energy_estimation.ipynb](https://github.com/smarttransit-ai/transit-gym/blob/master/energy_estimation/Energy_estimation.ipynb).
@@ -210,8 +210,9 @@ The results will be put in HelloWorld/Simulation_1. Specifically, the trajectori
 ## Example 2 : Chattanooga Simulation - 0900 - 1000 hours (uncalibrated) with GTFS Changes
 
 Go to the [Chattanooga_CS_900_1000](https://github.com/smarttransit-ai/transit-simulator/tree/master/examples/Chattanooga_CS_900_1000) example folder. 
+
 ### Step 0. *Optional* Generate new GTFS files
-New GTFS files can be generated as shown in [Step 8. Generating GTFS files](https://github.com/smarttransit-ai/transit-gym/README.md/#new-gtfs)
+New GTFS files can be generated as shown in [Step 8. Generating GTFS files](#new-gtfs)
 
 ### Step 1. Prepare the Required Files
 
@@ -229,16 +230,15 @@ $ python3 driver.py
 3. The *post-processing* can be performed on the collected data according to the steps mentioned [Step 6. Post-processing](#post-processing)
 
 ## Example 3 : Chattanooga Simulation - 24 Hours (Uncalibrated)
-
-Follow the instructions as before to install the system. However, we will use a different configuration file.
+Go to the [Chattanooga_CS_24_hours](https://github.com/smarttransit-ai/transit-simulator/tree/master/examples/Chattanooga_CS_24_hours) example folder. 
 
 ### Step 1. Prepare the Required Files for 24 Hours
 The files are already arranged in the required structure. *Extract zip file in /network/ folder*<br>
-Download the routes file (routes.Chattanooga_Daily_Trips.rou.xml) from (https://drive.google.com/file/d/17O9rhpYR1JWlh9vSRZvyCdIFsTKhLSZj/view?usp=sharing) and put in the Chattanooga_CS_24_hours/routes/ folder.
+Download the routes file (routes.Chattanooga_Daily_Trips.rou.xml) from https://drive.google.com/file/d/17O9rhpYR1JWlh9vSRZvyCdIFsTKhLSZj/view?usp=sharing and put in the Chattanooga_CS_24_hours/routes/ folder.
 
 ### Step 2. Start Simulation
 **Warning: This execution may take a long time (>24 hours)**<br>
-**Note**: The simulation time can be changed to different durations by changing the "time [0000:2359]" in [Chattanooga_CS_24_hours.transsim](https://github.com/smarttransit-ai/transit-gym/tree/master/examples/Chattanooga_CS_24_hours).<br>
+**Note**: The simulation time can be changed to different durations by changing the "time [0000:2359]" in [Chattanooga_CS_24_hours.transsim](https://github.com/smarttransit-ai/transit-gym/tree/master/examples/Chattanooga_CS_24_hours/Chattanooga_CS_24_hours.transsim).<br>
 
 1. Simulate for 24 hours from 12:00 AM - 12:00 AM (next day). 
 ```
@@ -254,30 +254,43 @@ $ python3 driver_24.py
 
 
 ## Example 4 : Chattanooga Simulation - 24 Hours after calibration
-The procedure is similar to "Installation Instructions", with the configuration file of 24 Hours. The configuration file and driver python file updated as "Chattanooga_CS_24_hours_cal" and "driver_24_cal" respectively at: [examples/Chattanooga_CS_cal](examples/Chattanooga_CS_cal)
+Go to the [Chattanooga_CS_24_hours](https://github.com/smarttransit-ai/transit-simulator/tree/master/examples/Chattanooga_CS_24_hours) example folder. 
 
 **Note**: Look at [calibration-poster.pdf](calibration-poster.pdf) for the calibration procedures that we used.
 
-1. Download the calibrated routes file (Chattanooga_trips_cal.rou.xml) from (https://drive.google.com/file/d/1IxJPMDwjnMn5U5wSLA2PJ_J0WsePk_aN/view?usp=sharing) and put in the /routes/ folder. 
+### Step 1. Prepare the Required Files for 24 Hours
+The files are already arranged in the required structure. *Extract zip file in /network/ folder*<br>
+1. Download the calibrated routes file (Chattanooga_trips_cal.rou.xml) from https://drive.google.com/file/d/1IxJPMDwjnMn5U5wSLA2PJ_J0WsePk_aN/view?usp=sharing and put in the /routes/ folder. 
 2. Extract the zip file in /network folder 
-3. Run the [Chattanooga_CS_24_hours_cal.transsim](https://github.com/smarttransit-ai/transit-simulator/tree/master/examples/Chattanooga_CS_cal) example. cd into Chattanooga_CS and run: python3 driver.py
-4. Simulate for 24 hour from 00:00 AM - 12 PM. Change the simulation to a whole day or different time windows by changing the "time [0000:2359]" in [Chattanooga_CS_24_hours_cal.transsim](https://github.com/smarttransit-ai/transit-simulator/tree/master/examples/Chattanooga_CS_cal).
-5. Collect output. The output results are saved at Chattanooga_CS/Chattanooga_CS/output/. The output folder includes trajectories for buses, bus stop information, and edge information, all in csv format.
+
 
 
 ### Step 2. Start Simulation
-As shown in [driver_24_cal.py](examples/driver_24.py), you can now use the package it to interpret your transsim program. Use run() to start the simulation. The result will be available in the running directory after it completes.
+**Warning: This execution may take a long time (>24 hours)**<br>
+**Note**: The simulation time can be changed to different durations by changing the "time [0000:2359]" in [Chattanooga_CS_24_hours.transsim](https://github.com/smarttransit-ai/transit-gym/tree/master/examples/Chattanooga_CS_24_hours/Chattanooga_CS_24_hours.transsim).<br>
+
+1. Simulate for 24 hours from 12:00 AM - 12:00 AM (next day). 
+```
+$ cd transit-gym/examples/Chattanooga_CS_cal
+$ python3 driver.py
+```
+2. The result are available in `/Simulation1/output`.  The output folder includes trajectories for buses, bus stop information, and edge information, all in csv format.
+
+  *Optional* The example output of simulating for 24 hours from 12:00 AM - 12:00 AM(nextday) is saved at https://drive.google.com/drive/u/1/folders/1w9hj8wMJOGemEWVHgJ4_zvXnMT2Htbv9.
+
+3. The *post-processing* can be performed on the collected data according to the steps mentioned [Step 6. Post-processing](#post-processing)
 
 
-## Changing the Settings - Examples
-1. Change the vehicle Assignment by changing the content of "vehicleassignment{}" in .transsim files in the respective example and run: python3 driver.py
-3. Repeat steps 1-7 from above.
+
+The procedure is similar to "Installation Instructions", with the configuration file of 24 Hours. The configuration file and driver python file updated as "Chattanooga_CS_24_hours_cal" and "driver_24_cal" respectively at: [examples/Chattanooga_CS_cal](examples/Chattanooga_CS_cal)
 
 
-## Changing the Settings - Examples
-1. Change the GTFS Schedule by changing "import "gtfs.20200816"" to other gtfs file name, such as "import "gtfs.20211024"" in [Chattanooga_CS.transsim](https://github.com/smarttransit-ai/transit-simulator/blob/master/examples/Chattanooga_CS/Chattanooga_CS.transsim) and run: python3 driver.py
-2. Repeat steps 1-7 from above.
+## Additional Steps. Changing the Settings - Examples
+#### Changing the Vehicle Assignment
+  1. Change the vehicle Assignment by changing the content of "vehicleassignment{}" in .transsim files in the respective example and run: python3 driver.py
 
+#### Changing the GTFS schedule
+1. Change the GTFS Schedule by changing "import "gtfs.20200816"" to other gtfs file name, such as "import "gtfs.20211024"" in the transsim file. For example, in  [Chattanooga_CS.transsim](https://github.com/smarttransit-ai/transit-simulator/blob/master/examples/Chattanooga_CS/Chattanooga_CS.transsim) change **import "gtfs.20200816"** to **import "gtfs.20211024"**
 
 
 
