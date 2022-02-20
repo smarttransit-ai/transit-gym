@@ -211,7 +211,7 @@ The results will be put in HelloWorld/Simulation_1. Specifically, the trajectori
 
 Go to the [Chattanooga_CS_900_1000](https://github.com/smarttransit-ai/transit-simulator/tree/master/examples/Chattanooga_CS_900_1000) example folder. 
 ### Step 0. *Optional* Generate new GTFS files
-<pre>  New GTFS files </pre>can be generated as shown in [Step 8. Generating GTFS files](https://github.com/smarttransit-ai/transit-gym/edit/readme_change/README.md/#new-gtfs)
+New GTFS files can be generated as shown in [Step 8. Generating GTFS files](https://github.com/smarttransit-ai/transit-gym/README.md/#new-gtfs)
 
 ### Step 1. Prepare the Required Files
 
