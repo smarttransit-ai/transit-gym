@@ -301,7 +301,7 @@ $ python3 driver.py
 Change the vehicle Assignment by changing the content of "vehicleassignment{}" in .transsim files in the respective example and run: python3 driver.py
 
 #### Changing the GTFS schedule[](#change-duration)
-Change the GTFS Schedule by changing "import "gtfs.20200816"" to other gtfs file name, such as "import "gtfs.20211024"" in the transsim file. For example, in  [Chattanooga_CS.transsim](https://github.com/smarttransit-ai/transit-simulator/blob/master/examples/Chattanooga_CS/Chattanooga_CS.transsim) change **import "gtfs.20200816"** to **import "gtfs.20211024"**
+Change the GTFS Schedule by changing "import "gtfs.20200816"" to other gtfs file name, such as "import "gtfs.20211024"" in the transsim file. For example, in  [Chattanooga_CS_24_hours_cal.transsim](https://github.com/smarttransit-ai/transit-gym/blob/master/examples/Chattanooga_CS_cal/Chattanooga_CS_24_hours_cal.transsim) change **import "gtfs.20200816"** to **import "gtfs.20211024"**
 
 
 
