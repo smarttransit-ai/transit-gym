@@ -282,7 +282,7 @@ The files are already arranged in the required structure. *Extract zip file in /
 
 ### Step 2. Start Simulation
 **Warning: This execution may take a long time (>24 hours)**<br>
-**Note**: The simulation time can be changed to different durations by changing the "time [0000:2359]" in [Chattanooga_CS_cal.transsim](https://github.com/smarttransit-ai/transit-gym/tree/master/examples/Chattanooga_cal/Chattanooga_CS_cal.transsim).<br>
+**Note**: The simulation time can be changed to different durations by changing the "time [0000:2359]" in [Chattanooga_CS_cal.transsim](https://github.com/smarttransit-ai/transit-gym/tree/master/examples/Chattanooga_CS_cal/Chattanooga_CS_cal.transsim).<br>
 
 1. Simulate for 24 hours from 12:00 AM - 12:00 AM (next day). 
 ```
