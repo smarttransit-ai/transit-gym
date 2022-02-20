@@ -147,7 +147,7 @@ $ python3 driver.py
 The result will be available in the running directory in `Simulation1\output\` after it completes.<br><br>
 An example output of the Trajectory generated<br>
 
-![img1](https://github.com/smarttransit-ai/transit-gym/blob/readme_change/resources/traj_sample.png)
+![img1](resources/traj_sample.png)
 
 ### Step 5. For running Energy estimation 
 Install jupyter-nbconvert to run python notebooks. 
@@ -158,26 +158,26 @@ $ sudo apt install jupyter-nbconvert
 ### Step 6. Post-processing on generated results[](#post-processing)
 Here, perform 3 types of post-analysis
 1. Compute the energy estimates.
-  Fill the corresponding **folder names** in the script and run [Energy_estimation.ipynb](https://github.com/smarttransit-ai/transit-gym/blob/master/energy_estimation/Energy_estimation.ipynb).
+  Fill the corresponding **folder names** in the script and run [Energy_estimation.ipynb](energy_estimation/Energy_estimation.ipynb).
 ```
 $ jupyter nbconvert --execute Energy_estimation.ipynb
 ```
 The output notebook is stored in a .html file. The energy estimation results are saved in your created folder<br>
 2. Plot the energy estimates<br>
-  Plot Energy Estimates across trajectories for vehicles. Run the script [plot_energy_estimation.ipynb](https://github.com/smarttransit-ai/transit-gym/blob/master/energy_estimation/plot_energy_estimation.ipynb) with the energy estimation results.
+  Plot Energy Estimates across trajectories for vehicles. Run the script [plot_energy_estimation.ipynb](energy_estimation/plot_energy_estimation.ipynb) with the energy estimation results.
 ```
 $ jupyter nbconvert --execute plot_energy_estimation.ipynb
 ```
 
 3. Plot the occupancy of buses
-  Plot occupancy of buses. Read the "busstop_info.csv" from the simulation output folder and run the script [plot_occupancy.ipynb](https://github.com/smarttransit-ai/transit-gym/blob/master/manual_files/output/visulization%20example/plot_occupancy.ipynb).
+  Plot occupancy of buses. Read the "busstop_info.csv" from the simulation output folder and run the script [plot_occupancy.ipynb](manual_files/output/visulization%20example/plot_occupancy.ipynb).
 ```
 $ jupyter nbconvert --execute plot_occupancy.ipynb
 ```
 
 Here is an example plot to estimate energy usage from the results of Hello_World<br>
 
-![img2](https://github.com/smarttransit-ai/transit-gym/blob/readme_change/resources/hello_world_plot.PNG)
+![img2](resources/hello_world_plot.PNG)
 
 ### Optional: Step 7. Installing ubuntu unzipper
 ```
@@ -185,7 +185,7 @@ $ sudo apt-get install unzip
 ```
 
 ### Optional : Step 8. Updating GTFS files[](#new-gtfs)
-Using [GTFS_processor.py]("https://github.com/smarttransit-ai/transit-gym/blob/master/src/transsim/GTFS_processor.py") to generate new files and put the files in the GFTS folder.
+Using [GTFS_processor.py]("src/transsim/GTFS_processor.py") to generate new files and put the files in the GFTS folder.
 ```
 $ cd transit-gym/src/transsim
 $ python3 GTFS_processor.py
@@ -194,7 +194,7 @@ $ python3 GTFS_processor.py
 ## Example 1: Hello World
 
 ### Step 1. Unzip network files
-Unzip the network file contained in examples/HelloWorld/network .<br>
+Unzip the network file contained in [examples/HelloWorld/network](examples/HelloWorld/network).
 
 ```
 $ cd network
@@ -215,7 +215,7 @@ The results will be put in HelloWorld/Simulation_1. Specifically, the trajectori
 
 ## Example 2 : Chattanooga Simulation - 0900 - 1000 hours (uncalibrated) with GTFS Changes
 
-Go to the [Chattanooga_CS_900_1000](https://github.com/smarttransit-ai/transit-simulator/tree/master/examples/Chattanooga_CS_900_1000) example folder. 
+Go to the [Chattanooga_CS_900_1000](examples/Chattanooga_CS_900_1000) example folder. 
 
 ### Step 0. *Optional* Update with new GTFS files
 GTFS files can be updated as shown in [Step 8. Generating GTFS files](#new-gtfs)
@@ -240,7 +240,7 @@ $ python3 driver.py
 3. The *post-processing* can be performed on the collected data according to the steps mentioned [Step 6. Post-processing](#post-processing)
 
 ## Example 3 : Chattanooga Simulation - 24 Hours (Uncalibrated)
-Go to the [Chattanooga_CS_24_hours](https://github.com/smarttransit-ai/transit-simulator/tree/master/examples/Chattanooga_CS_24_hours) example folder. 
+Go to the [Chattanooga_CS_24_hours](examples/Chattanooga_CS_24_hours) example folder. 
 
 ### Step 1. Prepare the Required Files for 24 Hours
 The files are already arranged in the required structure. *Extract zip file in /network/ folder*<br>
@@ -253,7 +253,7 @@ $ unzip Chattanooga_SUMO_Network.net.zip
 
 ### Step 2. Start Simulation
 **Warning: This execution may take a long time (>24 hours)**<br>
-**Note**: The simulation time can be changed to different durations by changing the "time [0000:2359]" in [Chattanooga_CS_24_hours.transsim](https://github.com/smarttransit-ai/transit-gym/tree/master/examples/Chattanooga_CS_24_hours/Chattanooga_CS_24_hours.transsim), as mentioned [here](#change-duration)<br>
+**Note**: The simulation time can be changed to different durations by changing the "time [0000:2359]" in [Chattanooga_CS_24_hours.transsim](examples/Chattanooga_CS_24_hours/Chattanooga_CS_24_hours.transsim), as mentioned [here](#change-duration)<br>
 
 1. Simulate for 24 hours from 12:00 AM - 12:00 AM (next day). 
 ```
@@ -269,7 +269,7 @@ $ python3 driver_24.py
 
 
 ## Example 4 : Chattanooga Simulation - 24 Hours after calibration
-Go to the [Chattanooga_CS_cal](https://github.com/smarttransit-ai/transit-simulator/tree/master/examples/Chattanooga_CS_cal) example folder. 
+Go to the [Chattanooga_CS_cal](examples/Chattanooga_CS_cal) example folder. 
 
 **Note**: Look at [calibration-poster.pdf](calibration-poster.pdf) for the calibration procedures that we used.
 
@@ -282,7 +282,7 @@ The files are already arranged in the required structure. *Extract zip file in /
 
 ### Step 2. Start Simulation
 **Warning: This execution may take a long time (>24 hours)**<br>
-**Note**: The simulation time can be changed to different durations by changing the "time [0000:2359]" in [Chattanooga_CS_24_hours_cal.transsim](https://github.com/smarttransit-ai/transit-gym/blob/master/examples/Chattanooga_CS_cal/Chattanooga_CS_24_hours_cal.transsim).<br>
+**Note**: The simulation time can be changed to different durations by changing the "time [0000:2359]" in [Chattanooga_CS_24_hours_cal.transsim](examples/Chattanooga_CS_cal/Chattanooga_CS_24_hours_cal.transsim).<br>
 
 1. Simulate for 24 hours from 12:00 AM - 12:00 AM (next day). 
 ```
@@ -301,7 +301,7 @@ $ python3 driver.py
 Change the vehicle Assignment by changing the content of "vehicleassignment{}" in .transsim files in the respective example and run: python3 driver.py
 
 #### Changing the GTFS schedule[](#change-duration)
-Change the GTFS Schedule by changing "import "gtfs.20200816"" to other gtfs file name, such as "import "gtfs.20211024"" in the transsim file. For example, in  [Chattanooga_CS_24_hours_cal.transsim](https://github.com/smarttransit-ai/transit-gym/blob/master/examples/Chattanooga_CS_cal/Chattanooga_CS_24_hours_cal.transsim) change **import "gtfs.20200816"** to **import "gtfs.20211024"**
+Change the GTFS Schedule by changing "import "gtfs.20200816"" to other gtfs file name, such as "import "gtfs.20211024"" in the transsim file. For example, in  [Chattanooga_CS_24_hours_cal.transsim](examples/Chattanooga_CS_cal/Chattanooga_CS_24_hours_cal.transsim) change **import "gtfs.20200816"** to **import "gtfs.20211024"**
 
 
 
