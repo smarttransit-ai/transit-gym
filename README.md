@@ -108,14 +108,14 @@ python >= 3.6 required for dependencies to work.
 
 Optional : create a virtual environment
 Install required python packages from requirements.txt
-'''
+```
 $ pip install -r requirements.txt
-'''
+```
 Navigate to /transit-gym/src, create a python venv (or use install for all environments). Use the command "***pip install .***" to install the package into your environment.
-'''
+```
 cd transit-gym/src
 $ pip install .
-'''
+```
 
 Install required python packages from requirements.txt
 
