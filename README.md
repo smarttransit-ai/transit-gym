@@ -11,7 +11,38 @@ Please refer to [Manual Files](manual_files) if you are looking for **manual ste
 
 A youtube presentation of this work is available at [https://youtu.be/Fw4UQGcB80o](https://youtu.be/Fw4UQGcB80o).
 
-# Installation Instructions
+
+# Docker Instructions
+
+Assuming you have docker command line, follow these instructions
+
+```
+$ git clone https://github.com/smarttransit-ai/transit-gym.git 
+$ cd transit-gym
+$ docker build -t transit-gym-docker .
+```
+
+Now you can run various examples. create a directory where results will be stored and then launch docker into root and mount simulation_output to /simulation_output. The docker will provide a prompt into the container. The number may be different.
+
+```
+$ mkdir simulation_output  # 
+$ docker run -t -i -v simulation_output:/simulation_output transit-gym-docker bash  
+root@37a93e9abef8:/# 
+```
+
+Now launch example
+
+```
+root@9c7f0f221ea7:/# cd transit-gym/examples/HelloWorld/
+root@9c7f0f221ea7:/transit-gym/examples/HelloWorld# python driver.py 
+```
+
+The output will look like the following
+
+```
+```
+
+# Regular Installation Instructions (without Docker)
 
 ## Step 1. Install package
 
