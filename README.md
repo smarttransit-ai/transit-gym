@@ -119,7 +119,7 @@ $ pip3 install .
 
 ### Step 2. Install SUMO
 
-If you have not already done so, go to "https://sumo.dlr.de/docs/Installing/index.html" to install SUMO on your machine. Please install the latest version instead of the regular distribution.
+If you have not already done so, go to [Installing SUMO]("https://sumo.dlr.de/docs/Installing/index.html") to install SUMO on your machine. Please install the latest version instead of the regular distribution.
 
 ### Step 3. Prepare files
 
