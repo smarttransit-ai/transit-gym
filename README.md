@@ -146,7 +146,7 @@ $ python3 driver.py
 ```
 The result will be available in the running directory in `Simulation1\output\` after it completes.<br>
 An example output of the Trajectory generated:
-[img2](https://github.com/smarttransit-ai/transit-gym/blob/readme_change/resources/traj_sample.png)
+![img2](https://github.com/smarttransit-ai/transit-gym/blob/readme_change/resources/traj_sample.png)
 
 ### Step 5. For running Energy estimation 
 Install jupyter-nbconvert to run python notebooks. 
