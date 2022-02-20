@@ -188,7 +188,6 @@ $ python3 GTFS_processor.py
 
 ### Step 1. Unzip network files
 Unzip the network file contained in examples/HelloWorld/network .<br>
-Run the following command in the directory examples/HelloWorld/network:
 
 ```
 $ cd network
@@ -276,7 +275,7 @@ The files are already arranged in the required structure. *Extract zip file in /
 
 ### Step 2. Start Simulation
 **Warning: This execution may take a long time (>24 hours)**<br>
-**Note**: The simulation time can be changed to different durations by changing the "time [0000:2359]" in [Chattanooga_CS_24_hours.transsim](https://github.com/smarttransit-ai/transit-gym/tree/master/examples/Chattanooga_CS_24_hours/Chattanooga_CS_24_hours.transsim).<br>
+**Note**: The simulation time can be changed to different durations by changing the "time [0000:2359]" in [Chattanooga_CS_24_hours.transsim](https://github.com/smarttransit-ai/transit-gym/tree/master/examples/Chattanooga_CS_24_hours/Chattanooga_CS_cal.transsim).<br>
 
 1. Simulate for 24 hours from 12:00 AM - 12:00 AM (next day). 
 ```
@@ -288,10 +287,6 @@ $ python3 driver.py
   *Optional* The example output of simulating for 24 hours from 12:00 AM - 12:00 AM(nextday) is saved at https://drive.google.com/drive/u/1/folders/1w9hj8wMJOGemEWVHgJ4_zvXnMT2Htbv9.
 
 3. The *post-processing* can be performed on the collected data according to the steps mentioned [Step 6. Post-processing](#post-processing)
-
-
-
-The procedure is similar to "Installation Instructions", with the configuration file of 24 Hours. The configuration file and driver python file updated as "Chattanooga_CS_24_hours_cal" and "driver_24_cal" respectively at: [examples/Chattanooga_CS_cal](examples/Chattanooga_CS_cal)
 
 
 ## Additional Steps. Changing the Settings - Examples
