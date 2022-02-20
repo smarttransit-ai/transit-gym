@@ -22,7 +22,7 @@ $ cd transit-gym
 $ docker build -t transit-gym-docker .
 ```
 
-Now you can run various examples. create a directory where results will be stored and then launch docker into root and mount simulation_output to /simulation_output. The docker will provide a prompt into the container. The number may be different.
+Now you can run various examples. create a directory where results will be stored and then launch docker into root and mount simulation_output to /simulation_output. The docker will provide a prompt into the container. The container number 37a93e9abef8 will be different on your machine.
 
 ```
 $ mkdir simulation_output  # 
