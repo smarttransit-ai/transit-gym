@@ -26,16 +26,16 @@ class Simulation:
     def run(self, file_name):
         if not file_name.endswith('.transsim'):
             raise ValueError('Wrong extension of program')
-        print('Starting Interpretion...\n')
+        print('Generating Configuration files for Simulation from ',file_name)
         result = self.interpreter.interpret(file_name)
         #result = ['../SUMO_Simulation/Simulation_3/']
-        print('Starting Simulation\n')
+        print('Starting Simulation. Calling Sumo: ','sumo ' + res + 'config.sumocfg')
         for res in result:
             subprocess.call('sumo ' + res + 'config.sumocfg', shell=True)
-        print('\nSimulation Complete - Proceed to output processing\n')
+        print('Simulation Complete - Proceeding to output processing')
         processor = Output_Processor()
         for res in result:
             processor.generate(res)
-        print("\nAll Done")
+        print("All Done")
         
         
