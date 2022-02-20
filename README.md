@@ -184,7 +184,7 @@ Here is an example plot to estimate energy usage from the results of Hello_World
 $ sudo apt-get install unzip
 ```
 
-### Optional : Step 8. Updating GTFS files[](#new-gtfs)
+### Optional : Step 8. [Updating GTFS files](#new-gtfs)
 Using [GTFS_processor.py](src/transsim/GTFS_processor.py) to generate new files and put the files in the GFTS folder.
 ```
 $ cd transit-gym/src/transsim
