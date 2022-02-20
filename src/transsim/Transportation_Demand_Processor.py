@@ -28,7 +28,7 @@ class TDProcessor:
             person_trips + '" --net-file "' + network + '" --unsorted-input --additional-files "'+ \
                 busStopfileFull + ', ' + vehiclefileFull + '" --ptline-routing --output-file "' + \
                     final_route_file_full + '" --ignore-errors --no-warnings'
-        print(time.ctime(),":","running duarouter")
+        print(time.ctime(),":","running duarouter. Takes time.")
         errorcode = subprocess.run(command, shell=True,check=True, capture_output=True)
         print(time.ctime(),":","duarouter done")
         
