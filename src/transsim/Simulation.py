@@ -32,7 +32,7 @@ class Simulation:
         #result = ['../SUMO_Simulation/Simulation_3/']        
         for res in result:
             print(time.ctime(),":",'Starting Simulation. Calling Sumo: ','sumo ' + res + 'config.sumocfg')
-            subprocess.run('sumo ' + res + 'config.sumocfg', shell=True,check=True,capture_output=True)
+            print(subprocess.run('sumo ' + res + 'config.sumocfg', shell=True,check=True,capture_output=True).stdout)
         print(time.ctime(),":",'Simulation Complete - Proceeding to output processing')
         processor = Output_Processor()
         for res in result:
