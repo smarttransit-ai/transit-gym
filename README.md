@@ -211,7 +211,7 @@ The results will be put in HelloWorld/Simulation_1. Specifically, the trajectori
 
 Go to the [Chattanooga_CS_900_1000](https://github.com/smarttransit-ai/transit-simulator/tree/master/examples/Chattanooga_CS_900_1000) example folder. 
 ### Step 0. *Optional* Generate new GTFS files
-<pre>  New GTFS files can be generated as shown in [Step 8. Generating GTFS files](https://github.com/smarttransit-ai/transit-gym/edit/readme_change/README.md/#new-gtfs)</pre>
+<pre>  New GTFS files </pre>can be generated as shown in [Step 8. Generating GTFS files](https://github.com/smarttransit-ai/transit-gym/edit/readme_change/README.md/#new-gtfs)
 
 ### Step 1. Prepare the Required Files
 
@@ -226,7 +226,7 @@ $ python3 driver.py
 ```
 2. The result are available in `/Simulation1/output`.  The output folder includes trajectories for buses, bus stop information, and edge information, all in csv format. 
 <pre>  *Optional* The example output of simulating for one hour from 9 AM - 10 AM is stored at https://drive.google.com/drive/u/1/folders/1w9hj8wMJOGemEWVHgJ4_zvXnMT2Htbv9</pre>
-3. The *post-processing* can be performed on the collected data according to the steps mentioned [Step 6. Post-processing](https://github.com/smarttransit-ai/transit-gym#readme/#post-processing)
+3. The *post-processing* can be performed on the collected data according to the steps mentioned [Step 6. Post-processing](#post-processing)
 
 ## Example 3 : Chattanooga Simulation - 24 Hours (Uncalibrated)
 
@@ -249,7 +249,7 @@ $ python3 driver_24.py
 
   *Optional* The example output of simulating for 24 hours from 12:00 AM - 12:00 AM(nextday) is saved at https://drive.google.com/drive/u/1/folders/1w9hj8wMJOGemEWVHgJ4_zvXnMT2Htbv9.
 
-3. The *post-processing* can be performed on the collected data according to the steps mentioned [Step 6. Post-processing](https://github.com/smarttransit-ai/transit-gym/edit/readme_change/README.md/#post-processing)
+3. The *post-processing* can be performed on the collected data according to the steps mentioned [Step 6. Post-processing](#post-processing)
 
 
 
