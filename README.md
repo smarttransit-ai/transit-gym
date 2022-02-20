@@ -152,7 +152,7 @@ Install jupyter-nbconvert to run python notebooks.
 $ sudo apt install jupyter-nbconvert
 ```
 
-### [Step 6. Post-processing on generated results](#post-processing)
+### Step 6. Post-processing on generated results[](#post-processing)
 Here, perform 3 types of post-analysis
 1. Compute the energy estimates.
   Fill the corresponding **folder names** in the script and run [Energy_estimation.ipynb](https://github.com/smarttransit-ai/transit-gym/blob/master/energy_estimation/Energy_estimation.ipynb).
@@ -177,7 +177,7 @@ $ jupyter nbconvert --execute plot_occupancy.ipynb
 $ sudo apt-get install zip unzip
 ```
 
-### Optional : Step 8. Generating GTFS files(#new-gtfs)
+### Optional : Step 8. Generating GTFS files[](#new-gtfs)
 Using [GTFS_processor.py]"https://github.com/smarttransit-ai/transit-gym/blob/master/src/transsim/GTFS_processor.py" to generate new files and put the files in the GFTS folder.
 ```
 $ cd transit-gym/src/transsim
@@ -207,8 +207,28 @@ $ python3 driver.py
 ### Step 3. Collect results
 The results will be put in HelloWorld/Simulation_1. Specifically, the trajectories and edge output files will be in the folder HelloWorld/Simulation_1/output/.
 
+## Example 2 : Chattanooga Simulation - 0900 - 1000 hours (uncalibrated) with GTFS Changes
 
-## Example 2 : Chattanooga Simulation - 24 Hours (Uncalibrated)
+Go to the [Chattanooga_CS_900_1000](https://github.com/smarttransit-ai/transit-simulator/tree/master/examples/Chattanooga_CS_900_1000) example folder. 
+### Step 0. *Optional* Generate new GTFS files
+<pre>  New GTFS files can be generated as shown in [Step 8. Generating GTFS files](https://github.com/smarttransit-ai/transit-gym/edit/readme_change/README.md/#new-gtfs)</pre>
+
+### Step 1. Prepare the Required Files
+
+1. Download the routes file (routes.Chattanooga_Daily_Trips.rou.xml) from (https://drive.google.com/file/d/17O9rhpYR1JWlh9vSRZvyCdIFsTKhLSZj/view?usp=sharing) and put in the /routes/ folder. 
+2. Extract the zip file in /Chattanooga_CS_900_1000/network
+
+### Step 2. Start Simulation
+
+1. Simulating for one hour from 9 AM - 10 AM. The duration in driver.py is changed: 0900 to 1000 hrs
+```
+$ python3 driver.py
+```
+2. The result are available in `/Simulation1/output`.  The output folder includes trajectories for buses, bus stop information, and edge information, all in csv format. 
+<pre>  *Optional* The example output of simulating for one hour from 9 AM - 10 AM is stored at https://drive.google.com/drive/u/1/folders/1w9hj8wMJOGemEWVHgJ4_zvXnMT2Htbv9</pre>
+3. The *post-processing* can be performed on the collected data according to the steps mentioned [Step 6. Post-processing](https://github.com/smarttransit-ai/transit-gym#readme/#post-processing)
+
+## Example 3 : Chattanooga Simulation - 24 Hours (Uncalibrated)
 
 Follow the instructions as before to install the system. However, we will use a different configuration file.
 
@@ -229,28 +249,9 @@ $ python3 driver_24.py
 
   *Optional* The example output of simulating for 24 hours from 12:00 AM - 12:00 AM(nextday) is saved at https://drive.google.com/drive/u/1/folders/1w9hj8wMJOGemEWVHgJ4_zvXnMT2Htbv9.
 
-3. The *post-processing* can be performed on the collected data according to the steps mentioned [here](https://github.com/smarttransit-ai/transit-gym/edit/readme_change/README.md/#post-processing)
+3. The *post-processing* can be performed on the collected data according to the steps mentioned [Step 6. Post-processing](https://github.com/smarttransit-ai/transit-gym/edit/readme_change/README.md/#post-processing)
 
-## Example 3 : Chattanooga Simulation - 0900 - 1000 hours with GTFS Changes
 
-Go to the [Chattanooga_CS_900_1000](https://github.com/smarttransit-ai/transit-simulator/tree/master/examples/Chattanooga_CS_900_1000) example folder. 
-### Step 0. *Optional* Generate new GTFS files
-  New GTFS files can be generated as shown [here](https://github.com/smarttransit-ai/transit-gym/edit/readme_change/README.md/#new-gtfs)
-
-### Step 1. Prepare the Required Files
-
-1. Download the routes file (routes.Chattanooga_Daily_Trips.rou.xml) from (https://drive.google.com/file/d/17O9rhpYR1JWlh9vSRZvyCdIFsTKhLSZj/view?usp=sharing) and put in the /routes/ folder. 
-2. Extract the zip file in /Chattanooga_CS_900_1000/network
-
-### Step 2. Start Simulation
-
-1. Simulating for one hour from 9 AM - 10 AM. The duration in driver.py is changed: 0900 to 1000 hrs
-```
-$ python3 driver.py
-```
-2. The result are available in `/Simulation1/output`.  The output folder includes trajectories for buses, bus stop information, and edge information, all in csv format. 
-  *Optional* The example output of simulating for one hour from 9 AM - 10 AM is stored at https://drive.google.com/drive/u/1/folders/1w9hj8wMJOGemEWVHgJ4_zvXnMT2Htbv9
-3. The *post-processing* can be performed on the collected data according to the steps mentioned [here](https://github.com/smarttransit-ai/transit-gym/edit/readme_change/README.md/#post-processing)
 
 ## Example 4 : Chattanooga Simulation - 24 Hours after calibration
 The procedure is similar to "Installation Instructions", with the configuration file of 24 Hours. The configuration file and driver python file updated as "Chattanooga_CS_24_hours_cal" and "driver_24_cal" respectively at: [examples/Chattanooga_CS_cal](examples/Chattanooga_CS_cal)
