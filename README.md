@@ -174,7 +174,7 @@ $ jupyter nbconvert --execute plot_occupancy.ipynb
 
 ### Optional: Step 7. Installing ubuntu unzipper
 ```
-$ sudo apt-get install zip unzip
+$ sudo apt-get install unzip
 ```
 
 ### Optional : Step 8. Generating GTFS files[](#new-gtfs)
@@ -191,7 +191,7 @@ Unzip the network file contained in examples/HelloWorld/network .<br>
 Run the following command in the directory examples/HelloWorld/network:
 
 ```
-$ sudo apt-get install unzip
+$ cd network
 $ unzip Chattanooga_SUMO_Network.net.zip
 ```
 
@@ -218,6 +218,10 @@ New GTFS files can be generated as shown in [Step 8. Generating GTFS files](#new
 
 1. Download the routes file (routes.Chattanooga_Daily_Trips.rou.xml) from (https://drive.google.com/file/d/17O9rhpYR1JWlh9vSRZvyCdIFsTKhLSZj/view?usp=sharing) and put in the /routes/ folder. 
 2. Extract the zip file in /Chattanooga_CS_900_1000/network
+```
+$ cd network
+$ unzip Chattanooga_SUMO_Network.net.zip
+```
 
 ### Step 2. Start Simulation
 
@@ -234,11 +238,16 @@ Go to the [Chattanooga_CS_24_hours](https://github.com/smarttransit-ai/transit-s
 
 ### Step 1. Prepare the Required Files for 24 Hours
 The files are already arranged in the required structure. *Extract zip file in /network/ folder*<br>
-Download the routes file (routes.Chattanooga_Daily_Trips.rou.xml) from https://drive.google.com/file/d/17O9rhpYR1JWlh9vSRZvyCdIFsTKhLSZj/view?usp=sharing and put in the Chattanooga_CS_24_hours/routes/ folder.
+1. Download the routes file (routes.Chattanooga_Daily_Trips.rou.xml) from https://drive.google.com/file/d/17O9rhpYR1JWlh9vSRZvyCdIFsTKhLSZj/view?usp=sharing and put in the Chattanooga_CS_24_hours/routes/ folder.
+2. Extract the zip file in /Chattanooga_CS_24_hours/network
+```
+$ cd network
+$ unzip Chattanooga_SUMO_Network.net.zip
+```
 
 ### Step 2. Start Simulation
 **Warning: This execution may take a long time (>24 hours)**<br>
-**Note**: The simulation time can be changed to different durations by changing the "time [0000:2359]" in [Chattanooga_CS_24_hours.transsim](https://github.com/smarttransit-ai/transit-gym/tree/master/examples/Chattanooga_CS_24_hours/Chattanooga_CS_24_hours.transsim).<br>
+**Note**: The simulation time can be changed to different durations by changing the "time [0000:2359]" in [Chattanooga_CS_24_hours.transsim](https://github.com/smarttransit-ai/transit-gym/tree/master/examples/Chattanooga_CS_24_hours/Chattanooga_CS_24_hours.transsim), as mentioned [here](#change-duration)<br>
 
 1. Simulate for 24 hours from 12:00 AM - 12:00 AM (next day). 
 ```
@@ -289,7 +298,7 @@ The procedure is similar to "Installation Instructions", with the configuration 
 #### Changing the Vehicle Assignment
   1. Change the vehicle Assignment by changing the content of "vehicleassignment{}" in .transsim files in the respective example and run: python3 driver.py
 
-#### Changing the GTFS schedule
+#### Changing the GTFS schedule[](#change-duration)
 1. Change the GTFS Schedule by changing "import "gtfs.20200816"" to other gtfs file name, such as "import "gtfs.20211024"" in the transsim file. For example, in  [Chattanooga_CS.transsim](https://github.com/smarttransit-ai/transit-simulator/blob/master/examples/Chattanooga_CS/Chattanooga_CS.transsim) change **import "gtfs.20200816"** to **import "gtfs.20211024"**
 
 
