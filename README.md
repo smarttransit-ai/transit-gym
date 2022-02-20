@@ -177,7 +177,7 @@ $ jupyter nbconvert --execute plot_occupancy.ipynb
 $ sudo apt-get install unzip
 ```
 
-### Optional : Step 8. Generating GTFS files[](#new-gtfs)
+### Optional : Step 8. Updating GTFS files[](#new-gtfs)
 Using [GTFS_processor.py]"https://github.com/smarttransit-ai/transit-gym/blob/master/src/transsim/GTFS_processor.py" to generate new files and put the files in the GFTS folder.
 ```
 $ cd transit-gym/src/transsim
@@ -210,8 +210,8 @@ The results will be put in HelloWorld/Simulation_1. Specifically, the trajectori
 
 Go to the [Chattanooga_CS_900_1000](https://github.com/smarttransit-ai/transit-simulator/tree/master/examples/Chattanooga_CS_900_1000) example folder. 
 
-### Step 0. *Optional* Generate new GTFS files
-New GTFS files can be generated as shown in [Step 8. Generating GTFS files](#new-gtfs)
+### Step 0. *Optional* Update with new GTFS files
+GTFS files can be updated as shown in [Step 8. Generating GTFS files](#new-gtfs)
 
 ### Step 1. Prepare the Required Files
 
