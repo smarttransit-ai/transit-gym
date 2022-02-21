@@ -4,25 +4,33 @@ Note: All the below steps are executed on Ubuntu 20.04 LTS. Please make sure you
 
 **Note**: Look at [calibration-poster.pdf](calibration-poster.pdf) for the calibration procedures that we used.
 
-### Step 1. Prepare the Required Files for 24 Hours
-The files are already arranged in the required structure. *Extract zip file in /network/ folder*<br>
-1. Download the calibrated routes file (Chattanooga_trips_cal.rou.xml) from https://drive.google.com/file/d/1IxJPMDwjnMn5U5wSLA2PJ_J0WsePk_aN/view?usp=sharing and put in the /routes/ folder. 
-2. Extract the zip file in /network folder 
+**Warning: This execution may take a long time (>24 hours)**
 
+Remember to download the route file. Refer to the [instructions on main readme.md](https://github.com/smarttransit-ai/transit-gym#step-3-run-simulation). Assuming you are in parent folder Chattanooga_CS_cal you can follow these commands.
 
-
-### Step 2. Start Simulation
-**Warning: This execution may take a long time (>24 hours)**<br>
-**Note**: The simulation time can be changed to different durations by changing the "time [0000:2359]" in [Chattanooga_CS_24_hours.transsim](https://github.com/smarttransit-ai/transit-gym/tree/master/examples/Chattanooga_CS_24_hours/Chattanooga_CS_cal.transsim).<br>
-
-1. Simulate for 24 hours from 12:00 AM - 12:00 AM (next day). 
 ```
-$ cd transit-gym/examples/Chattanooga_CS_cal
-$ python3 driver.py
+$ cd network
+$ unzip Chattanooga_SUMO_Network.net.zip
+$ cd ../routes
+$ wget https://www.dropbox.com/s/1tn7an1rijfyafa/Chattanooga_trips_cal.rou.xml.tar.gz?dl=0
+$ tar -xzvf Chattanooga_trips_cal.rou.xml.tar.gz 
 ```
-2. The result are available in `/Simulation1/output`.  The output folder includes trajectories for buses, bus stop information, and edge information, all in csv format.
 
-  *Optional* The example output of simulating for 24 hours from 12:00 AM - 12:00 AM(nextday) is saved at https://drive.google.com/drive/u/1/folders/1w9hj8wMJOGemEWVHgJ4_zvXnMT2Htbv9.
+check a file called Chattanooga_trips_cal.rou.xml is in the routes folder. 
 
-3. The *post-processing* can be performed on the collected data according to the steps mentioned [Step 6. Post-processing](#post-processing)
+```
+check if MD5 (Chattanooga_trips_cal.rou.xml) = 9caba35a878d77c4700e9e3aad10b37f
+```
 
+Then get to the top folder Chattanooga_CS_cal
+
+```
+$ cd Chattanooga_CS_cal
+$ python3 river.py
+```
+
+Result are available in `/Simulation1/output`.  The output folder includes trajectories for buses, bus stop information, and edge information, all in csv format. An example of the same is available at https://drive.google.com/drive/u/0/folders/1w9hj8wMJOGemEWVHgJ4_zvXnMT2Htbv9.
+
+Now you can perform post processing as described in the [instructions on main readme.md](https://github.com/smarttransit-ai/transit-gym#step-4-post-processing-of-outputs) 
+
+ 
