@@ -102,7 +102,7 @@ Now the simulation results will be in host machine.
 
 # Regular Installation Instructions (without Docker)
 
-### Step 1. Install packages
+## Step 1. Install packages
 
 python >= 3.6 required for dependencies to work.
 
@@ -117,9 +117,15 @@ $ cd transit-gym/src
 $ pip3 install .
 ```
 
-### Step 2. Install SUMO
+## Step 2. Install SUMO
 
 If you have not already done so, go to https://sumo.dlr.de/docs/Installing/index.html to install SUMO on your machine. Please install the latest version instead of the regular distribution.
+
+
+Now you can run various examples included with the installation. These examples are:
+
+* [examples/HelloWorld](examples/HelloWorld) - a basic example that shows the installation is ready.
+* [examples/Chattanooga_CS_900_1000](examples/Chattanooga_CS_900_1000) - an example that shows how you can change the time of simulation. For example compare the time value in [examples/Chattanooga_CS_900_1000/Chattanooga_CS_900_1000.transsim](examples/Chattanooga_CS_900_1000/Chattanooga_CS_900_1000.transsim) and [examples/Chattanooga_CS_900_1000/Chattanooga_CS_backup.transsim](examples/Chattanooga_CS_900_1000/Chattanooga_CS_backup.transsim)
 
 ### Step 3. Prepare files
 
