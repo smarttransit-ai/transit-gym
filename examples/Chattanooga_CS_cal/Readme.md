@@ -2,55 +2,27 @@
 
 Note: All the below steps are executed on Ubuntu 20.04 LTS. Please make sure your python version >= 3.7
 
-#### 1.Install SUMO
+**Note**: Look at [calibration-poster.pdf](calibration-poster.pdf) for the calibration procedures that we used.
 
-The package requires sumo ver >= 1.8.0. To install the latest version of SUMO, run
-
-sudo **add**-apt-repository ppa:sumo/stable
-
-sudo apt-**get** update
-
-sudo apt-**get** install sumo sumo-tools sumo-doc
-
-#### 2. Install transsim package
-
-Install the package into the python environment.
-
-For global installation, cd into the directory transsim/src and run:
-
-sudo **pip3** install .
-
-To install the package into your global python environment. 
-
-#### 3. Prepare network and route files
-
-Unzip the network file contained in examples/Chattanooga_CS/network.
-
-Run the following command in the directory examples/Chattanooga_CS/network:
-
-sudo apt-**get** install unzip
-
-**unzip** Chattanooga_SUMO_Network.net.zip
-
-Then, go to
-
-https://drive.google.com/file/d/18QYhq5gbh9ytAzwC9kSXwNHfwSljbp8s/view?usp=sharing
-
-to download the route file and put in a new directory examples/Chattanooga_CS/routes
-
-#### 4. Run simulation
-
-You are all set to run the Chattanooga_CS example. cd into Chattanooga_CS and run:
-
-**python3** driver.py
-
-#### 5. Collect results
-
-Chattanooga_CS/Chattanooga_CS/output/.
+### Step 1. Prepare the Required Files for 24 Hours
+The files are already arranged in the required structure. *Extract zip file in /network/ folder*<br>
+1. Download the calibrated routes file (Chattanooga_trips_cal.rou.xml) from https://drive.google.com/file/d/1IxJPMDwjnMn5U5wSLA2PJ_J0WsePk_aN/view?usp=sharing and put in the /routes/ folder. 
+2. Extract the zip file in /network folder 
 
 
 
+### Step 2. Start Simulation
+**Warning: This execution may take a long time (>24 hours)**<br>
+**Note**: The simulation time can be changed to different durations by changing the "time [0000:2359]" in [Chattanooga_CS_24_hours.transsim](https://github.com/smarttransit-ai/transit-gym/tree/master/examples/Chattanooga_CS_24_hours/Chattanooga_CS_cal.transsim).<br>
 
+1. Simulate for 24 hours from 12:00 AM - 12:00 AM (next day). 
+```
+$ cd transit-gym/examples/Chattanooga_CS_cal
+$ python3 driver.py
+```
+2. The result are available in `/Simulation1/output`.  The output folder includes trajectories for buses, bus stop information, and edge information, all in csv format.
 
+  *Optional* The example output of simulating for 24 hours from 12:00 AM - 12:00 AM(nextday) is saved at https://drive.google.com/drive/u/1/folders/1w9hj8wMJOGemEWVHgJ4_zvXnMT2Htbv9.
 
+3. The *post-processing* can be performed on the collected data according to the steps mentioned [Step 6. Post-processing](#post-processing)
 

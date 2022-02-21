@@ -8,6 +8,6 @@ Created on Tue Dec 15 20:21:58 2020
 from transsim.Simulation import Simulation
 
 sim = Simulation(data_path = '.')
-sim.run('Chattanooga_CS.transsim')
+sim.run('Chattanooga_CS_900_1000.transsim')
 
 

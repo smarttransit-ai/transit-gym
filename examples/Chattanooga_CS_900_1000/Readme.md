@@ -1,56 +1,24 @@
 ## Steps to run the Chattanooga_CS example
 
 Note: All the below steps are executed on Ubuntu 20.04 LTS. Please make sure your python version >= 3.7
+### Step 0. *Optional* Generate new GTFS files
+New GTFS files can be generated as shown in [Step 8. Generating GTFS files](#new-gtfs)
 
-#### 1.Install SUMO
+### Step 1. Prepare the Required Files
 
-The package requires sumo ver >= 1.8.0. To install the latest version of SUMO, run
+1. Download the routes file (routes.Chattanooga_Daily_Trips.rou.xml) from (https://drive.google.com/file/d/17O9rhpYR1JWlh9vSRZvyCdIFsTKhLSZj/view?usp=sharing) and put in the /routes/ folder. 
+2. Extract the zip file in /Chattanooga_CS_900_1000/network
+```
+$ cd network
+$ unzip Chattanooga_SUMO_Network.net.zip
+```
 
-sudo **add**-apt-repository ppa:sumo/stable
+### Step 2. Start Simulation
 
-sudo apt-**get** update
-
-sudo apt-**get** install sumo sumo-tools sumo-doc
-
-#### 2. Install transsim package
-
-Install the package into the python environment.
-
-For global installation, cd into the directory transsim/src and run:
-
-sudo **pip3** install .
-
-To install the package into your global python environment. 
-
-#### 3. Prepare network and route files
-
-Unzip the network file contained in examples/Chattanooga_CS/network.
-
-Run the following command in the directory examples/Chattanooga_CS/network:
-
-sudo apt-**get** install unzip
-
-**unzip** Chattanooga_SUMO_Network.net.zip
-
-Then, go to
-
-https://drive.google.com/file/d/18QYhq5gbh9ytAzwC9kSXwNHfwSljbp8s/view?usp=sharing
-
-to download the route file and put in a new directory examples/Chattanooga_CS/routes
-
-#### 4. Run simulation
-
-You are all set to run the Chattanooga_CS example. cd into Chattanooga_CS and run:
-
-**python3** driver.py
-
-#### 5. Collect results
-
-Chattanooga_CS/Chattanooga_CS/output/.
-
-
-
-
-
-
-
+1. Simulating for one hour from 9 AM - 10 AM. The duration in driver.py is changed: 0900 to 1000 hrs
+```
+$ python3 driver.py
+```
+2. The result are available in `/Simulation1/output`.  The output folder includes trajectories for buses, bus stop information, and edge information, all in csv format. 
+<pre>  *Optional* The example output of simulating for one hour from 9 AM - 10 AM is stored at https://drive.google.com/drive/u/1/folders/1w9hj8wMJOGemEWVHgJ4_zvXnMT2Htbv9</pre>
+3. The *post-processing* can be performed on the collected data according to the steps mentioned [Step 6. Post-processing](#post-processing)
