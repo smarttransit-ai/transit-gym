@@ -1,24 +1,26 @@
-## Steps to run the Chattanooga_CS example
+Remember to download the route file. Refer to the [instructions on main readme.md](https://github.com/smarttransit-ai/transit-gym#step-3-run-simulation). Assuming you are in parent folder Chattanooga_CS_900_1000 you can follow these commands.
 
-Note: All the below steps are executed on Ubuntu 20.04 LTS. Please make sure your python version >= 3.7
-### Step 0. *Optional* Generate new GTFS files
-New GTFS files can be generated as shown in [Step 8. Generating GTFS files](#new-gtfs)
-
-### Step 1. Prepare the Required Files
-
-1. Download the routes file (routes.Chattanooga_Daily_Trips.rou.xml) from (https://drive.google.com/file/d/17O9rhpYR1JWlh9vSRZvyCdIFsTKhLSZj/view?usp=sharing) and put in the /routes/ folder. 
-2. Extract the zip file in /Chattanooga_CS_900_1000/network
 ```
 $ cd network
 $ unzip Chattanooga_SUMO_Network.net.zip
+$ cd ../routes
+$ wget https://www.dropbox.com/s/6sr0w60d96098v3/Chattanooga_Daily_Trips.rou.xml.tar.gz?dl=0
+$ tar -xzvf Chattanooga_Daily_Trips.rou.xml.tar.gz
 ```
 
-### Step 2. Start Simulation
+check a file called Chattanooga_Daily_Trips.rou.xml is in the routes folder. 
 
-1. Simulating for one hour from 9 AM - 10 AM. The duration in driver.py is changed: 0900 to 1000 hrs
 ```
-$ python3 driver.py
+check if MD5 (Chattanooga_Daily_Trips.rou.xml) = dfbd1bc3bd889f58d179d268132708a9
 ```
-2. The result are available in `/Simulation1/output`.  The output folder includes trajectories for buses, bus stop information, and edge information, all in csv format. 
-<pre>  *Optional* The example output of simulating for one hour from 9 AM - 10 AM is stored at https://drive.google.com/drive/u/1/folders/1w9hj8wMJOGemEWVHgJ4_zvXnMT2Htbv9</pre>
-3. The *post-processing* can be performed on the collected data according to the steps mentioned [Step 6. Post-processing](#post-processing)
+
+Then get to the top folder Chattanooga_CS_900_1000
+
+```
+$ cd Chattanooga_CS_900_1000
+$ python3 driver.py # Simulating for one hour from 9 AM - 10 AM. The duration in driver.py is changed: 0900 to 1000 hrs
+```
+
+Result are available in `/Simulation1/output`.  The output folder includes trajectories for buses, bus stop information, and edge information, all in csv format. An example of the same is available at https://drive.google.com/drive/u/0/folders/1w9hj8wMJOGemEWVHgJ4_zvXnMT2Htbv9.
+
+Now you can perform post processing as described in the [instructions on main readme.md](https://github.com/smarttransit-ai/transit-gym#step-4-post-processing-of-outputs) 
