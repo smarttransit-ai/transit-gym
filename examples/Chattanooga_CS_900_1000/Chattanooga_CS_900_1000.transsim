@@ -6,6 +6,7 @@ import "taz.taz.xml"
 import "routes.Chattanooga_Daily_Trips.rou.xml"
 import "gui.gui.view.xml"
 import "bus-stop.busstops.xlsx"
+import "bus_withPerson.rou.xlsx"
 
 
 simulation configuration 1
