@@ -6,7 +6,7 @@ Below you will find the installation instructions and steps required to run a fe
 Please refer to [Manual Files](manual_files) if you are looking for **manual steps** to create the simulation environment. Otherwise follow the steps below that provide helper scripts. During these steps we refer to two different scenarios:
 
 1. [Hello World](examples/HelloWorld/): a simple example that demonstrates the full functionality and usages.
-2. [Chattanooga_CS](examples/Chattanooga_CS/): an environment for transit simulation within the Chattanooga area.
+2. [Chattanooga_CS_24_hours](examples/Chattanooga_CS_24_hours/): an environment for transit simulation within the Chattanooga area.
 3. [examples/Chattanooga_CS_cal](examples/Chattanooga_CS_cal): an example that includes updated matrices that were calibrated using real traffic from streets. Refer to [calibration-poster.pdf](calibration-poster.pdf) for details.
 
 A youtube presentation of this work is available at [https://youtu.be/Fw4UQGcB80o](https://youtu.be/Fw4UQGcB80o).
