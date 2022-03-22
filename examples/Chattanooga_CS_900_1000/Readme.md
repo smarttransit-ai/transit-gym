@@ -4,7 +4,7 @@ Remember to download the route file. Refer to the [instructions on main readme.m
 $ cd network
 $ unzip Chattanooga_SUMO_Network.net.zip
 $ cd ../routes
-$ wget https://www.dropbox.com/s/6sr0w60d96098v3/Chattanooga_Daily_Trips.rou.xml.tar.gz?dl=0
+$ wget https://www.dropbox.com/s/6sr0w60d96098v3/Chattanooga_Daily_Trips.rou.xml.tar.gz
 $ tar -xzvf Chattanooga_Daily_Trips.rou.xml.tar.gz
 ```
 
