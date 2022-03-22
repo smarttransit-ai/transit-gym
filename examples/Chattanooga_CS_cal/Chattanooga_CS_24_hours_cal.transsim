@@ -8,7 +8,7 @@ import "gui.gui.view.xml"
 import "bus-stop.busstops.xlsx"
 import "vTypeDist_lanech_1_2_1.add.xml"
 import "detector_new_inrix.add.xml"
-import "bus_withPerson.rou.xlsx"
+import "routes.bus_withPerson.rou.xml"
 
 
 simulation configuration 1
