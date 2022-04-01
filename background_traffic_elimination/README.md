@@ -37,7 +37,7 @@ it_run.zip && rm -rf /tmp/cookies.txt
 ```
 $ sed -i '48 i \\t \t<edge id="0" sampledSeconds="0" traveltime="0" overlapTraveltime="0" density="0" laneDensity="0" occupancy="0" waitingTime="0" timeLoss="0" speed="0" speedRelative="0" departed="0" arrived="0" entered="0" left="0" laneChangedFrom="0" laneChangedTo="0"/>' EdgeData.xml
    ```
-6. Create output folder ```mkdir output```
+6. Create 'output' folder ```mkdir output```
 
 7. Run the outputRocess.py file - 
 
