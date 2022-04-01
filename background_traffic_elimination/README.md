@@ -32,7 +32,7 @@ it_run.zip && rm -rf /tmp/cookies.txt
 	python3 /usr/share/sumo/tools/xml/xml2csv.py busstop_output.xml
 	python3 /usr/share/sumo/tools/xml/xml2csv.py trajectories_output.xml -p
    ```
-5. Change the first line of EdgeData.csv (to accomodate all the parameters - the default first line may not have all of them):<br>
+5. Change the first line of EdgeData.csv (to accomodate all the parameters - the default first line may not have all of them).<br>
 	In the terminal, type:
 ```
 $ sed -i '48 i \\t \t<edge id="0" sampledSeconds="0" traveltime="0" overlapTraveltime="0" density="0" laneDensity="0" occupancy="0" waitingTime="0" timeLoss="0" speed="0" speedRelative="0" departed="0" arrived="0" entered="0" left="0" laneChangedFrom="0" laneChangedTo="0"/>' EdgeData.xml
