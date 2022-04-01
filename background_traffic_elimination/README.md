@@ -6,7 +6,7 @@
 
 2. Add transit_run folder to background_traffic_elimination folder (change bus_withPerson.xml for new gtfs)<br>
    a. You can change the simulation endtime by changing the value in **line 16** in run-sim-with-background-traffic-elimination.py <br>
-  <\t> ```while traci.simulation.getTime() < (max duration):```<br>
+  ```while traci.simulation.getTime() < (max duration):```<br>
    b. SImulation time can also be changed from the .sumocfg file
    
 3. Copy the following files from background_traffic_elimination folder to manual_files/codes/:
