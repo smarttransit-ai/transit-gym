@@ -27,11 +27,13 @@
    ```
 6. Create output folder ```mkdir output```
 
-7. Run the outputRocess.py file - .csv files for all the trajectories are stored in output folder
+7. Run the outputRocess.py file - 
 
    ```python outputProcess.py ```
 	
 
+<br>
+The required .csv files for all the trajectories are stored in /output folder
 <!-- 1. Run "log-edge-data-in-normal-simulation.ipynb"
 2. Run "log-bus-data-in-normal-simultion.ipynb"
 3. Run "remove-background-traffic-and-log-bus-data"
