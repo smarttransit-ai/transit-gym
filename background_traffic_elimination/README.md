@@ -3,13 +3,19 @@
 ## Steps:
 
 1. Download [filtered-edge-data.pkl](https://drive.google.com/file/d/1uF-SDjassfoRxPayVo2iggGGhNH3DPJf/view?usp=sharing) and put into folder *background_traffic_elimination*
+```
+$ cd background_traffic_elimination
+$ wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1uF-SDjassfoRxPayVo2iggGGhNH3DPJf' -O- | sed -rn 's/.*c
+onfirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1uF-SDjassfoRxPayVo2iggGGhNH3DPJf" -O filte
+red_edge_data.pkl && rm -rf /tmp/cookies.txt
+```
 
-2. Add transit_run folder to background_traffic_elimination folder (change bus_withPerson.xml for new gtfs)<br>
+2. Add transit_run folder to /background_traffic_elimination  (change **bus_withPerson.xml** for new gtfs)<br>
    a. You can change the simulation endtime by changing the value in **line 16** in run-sim-with-background-traffic-elimination.py <br>
-  ```while traci.simulation.getTime() < (max duration):```<br>
-   b. SImulation time can also be changed from the .sumocfg file
+    "while traci.simulation.getTime() < (max duration): "<br>
+   b. Simulation time can also be changed from the .sumocfg file
    
-3. Copy the following files from background_traffic_elimination folder to manual_files/codes/:
+3. Copy the following files from /background_traffic_elimination to /manual_files/codes/:
 	1. busstop_output.xml   ```cp ./transit_run/busstop_output.xml ../manual_files/codes/```
 	2. EdgeData.xml   ```cp ./transit_run/EdgeData.xml ../manual_files/codes/```
 	3. trajectories_output.xml   ```cp ./transit_run/trajectories_output.xml ../manual_files/codes/```
