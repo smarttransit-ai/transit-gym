@@ -35,7 +35,7 @@ it_run.zip && rm -rf /tmp/cookies.txt
 5. Change the first line of EdgeData.csv (to accomodate all the parameters - the default first line may not have all of them):
 	In the terminal, type:
 	```
-   sed -i '48 i \\t \t<edge id="-78766" sampledSeconds="9.79" traveltime="9.24" overlapTraveltime="9.79" density="0.24" laneDensity="0.12" occupancy="0.09" waitingTime="0.00" timeLoss="0.15" speed="14.49" speedRelative="1.04" departed="0" arrived="0" entered="1" left="1" laneChangedFrom="0" laneChangedTo="0"/>' EdgeData.xml
+   sed -i '48 i \\t \t<edge id="0" sampledSeconds="0" traveltime="0" overlapTraveltime="0" density="0" laneDensity="0" occupancy="0" waitingTime="0" timeLoss="0" speed="0" speedRelative="0" departed="0" arrived="0" entered="0" left="0" laneChangedFrom="0" laneChangedTo="0"/>' EdgeData.xml
    ```
 6. Create output folder ```mkdir output```
 
