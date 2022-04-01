@@ -4,9 +4,9 @@
 
 1. Download [filtered-edge-data.pkl](https://drive.google.com/file/d/1uF-SDjassfoRxPayVo2iggGGhNH3DPJf/view?usp=sharing) and put into folder *background_traffic_elimination*
 
-2. Add transit_run folder to background_traffic_elimination folder (change bus_withPerson.xml for new gtfs)
-   a. You can change the simulation endtime by changing the value in line 16 in run-sim-with-background-traffic-elimination.py 
-   ```while traci.simulation.getTime() < (max duration):```
+2. Add transit_run folder to background_traffic_elimination folder (change bus_withPerson.xml for new gtfs)<br>
+   a. You can change the simulation endtime by changing the value in line 16 in run-sim-with-background-traffic-elimination.py <br>
+   ```while traci.simulation.getTime() < (max duration):```<br>
    b. SImulation time can also be changed from the .sumocfg file
    
 3. Copy the following files from background_traffic_elimination folder to manual_files/codes/:
