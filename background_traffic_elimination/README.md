@@ -45,9 +45,9 @@ $ sed -i '48 i \\t \t<edge id="0" sampledSeconds="0" traveltime="0" overlapTrave
 7. Create 'output' folder  ```mkdir output```
 
 8. Run the outputRocess.py file - 
- ```
-   $ python outputProcess.py 
-   ```
+```
+$ python outputProcess.py 
+```
 	
 
 <br>
