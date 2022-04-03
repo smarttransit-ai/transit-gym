@@ -23,7 +23,7 @@ it_run.zip && rm -rf /tmp/cookies.txt
    
 3. Run run-sim-with-background-traffic-elimination.py
 ```
- python3 run-sim-with-background-traffic-elimination.py
+$ python3 run-sim-with-background-traffic-elimination.py
 ```
 
 4. After the simulation is complete, copy the following files from /background_traffic_elimination to /manual_files/codes/:
@@ -33,20 +33,21 @@ it_run.zip && rm -rf /tmp/cookies.txt
 
 5. Generate csv from xml for all the above files:
 	```
-   python3 /usr/share/sumo/tools/xml/xml2csv.py EdgeData.xml
-	python3 /usr/share/sumo/tools/xml/xml2csv.py busstop_output.xml
-	python3 /usr/share/sumo/tools/xml/xml2csv.py trajectories_output.xml -p
+   	$ python3 /usr/share/sumo/tools/xml/xml2csv.py EdgeData.xml
+	$ python3 /usr/share/sumo/tools/xml/xml2csv.py busstop_output.xml
+	$ python3 /usr/share/sumo/tools/xml/xml2csv.py trajectories_output.xml -p
    ```
 6. Change the first line of EdgeData.csv (to accomodate all the parameters - the default first line may not have all of them).<br>
 	In the terminal, type:
 ```
 $ sed -i '48 i \\t \t<edge id="0" sampledSeconds="0" traveltime="0" overlapTraveltime="0" density="0" laneDensity="0" occupancy="0" waitingTime="0" timeLoss="0" speed="0" speedRelative="0" departed="0" arrived="0" entered="0" left="0" laneChangedFrom="0" laneChangedTo="0"/>' EdgeData.xml
    ```
-7. Create 'output' folder ```mkdir output```
+7. Create 'output' folder 
+ ```$ mkdir output```
 
 8. Run the outputRocess.py file - 
 
-   ```python outputProcess.py ```
+   ```$ python outputProcess.py ```
 	
 
 <br>
