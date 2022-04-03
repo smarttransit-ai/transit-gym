@@ -23,7 +23,7 @@ it_run.zip && rm -rf /tmp/cookies.txt
    
 3. Run run-sim-with-background-traffic-elimination.py
 ```
-$ python3 run-sim-with-background-traffic-elimination.py
+$ python run-sim-with-background-traffic-elimination.py
 ```
 
 4. After the simulation is complete, copy the following files from /background_traffic_elimination to /manual_files/codes/:
