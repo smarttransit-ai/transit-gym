@@ -33,9 +33,9 @@ $ python run-sim-with-background-traffic-elimination.py
 
 5. Generate csv from xml for all the above files:
 	```
-   	$ python3 /usr/share/sumo/tools/xml/xml2csv.py EdgeData.xml
-	$ python3 /usr/share/sumo/tools/xml/xml2csv.py busstop_output.xml
-	$ python3 /usr/share/sumo/tools/xml/xml2csv.py trajectories_output.xml -p
+   	$ python /usr/share/sumo/tools/xml/xml2csv.py EdgeData.xml
+	$ python /usr/share/sumo/tools/xml/xml2csv.py busstop_output.xml
+	$ python /usr/share/sumo/tools/xml/xml2csv.py trajectories_output.xml -p
    ```
 6. Change the first line of EdgeData.csv (to accomodate all the parameters - the default first line may not have all of them).<br>
 	In the terminal, type:
