@@ -21,31 +21,38 @@ it_run.zip && rm -rf /tmp/cookies.txt
     "while traci.simulation.getTime() < (max duration): "<br>
    b. Simulation time can also be changed from the .sumocfg file
    
-3. Copy the following files from /background_traffic_elimination to /manual_files/codes/:
+3. Run run-sim-with-background-traffic-elimination.py
+```
+ python3 run-sim-with-background-traffic-elimination.py
+```
+
+4. After the simulation is complete, copy the following files from /background_traffic_elimination to /manual_files/codes/:
 	1. busstop_output.xml   ```cp ./transit_run/busstop_output.xml ../manual_files/codes/```
 	2. EdgeData.xml   ```cp ./transit_run/EdgeData.xml ../manual_files/codes/```
 	3. trajectories_output.xml   ```cp ./transit_run/trajectories_output.xml ../manual_files/codes/```
 
-4. Generate csv from xml for all the above files:
+5. Generate csv from xml for all the above files:
 	```
    python3 /usr/share/sumo/tools/xml/xml2csv.py EdgeData.xml
 	python3 /usr/share/sumo/tools/xml/xml2csv.py busstop_output.xml
 	python3 /usr/share/sumo/tools/xml/xml2csv.py trajectories_output.xml -p
    ```
-5. Change the first line of EdgeData.csv (to accomodate all the parameters - the default first line may not have all of them).<br>
+6. Change the first line of EdgeData.csv (to accomodate all the parameters - the default first line may not have all of them).<br>
 	In the terminal, type:
 ```
 $ sed -i '48 i \\t \t<edge id="0" sampledSeconds="0" traveltime="0" overlapTraveltime="0" density="0" laneDensity="0" occupancy="0" waitingTime="0" timeLoss="0" speed="0" speedRelative="0" departed="0" arrived="0" entered="0" left="0" laneChangedFrom="0" laneChangedTo="0"/>' EdgeData.xml
    ```
-6. Create 'output' folder ```mkdir output```
+7. Create 'output' folder ```mkdir output```
 
-7. Run the outputRocess.py file - 
+8. Run the outputRocess.py file - 
 
    ```python outputProcess.py ```
 	
 
 <br>
 The required .csv files for all the trajectories are stored in /output folder
+
+
 <!-- 1. Run "log-edge-data-in-normal-simulation.ipynb"
 2. Run "log-bus-data-in-normal-simultion.ipynb"
 3. Run "remove-background-traffic-and-log-bus-data"
