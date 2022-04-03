@@ -42,8 +42,7 @@ $ python3 run-sim-with-background-traffic-elimination.py
 ```
 $ sed -i '48 i \\t \t<edge id="0" sampledSeconds="0" traveltime="0" overlapTraveltime="0" density="0" laneDensity="0" occupancy="0" waitingTime="0" timeLoss="0" speed="0" speedRelative="0" departed="0" arrived="0" entered="0" left="0" laneChangedFrom="0" laneChangedTo="0"/>' EdgeData.xml
    ```
-7. Create 'output' folder 
- ```$ mkdir output```
+7. Create 'output' folder  ```mkdir output```
 
 8. Run the outputRocess.py file - 
 
