@@ -31,17 +31,17 @@ $ python run-sim-with-background-traffic-elimination.py
 	2. EdgeData.xml   ```cp ./transit_run/EdgeData.xml ../manual_files/codes/```
 	3. trajectories_output.xml   ```cp ./transit_run/trajectories_output.xml ../manual_files/codes/```
 
-5. Generate csv from xml for all the above files:
-	```
-   	$ python /usr/share/sumo/tools/xml/xml2csv.py EdgeData.xml
-	$ python /usr/share/sumo/tools/xml/xml2csv.py busstop_output.xml
-	$ python /usr/share/sumo/tools/xml/xml2csv.py trajectories_output.xml -p
-   ```
-6. Change the first line of EdgeData.csv (to accomodate all the parameters - the default first line may not have all of them).<br>
+5. Change the first line of EdgeData.csv (to accomodate all the parameters - the default first line may not have all of them).<br>
 	In the terminal, type:
 ```
 $ sed -i '48 i \\t \t<edge id="0" sampledSeconds="0" traveltime="0" overlapTraveltime="0" density="0" laneDensity="0" occupancy="0" waitingTime="0" timeLoss="0" speed="0" speedRelative="0" departed="0" arrived="0" entered="0" left="0" laneChangedFrom="0" laneChangedTo="0"/>' EdgeData.xml
    ```
+6. Generate csv from xml for all the above files:
+	```
+   	$ python /usr/share/sumo/tools/xml/xml2csv.py EdgeData.xml
+	$ python /usr/share/sumo/tools/xml/xml2csv.py busstop_output.xml
+	$ python /usr/share/sumo/tools/xml/xml2csv.py trajectories_output.xml -p
+   ``` 
 7. Create 'output' folder  ```mkdir output```
 
 8. Run the outputRocess.py file - 
