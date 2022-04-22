@@ -128,3 +128,5 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+/background_traffic_elimination/sim_with_vehId_concept/transit_run
+/background_traffic_elimination/sim_with_vehId_concept/*.pkl

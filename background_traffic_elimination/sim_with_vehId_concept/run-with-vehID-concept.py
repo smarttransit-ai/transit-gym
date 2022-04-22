@@ -10,7 +10,7 @@ import datetime
 
 BUS_ROUTE_FILE = './transit_run/bus_routes_only.rou.xml'
 ROUTE_ASM_FILE = 'trips_vid_n_timebyGTFS_vehtype_20220111.csv'
-SUMO_CMD = ["/usr/bin/sumo-gui"]
+SUMO_CMD = ["/usr/bin/sumo"]
 SUMO_CONFIG_FILE = ["-c", "./transit_run/Chattanooga_SUMO_mehdi_final.sumocfg"]
 EDGE_DATA_FILE = './filtered_edge_data.pkl'
 
@@ -28,6 +28,7 @@ for route in doc['routes']['route']:
 ## process route_id to match with bus_with_person.rou.xml -------
 route_asm_df = pd.read_csv(ROUTE_ASM_FILE)
 route_asm_df['route_id'] = route_asm_df.apply(lambda row: str(row['trip_id']) + '020' + '_' + row['gtfs_time_start'], axis=1)
+route_asm_df['sumo_vehID'] = route_asm_df.apply(lambda row: str(row['trip_id']) + '_' + row['gtfs_time_start'], axis=1)
 route_asm_df['valid'] = route_asm_df['route_id'].apply(lambda x: x in route_ids)
 print('WARNING: There are {} invalid trips'.format(len(route_asm_df[route_asm_df['valid'] == False])))
 route_asm_df = route_asm_df[route_asm_df['valid']] # get only valid trips (found in .rou.xml)
@@ -60,14 +61,16 @@ for veh_id in route_asm_df['vid'].unique():
     veh_obj[veh_id]['counter'] = 0
     df_veh = route_asm_df[route_asm_df['vid'] == veh_id]
     for idx, row in df_veh.iterrows():
-        veh_obj[veh_id]['routes'].append({'route_id': row['route_id'], 'depart': row['depart'], 'veh_type': row['vehicle_type']})
+        veh_obj[veh_id]['routes'].append({'route_id': row['route_id'], 'depart': row['depart'], 
+            'sumo_vehID': row['sumo_vehID'], 'veh_type': row['vehicle_type']})
 # -----------------------------------------------------------------
 
 # Add first trips of vehicles -------------------------------------
 for veh_id in veh_obj:
     veh_routes, veh_counter = veh_obj[veh_id]['routes'], veh_obj[veh_id]['counter']
-    traci.vehicle.add('{}-{}'.format(veh_id, veh_counter), veh_routes[veh_counter]['route_id'],
-                                depart=veh_routes[veh_counter]['depart'], typeID=veh_routes[veh_counter]['veh_type'], departPos='stop')
+    traci.vehicle.add('{}-{}_{}'.format(veh_id, veh_counter, veh_routes[veh_counter]['sumo_vehID']), 
+                        veh_routes[veh_counter]['route_id'], depart=veh_routes[veh_counter]['depart'],
+                        typeID=veh_routes[veh_counter]['veh_type'], departPos='stop')
     veh_obj[veh_id]['counter'] += 1
 # -----------------------------------------------------------------
 
