@@ -9,8 +9,8 @@ from collections import OrderedDict
 import datetime
 
 BUS_ROUTE_FILE = './transit_run/bus_routes_only.rou.xml'
-ROUTE_ASM_FILE = 'trips_vid_n_timebyGTFS_20220111.csv'
-SUMO_CMD = ["/usr/bin/sumo"]
+ROUTE_ASM_FILE = 'trips_vid_n_timebyGTFS_vehtype_20220111.csv'
+SUMO_CMD = ["/usr/bin/sumo-gui"]
 SUMO_CONFIG_FILE = ["-c", "./transit_run/Chattanooga_SUMO_mehdi_final.sumocfg"]
 EDGE_DATA_FILE = './filtered_edge_data.pkl'
 
@@ -60,14 +60,14 @@ for veh_id in route_asm_df['vid'].unique():
     veh_obj[veh_id]['counter'] = 0
     df_veh = route_asm_df[route_asm_df['vid'] == veh_id]
     for idx, row in df_veh.iterrows():
-        veh_obj[veh_id]['routes'].append({'route_id': row['route_id'], 'depart': row['depart']})
+        veh_obj[veh_id]['routes'].append({'route_id': row['route_id'], 'depart': row['depart'], 'veh_type': row['vehicle_type']})
 # -----------------------------------------------------------------
 
 # Add first trips of vehicles -------------------------------------
 for veh_id in veh_obj:
     veh_routes, veh_counter = veh_obj[veh_id]['routes'], veh_obj[veh_id]['counter']
     traci.vehicle.add('{}-{}'.format(veh_id, veh_counter), veh_routes[veh_counter]['route_id'],
-                                depart=veh_routes[veh_counter]['depart'], typeID='Gillig_105', departPos='stop')
+                                depart=veh_routes[veh_counter]['depart'], typeID=veh_routes[veh_counter]['veh_type'], departPos='stop')
     veh_obj[veh_id]['counter'] += 1
 # -----------------------------------------------------------------
 
@@ -82,7 +82,7 @@ while traci.simulation.getTime() < 3600*24:
         if veh_counter < len(veh_routes):
             new_veh_id = '{}-{}'.format(veh_id, veh_counter)
             traci.vehicle.add(new_veh_id, veh_routes[veh_counter]['route_id'],
-                                        depart=veh_routes[veh_counter]['depart'],  typeID='Gillig_105', departPos='stop')
+                                        depart=veh_routes[veh_counter]['depart'],  typeID=veh_routes[veh_counter]['veh_type'], departPos='stop')
             if step > veh_routes[veh_counter]['depart']:
                 delta = step - veh_routes[veh_counter]['depart']
                 for stop in traci.vehicle.getStops(new_veh_id):
