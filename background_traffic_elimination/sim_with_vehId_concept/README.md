@@ -26,7 +26,7 @@ onfirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1uF-SDjassfoRxPayVo2iggGGhNH3DPJf" -O filte
 red_edge_data.pkl && rm -rf /tmp/cookies.txt
 ```
 
-2. Add transit_run folder to /background_traffic_elimination  (change **bus_withPerson.xml** for new gtfs)<br>
+2. Add transit_run folder here  (change **bus_withPerson.xml** for new gtfs)<br>
 
  Download transit_run.zip and extract it ( https://drive.google.com/file/d/1J8EN538uXquD76HHwHmT8AWNHc2ERG3z/view?usp=sharing ) 
  
