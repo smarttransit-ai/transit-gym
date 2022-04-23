@@ -66,9 +66,12 @@ $ sed -i '48 i \\t \t<edge id="0" sampledSeconds="0" traveltime="0" overlapTrave
 	$ python /usr/share/sumo/tools/xml/xml2csv.py busstop_output.xml
 	$ python /usr/share/sumo/tools/xml/xml2csv.py trajectories_output.xml -p
    ``` 
-9. Create 'output' folder  ```mkdir output```
+   
+9. Temporary fix : replace 'trajectories_output.csvactorConfig.csv' with [https://drive.google.com/file/d/1d82N7x5gRQsgwuw3c5PmwK5ZnBsAsDx5/view?usp=sharing] - fix for assiging vehicle fuel types
 
-10. Run the outputRocess.py file - 
+10. Create 'output' folder  ```mkdir output```
+
+11.  Run the outputRocess.py file - 
 ```
 $ python outputProcess.py 
 ```
