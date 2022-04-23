@@ -28,11 +28,8 @@ red_edge_data.pkl && rm -rf /tmp/cookies.txt
 
 2. Add transit_run folder to /background_traffic_elimination  (change **bus_withPerson.xml** for new gtfs)<br>
 
-```
-$ wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1TDb9rhMw7DU5aU0keUPkA7Jf05UoRSKN' -O- | sed -rn 's/.*c
-onfirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1TDb9rhMw7DU5aU0keUPkA7Jf05UoRSKN" -O trans
-it_run.zip && rm -rf /tmp/cookies.txt
-```
+ Download transit_run.zip and extract it ( https://drive.google.com/file/d/1J8EN538uXquD76HHwHmT8AWNHc2ERG3z/view?usp=sharing ) 
+ 
    a. You can change the simulation endtime by changing the value in **line 16** in run-sim-with-background-traffic-elimination.py <br>
     "while traci.simulation.getTime() < (max duration): "<br>
    b. Simulation time can also be changed from the .sumocfg file
