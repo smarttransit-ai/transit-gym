@@ -20,13 +20,13 @@ stopO.to_csv("./output/busstop_info.csv",index=False)
 
 
 ## edge based output with mean speed for each hour(3600s)
-# edgeO = pd.read_csv("EdgeData.csv",sep=';')
-# edgeO=edgeO[["interval_begin","interval_end","edge_id","edge_speed",
-#              "edge_density","edge_laneDensity","edge_left",
-#              "edge_occupancy","edge_traveltime",
-#              "edge_waitingTime","edge_entered"]]
-# # UNIT: "edge_speed":m/s, "edge_density":#veh/km, "edge_occupancy":%
-# edgeO.to_csv("./output/edge_info.csv",index=False)
+edgeO = pd.read_csv("EdgeData.csv",sep=';')
+edgeO=edgeO[["interval_begin","interval_end","edge_id","edge_speed",
+             "edge_density","edge_laneDensity","edge_left",
+             "edge_occupancy","edge_traveltime",
+             "edge_waitingTime","edge_entered"]]
+# UNIT: "edge_speed":m/s, "edge_density":#veh/km, "edge_occupancy":%
+edgeO.to_csv("./output/edge_info.csv",index=False)
 
 
 ## trajectory for all vehicles during the simulation time interval
