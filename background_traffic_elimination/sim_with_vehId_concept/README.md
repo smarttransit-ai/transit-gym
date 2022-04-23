@@ -40,7 +40,7 @@ Note that: *BUS_WITH_PERSON_FILE* and *OUTPUT_BUS_ROUTE_FILE* can be edited
 
 4. Edit sumo configuration file 
 
-Edit Line 7 of *transit_run/Chattanooga_SUMO.sumocfg* to
+Edit Line 7 of *transit_run/Chattanooga_SUMO_Mehdi_final.sumocfg* to
 ```
 <route-files value="bus_routes_only.rou.xml"/>
 ```
