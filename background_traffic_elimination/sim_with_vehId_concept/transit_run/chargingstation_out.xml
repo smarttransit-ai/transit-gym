@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2022-04-23 11:37:15 by Eclipse SUMO sumo Version 1.12.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="./transit_run/Chattanooga_SUMO_Network.net.xml"/>
+        <route-files value="./transit_run/bus_routes_only.rou.xml"/>
+        <additional-files value="./transit_run/busStopsCARTA.add.xml,./transit_run/edgedump.add.xml,./transit_run/detector_new_inrix.add.xml"/>
+    </input>
+
+    <output>
+        <emission-output value="./transit_run/emission_output.xml"/>
+        <chargingstations-output value="./transit_run/chargingstation_out.xml"/>
+        <amitran-output value="./transit_run/trajectories_output.xml"/>
+        <stop-output value="./transit_run/busstop_output.xml"/>
+    </output>
+
+    <time>
+        <begin value="15660"/>
+        <end value="86400"/>
+    </time>
+
+    <processing>
+        <ignore-route-errors value="true"/>
+    </processing>
+
+    <report>
+        <xml-validation value="never"/>
+        <xml-validation.routes value="never"/>
+        <no-warnings value="true"/>
+        <error-log value="./transit_run/error_warning_log.txt"/>
+    </report>
+
+    <traci_server>
+        <remote-port value="60047"/>
+    </traci_server>
+
+    <gui_only>
+        <gui-settings-file value="./transit_run/gui.view.xml"/>
+    </gui_only>
+
+</configuration>
+-->
+
+<chargingstations-export>
+</chargingstations-export>
