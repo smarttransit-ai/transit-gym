@@ -42,9 +42,11 @@ $ sed -i '48 i \\t \t<edge id="0" sampledSeconds="0" traveltime="0" overlapTrave
 	$ python /usr/share/sumo/tools/xml/xml2csv.py busstop_output.xml
 	$ python /usr/share/sumo/tools/xml/xml2csv.py trajectories_output.xml -p
    ``` 
-7. Create 'output' folder  ```mkdir output```
+7. temporary fix : replace 'trajectories_output.csvactorConfig.csv' with [https://drive.google.com/file/d/1d82N7x5gRQsgwuw3c5PmwK5ZnBsAsDx5/view?usp=sharing] 
 
-8. Run the outputRocess.py file - 
+8. Create 'output' folder  ```mkdir output```
+
+9. Run the outputRocess.py file - 
 ```
 $ python outputProcess.py 
 ```
