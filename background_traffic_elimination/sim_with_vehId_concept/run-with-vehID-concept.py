@@ -83,7 +83,7 @@ while traci.simulation.getTime() < 3600*24:
         veh_id = int(veh_id_sim.split('-')[0])
         veh_routes, veh_counter = veh_obj[veh_id]['routes'], veh_obj[veh_id]['counter']
         if veh_counter < len(veh_routes):
-            new_veh_id = '{}-{}'.format(veh_id, veh_counter)
+            new_veh_id = '{}-{}_{}'.format(veh_id, veh_counter, veh_routes[veh_counter]['sumo_vehID'])
             traci.vehicle.add(new_veh_id, veh_routes[veh_counter]['route_id'],
                                         depart=veh_routes[veh_counter]['depart'],  typeID=veh_routes[veh_counter]['veh_type'], departPos='stop')
             if step > veh_routes[veh_counter]['depart']:
