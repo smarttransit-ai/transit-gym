@@ -5,7 +5,7 @@
     <input>
         <net-file value="Chattanooga_SUMO_Network.net.xml"/>
         <route-files value="bus_routes_only.rou.xml"/>
-        <additional-files value="busStopsCARTA.add.xml,edgedump.add.xml"/>	
+        <additional-files value="busStopsCARTA_v21.add.xml,edgedump.add.xml"/>	
     </input>
 
     <time>
