@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="Chattanooga_SUMO_Network.net.xml"/>
+        <route-files value="bus_routes_only.rou.xml"/>
+        <additional-files value="busStopsCARTA.add.xml,edgedump.add.xml"/>	
+    </input>
+
+    <time>
+        <begin value="14000"/>
+        <end value="36000"/>
+    </time>
+	
+    <output>
+        <stop-output value="busstop_output.xml"/>
+    </output>
+	
+    <processing>
+        <time-to-teleport value="50" />
+        <ignore-junction-blocker value="1" />
+        <waiting-time-memory value="100000000" />
+        <ignore-route-errors value="true"/> 
+    </processing>
+	
+	<report>
+	    <no-warnings value="true"/>
+	    <error-log value="error_warning_log.txt"/>
+	    <xml-validation value="never"/>
+	</report>
+	
+</configuration>
