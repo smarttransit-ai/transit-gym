@@ -1,5 +1,3 @@
-# Background traffic elimination
-
 ## Steps:
 
 1. Download [filtered-edge-data.pkl](https://drive.google.com/file/d/1uF-SDjassfoRxPayVo2iggGGhNH3DPJf/view?usp=sharing) and put into folder *background_traffic_elimination*
@@ -10,21 +8,24 @@ onfirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1uF-SDjassfoRxPayVo2iggGGhNH3DPJf" -O filte
 red_edge_data.pkl && rm -rf /tmp/cookies.txt
 ```
 
-2. Add transit_run folder to /background_traffic_elimination  (change **bus_withPerson.xml** for new gtfs)<br>
+2. Download Chattanooga_SUMO_Network.net.xml and put into folder transit_run
+
+<!-- 2. Add transit_run folder to /background_traffic_elimination  (change **bus_withPerson.xml** for new gtfs)<br>
 
 ```
 $ wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1TDb9rhMw7DU5aU0keUPkA7Jf05UoRSKN' -O- | sed -rn 's/.*c
 onfirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1TDb9rhMw7DU5aU0keUPkA7Jf05UoRSKN" -O trans
 it_run.zip && rm -rf /tmp/cookies.txt
 ```
-
-3. Modify the route file
+ -->
+<!-- 3. Modify the route file
 ```
 python ./vehId_concept/preprocessing/generate-bus-route-file.py
 ```
 Then, make sure that the sumocfg file is using ```<route-files value="bus_routes_only.rou.xml"/>``` (line 6)
-
-4. Run main.py
+ -->
+ 
+3. Run main.py
    &emsp; a. You can change the simulation endtime by changing the value in **line 6** in main.py 
     &emsp; &emsp; "END_TIMESTEP = 3600*24 "
    &emsp; b. Simulation time can also be changed from the .sumocfg file
@@ -32,8 +33,7 @@ Then, make sure that the sumocfg file is using ```<route-files value="bus_routes
 $ python main.py
 ```
 
-
-5. After the simulation is complete, copy the following files from /background_traffic_elimination to /manual_files/codes/:
+4. After the simulation is complete, copy the following files from /transit_run to /manual_files/codes/:
 	1. busstop_output.xml   ```cp ./transit_run/busstop_output.xml ../manual_files/codes/```
 	2. EdgeData.xml   ```cp ./transit_run/EdgeData.xml ../manual_files/codes/```
 	3. trajectories_output.xml   ```cp ./transit_run/trajectories_output.xml ../manual_files/codes/```
