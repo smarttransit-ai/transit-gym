@@ -130,3 +130,6 @@ dmypy.json
 .pyre/
 /background_traffic_elimination/sim_with_vehId_concept/transit_run
 /background_traffic_elimination/sim_with_vehId_concept/*.pkl
+simulation/old_files
+simulation/transit_run/Chattanooga_SUMO_Network.net.xml
+simulation/background_traffic_elimination/filtered_edge_data.pkl
