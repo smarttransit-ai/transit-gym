@@ -2,7 +2,7 @@
 Default directory structure
 ```
 sim_with_vehId_concept
-|___preprocessing
+└───preprocessing
 │   |   generate-bus-route-file.py
 │   run-with-vehID-concept.py
 |   trips_vid_n_timebyGTFS_20220111.csv
