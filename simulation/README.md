@@ -26,9 +26,9 @@ Then, make sure that the sumocfg file is using ```<route-files value="bus_routes
  -->
  
 3. Run main.py <br>
-   a. You can change the simulation endtime by changing the value in **line 6** in main.py 
+   a. You can change the simulation endtime by changing the value in **line 6** in main.py <br>
     &emsp; &emsp; "END_TIMESTEP = 3600*24 "<br>
-   &emsp; b. Simulation time can also be changed from the .sumocfg file
+   b. Simulation time can also be changed from the .sumocfg file
 ```
 $ python main.py
 ```
