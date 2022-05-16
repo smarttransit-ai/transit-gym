@@ -25,9 +25,9 @@ python ./vehId_concept/preprocessing/generate-bus-route-file.py
 Then, make sure that the sumocfg file is using ```<route-files value="bus_routes_only.rou.xml"/>``` (line 6)
  -->
  
-3. Run main.py
-   &emsp; a. You can change the simulation endtime by changing the value in **line 6** in main.py 
-    &emsp; &emsp; "END_TIMESTEP = 3600*24 "
+3. Run main.py <br>
+   a. You can change the simulation endtime by changing the value in **line 6** in main.py 
+    &emsp; &emsp; "END_TIMESTEP = 3600*24 "<br>
    &emsp; b. Simulation time can also be changed from the .sumocfg file
 ```
 $ python main.py
