@@ -24,4 +24,4 @@ Edit Line 7 of *transit_run/Chattanooga_..sumocfg* to
 ```
 
 #### Step 3: Simulation
-> python3 run-with-vehID-concept.py 
+> python3 BusGenerator.py
