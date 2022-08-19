@@ -4,3 +4,5 @@ Key lines are commented "user-defined" that are associated withthe charging prof
 In chargerLoad.py: Lines 42, 59 and 60
 To vary the interval between charger load update and the computation of the Grid score, update line 492 in federate1.py.
 Currently set to update every 300 sec (i.e., 5 min).
+
+Run using the .bat file
