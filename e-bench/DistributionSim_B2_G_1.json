@@ -1,0 +1,3958 @@
+{
+	"name" : "DistributionSim_B2_G_1",
+	"period" : 1.0,
+	"publications" : [ 
+		{
+			"global" : false,
+			"key" : "totalLoad",
+			"type" : "complex",
+			"unit" : "MVA",
+			"info" : "{
+				\"object\" : \"R5-12-47-1_node_266\",
+				\"property\" : \"distribution_load\"
+			}"
+		},
+		{
+			"global" : false,
+			"key" : "voltagea",
+			"type" : "complex",
+			"unit" : "V",
+			"info" : "{
+				\"object\" : \"R5-12-47-1_meter_1\",
+				\"property\" : \"voltage_A\"
+			}"
+		},
+		{
+			"global" : false,
+			"key" : "voltageb",
+			"type" : "complex",
+			"unit" : "V",
+			"info" : "{
+				\"object\" : \"R5-12-47-1_meter_1\",
+				\"property\" : \"voltage_B\"
+			}"
+		},
+		{
+			"global" : false,
+			"key" : "voltagec",
+			"type" : "complex",
+			"unit" : "V",
+			"info" : "{
+				\"object\" : \"R5-12-47-1_meter_1\",
+				\"property\" : \"voltage_C\"
+			}"
+		},
+        { 
+            "global" : false, 
+            "key" : "ohloss1", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_1\", 
+                 \"property\" : \"power_losses\"
+            }" 
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss2", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_2\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss3", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_3\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss4", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_4\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss5", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_5\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss6", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_6\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss7", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_7\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss8", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_8\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss9", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_9\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss10", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_10\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss11", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_11\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss12", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_12\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss13", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_13\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss14", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_14\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss15", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_15\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss16", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_16\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss17", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_17\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss18", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_18\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss19", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_19\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss20", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_20\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss21", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_21\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss22", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_22\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss23", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_23\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss24", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_24\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss25", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_25\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss26", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_26\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss27", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_27\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss28", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_28\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss29", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_29\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss30", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_30\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss31", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_31\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss32", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_32\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss33", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_33\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss34", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_34\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss35", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_35\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss36", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_36\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss37", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_37\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss38", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_38\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss39", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_39\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss40", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_40\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss41", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_41\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss42", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_42\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss43", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_43\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss44", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_44\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss45", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_45\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss46", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_46\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss47", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_47\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss48", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_48\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss49", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_49\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss50", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_50\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss51", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_51\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss52", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_52\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss53", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_53\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss54", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_54\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss55", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_55\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss56", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_56\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss57", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_57\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss58", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_58\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss59", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_59\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss60", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_60\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss61", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_61\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss62", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_62\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss63", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_63\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss64", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_64\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss65", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_65\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss66", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_66\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss67", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_67\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss68", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_68\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss69", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_69\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss70", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_70\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss71", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_71\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss72", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_72\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss73", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_73\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss74", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_74\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss75", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_75\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss76", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_76\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss77", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_77\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss78", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_78\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss79", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_79\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss80", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_80\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss81", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_81\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss82", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_82\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss83", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_83\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss84", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_84\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss85", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_85\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss86", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_86\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss87", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_87\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss88", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_88\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss89", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_89\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss90", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_90\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss91", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_91\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss92", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_92\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss93", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_93\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss94", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_94\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss95", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_95\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss96", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_96\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss97", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_97\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss98", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_98\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss99", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_99\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss100", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_100\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss101", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_101\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss102", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_102\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss103", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_103\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss104", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_104\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss105", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_105\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss106", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_106\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss107", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_107\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss108", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_108\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss109", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_109\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss110", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_110\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss111", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_111\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss112", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_112\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss113", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_113\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss114", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_114\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss115", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_115\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss116", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_116\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss117", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_117\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss118", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_118\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss119", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_119\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss120", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_120\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss121", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_121\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss122", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_122\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss123", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_123\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss124", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_124\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss125", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_125\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss126", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_126\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss127", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_127\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss128", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_128\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss129", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_129\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss130", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_130\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss131", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_131\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss132", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_132\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss133", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_133\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss134", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_134\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss135", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_135\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss136", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_136\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss137", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_137\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss138", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_138\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss139", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_139\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss140", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_140\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss141", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_141\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss142", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_142\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss143", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_143\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss144", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_144\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss145", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_145\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss146", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_146\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss147", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_147\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss148", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_148\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss149", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_149\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss150", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_150\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss151", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_151\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss152", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_152\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss153", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_153\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss154", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_154\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss155", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_155\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss156", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_156\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss157", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_157\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss158", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_158\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss159", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_159\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss160", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_160\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss161", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_161\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss162", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_162\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss163", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_163\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss164", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_164\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss165", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_165\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss166", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_166\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss167", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_167\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss168", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_168\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss169", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_169\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss170", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_170\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss171", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_171\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss172", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_172\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss173", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_173\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss174", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_174\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss175", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_175\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss176", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_176\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss177", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_177\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss178", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_178\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss179", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_179\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss180", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_180\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss181", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_181\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss182", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_182\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss183", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_183\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss184", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_184\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss185", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_185\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss186", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_186\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss187", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_187\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss188", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_188\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss189", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_189\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss190", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_190\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ohloss191", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ol_191\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+	{ 
+            "global" : false, 
+            "key" : "txloss1", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_1\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss2", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_2\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss3", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_3\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss4", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_4\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss5", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_5\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss6", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_6\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss7", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_7\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss8", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_8\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss9", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_9\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss10", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_10\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss11", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_11\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss12", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_12\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss13", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_13\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss14", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_14\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss15", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_15\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss16", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_16\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss17", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_17\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss18", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_18\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss19", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_19\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss20", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_20\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss21", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_21\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss22", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_22\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss23", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_23\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss24", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_24\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss25", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_25\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss26", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_26\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss27", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_27\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss28", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_28\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss29", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_29\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss30", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_30\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss31", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_31\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss32", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_32\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss33", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_33\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss34", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_34\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss35", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_35\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss36", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_36\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss37", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_37\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss38", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_38\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss39", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_39\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss40", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_40\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss41", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_41\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss42", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_42\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss43", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_43\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss44", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_44\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss45", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_45\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss46", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_46\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss47", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_47\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss48", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_48\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss49", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_49\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss50", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_50\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss51", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_51\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss52", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_52\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss53", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_53\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss54", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_54\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss55", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_55\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss56", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_56\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss57", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_57\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss58", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_58\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss59", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_59\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss60", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_60\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss61", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_61\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss62", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_62\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss63", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_63\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss64", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_64\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss65", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_65\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss66", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_66\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss67", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_67\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss68", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_68\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss69", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_69\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss70", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_70\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss71", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_71\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss72", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_72\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss73", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_73\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss74", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_74\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss75", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_75\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss76", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_76\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss77", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_77\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss78", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_78\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss79", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_79\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss80", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_80\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss81", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_81\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss82", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_82\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss83", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_83\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss84", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_84\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss85", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_85\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss86", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_86\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss87", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_87\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss88", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_88\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss89", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_89\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss90", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_90\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss91", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_91\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss92", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_92\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss93", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_93\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss94", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_94\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss95", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_95\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss96", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_96\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss97", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_97\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss98", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_98\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss99", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_99\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss100", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_100\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss101", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_101\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss102", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_102\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss103", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_103\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss104", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_104\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss105", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_105\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss106", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_106\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss107", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_107\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss108", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_108\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss109", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_109\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss110", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_110\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss111", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_111\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss112", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_112\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss113", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_113\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss114", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_114\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss115", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_115\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss116", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_116\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss117", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_117\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss118", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_118\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss119", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_119\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss120", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_120\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss121", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_121\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss122", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_122\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss123", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_123\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss124", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_124\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss125", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_125\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss126", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_126\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss127", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_127\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss128", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_128\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss129", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_129\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss130", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_130\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss131", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_131\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss132", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_132\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss133", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_133\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss134", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_134\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss135", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_135\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss136", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_136\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss137", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_137\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss138", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_138\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss139", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_139\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss140", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_140\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss141", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_141\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss142", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_142\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss143", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_143\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss144", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_144\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss145", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_145\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss146", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_146\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss147", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_147\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss148", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_148\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss149", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_149\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss150", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_150\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss151", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_151\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss152", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_152\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss153", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_153\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss154", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_154\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss155", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_155\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss156", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_156\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss157", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_157\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss158", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_158\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss159", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_159\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss160", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_160\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss161", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_161\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss162", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_162\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss163", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_163\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss164", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_164\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss165", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_165\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss166", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_166\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss167", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_167\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss168", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_168\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss169", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_169\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss170", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_170\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss171", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_171\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss172", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_172\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss173", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_173\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss174", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_174\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss175", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_175\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss176", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_176\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss177", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_177\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss178", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_178\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss179", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_179\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss180", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_180\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss181", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_181\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss182", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_182\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss183", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_183\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss184", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_184\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "txloss185", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_tl_185\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ugloss1", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ul_1\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ugloss2", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ul_2\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ugloss3", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ul_3\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ugloss4", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ul_4\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ugloss5", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ul_5\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ugloss6", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ul_6\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ugloss7", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ul_7\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ugloss8", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ul_8\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ugloss9", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ul_9\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ugloss10", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ul_10\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ugloss11", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ul_11\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+        { 
+            "global" : false, 
+            "key" : "ugloss12", 
+            "type" : "complex",
+            "unit " : "VA", 
+            "info" : "{ 
+                 \"object\" : \"R5-12-47-1_ul_12\", 
+                 \"property\" : \"power_losses\"
+            }"
+         }, 
+
+		
+	],
+	"subscriptions" : [
+		{
+			"key" : "CH1/LoadA",
+			"type" : "complex",
+			"unit" : "VA",
+			"info" : "{
+				\"object\" : \"charger1\",
+				\"property\" : \"constant_power_A\"
+			}"
+		},
+		{
+			"key" : "CH1/LoadB",
+			"type" : "complex",
+			"unit" : "VA",
+			"info" : "{
+				\"object\" : \"charger1\",
+				\"property\" : \"constant_power_B\"
+			}"
+		},
+		{
+			"key" : "CH1/LoadC",
+			"type" : "complex",
+			"unit" : "VA",
+			"info" : "{
+				\"object\" : \"charger1\",
+				\"property\" : \"constant_power_C\"
+			}"
+		}
+	],
+	
+}
