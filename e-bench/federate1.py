@@ -471,7 +471,7 @@ def main():
     subidloss.append(h.helicsFederateRegisterSubscription(fed, "DistributionSim_B2_G_1/ohloss191", ""))
 
     # Register endpoint
-    #epid = h.helicsFederateRegisterEndpoint(fed, "ep1", None)
+    epid = h.helicsFederateRegisterEndpoint(fed, "ep1", None)
     
     # h.helicsSubscriptionSetDefaultComplex(subid, 0, 0)
     

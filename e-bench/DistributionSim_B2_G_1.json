@@ -3954,5 +3954,16 @@
 			}"
 		}
 	],
+	"endpoints" : [
+		{
+			"global" : false,
+			"name" : "ep1",
+			"type" : "double",
+			"info" : "{
+				\"object\" : \"Market_1\",
+				\"property\" : \"fixed_price\"
+			}"
+		}
+	]
 	
 }
