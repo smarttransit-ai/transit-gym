@@ -1,6 +1,7 @@
 {
 	"name" : "DistributionSim_B2_G_1",
 	"period" : 1.0,
+	"offset" : 0,	
 	"publications" : [ 
 		{
 			"global" : false,
@@ -3921,9 +3922,7 @@
                  \"object\" : \"R5-12-47-1_ul_12\", 
                  \"property\" : \"power_losses\"
             }"
-         }, 
-
-		
+         }		
 	],
 	"subscriptions" : [
 		{
