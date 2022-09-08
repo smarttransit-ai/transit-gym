@@ -73,7 +73,7 @@ sut_op.txt
 `od2trips --taz-files taz.xml --od-matrix-files mut_am.txt --output-file trips_mut_am_xml.trips.xml --prefix mut_am --vtype trailer --spread.uniform`
 
 ## 6- Combine the different trips files into one trip file for sumo
-A [jupyter notebook Combine_trip_files.ipynb](https://github.com/smarttransit-ai/transit-gym/tree/master/simulation/Generate_routes_file_from_OD_matrices)  code file attached here to does this.
+A [jupyter notebook Combine_trip_files.ipynb](https://github.com/smarttransit-ai/transit-gym/tree/master/simulation/Generate_routes_file_from_OD_matrices/code)  code file attached here to does this.
 
 ## 7- Generating the routes file using  duaIterate:
 This step depends on the demand file may takes time from one day to a month for 50 iteration. (https://sumo.dlr.de/docs/Demand/Dynamic_User_Assignment.html)
