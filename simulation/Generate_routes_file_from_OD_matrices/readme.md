@@ -1,7 +1,7 @@
 # Generate routes file from OD matrices (background traffic)
 
 ## 1- Convert TAZ shapefile to Sumo polygon file with POLYCONVERT:
-For this step we need TAZ shape files from the folder [“tazshapefile_909_TAZ”](https://github.com/smarttransit-ai/transit-gym/tree/master/simulation/Generate_routes_file_from_OD_matrices/TAZ_shapefiles) and the [Chattanooga network file](https://github.com/smarttransit-ai/transit-gym/tree/master/simulation/Generate_routes_file_from_OD_matrices/Chattanooga_Network) with this command: 
+For this step we need [TAZ shape files](https://github.com/smarttransit-ai/transit-gym/tree/master/simulation/Generate_routes_file_from_OD_matrices/TAZ_shapefiles) and the [Chattanooga network file](https://github.com/smarttransit-ai/transit-gym/tree/master/simulation/Generate_routes_file_from_OD_matrices/Chattanooga_Network) with this command: 
 
 `polyconvert --net-file Chattanooga_SUMO_Network.net.xml --shapefile-prefixes taz909  --shapefile.id-column TAZID --shapefile.add-param true --shapefile.fill false  --proj.utm true -o polygon.xml`
 
