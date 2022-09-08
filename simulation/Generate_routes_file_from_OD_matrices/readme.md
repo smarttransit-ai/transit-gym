@@ -1,7 +1,7 @@
 # Generate routes file from OD matrices (background traffic)
 
 ## 1- Convert TAZ shapefile to Sumo polygon file with POLYCONVERT:
-For this step we need TAZ shape files from the folder “tazshapefile_909_TAZ” and the Chattanooga network file with this command: 
+For this step we need TAZ shape files from the folder [“tazshapefile_909_TAZ”](https://github.com/smarttransit-ai/transit-gym/tree/master/simulation/Generate_routes_file_from_OD_matrices/TAZ_shapefiles) and the [Chattanooga network file](https://github.com/smarttransit-ai/transit-gym/tree/master/simulation/Generate_routes_file_from_OD_matrices/Chattanooga_Network) with this command: 
 
 `polyconvert --net-file Chattanooga_SUMO_Network.net.xml --shapefile-prefixes taz909  --shapefile.id-column TAZID --shapefile.add-param true --shapefile.fill false  --proj.utm true -o polygon.xml`
 
@@ -15,7 +15,7 @@ For this step we need TAZ shape files from the folder “tazshapefile_909_TAZ”
 Fix incorrect TAZ ids by removing “#x” part. Remember that this step is only for TAZ ids not the other  part of the TAZ file such as edges.
 
 ## 4- Convert given OD matrices to O-format for sumo shown below :
-All of our ODs are in this format, but if not the ODs should be converted to this format.
+All of our [ODs](https://github.com/smarttransit-ai/transit-gym/tree/master/simulation/Generate_routes_file_from_OD_matrices/OD_matrices) are in this format, but if not the ODs should be converted to this format.
 
 $OR;D2
 * From-Time  To-Time
@@ -42,6 +42,7 @@ You need to create separate files for different vehicle types: passenger, single
 You might need to create different files for different times of day too because of "From-Time" and "To-Time" line in O-format.
 
 ## 5- Generate trips using od2trips in Sumo for passenger, single unit truck and multi-unit truck files.
+
 For doing this step we need 9 separate OD files: (op: off peak hours)
 pass_am.txt
 pass_pm.txt
