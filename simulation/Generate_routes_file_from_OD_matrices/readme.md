@@ -6,7 +6,7 @@ For this step we need [TAZ shape files](https://github.com/smarttransit-ai/trans
 `polyconvert --net-file Chattanooga_SUMO_Network.net.xml --shapefile-prefixes taz909  --shapefile.id-column TAZID --shapefile.add-param true --shapefile.fill false  --proj.utm true -o polygon.xml`
 
 
-## 2- convert Sumo polygon file to Sumo TAZ file with edges assigned to TAZs:
+## 2- Convert Sumo polygon file to Sumo TAZ file with edges assigned to TAZs:
 
 `$SUMO_HOME/tools/edgesInDistricts.py -n Chattanooga_SUMO_Network.net.xml -t polygon.xml  -o taz.xml'`
 
