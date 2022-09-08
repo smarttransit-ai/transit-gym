@@ -26,14 +26,16 @@ $OR;D2
 * additional
 * comments
          1          1       1.00
+         
          1          2       2.00
+         
          1          3       3.00
+         
          2          1       4.00
+         
          2          2       5.00
-         2          3       6.00
-         3          1       7.00
-         3          2       8.00
-         3          3       9.00
+         
+     
 
 You need to create separate files for different vehicle types: passenger, single unit truck and multi-unit truck because OD2Trips process vehicle types separately. 
 You might need to create different files for different times of day too because of "From-Time" and "To-Time" line in O-format.
