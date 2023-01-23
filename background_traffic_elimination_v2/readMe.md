@@ -1,21 +1,25 @@
-
-# 1. Generate trip-assignment files
-File: Pre-processing/generate-trip-assignment.py
-
-Inputs: 
-* GTFS
-* APC
-* date
-
-Command:
-
+#0 Unzip the SUMO network file 
 ```bat
-$ cd Pre-processing
-$ python generate-trip-assignment.py --GTFS ../GTFS/20210815 --APC ../APC/202108.parquet --date 20210820
+$ unzip transit-sim-date/Chattanooga_SUMO_Network.net.xml.zip
 ```
 
-Output:
-* Pre-processing/trip-assignments/trip-asm-20210820.csv
+# 1. Generate trip-assignment files
+  File: Pre-processing/generate-trip-assignment.py
+
+  Inputs: 
+  * GTFS
+  * APC
+  * date
+
+  Command:
+
+  ```bat
+  $ cd Pre-processing
+  $ python generate-trip-assignment.py --GTFS ../GTFS/20210815 --APC ../APC/202108.parquet --date 20210820
+  ```
+
+  Output:
+  * Pre-processing/trip-assignments/trip-asm-20210820.csv
 
 # 2. Generate bus route files
 File: generate-route.py
