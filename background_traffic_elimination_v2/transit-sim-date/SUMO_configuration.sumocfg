@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="Chattanooga_SUMO_Network.net.xml"/>
+        <additional-files value="parking.add.xml"/>
+<!--         <route-files value="routes-2021-08-20.rou.xml"/> -->
+<!--         <additional-files value="busStop-2021-08-19.add.xml,parking.add.xml"/> -->
+    </input>
+
+    <time>
+        <begin value="0"/>
+        <end value="86400"/>
+    </time>
+
+    <output>
+        <stop-output value="busstop_output.xml"/>
+        <amitran-output value="trajectory_output.xml"/>
+    </output>
+
+    <processing>
+        <time-to-teleport value="50" />
+        <ignore-junction-blocker value="1" />
+        <waiting-time-memory value="100000000" />
+        <ignore-route-errors value="true"/> 
+    </processing>
+
+    <report>
+        <xml-validation value="never"/>
+    </report>
+</configuration>
