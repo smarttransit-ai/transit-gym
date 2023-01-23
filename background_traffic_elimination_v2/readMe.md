@@ -1,4 +1,4 @@
-#0 Unzip the SUMO network file 
+# 0. Unzip the SUMO network file 
 ```bat
 $ unzip transit-sim-date/Chattanooga_SUMO_Network.net.xml.zip
 ```
