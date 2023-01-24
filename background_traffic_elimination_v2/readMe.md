@@ -103,3 +103,7 @@ Outputs
 
 - Post-processing/trip-level-output/busstop_info.csv
 - Post-processing/trip-level-output/trajectory-{trip_id}.csv
+
+These outputs contain the trip level information of each simulated trip, during the given time period.
+
+
