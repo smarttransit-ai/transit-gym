@@ -48,6 +48,8 @@ Outputs:
 
 # 3. Generate transit demand file
 
+We will use the duarouter feature, which is packaged with SUMO.
+
 $ cd transit-sim-date
 
 ```bat
