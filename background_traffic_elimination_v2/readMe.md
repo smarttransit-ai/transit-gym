@@ -87,11 +87,17 @@ Outputs:
 
 # 5. Postprocessing - from block-level to trip level
 
-File: Post-processing/outputProcess.py --date 2021-08-20
+File: Post-processing/outputProcess.py
 
 Inputs:
 
-- date - block 4 line 1
+- date
+
+Command:
+
+```bat
+$ python Post-processing/outputProcess.py --date 2021-08-20
+```
 
 Outputs
 
