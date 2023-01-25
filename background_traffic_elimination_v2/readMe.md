@@ -68,24 +68,48 @@ Outputs:
 
 # 4. Run simulation with BTE
 
-File: run-simulation.py
+## 4.1 Mode 1 -- simulation with background traffic
+
+File: run-TransitGym.py
 
 Inputs:
 
 - date
 - simulation folder
-- BTE data
+- background traffic
 
 Command:
 
 ```bat
-$ python run-simulation.py --date 20210820 --sim transit-sim-date --BTE_data BTE/edge_speed_by_sim.pkl
+$ python run-TransitGym.py --date 20210820 --sim transit-sim-date --bgTraffic combined_trips_100k_08-25_049.rou.xml
 ```
 
 Outputs:
 
 - transit-sim-date/busstop_output.xml
 - transit-sim-date/trajectory_output.xml
+
+## 4.2 Mode 2 -- simulation with BTE
+
+File: run-BTESim.py
+
+Inputs:
+
+- date
+- simulation folder
+- background traffic
+
+Command:
+
+```bat
+$ python run-BTESim.py --date 20210820 --sim transit-sim-date --BTE_data BTE/edge_speed_by_sim.pkl
+```
+
+Outputs:
+
+- transit-sim-date/busstop_output.xml
+- transit-sim-date/trajectory_output.xml
+
 
 # 5. Postprocessing - from block-level to trip level
 
