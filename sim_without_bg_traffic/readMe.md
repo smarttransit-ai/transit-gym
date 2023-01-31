@@ -130,3 +130,8 @@ Outputs
 - Post-processing/trip-level-output/trajectory-{trip_id}.csv
 
 These outputs contain the trip level information of each simulated trip, during the given time period.
+
+
+## Frequently Asked Questions
+
+They acan be found in the Results and Discussions in[ BTETransitSimReport](..\docs\BTETransitSimReport.pdf)

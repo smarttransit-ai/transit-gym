@@ -8,6 +8,8 @@ By including the background traffic in the simulation, users can get a more accu
 
 For regular activities, or where fast changes needed to be implemented in any of the components of the simualtion, re-running the simualtion woud be temporlally and computationally expensive. To sort this issue, we have looked into the process of simulation where we eliminate all the background traffic (vehicles other than the ones we are concerned about, buses in our case). The paper, [BTE-Sim: Fast Simulation Environment For Public Transportation](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10020973), and the related recources [BTETransitSimReport.pdf](docs\BTETransitSimReport.pdf), [S06211-sen.pdf](docs\S06211-sen.pdf) explain the process. It does use the initial results that the background traffic simulation method generates and calibrates them to be used here. You can find the steps to run BTE-Sim under[ Sim without bg traffic](sim_without_bgtraffic).
 
+Further, the simulations for energy usage from power grids can be done using the steps mentioned in [e-bench](archive/e-bench).
+
 ## Requirement: Install SUMO
 
 If you have not already done so, go to [https://sumo.dlr.de/docs/Installing/index.html](https://sumo.dlr.de/docs/Installing/index.html) to install SUMO on your machine. Please install the **latest version** instead of the regular distribution.
