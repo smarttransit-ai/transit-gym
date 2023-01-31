@@ -4,6 +4,10 @@
 $ unzip transit-sim-date/Chattanooga_SUMO_Network.net.xml.zip
 ```
 
+# Generate the pre-required files (under ./simualtion)
+
+We can generate the network, person_trips, sumo configuration and other files by following the steps in the **[manual_files](manual_files) ** folder.
+
 # 1. Generate trip-assignment files
 
 File: Pre-processing/generate-trip-assignment.py

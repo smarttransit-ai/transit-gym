@@ -8,7 +8,6 @@ import json
 from collections import OrderedDict
 import datetime
 
-
 import argparse
 
 parser = argparse.ArgumentParser()
