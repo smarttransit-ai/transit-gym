@@ -91,7 +91,7 @@ Outputs:
 
 ## 4.2 Mode 2 -- simulation with BTE
 
-File: run-BTESim.py
+File: run-BTESim.py now
 
 Inputs:
 
@@ -109,7 +109,6 @@ Outputs:
 
 - transit-sim-date/busstop_output.xml
 - transit-sim-date/trajectory_output.xml
-
 
 # 5. Postprocessing - from block-level to trip level
 
@@ -131,5 +130,3 @@ Outputs
 - Post-processing/trip-level-output/trajectory-{trip_id}.csv
 
 These outputs contain the trip level information of each simulated trip, during the given time period.
-
-
