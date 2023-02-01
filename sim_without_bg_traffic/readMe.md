@@ -8,7 +8,7 @@ $ unzip transit-sim-date/Chattanooga_SUMO_Network.net.xml.zip
 
 ### (applicable when simualting a new city/changed network, demand)
 
-We can generate the **network**, **person_trips**, **sumo configuration** and other files (if required) by following the steps in the **[manual_files](manual_files) ** folder.
+We can generate the **network**, **person_trips**, **sumo configuration** and other files (if required) by following the steps in the **[manual_files](manual_files)** folder.
 
 Next, follow Steps 4 to 8 to generate the simualtion without background traffic
 
