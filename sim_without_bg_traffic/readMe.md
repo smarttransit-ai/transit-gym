@@ -1,9 +1,9 @@
-# 0. Install library and Unzip the SUMO network file
-
+# 1. Install libraries
 ```bat
 $ pip install -r requirements.txt
 ```
 
+# 2. Unzip the SUMO network file
 ```bat
 $ unzip transit-sim-date/Chattanooga_SUMO_Network.net.xml.zip
 ```
@@ -12,7 +12,7 @@ $ unzip transit-sim-date/Chattanooga_SUMO_Network.net.xml.zip
 
 We can generate the network, person_trips, sumo configuration and other files by following the steps in the **[manual_files](manual_files) ** folder.
 
-# 1. Generate trip-assignment files
+# 3. Generate trip-assignment files
 
 File: Pre-processing/generate-trip-assignment.py
 
@@ -33,7 +33,7 @@ Output:
 
 - Pre-processing/trip-assignments/trip-asm-20210820.csv
 
-# 2. Generate bus route files
+# 4. Generate bus route files
 
 File: generate-route.py
 
@@ -54,7 +54,7 @@ Outputs:
 - transit-sim-date/routes-20210820.rou.xml
 - transit-sim-date/busStop-20210820.add.xml
 
-# 3. Generate transit demand file
+# 5. Generate transit demand file
 
 We will use the duarouter feature, which is packaged with SUMO.
 
@@ -74,9 +74,9 @@ Outputs:
 
 - transit-sim-date/passenger-20210820.rou.xml
 
-# 4. Run simulation with BTE
+# 6. Run simulation with BTE
 
-## 4.1 Mode 1 -- simulation with background traffic
+## 6.1 Mode 1 -- simulation with background traffic
 
 File: run-TransitGym.py
 
@@ -97,7 +97,7 @@ Outputs:
 - transit-sim-date/busstop_output.xml
 - transit-sim-date/trajectory_output.xml
 
-## 4.2 Mode 2 -- simulation with BTE
+## 6.2 Mode 2 -- simulation with BTE
 
 File: run-BTESim.py now
 
@@ -118,7 +118,7 @@ Outputs:
 - transit-sim-date/busstop_output.xml
 - transit-sim-date/trajectory_output.xml
 
-# 5. Postprocessing - from block-level to trip level
+# 7. Postprocessing - from block-level to trip level
 
 File: Post-processing/outputProcess.py
 
