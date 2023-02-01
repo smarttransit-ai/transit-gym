@@ -205,7 +205,3 @@ Change the GTFS Schedule by changing "import "gtfs.20200816"" to other gtfs file
 ## Optional : Step 5. Changing the Vehicle Assignment
 
 Change the vehicle Assignment by changing the content of "vehicleassignment{}" in .transsim files in the respective example and run: python3 driver.py
-
-# Acknowledgement
-
-This material is based upon work supported by National Science Foundation under grants CNS-1952011, CNS-2029950 and Department of Energy, Office of Energy Efficiency and Renewable Energy (EERE), under Award Number DEEE0008467. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation or the Department of Energy.
