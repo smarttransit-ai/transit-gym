@@ -157,4 +157,4 @@ $ jupyter nbconvert --execute plot_occupancy.ipynb
 
 ## Frequently Asked Questions
 
-They acan be found in the Results and Discussions in[ BTETransitSimReport](..\docs\BTETransitSimReport.pdf)
+They can be found in the Results and Discussions in[ BTETransitSimReport](..\docs\BTETransitSimReport.pdf)
