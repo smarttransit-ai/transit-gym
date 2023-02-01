@@ -13,7 +13,7 @@ Further, the simulations for energy usage from power grids can be done using the
 ## Environment installation:
 
 - OS: ubuntu 20.04 (recommended version)
-- SUMO [https://sumo.dlr.de/docs/Installing/index.html](https://sumo.dlr.de/docs/Installing/index.html) to install SUMO on your machine. Please install the **latest version** instead of the regular distribution.
+- SUMO [https://sumo.dlr.de/docs/Installing/index.html](https://sumo.dlr.de/docs/Installing/index.html) to install SUMO on your machine. Please install the **latest version** instead of the regular distribution. We have used, version 1.14.1.
 - Python 3.9 (recommended version)
 - Optional: create a virtual environment
   - Python libraries [requirements.txt](requirements.txt)
