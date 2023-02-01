@@ -10,7 +10,7 @@ For regular activities, or where fast changes needed to be implemented in any of
 
 Further, the simulations for energy usage from power grids can be done using the steps mentioned in [e-bench](archive/e-bench).
 
-## Environment requirements: 
+## Environment installation: 
 
 * OS: ubuntu 20.04 (recommended version)
 * SUMO [https://sumo.dlr.de/docs/Installing/index.html](https://sumo.dlr.de/docs/Installing/index.html) to install SUMO on your machine. Please install the **latest version** instead of the regular distribution.
