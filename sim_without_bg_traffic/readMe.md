@@ -1,4 +1,8 @@
-# 0. Unzip the SUMO network file
+# 0. Install library and Unzip the SUMO network file
+
+```bat
+$ pip install -r requirements.txt
+```
 
 ```bat
 $ unzip transit-sim-date/Chattanooga_SUMO_Network.net.xml.zip
