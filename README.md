@@ -19,7 +19,7 @@ Further, the simulations for energy usage from power grids can be done using the
   - Python libraries [requirements.txt](requirements.txt)
 
 ## Two modes of simulation
-
+The instructions for each mode can be found in these folders 
 - [Transit-Gym](https://github.com/smarttransit-ai/transit-gym/tree/rc1/sim_with_bg_traffic)
 - [BTE-SIM](https://github.com/smarttransit-ai/transit-gym/tree/rc1/sim_without_bg_traffic)
 
