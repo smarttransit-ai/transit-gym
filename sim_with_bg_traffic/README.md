@@ -11,6 +11,10 @@ Please refer to [Manual Files](manual_files) if you are looking for **manual ste
 
 A youtube presentation of this work is available at [https://youtu.be/Fw4UQGcB80o](https://youtu.be/Fw4UQGcB80o).
 
+# Process outline
+
+![TransitGym](../resources/Transit-gym3.png)
+
 ##### **Disclaimer**: Using Docker is more secure and reliable way of running the simulation. Please keep in mind that this would **not be compatible** with the [sim_without_bg_traffic](sim_without_bg_traffic) process that requires results from this. Please use the [Regular simualtion method](#regular) for compatibility.
 
 # Docker Instructions
@@ -153,7 +157,7 @@ $ python3 driver.py
 
 The result will be available in `Simulation_1\output\` after it completes.
 
-An example output of the Trajectory generated from the hello world example is shown below. 
+An example output of the Trajectory generated from the hello world example is shown below.
 
 ![img1](../resources/traj_sample.png)
 

@@ -1,3 +1,7 @@
+# Process outline
+
+![BTESim](../resources/Transit-gym4.png)
+
 # 1. Unzip the SUMO network file (if using the provided city's network)
 
 ```bat
@@ -8,7 +12,7 @@ $ unzip transit-sim-date/Chattanooga_SUMO_Network.net.xml.zip
 
 ### (applicable when simualting a new city/changed network, demand)
 
-We can generate the **network**, **person_trips**, **sumo configuration** and other files (if required) by following the steps in the **[manual_files](manual_files)** folder.
+We can generate the **network**, **person_trips**, **sumo configuration** and other files (if required) by following the steps in the **[manual_files](manual_files) ** folder.
 
 Next, follow Steps 4 to 8 to generate the simualtion without background traffic
 
@@ -153,8 +157,8 @@ Here is an example plot that shows the output of estimate energy usage from the 
 $ jupyter nbconvert --execute plot_occupancy.ipynb
 ```
 
-![img3](../resources/hello_world_plot.PNG)
+![img3](..\resources\hello_world_plot.PNG)
 
 ## Frequently Asked Questions
 
-They can be found in the Results and Discussions in[ BTETransitSimReport](..\docs\BTETransitSimReport.pdf)
+They acan be found in the Results and Discussions in[ BTETransitSimReport](..\docs\BTETransitSimReport.pdf)
