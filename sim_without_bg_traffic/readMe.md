@@ -147,7 +147,7 @@ $ jupyter nbconvert --execute Energy_estimation.ipynb
 $ jupyter nbconvert --execute plot_energy_estimation.ipynb
 ```
 
-Here is an example plot that shows the output of estimate energy usage from the results of Hello_World simulation.Plot the occupancy of buses. Plot occupancy of buses. Read the "busstop_info.csv" from the simulation output folder and run the script [plot_occupancy.ipynb](manual_files/output/visulization%20example/plot_occupancy.ipynb). 
+Here is an example plot that shows the output of estimate energy usage from the results of Hello_World simulation.Plot the occupancy of buses. Plot occupancy of buses. Read the "busstop_info.csv" from the simulation output folder and run the script [plot_occupancy.ipynb](manual_files/output/visulization%20example/plot_occupancy.ipynb).
 
 ```
 $ jupyter nbconvert --execute plot_occupancy.ipynb
