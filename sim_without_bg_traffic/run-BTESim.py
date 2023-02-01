@@ -1,14 +1,7 @@
 import traci
-import pandas as pd
 import random
 import time
 import pickle
-import xmltodict
-import json
-from collections import OrderedDict
-import datetime
-
-
 import argparse
 
 parser = argparse.ArgumentParser()

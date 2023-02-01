@@ -1,13 +1,11 @@
 import pandas as pd
 pd.options.mode.chained_assignment = None
-import numpy as np
 import argparse
+import os
 
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--date", type=str, default="2021-08-s20", help="date")
-# parser.add_argument("--sim", type=str, default="transit-sim-date", help="simulation folder")
-# parser.add_argument("--BTE_data", type=str, default="BTE/edge_speed_by_sim.pkl", help="BTE data")
 args = parser.parse_args()
 
 ## bus stop output containing delay and person load information
@@ -51,6 +49,9 @@ def time_conv(x):
     return int(h) * 3600 + int(m) * 60 + int(s)
 
 stopO['gtfs_time'] = stopO['stopinfo_started'] - stopO['stopinfo_arrivalDelay'].apply(float)
+
+if not os.path.exists('trip-level-output'):
+   os.makedirs('trip-level-output')
 
 final_stopO = pd.DataFrame()
 for veh_id in stopO['stopinfo_id'].unique():

@@ -1,12 +1,10 @@
 import pandas as pd
-import plotly.express as px
 import sumolib
 import traci
 import random
 import copy
 import math
 from itertools import groupby
-import os
 import argparse
 
 parser = argparse.ArgumentParser()
