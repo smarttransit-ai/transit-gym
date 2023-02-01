@@ -10,10 +10,12 @@ For regular activities, or where fast changes needed to be implemented in any of
 
 Further, the simulations for energy usage from power grids can be done using the steps mentioned in [e-bench](archive/e-bench).
 
-## Requirement: Install SUMO
+## Environment requirements: 
 
-If you have not already done so, go to [https://sumo.dlr.de/docs/Installing/index.html](https://sumo.dlr.de/docs/Installing/index.html) to install SUMO on your machine. Please install the **latest version** instead of the regular distribution.
-
+* OS: ubuntu 20.04 (recommended version)
+* SUMO [https://sumo.dlr.de/docs/Installing/index.html](https://sumo.dlr.de/docs/Installing/index.html) to install SUMO on your machine. Please install the **latest version** instead of the regular distribution.
+* Python 3.9 (recommended version)
+* Python libraries [requirements.txt](https://github.com/smarttransit-ai/transit-gym/blob/rc1/sim_without_bg_traffic/requirements.txt)
 
 ## Files required for running simulation
 
