@@ -43,11 +43,12 @@ Inputs:
 - GTFS extarcted folder (example GTFS stored in GTFS/20210815)
 - date (in YYYYMMDD format)
 - simulation folder (by default, transit-sim-date)
+- SUMO_PATH: the installation location of SUMO (by default, /usr/bin/sumo)
 
 Command:
 
 ```bat
-$ python generate-route.py --GTFS GTFS/20210815 --date 20210820 --sim transit-sim-date
+$ python generate-route.py --GTFS GTFS/20210815 --date 20210820 --sim transit-sim-date --SUMO_PATH /usr/bin/sumo
 ```
 
 Outputs:
@@ -84,11 +85,12 @@ Inputs:
 - date (in YYYYMMDD format)
 - simulation folder (by default, transit-sim-date)
 - background traffic (by default, BTE/edge_speed_by_sim.pkl)
+- SUMO_PATH: the installation location of SUMO (by default, /usr/bin/sumo)
 
 Command:
 
 ```bat
-$ python run-BTESim.py --date 20210820 --sim transit-sim-date --BTE_data BTE/edge_speed_by_sim.pkl
+$ python run-BTESim.py --date 20210820 --sim transit-sim-date --BTE_data BTE/edge_speed_by_sim.pkl --SUMO_PATH /usr/bin/sumo
 ```
 
 Outputs:

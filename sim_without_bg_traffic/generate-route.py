@@ -8,12 +8,13 @@ from itertools import groupby
 import argparse
 
 parser = argparse.ArgumentParser()
+parser.add_argument("--SUMO_PATH", type=str, default="/usr/bin/sumo", help="SUMO installation path")
 parser.add_argument("--GTFS", type=str, default="c", help="GTFS folder")
 parser.add_argument("--date", type=str, default="20210820", help="date")
 parser.add_argument("--sim", type=str, default="transit-sim-date", help="simulation folder")
 args = parser.parse_args()
 
-SUMO_CMD = ["/usr/bin/sumo"]
+SUMO_CMD = ["".format(args.SUMO_PATH)]
 SUMO_CONFIG_FILE = ["-c", "{}/SUMO_configuration.sumocfg".format(args.sim)]
 SUMO_CMD.extend(SUMO_CONFIG_FILE)
 traci.start(SUMO_CMD, label=str(random.randint(10000, 50000)))
