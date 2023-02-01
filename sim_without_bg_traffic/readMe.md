@@ -153,7 +153,7 @@ Here is an example plot that shows the output of estimate energy usage from the 
 $ jupyter nbconvert --execute plot_occupancy.ipynb
 ```
 
-[![img2](..\resources\hello_world_plot.PNG)](sim_without_bg_traffic\resources\hello_world_plot.PNG)
+[!img2](..\resources\hello_world_plot.PNG)
 
 ## Frequently Asked Questions
 
