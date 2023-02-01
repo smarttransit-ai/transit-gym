@@ -153,9 +153,9 @@ $ python3 driver.py
 
 The result will be available in `Simulation_1\output\` after it completes.
 
-An example output of the Trajectory generated from the hello world example is shown below.
+An example output of the Trajectory generated from the hello world example is shown below. 
 
-![img1](resources/traj_sample.png)
+![img1](../resources/traj_sample.png)
 
 ## Step 3. Post processing of outputs
 
@@ -186,7 +186,7 @@ $ jupyter nbconvert --execute plot_energy_estimation.ipynb
 ```
 
 Here is an example plot that shows the output of estimate energy usage from the results of Hello_World simulation.
-![img2](resources/hello_world_plot.PNG)
+![img2](../resources/hello_world_plot.PNG)
 
 3. Plot the occupancy of buses. Plot occupancy of buses. Read the "busstop_info.csv" from the simulation output folder and run the script [plot_occupancy.ipynb](manual_files/output/visulization%20example/plot_occupancy.ipynb).
 
