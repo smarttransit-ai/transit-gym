@@ -1,4 +1,4 @@
-# Transit-GYM
+# Simulating Bus Transit Using Sumo
 
 The following project describes the procedures necessary to simulate the public transit in the city of Chattanooga. The approach is generalizable and can be extended to other cities. The papers, [TRANSIT-GYM: A Simulation and Evaluation Engine for Analysis of Bus Transit Systems](https://ieeexplore.ieee.org/abstract/document/9556290), [BTE-Sim: Fast Simulation Environment For Public Transportation](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10020973) provides details about the work.
 
