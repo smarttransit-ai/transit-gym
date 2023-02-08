@@ -18,10 +18,31 @@ Further, the simulations for energy usage from power grids can be done using the
 - Optional: create a virtual environment
   - Python libraries [requirements.txt](requirements.txt)
 
+## Input Data
+
+Before we start the simulation, we assume that the following data is present.
+
+- OD Demand Data. This data ..... two line description. THe format of the data looks like ... An example data file is present at location....
+- GTFS Data. This data describes the schedule and trip of the buses.....An example data file is present at location...
+- Historical Traffic Profile -- This data provides...  This data is only needed if you want to recalbirate....The format of the data looks like and refers to roads.. An example data file is present at location
+- Network data of the city... If you want to regenerate it.. follow the steps...
+- Vehicle List
+- Energy Models
+- Vehicle to Block Assignments..
+
+## Output Results
+
+When we simulate output files are generated. They consist of... and example is located at...
+
 ## Two modes of simulation
 The instructions for each mode can be found in these folders 
-- [Transit-Gym](https://github.com/smarttransit-ai/transit-gym/tree/rc1/sim_with_bg_traffic)
-- [BTE-SIM](https://github.com/smarttransit-ai/transit-gym/tree/rc1/sim_without_bg_traffic)
+- [Transit-Gym](https://github.com/smarttransit-ai/transit-gym/tree/rc1/sim_with_bg_traffic) - with background traffic. When you do background traffic simulation.. what additional data is required.
+
+Quick start instructions -- assuming you dont need to change anything
+
+- [BTE-SIM](https://github.com/smarttransit-ai/transit-gym/tree/rc1/sim_without_bg_traffic) -- without background traffic. Some extra data is required here.. and you describe that.
+
+Quick start instructions
 
 Simulation time for Chattanooga while varying the number of vehicles:
 
@@ -34,6 +55,22 @@ Simulation time for Chattanooga while varying the number of vehicles:
 
 \*All test were performed on a regular 8-core CPU desktop with 64 GB of RAM.
 
+## Analyzing the output of simulation...
+
+
+## Updating configuration.
+
+Q.1. What to do if a new GTFS file has been created because there is schedule change in the city.
+
+Q.2. What to do if the network file changes..
+
 # Acknowledgement
 
 This material is based upon work supported by National Science Foundation under grants CNS-1952011, CNS-2029950 and Department of Energy, Office of Energy Efficiency and Renewable Energy (EERE), under Award Number DEEE0008467. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation or the Department of Energy.
+
+# References
+
+Read the following paper for understanding the work further.
+
+1 -
+2 - 
