@@ -14,7 +14,7 @@ A youtube presentation of this work is available at [https://youtu.be/Fw4UQGcB80
 # Process outline
 
 ![TransitGym](../resources/Transit-gym3.png)
-
+<!-- 
 ##### **Disclaimer**: Using Docker is more secure and reliable way of running the simulation. Please keep in mind that this would **not be compatible** with the [sim_without_bg_traffic](sim_without_bg_traffic) process that requires results from this. Please use the [Regular simualtion method](#regular) for compatibility.
 
 # Docker Instructions
@@ -105,7 +105,7 @@ Now the simulation results will be in host machine.
 (base) host-machine:simulation_output $
 
 
-```
+``` -->
 
 # [Regular Installation Instructions (without Docker)](#regular)
 
