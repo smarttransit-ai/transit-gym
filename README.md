@@ -75,4 +75,5 @@ This material is based upon work supported by National Science Foundation under 
 Read the following paper for understanding the work further.
 
 1 - [TRANSIT-GYM: A Simulation and Evaluation Engine for Analysis of Bus Transit Systems](https://ieeexplore.ieee.org/abstract/document/9556290)
+
 2 - [BTE-Sim: Fast Simulation Environment For Public Transportation](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10020973)
