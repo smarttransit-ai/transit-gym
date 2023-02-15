@@ -38,11 +38,11 @@ When we simulate output files are generated. They consist of... and example is l
 The instructions for each mode can be found in these folders 
 - [Transit-Gym](https://github.com/smarttransit-ai/transit-gym/tree/rc1/sim_with_bg_traffic) - with background traffic. When you do background traffic simulation.. what additional data is required.
 
-Quick start instructions -- assuming you dont need to change anything
+Quick start instructions - Run the examples
 
 - [BTE-SIM](https://github.com/smarttransit-ai/transit-gym/tree/rc1/sim_without_bg_traffic) -- without background traffic. Some extra data is required here.. and you describe that.
 
-Quick start instructions
+Quick start instructions - Run Steps 3 to 7 with the example data for Chattanooga, TN, USA.
 
 Simulation time for Chattanooga while varying the number of vehicles:
 
