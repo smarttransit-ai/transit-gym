@@ -9,8 +9,8 @@ import argparse
 parser = argparse.ArgumentParser()
 parser.add_argument("--date", type=str, default="20210820", help="date")
 parser.add_argument("--sim", type=str, default="transit-sim-date", help="simulation folder")
-parser.add_argument("--INRIX_data", type=str, default="./INRIX-data/part-00054-49075979-b38a-4685-b377-f8d38d569b56.c000.snappy.parquet", help="INRIX data")
-parser.add_argument("--INRIX_geo", type=str, default="./INRIX-data/USA_Tennessee.geojson", help="INRIX geojson")
+parser.add_argument("--INRIX_data", type=str, default="INRIX-data/part-00054-49075979-b38a-4685-b377-f8d38d569b56.c000.snappy.parquet", help="INRIX data")
+parser.add_argument("--INRIX_geo", type=str, default="INRIX-data/USA_Tennessee.geojson", help="INRIX geojson")
 args = parser.parse_args()
 
 SUMO_CMD = ["/usr/bin/sumo"]
