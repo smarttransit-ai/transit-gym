@@ -10,8 +10,9 @@ Inputs:
 - background traffic
 
 Command:
-
+```
 $ python edge_speed_by_sim.py --date 20210820 --sim transit-sim-date --bgTraffic combined_trips_100k_08-25_049.rou.xml
+```
 
 Outputs:
 - edge_speed_by_sim.pkl
@@ -27,9 +28,9 @@ Inputs:
 - INRIX geojson
 
 Command:
-
+```
 $ python edge_speed_by_INRIX.py --date 20210820 --sim transit-sim-date --INRIX_data INRIX-data/part-00054-49075979-b38a-4685-b377-f8d38d569b56.c000.snappy.parquet --INRIX_geo INRIX-data/USA_Tennessee.geojson
-
+```
 Outputs:
 - edge_speed_by_INRIX.pkl
 
