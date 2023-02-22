@@ -62,6 +62,8 @@ Simulation time for Chattanooga while varying the number of vehicles:
 
 Q.1. What to do if a new GTFS file has been created because there is schedule change in the city.
 
+For BTE-Sim, we need to run Steps 3, 4, and 5 [here](https://github.com/smarttransit-ai/transit-gym/tree/rc1/sim_without_bg_traffic) again, i.e., generate trip-assignment files, generate bus route files, and generate transit demand file
+
 Q.2. What to do if the network file changes..
 
 Q.3. How to run in non-visualization mode.
