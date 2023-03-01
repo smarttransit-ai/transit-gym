@@ -20,6 +20,8 @@ We can generate the follwing files:
 
 by following the steps in the **[manual_files](manual_files)** folder.
 
+We also create a [parking.xml](transit-sim-date/parking.add.xml) file to make a virtual parking location, where the buses are intermediately stored when not in use. It can be any randomly chosen empty space on the map.
+
 Next, follow Steps 3 to 7 to generate the simualtion without background traffic
 
 # 3. Generate trip-assignment files
