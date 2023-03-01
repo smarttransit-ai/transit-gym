@@ -25,7 +25,7 @@ Before we start the simulation, we assume that the following data is present.
 - OD Demand Data. This data includes an origin destination matrix from zone to zone levels. An example of Chattanooga can be found at.. The .geojson file defines the zone geography while the .od file contains the number of movements between zones.
 - GTFS Data. This data describes the schedule and trip of the buses. An example data file is present at [sim_without_bg_traffic/GTFS/20210815](https://github.com/smarttransit-ai/transit-gym/tree/rc1/sim_without_bg_traffic/GTFS/20210815)
 - Historical Traffic Profile -- (INRIX). This data provides the real-world observed speed of road segments across the city. This data is only needed if you want to recalbirate.
-- Network data of the city. This network is in SUMO format and converted from OpenStreetMap. [netconvert](https://sumo.dlr.de/docs/Networks/Import/OpenStreetMap.html). The step is in [manual_files](https://github.com/smarttransit-ai/transit-gym/tree/rc1/sim_without_bg_traffic/manual_files)
+- Road network. This road network is in SUMO format (.net.xml) and converted from OpenStreetMap. [netconvert](https://sumo.dlr.de/docs/Networks/Import/OpenStreetMap.html). The step is in [manual_files](https://github.com/smarttransit-ai/transit-gym/tree/rc1/sim_without_bg_traffic/manual_files)
 - Vehicle List
 - Energy Models
 - APC
