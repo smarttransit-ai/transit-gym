@@ -22,17 +22,25 @@ Further, the simulations for energy usage from power grids can be done using the
 
 Before we start the simulation, we assume that the following data is present.
 
-- OD Demand Data. This data includes an origin destination matrix from zone to zone levels. An example of Chattanooga can be found at.. The .geojson file defines the zone geography while the .od file contains the number of movements between zones.
-- GTFS Data. This data describes the schedule and trip of the buses. An example data file is present at [sim_without_bg_traffic/GTFS/20210815](https://github.com/smarttransit-ai/transit-gym/tree/rc1/sim_without_bg_traffic/GTFS/20210815)
-- Historical Traffic Profile -- (INRIX). This data provides the real-world observed speed of road segments across the city. This data is only needed if you want to recalbirate.
-- Road network. This road network is in SUMO format (.net.xml) and converted from OpenStreetMap. [netconvert](https://sumo.dlr.de/docs/Networks/Import/OpenStreetMap.html). The step is in [manual_files](https://github.com/smarttransit-ai/transit-gym/tree/rc1/sim_without_bg_traffic/manual_files)
-- Vehicle List
-- Energy Models
-- APC
+- **OD Demand Data**: This data includes an origin destination matrix from zone to zone levels. An example of Chattanooga can be found at.. The .geojson file defines the zone geography while the .od file contains the number of movements between zones.
+- **GTFS Data**: This data describes the schedule and trip of the buses. An example data file is present at [sim_without_bg_traffic/GTFS/20210815](https://github.com/smarttransit-ai/transit-gym/tree/rc1/sim_without_bg_traffic/GTFS/20210815)
+- **Historical Traffic Profile - (INRIX)**: This data provides the real-world observed speed of road segments across the city. This data is only needed if you want to recalbirate.
+- **Road network**: This road network is in SUMO format (.net.xml) and converted from OpenStreetMap. [netconvert](https://sumo.dlr.de/docs/Networks/Import/OpenStreetMap.html). The step is in [manual_files](https://github.com/smarttransit-ai/transit-gym/tree/rc1/sim_without_bg_traffic/manual_files)
+- **Vehicle List**: The details of the types of buses used in the fleet
+- **Energy Models**: The energy use for each types of bus (namely, Diesel, Hybrid, Electric)
+- **APC**: The Automated Passenger Count data for the buses, at a stop wise granularity
 
 ## Output Results
 
-When we simulate output files are generated. They consist of... and example is located at...
+When we simulate output files are generated. Here, we show the occupancy of the buses, and the route density, that we generate from our simulation..
+* Occupancy
+![occupancy](resources/occ.pdf)
+* Route 4 density
+![density](resources/den.pdf)
+
+Comparison of the Time of Arrival from Transit Gym vs BTE-Sim
+
+![comparison](resources/ToA.pdf)
 
 ## Two modes of simulation
 The instructions for each mode can be found in these folders 
