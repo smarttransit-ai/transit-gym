@@ -14,9 +14,9 @@ $ unzip transit-sim-date/Chattanooga_SUMO_Network.net.xml.zip
 
 We can generate the follwing files:
 
-- **network** 
--**person_trips**
--**sumo configuration** 
+-**network**<br>
+-**person_trips**<br>
+-**sumo configuration** <br>
 
 by following the steps in the **[manual_files](manual_files)** folder.
 
