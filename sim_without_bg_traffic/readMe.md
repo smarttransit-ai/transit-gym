@@ -104,6 +104,8 @@ Outputs:
 
 # 7. Post-processing - from block-level to trip level
 
+The results we generate till are in the form of *blocks*. We now convert them to individual trips, by comparing them the input GTFS data.
+
 File: Post-processing/outputProcess.py
 
 Inputs:
