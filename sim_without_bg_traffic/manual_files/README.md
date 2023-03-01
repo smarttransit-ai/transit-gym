@@ -6,7 +6,7 @@
 
 *Note:* The green boxes in the above diagram indicate the input information.
 
-*Disclaimer*: All the procedures are quite complicated and may take a lot of time to regnerate.
+**Disclaimer**: All the procedures are quite complicated and may take a lot of time to regnerate.
 
 ### Step 1. Correct network
 
