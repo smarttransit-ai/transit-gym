@@ -34,13 +34,13 @@ Before we start the simulation, we assume that the following data is present.
 
 When we simulate output files are generated. Here, we show the occupancy of the buses, and the route density, that we generate from our simulation..
 * Occupancy
-![occupancy](resources/occ.pdf)
+![occupancy](resources/occ.jpg)
 * Route 4 density
-![density](resources/den.pdf)
+![density](resources/den.jpg)
 
 Comparison of the Time of Arrival from Transit Gym vs BTE-Sim
 
-![comparison](resources/ToA.pdf)
+![comparison](resources/ToA.jpg)
 
 ## Two modes of simulation
 The instructions for each mode can be found in these folders 
