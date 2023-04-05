@@ -34,3 +34,21 @@ $ python edge_speed_by_INRIX.py --date 20210820 --sim transit-sim-date --INRIX_d
 Outputs:
 - edge_speed_by_INRIX.pkl
 
+
+## Approach 3. Using APC data
+
+File: edge_speed_by_APC.py
+
+Inputs:
+- date
+- simulation folder
+- trips_from_blocks
+- APC
+
+Command:
+```
+$ python edge_speed_by_APC.py --date 20210820 --sim transit-sim-date --trips_from_blocks Post-processing/trips_from_blocks.csv --APC APC/202108.parquet
+```
+Outputs:
+- edge_speed_by_APC.pkl
+
